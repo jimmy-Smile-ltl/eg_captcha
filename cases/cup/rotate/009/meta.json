@@ -1,0 +1,35 @@
+{
+  "case_id": "cup/rotate/009",
+  "vendor": "cup",
+  "vendor_name": "中国银联",
+  "type": "rotate",
+  "type_name": "旋转验证",
+  "variant": "classic",
+  "media": [
+    "image"
+  ],
+  "source_url": "https://captcha.cup.com.cn/",
+  "source_path": "cup/rotate/sets/18",
+  "collected_at": "2026-09-25",
+  "prompt": "拖动滑块，将图片旋转到正确方向",
+  "roles": {
+    "bg": "bg.png"
+  },
+  "answer_format": "angle",
+  "status": "sample-only",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "weak",
+    "accuracy": "low",
+    "notes": "源记录待优化；参考价值有限"
+  },
+  "review": {
+    "state": "pending",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "notes": "覆盖批次：样本中立收录；结果未纳入。源记录待优化；参考价值有限",
+  "method": "CV+VLM",
+  "method_note": "LLM 与 CV 均未达可用标准"
+}

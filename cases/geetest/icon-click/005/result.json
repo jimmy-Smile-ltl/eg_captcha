@@ -1,0 +1,65 @@
+{
+  "case_id": "geetest/icon-click/005",
+  "kind": "click",
+  "status": "solved",
+  "evidence": "offline-verified",
+  "confidence": "medium",
+  "answer": {
+    "kind": "click",
+    "points": [
+      {
+        "order": 1,
+        "x": 255,
+        "y": 77,
+        "label": "icon0",
+        "score": 0.7126725912094116
+      },
+      {
+        "order": 2,
+        "x": 110,
+        "y": 25,
+        "label": "icon1",
+        "score": 0.8405697345733643
+      },
+      {
+        "order": 3,
+        "x": 134,
+        "y": 81,
+        "label": "icon2",
+        "score": 0.8344769477844238
+      }
+    ]
+  },
+  "solution": {
+    "icons": [
+      {
+        "file": "icon0.png",
+        "template": 0,
+        "x": 255,
+        "y": 77,
+        "score": 0.7126725912094116,
+        "rotation": 225,
+        "source": "region#520"
+      },
+      {
+        "file": "icon1.png",
+        "template": 1,
+        "x": 110,
+        "y": 25,
+        "score": 0.8405697345733643,
+        "rotation": 170,
+        "source": "region#2"
+      },
+      {
+        "file": "icon2.png",
+        "template": 2,
+        "x": 134,
+        "y": 81,
+        "score": 0.8344769477844238,
+        "rotation": 200,
+        "source": "region#529"
+      }
+    ]
+  },
+  "notes": "源方案该组 2/3 命中；整体 23/27 ≈ 85%"
+}

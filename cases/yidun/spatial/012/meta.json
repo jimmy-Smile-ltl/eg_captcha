@@ -1,0 +1,35 @@
+{
+  "case_id": "yidun/spatial/012",
+  "vendor": "yidun",
+  "vendor_name": "网易易盾",
+  "type": "spatial",
+  "type_name": "空间推理",
+  "variant": "space-inference",
+  "media": [
+    "image"
+  ],
+  "source_url": "https://dun.163.com/trial",
+  "source_path": "yidun/space-inference/sets/12",
+  "collected_at": "unknown",
+  "prompt": "根据空间关系点击目标",
+  "roles": {
+    "bg": "bg.jpg"
+  },
+  "answer_format": "points",
+  "status": "sample-only",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "exists",
+    "accuracy": "high",
+    "notes": "源记录 3/3 离线；结果待审查"
+  },
+  "review": {
+    "state": "pending",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "notes": "覆盖批次：样本中立收录；结果未纳入。源记录 3/3 离线；结果待审查",
+  "method": "VLM+CV",
+  "method_note": "本地 CV 定位图形 + 视觉 LLM 选空间关系"
+}

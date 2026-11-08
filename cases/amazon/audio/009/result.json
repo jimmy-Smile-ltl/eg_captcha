@@ -1,0 +1,67 @@
+{
+  "case_id": "amazon/audio/009",
+  "kind": "text",
+  "status": "result-pending-review",
+  "evidence": "unverified",
+  "confidence": "medium",
+  "answer": {
+    "kind": "text",
+    "text": "emerge"
+  },
+  "solution": {
+    "set": "09",
+    "problem_type": "noisyneighbour-en-us",
+    "audio_s": 10.18,
+    "sep_s": 13.64,
+    "chosen_src": 1,
+    "sources": [
+      {
+        "src": 0,
+        "text": "Science, nevertheless has a special crime, in its universality. Prestigations imputable to the power of judging completely of our a priori was impossible.",
+        "score": 2
+      },
+      {
+        "src": 1,
+        "text": "Type one of the two following words spoken by me. Emerge. General.",
+        "score": 12
+      }
+    ],
+    "decodings": [
+      "Type one of the two following words spoken by me. Emerge. General.",
+      "Type one of the two following words spoken by me."
+    ],
+    "candidates": [
+      "emerge",
+      "general"
+    ],
+    "candidate_probs": [
+      {
+        "word": "emerge",
+        "pos_from_instruction": 0,
+        "votes": 1,
+        "mean_prob": 0.7923
+      },
+      {
+        "word": "general",
+        "pos_from_instruction": 1,
+        "votes": 1,
+        "mean_prob": 0.4062
+      }
+    ],
+    "counts": {
+      "emerge": 1,
+      "general": 1
+    },
+    "answer": "emerge",
+    "asr_s": 25.64,
+    "review": {
+      "model": "large-v3-turbo",
+      "text": "Type one of the two following words spoken by me. Emerge Jimbo",
+      "tail": [
+        "emerge",
+        "jimbo"
+      ]
+    }
+  },
+  "notes": "两套 ASR 一致，仍待人工审查"
+}

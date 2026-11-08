@@ -1,0 +1,35 @@
+{
+  "case_id": "dingxiang/slide-restore/003",
+  "vendor": "dingxiang",
+  "vendor_name": "顶象",
+  "type": "slide-restore",
+  "type_name": "滑动还原",
+  "variant": "classic",
+  "media": [
+    "image"
+  ],
+  "source_url": "https://www.dingxiang-inc.com/business/captcha",
+  "source_path": "dingxiang/slide-restore/sets/03",
+  "collected_at": "unknown",
+  "prompt": "拖动滑块，将错位图像还原",
+  "roles": {
+    "bg": "bg.webp"
+  },
+  "answer_format": "shift",
+  "status": "sample-only",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "exists",
+    "accuracy": "high",
+    "notes": "窄带匹配 + 接缝裁决；类型表称已攻克；待审"
+  },
+  "review": {
+    "state": "pending",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "notes": "覆盖批次：样本中立收录；结果未纳入。背景还原已完成，求解器未写",
+  "method": "CV",
+  "method_note": "窄带匹配 + 接缝裁决；无 LLM"
+}

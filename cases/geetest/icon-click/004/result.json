@@ -1,0 +1,65 @@
+{
+  "case_id": "geetest/icon-click/004",
+  "kind": "click",
+  "status": "solved",
+  "evidence": "offline-verified",
+  "confidence": "high",
+  "answer": {
+    "kind": "click",
+    "points": [
+      {
+        "order": 1,
+        "x": 80,
+        "y": 106,
+        "label": "icon0",
+        "score": 0.8045718669891357
+      },
+      {
+        "order": 2,
+        "x": 156,
+        "y": 106,
+        "label": "icon1",
+        "score": 0.6906635761260986
+      },
+      {
+        "order": 3,
+        "x": 211,
+        "y": 56,
+        "label": "icon2",
+        "score": 0.8205968737602234
+      }
+    ]
+  },
+  "solution": {
+    "icons": [
+      {
+        "file": "icon0.png",
+        "template": 0,
+        "x": 80,
+        "y": 106,
+        "score": 0.8045718669891357,
+        "rotation": 90,
+        "source": "region#1530"
+      },
+      {
+        "file": "icon1.png",
+        "template": 1,
+        "x": 156,
+        "y": 106,
+        "score": 0.6906635761260986,
+        "rotation": 10,
+        "source": "region#1278"
+      },
+      {
+        "file": "icon2.png",
+        "template": 2,
+        "x": 211,
+        "y": 56,
+        "score": 0.8205968737602234,
+        "rotation": 30,
+        "source": "region#485"
+      }
+    ]
+  },
+  "notes": "源方案对照同场景差分真值 3/3 命中"
+}

@@ -1,0 +1,35 @@
+{
+  "case_id": "qingtongbu/curve/009",
+  "vendor": "qingtongbu",
+  "vendor_name": "企讯通",
+  "type": "curve",
+  "type_name": "曲线滑动",
+  "variant": "classic",
+  "media": [
+    "image"
+  ],
+  "source_url": "http://www.qingtongbu.com/#experience",
+  "source_path": "qingtongbu/curve/sets/09",
+  "collected_at": "2026-07-24",
+  "prompt": "沿曲线拖动滑块",
+  "roles": {
+    "bg": "bg.jpg"
+  },
+  "answer_format": "path",
+  "status": "sample-only",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "none",
+    "accuracy": "unknown",
+    "notes": "未撰写求解器（仅采集）"
+  },
+  "review": {
+    "state": "not-applicable",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "notes": "覆盖批次：样本中立收录；结果未纳入。未撰写求解器（仅采集）",
+  "method": "NONE(VLM+ACT)",
+  "method_note": "未撰写；建议 VLM 理解曲线 + 轨迹"
+}

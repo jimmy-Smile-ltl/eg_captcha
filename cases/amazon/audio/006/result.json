@@ -1,0 +1,64 @@
+{
+  "case_id": "amazon/audio/006",
+  "kind": "text",
+  "status": "result-pending-review",
+  "evidence": "unverified",
+  "confidence": "low",
+  "answer": {
+    "kind": "text",
+    "text": "aircraft"
+  },
+  "solution": {
+    "set": "06",
+    "problem_type": "noisyneighbour-en-us",
+    "audio_s": 9.98,
+    "sep_s": 11.53,
+    "chosen_src": 0,
+    "sources": [
+      {
+        "src": 0,
+        "text": "Type one of the two following words spoken by me. Aircraft. Office.",
+        "score": 12
+      },
+      {
+        "src": 1,
+        "text": "Critique of pure reason, therefore, belong well that constitutes transcendental flow into empirical sources of cognition as possible a priori of objects, and",
+        "score": 2
+      }
+    ],
+    "decodings": [
+      "Type one of the two following words spoken by me. Aircraft. Office.",
+      "Type one of the two following words spoken by me."
+    ],
+    "candidates": [
+      "aircraft",
+      "office"
+    ],
+    "candidate_probs": [
+      {
+        "word": "aircraft",
+        "pos_from_instruction": 0,
+        "votes": 1,
+        "mean_prob": 0.9615
+      },
+      {
+        "word": "office",
+        "pos_from_instruction": 1,
+        "votes": 1,
+        "mean_prob": 0.6463
+      }
+    ],
+    "counts": {
+      "aircraft": 1,
+      "office": 1
+    },
+    "answer": "aircraft",
+    "asr_s": 22.21,
+    "review": {
+      "model": "large-v3-turbo",
+      "text": "Type one of the two following words spoken by name, aircraft, office.",
+      "tail": []
+    }
+  },
+  "notes": "两套 ASR 中仅一套有结果，需人工听音频"
+}

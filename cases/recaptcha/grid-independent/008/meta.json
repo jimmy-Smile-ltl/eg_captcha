@@ -1,0 +1,35 @@
+{
+  "case_id": "recaptcha/grid-independent/008",
+  "vendor": "recaptcha",
+  "vendor_name": "Google reCAPTCHA",
+  "type": "grid-independent",
+  "type_name": "独立子图九宫格",
+  "variant": "independent",
+  "media": [
+    "image"
+  ],
+  "source_url": "https://www.google.com/sorry/index",
+  "source_path": "google reCaptcha/sets/independent/14",
+  "collected_at": "2026-11-01",
+  "prompt": "请选择包含消防栓的所有图片。",
+  "roles": {
+    "bg": "bg.jpg"
+  },
+  "answer_format": "indices",
+  "status": "sample-only",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "exists",
+    "accuracy": "high",
+    "notes": "旧批次 33/33 离线、7/7 线上；新批次待补跑"
+  },
+  "review": {
+    "state": "pending",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "notes": "覆盖批次：样本中立收录；结果未纳入。源记录 33/33 离线、7/7 线上；待审",
+  "method": "VLM",
+  "method_note": "视觉 LLM 直接读格；无需训练"
+}

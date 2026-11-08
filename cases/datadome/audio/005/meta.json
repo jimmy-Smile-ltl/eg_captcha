@@ -1,0 +1,35 @@
+{
+  "case_id": "datadome/audio/005",
+  "vendor": "datadome",
+  "vendor_name": "DataDome",
+  "type": "audio",
+  "type_name": "音频听写",
+  "variant": "digits",
+  "media": [
+    "audio"
+  ],
+  "source_url": "https://www.klook.com/",
+  "source_path": "datadome/audio-6digit/sets/08",
+  "collected_at": "unknown",
+  "prompt": "听音频并输入内容",
+  "roles": {
+    "audio": "audio.wav"
+  },
+  "answer_format": "text",
+  "status": "sample-only",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "exists",
+    "accuracy": "high",
+    "notes": "源方案 20/20；待审"
+  },
+  "review": {
+    "state": "pending",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "notes": "覆盖批次：样本中立收录；结果未纳入。源方案 20/20；待审",
+  "method": "AUDIO+ASR",
+  "method_note": "音频 DSP 模板 1-NN；Whisper 仅作标注/复核"
+}

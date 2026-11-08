@@ -1,0 +1,23 @@
+# OS / editor junk
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# logs / temp
+*.log
+*.tmp
+*.bak
+
+# local skill path (must not be published)
+skill/eg-captcha/references/local-path.md
+
+# tooling artifacts (repo itself stays zero-code)
+__pycache__/
+*.pyc
+.venv/
+node_modules/
+
+# local large assets
+cloud_assets/

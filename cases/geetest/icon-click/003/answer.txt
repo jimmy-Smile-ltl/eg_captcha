@@ -1,0 +1,4 @@
+answer: 1:(126,160); 2:(128,29); 3:(53,63)
+unit: px
+source: offline-verified
+note: 300x200 背景；按 icon0→icon1→icon2 顺序点击；分数 0.760/0.764/0.881

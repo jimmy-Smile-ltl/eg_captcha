@@ -1,0 +1,35 @@
+{
+  "case_id": "amazon/grid/004",
+  "vendor": "amazon",
+  "vendor_name": "Amazon AWS WAF",
+  "type": "grid",
+  "type_name": "九宫格多选",
+  "variant": "grid-5",
+  "media": [
+    "image"
+  ],
+  "source_url": "https://www.amazon.com/",
+  "source_path": "amazon/grid_5/sets/09",
+  "collected_at": "2026-11-01",
+  "prompt": "选择全部 床",
+  "roles": {
+    "bg": "bg.jpg"
+  },
+  "answer_format": "indices",
+  "status": "sample-only",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "exists",
+    "accuracy": "high",
+    "notes": "源记录 30/30 离线、20/20 线上；待审"
+  },
+  "review": {
+    "state": "pending",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "notes": "覆盖批次：样本中立收录；结果未纳入。源记录 30/30 离线、20/20 线上；待审",
+  "method": "VLM",
+  "method_note": "视觉 LLM 直接输出格子编号；无需训练检测器"
+}

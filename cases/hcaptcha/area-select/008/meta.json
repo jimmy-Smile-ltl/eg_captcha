@@ -1,0 +1,36 @@
+{
+  "case_id": "hcaptcha/area-select/008",
+  "vendor": "hcaptcha",
+  "vendor_name": "hCaptcha",
+  "type": "area-select",
+  "type_name": "区域点选",
+  "variant": "island_not_visited",
+  "media": [
+    "image"
+  ],
+  "source_url": "https://accounts.hcaptcha.com/demo",
+  "source_path": "hcaptcha/hcaptcha_area_select_island_not_visited/sets/01",
+  "collected_at": "2026-11-07",
+  "prompt": "Click the island the moving animal never visited",
+  "roles": {
+    "bg": "bg.png",
+    "aux": "aux-01.png"
+  },
+  "answer_format": "points",
+  "status": "sample-only",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "none",
+    "accuracy": "unknown",
+    "notes": "只采集题面，无验证答案"
+  },
+  "review": {
+    "state": "not-applicable",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "notes": "覆盖批次：样本中立收录；结果未纳入。只采集题面，无验证答案",
+  "method": "NONE(VLM)",
+  "method_note": "未撰写；建议 VLM 直接读图，起步便宜"
+}

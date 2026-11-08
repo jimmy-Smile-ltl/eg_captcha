@@ -1,0 +1,35 @@
+{
+  "case_id": "meituan/icon-click/009",
+  "vendor": "meituan",
+  "vendor_name": "美团 Yoda",
+  "type": "icon-click",
+  "type_name": "图标点选",
+  "variant": "130",
+  "media": [
+    "image"
+  ],
+  "source_url": "https://verify.meituan.com/v2",
+  "source_path": "meituan/icon_130/sets/61",
+  "collected_at": "unknown",
+  "prompt": "按顺序点击图中图标",
+  "roles": {
+    "bg": "bg.png"
+  },
+  "answer_format": "points",
+  "status": "sample-only",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "partial",
+    "accuracy": "high",
+    "notes": "图像 83/83；提交闭环未打通"
+  },
+  "review": {
+    "state": "pending",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "notes": "覆盖批次：样本中立收录；结果未纳入。图像 83/83；提交闭环未打通",
+  "method": "CV",
+  "method_note": "模板/滑窗匹配；无 LLM"
+}

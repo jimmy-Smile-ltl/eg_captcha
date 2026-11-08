@@ -1,0 +1,4 @@
+answer: aircraft
+unit: text
+source: unverified
+note: ASR 建议答案（small.en）；两套 ASR 中仅一套有结果，需人工听音频

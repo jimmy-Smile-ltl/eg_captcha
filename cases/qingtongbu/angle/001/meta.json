@@ -1,0 +1,35 @@
+{
+  "case_id": "qingtongbu/angle/001",
+  "vendor": "qingtongbu",
+  "vendor_name": "企讯通",
+  "type": "angle",
+  "type_name": "角度验证",
+  "variant": "classic",
+  "media": [
+    "image"
+  ],
+  "source_url": "http://www.qingtongbu.com/#experience",
+  "source_path": "qingtongbu/angle/sets/01",
+  "collected_at": "2026-07-23",
+  "prompt": "拖动滑块，调整到指定角度",
+  "roles": {
+    "bg": "bg.jpg"
+  },
+  "answer_format": "angle",
+  "status": "sample-only",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "weak",
+    "accuracy": "low",
+    "notes": "MAE 5.56°，通过率 73.33%；参考价值有限"
+  },
+  "review": {
+    "state": "pending",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "notes": "覆盖批次：样本中立收录；结果未纳入。MAE 5.56°，通过率 73.33%；参考价值有限",
+  "method": "CV",
+  "method_note": "角度估计；MAE 5.56°，通过率 73%"
+}

@@ -1,0 +1,67 @@
+{
+  "case_id": "amazon/audio/004",
+  "kind": "text",
+  "status": "result-pending-review",
+  "evidence": "unverified",
+  "confidence": "medium",
+  "answer": {
+    "kind": "text",
+    "text": "channel"
+  },
+  "solution": {
+    "set": "04",
+    "problem_type": "noisyneighbour-en-us",
+    "audio_s": 9.98,
+    "sep_s": 11.99,
+    "chosen_src": 0,
+    "sources": [
+      {
+        "src": 0,
+        "text": "Type one of the two following words spoken by me. Channel. Operator.",
+        "score": 12
+      },
+      {
+        "src": 1,
+        "text": "And now the question whether we have only to be found to fail, at least for a canon of pure construction of all these radical conceptions, as well as of the faculty of pure reason.",
+        "score": 2
+      }
+    ],
+    "decodings": [
+      "Type one of the two following words spoken by me. Channel. Operator.",
+      "Type one of the two following words spoken by me."
+    ],
+    "candidates": [
+      "channel",
+      "operator"
+    ],
+    "candidate_probs": [
+      {
+        "word": "channel",
+        "pos_from_instruction": 0,
+        "votes": 1,
+        "mean_prob": 0.5551
+      },
+      {
+        "word": "operator",
+        "pos_from_instruction": 1,
+        "votes": 1,
+        "mean_prob": 0.8351
+      }
+    ],
+    "counts": {
+      "channel": 1,
+      "operator": 1
+    },
+    "answer": "channel",
+    "asr_s": 23.29,
+    "review": {
+      "model": "large-v3-turbo",
+      "text": "Type one of the two following words spoken by me. Channel. Operator.",
+      "tail": [
+        "channel",
+        "operator"
+      ]
+    }
+  },
+  "notes": "两套 ASR 一致，仍待人工审查"
+}

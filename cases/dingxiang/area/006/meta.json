@@ -1,0 +1,35 @@
+{
+  "case_id": "dingxiang/area/006",
+  "vendor": "dingxiang",
+  "vendor_name": "顶象",
+  "type": "area",
+  "type_name": "面积验证",
+  "variant": "classic",
+  "media": [
+    "image"
+  ],
+  "source_url": "https://www.dingxiang-inc.com/business/captcha",
+  "source_path": "dingxiang/area/sets/06",
+  "collected_at": "unknown",
+  "prompt": "点击指定面积的区域",
+  "roles": {
+    "bg": "bg.webp"
+  },
+  "answer_format": "points",
+  "status": "sample-only",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "exists",
+    "accuracy": "high",
+    "notes": "源记录已攻克；待审"
+  },
+  "review": {
+    "state": "pending",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "notes": "覆盖批次：样本中立收录；结果未纳入。源记录已攻克；待审",
+  "method": "CV",
+  "method_note": "K-Means + Watershed；无 LLM"
+}

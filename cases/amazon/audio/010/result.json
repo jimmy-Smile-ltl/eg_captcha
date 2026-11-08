@@ -1,0 +1,67 @@
+{
+  "case_id": "amazon/audio/010",
+  "kind": "text",
+  "status": "result-pending-review",
+  "evidence": "unverified",
+  "confidence": "medium",
+  "answer": {
+    "kind": "text",
+    "text": "economic"
+  },
+  "solution": {
+    "set": "10",
+    "problem_type": "noisyneighbour-en-us",
+    "audio_s": 9.98,
+    "sep_s": 12.16,
+    "chosen_src": 1,
+    "sources": [
+      {
+        "src": 0,
+        "text": "The above problem is that the foundation names instruction of all the act of others with his own, which have themselves just as little foundations.",
+        "score": 2
+      },
+      {
+        "src": 1,
+        "text": "Type one of the two following words spoken by me, economic training.",
+        "score": 10
+      }
+    ],
+    "decodings": [
+      "Type one of the two following words spoken by me, economic training.",
+      "Type one of the two following words spoken by me economic training"
+    ],
+    "candidates": [
+      "economic",
+      "training"
+    ],
+    "candidate_probs": [
+      {
+        "word": "economic",
+        "pos_from_instruction": 0,
+        "votes": 2,
+        "mean_prob": 0.4273
+      },
+      {
+        "word": "training",
+        "pos_from_instruction": 1,
+        "votes": 2,
+        "mean_prob": 0.8423
+      }
+    ],
+    "counts": {
+      "economic": 2,
+      "training": 2
+    },
+    "answer": "economic",
+    "asr_s": 23.98,
+    "review": {
+      "model": "large-v3-turbo",
+      "text": "Type one of the two following words spoken by me, economic training.",
+      "tail": [
+        "economic",
+        "training"
+      ]
+    }
+  },
+  "notes": "两套 ASR 一致，仍待人工审查"
+}

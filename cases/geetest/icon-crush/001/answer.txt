@@ -1,0 +1,4 @@
+answer: swap=(0,0)<->(0,1); win_color=1; win_line=(0,0)-(1,0)-(2,0)
+unit: 棋盘格 (row,col)，0-based
+source: offline-verified
+note: 3x3 棋盘；交换后同色三连；源解 2 个，取第一个

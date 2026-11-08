@@ -1,0 +1,38 @@
+{
+  "case_id": "geetest/icon-click/003",
+  "vendor": "geetest",
+  "vendor_name": "极验 GeeTest",
+  "type": "icon-click",
+  "type_name": "图标点选",
+  "variant": "v4/icon",
+  "media": [
+    "image"
+  ],
+  "source_url": "https://www.geetest.com/en/adaptive-captcha-demo",
+  "source_path": "geetest/icon/sets/03",
+  "collected_at": "2026-07-23",
+  "prompt": "按顺序点击背景图中的 3 个图标",
+  "roles": {
+    "bg": "bg.jpg",
+    "aux": "aux-01.png",
+    "annotated": "annotated.png"
+  },
+  "answer_format": "points",
+  "status": "result-pending-review",
+  "evidence": "offline-verified",
+  "confidence": "medium",
+  "notes": "源方案该组 2/3 命中；整体 23/27 ≈ 85%",
+  "solver": {
+    "status": "exists",
+    "accuracy": "medium",
+    "notes": "源方案 23/27≈85%；结果待人工审查"
+  },
+  "review": {
+    "state": "pending",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "method": "CV",
+  "method_note": "颜色连通 + 轮廓 chamfer + 匈牙利；无 LLM"
+}

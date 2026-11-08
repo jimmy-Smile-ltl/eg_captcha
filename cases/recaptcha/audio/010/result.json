@@ -1,0 +1,41 @@
+{
+  "case_id": "recaptcha/audio/010",
+  "kind": "text",
+  "status": "result-pending-review",
+  "evidence": "unverified",
+  "confidence": "medium",
+  "answer": {
+    "kind": "text",
+    "text": "Doing the enchiladas."
+  },
+  "solution": {
+    "set": "10",
+    "set_path": "audio/10",
+    "transcript": "Doing the enchiladas.",
+    "words": [
+      [
+        "Doing",
+        0.0,
+        1.74
+      ],
+      [
+        "the",
+        1.74,
+        1.96
+      ],
+      [
+        "enchiladas.",
+        1.96,
+        2.56
+      ]
+    ],
+    "duration": 4.2,
+    "language_probability": 1.0,
+    "prompt": "Press PLAY to listen / Enter what you hear",
+    "model": "small.en",
+    "elapsed_s": 3.7,
+    "solved_at": "2026-11-07 21:55:20",
+    "note": "音频题：Whisper 转写结果，可直接作为 #audio-response 提交"
+  },
+  "notes": "Whisper 转写，待人工听音频核对"
+}

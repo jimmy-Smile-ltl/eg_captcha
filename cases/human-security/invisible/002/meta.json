@@ -1,0 +1,35 @@
+{
+  "case_id": "human-security/invisible/002",
+  "vendor": "human-security",
+  "vendor_name": "HUMAN Security",
+  "type": "invisible",
+  "type_name": "无感",
+  "variant": "invisible",
+  "media": [
+    "image"
+  ],
+  "source_url": "https://www.walmart.com/blocked",
+  "source_path": "HUMAN Security（PerimeterX）/invisible/samples/walmart_2026-11-01",
+  "collected_at": "2026-11-01",
+  "prompt": "无感验证，无题面",
+  "roles": {
+    "bg": "bg.png"
+  },
+  "answer_format": "none",
+  "status": "sample-only",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "browser",
+    "accuracy": "high",
+    "notes": "零注入 Chrome 可过；无题面"
+  },
+  "review": {
+    "state": "pending",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "notes": "覆盖批次：样本中立收录；结果未纳入。零注入 Chrome 可过；无题面",
+  "method": "ACT",
+  "method_note": "浏览器/环境放行；无题面"
+}

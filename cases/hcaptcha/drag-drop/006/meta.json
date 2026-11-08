@@ -1,0 +1,36 @@
+{
+  "case_id": "hcaptcha/drag-drop/006",
+  "vendor": "hcaptcha",
+  "vendor_name": "hCaptcha",
+  "type": "drag-drop",
+  "type_name": "拖拽拼块",
+  "variant": "pattern_fill",
+  "media": [
+    "image"
+  ],
+  "source_url": "https://accounts.hcaptcha.com/demo",
+  "source_path": "hcaptcha/hcaptcha_drag_drop_pattern_fill/sets/60",
+  "collected_at": "2026-11-05",
+  "prompt": "Place the correct item to finish the pattern",
+  "roles": {
+    "bg": "bg.png",
+    "aux": "aux-01.png"
+  },
+  "answer_format": "points",
+  "status": "sample-only",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "none",
+    "accuracy": "unknown",
+    "notes": "只采集题面，无验证答案"
+  },
+  "review": {
+    "state": "not-applicable",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "notes": "覆盖批次：样本中立收录；结果未纳入。只采集题面，无验证答案",
+  "method": "NONE(VLM)",
+  "method_note": "未撰写；建议 VLM 读图 + 拖拽"
+}

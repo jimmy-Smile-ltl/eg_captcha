@@ -1,0 +1,22 @@
+{
+  "case_id": "geetest/slide/004",
+  "kind": "slide",
+  "status": "solved",
+  "evidence": "offline-verified",
+  "confidence": "high",
+  "answer": {
+    "kind": "slide",
+    "gap_x": 129,
+    "gap_y": 103,
+    "ypos": 102
+  },
+  "solution": {
+    "ypos": 102,
+    "gap": [
+      129,
+      103
+    ],
+    "score": 0.2186865657567978
+  },
+  "notes": "Canny 边缘 + 归一化互相关模板匹配；gap 为缺口左上角"
+}

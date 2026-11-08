@@ -1,0 +1,4 @@
+answer: gap_x=129, gap_y=103, ypos=102
+unit: px
+source: offline-verified
+note: 300x200 背景；缺口左上角 (129,103)；ypos=102 为 API 给定，容差 ±4px

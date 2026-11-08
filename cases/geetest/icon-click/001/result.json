@@ -1,0 +1,65 @@
+{
+  "case_id": "geetest/icon-click/001",
+  "kind": "click",
+  "status": "solved",
+  "evidence": "unverified",
+  "confidence": "medium",
+  "answer": {
+    "kind": "click",
+    "points": [
+      {
+        "order": 1,
+        "x": 133,
+        "y": 58,
+        "label": "icon0",
+        "score": 0.8453094959259033
+      },
+      {
+        "order": 2,
+        "x": 215,
+        "y": 124,
+        "label": "icon1",
+        "score": 0.8291342258453369
+      },
+      {
+        "order": 3,
+        "x": 53,
+        "y": 121,
+        "label": "icon2",
+        "score": 0.7719224095344543
+      }
+    ]
+  },
+  "solution": {
+    "icons": [
+      {
+        "file": "icon0.png",
+        "template": 0,
+        "x": 133,
+        "y": 58,
+        "score": 0.8453094959259033,
+        "rotation": 10,
+        "source": "region#24"
+      },
+      {
+        "file": "icon1.png",
+        "template": 1,
+        "x": 215,
+        "y": 124,
+        "score": 0.8291342258453369,
+        "rotation": 50,
+        "source": "region#261"
+      },
+      {
+        "file": "icon2.png",
+        "template": 2,
+        "x": 53,
+        "y": 121,
+        "score": 0.7719224095344543,
+        "rotation": 350,
+        "source": "region#203"
+      }
+    ]
+  },
+  "notes": "源方案未给该组真值；整体 23/27 ≈ 85%"
+}

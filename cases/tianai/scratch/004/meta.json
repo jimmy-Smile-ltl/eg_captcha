@@ -1,0 +1,36 @@
+{
+  "case_id": "tianai/scratch/004",
+  "vendor": "tianai",
+  "vendor_name": "天爱",
+  "type": "scratch",
+  "type_name": "刮刮卡",
+  "variant": "classic",
+  "media": [
+    "image"
+  ],
+  "source_url": "https://captcha.tianai.cloud/",
+  "source_path": "tianai/scrape/sets/1360",
+  "collected_at": "unknown",
+  "prompt": "拖动滑块刮开涂层",
+  "roles": {
+    "bg": "bg.jpg",
+    "aux": "aux-01.png"
+  },
+  "answer_format": "points",
+  "status": "sample-only",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "weak",
+    "accuracy": "low",
+    "notes": "提示图匹配精度不够；参考价值有限"
+  },
+  "review": {
+    "state": "pending",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "notes": "覆盖批次：样本中立收录；结果未纳入。提示图匹配精度不够；参考价值有限",
+  "method": "CV",
+  "method_note": "提示图匹配；精度不足"
+}

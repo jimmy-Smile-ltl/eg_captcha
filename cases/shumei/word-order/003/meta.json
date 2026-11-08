@@ -1,0 +1,35 @@
+{
+  "case_id": "shumei/word-order/003",
+  "vendor": "shumei",
+  "vendor_name": "数美",
+  "type": "word-order",
+  "type_name": "语序点选",
+  "variant": "classic",
+  "media": [
+    "image"
+  ],
+  "source_url": "https://www.ishumei.com/new/product/tw/code",
+  "source_path": "shumei/word-order/sets/03",
+  "collected_at": "unknown",
+  "prompt": "按正确语序点击文字",
+  "roles": {
+    "bg": "bg.jpg"
+  },
+  "answer_format": "points+order",
+  "status": "sample-only",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "none",
+    "accuracy": "unknown",
+    "notes": "未撰写求解器（仅采集）"
+  },
+  "review": {
+    "state": "not-applicable",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "notes": "覆盖批次：样本中立收录；结果未纳入。未撰写求解器（仅采集）",
+  "method": "NONE(OCR+VLM)",
+  "method_note": "未撰写；建议 OCR + VLM 语序"
+}

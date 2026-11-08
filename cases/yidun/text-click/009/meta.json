@@ -1,0 +1,35 @@
+{
+  "case_id": "yidun/text-click/009",
+  "vendor": "yidun",
+  "vendor_name": "网易易盾",
+  "type": "text-click",
+  "type_name": "文字点选",
+  "variant": "enhanced",
+  "media": [
+    "image"
+  ],
+  "source_url": "https://dun.163.com/trial",
+  "source_path": "yidun/text_click_new/sets/05",
+  "collected_at": "unknown",
+  "prompt": "按顺序点击图中文字",
+  "roles": {
+    "bg": "bg.jpg"
+  },
+  "answer_format": "points",
+  "status": "sample-only",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "exists",
+    "accuracy": "high",
+    "notes": "源方案 12/12；结果待人工审查"
+  },
+  "review": {
+    "state": "pending",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "notes": "覆盖批次：样本中立收录；结果未纳入。源方案 12/12；结果待人工审查",
+  "method": "DET+OCR+VLM",
+  "method_note": "YOLO 检测 + Siamese 字形 + VLM 仲裁；VLM 只对分歧点调用"
+}

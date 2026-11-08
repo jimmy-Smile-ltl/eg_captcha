@@ -1,0 +1,46 @@
+{
+  "case_id": "recaptcha/audio/011",
+  "kind": "text",
+  "status": "result-pending-review",
+  "evidence": "unverified",
+  "confidence": "medium",
+  "answer": {
+    "kind": "text",
+    "text": "Please, please, please subscribe."
+  },
+  "solution": {
+    "set": "11",
+    "set_path": "audio/11",
+    "transcript": "Please, please, please subscribe.",
+    "words": [
+      [
+        "Please,",
+        1.04,
+        1.92
+      ],
+      [
+        "please,",
+        2.36,
+        2.36
+      ],
+      [
+        "please",
+        2.6,
+        2.6
+      ],
+      [
+        "subscribe.",
+        2.6,
+        2.96
+      ]
+    ],
+    "duration": 4.32,
+    "language_probability": 1.0,
+    "prompt": "Press PLAY to listen / Enter what you hear",
+    "model": "small.en",
+    "elapsed_s": 3.9,
+    "solved_at": "2026-11-07 21:55:24",
+    "note": "音频题：Whisper 转写结果，可直接作为 #audio-response 提交"
+  },
+  "notes": "Whisper 转写，待人工听音频核对"
+}

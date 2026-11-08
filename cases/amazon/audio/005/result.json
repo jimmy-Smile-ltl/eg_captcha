@@ -1,0 +1,75 @@
+{
+  "case_id": "amazon/audio/005",
+  "kind": "text",
+  "status": "result-pending-review",
+  "evidence": "unverified",
+  "confidence": "medium",
+  "answer": {
+    "kind": "text",
+    "text": "unless"
+  },
+  "solution": {
+    "set": "05",
+    "problem_type": "noisyneighbour-en-us",
+    "audio_s": 9.98,
+    "sep_s": 11.11,
+    "chosen_src": 1,
+    "sources": [
+      {
+        "src": 0,
+        "text": "After all, we have only to look at the foundation and construction of a science in general of synthesis a priori, with which alone we have to do with your mere vanity of great energy.",
+        "score": 2
+      },
+      {
+        "src": 1,
+        "text": "Type one of the two following words spoken by me, unless, despite.",
+        "score": 10
+      }
+    ],
+    "decodings": [
+      "Type one of the two following words spoken by me, unless, despite.",
+      "Type one of the two following words spoken by me, in left."
+    ],
+    "candidates": [
+      "unless",
+      "left",
+      "despite"
+    ],
+    "candidate_probs": [
+      {
+        "word": "unless",
+        "pos_from_instruction": 0,
+        "votes": 1,
+        "mean_prob": 0.8256
+      },
+      {
+        "word": "left",
+        "pos_from_instruction": 0,
+        "votes": 1,
+        "mean_prob": 0.1936
+      },
+      {
+        "word": "despite",
+        "pos_from_instruction": 1,
+        "votes": 1,
+        "mean_prob": 0.9313
+      }
+    ],
+    "counts": {
+      "unless": 1,
+      "left": 1,
+      "despite": 1
+    },
+    "answer": "unless",
+    "asr_s": 22.03,
+    "review": {
+      "model": "large-v3-turbo",
+      "text": "type one of the two following words spoken by me unless despite",
+      "tail": [
+        "unless",
+        "despite"
+      ]
+    }
+  },
+  "notes": "两套 ASR 一致，仍待人工审查"
+}

@@ -1,0 +1,35 @@
+{
+  "case_id": "yidun/word-group/012",
+  "vendor": "yidun",
+  "vendor_name": "网易易盾",
+  "type": "word-group",
+  "type_name": "语序选词",
+  "variant": "classic",
+  "media": [
+    "image"
+  ],
+  "source_url": "https://dun.163.com/trial",
+  "source_path": "yidun/word-group/sets/24",
+  "collected_at": "unknown",
+  "prompt": "选出并排列正确词语",
+  "roles": {
+    "bg": "bg.jpg"
+  },
+  "answer_format": "points+order",
+  "status": "sample-only",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "exists",
+    "accuracy": "high",
+    "notes": "源 llm_solver 12/12；待审"
+  },
+  "review": {
+    "state": "pending",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "notes": "覆盖批次：样本中立收录；结果未纳入。未撰写求解器（仅采集）",
+  "method": "VLM",
+  "method_note": "llm_solver 选词/排序；无需训练"
+}

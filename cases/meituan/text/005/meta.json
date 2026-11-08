@@ -1,0 +1,35 @@
+{
+  "case_id": "meituan/text/005",
+  "vendor": "meituan",
+  "vendor_name": "美团 Yoda",
+  "type": "text",
+  "type_name": "字符识别",
+  "variant": "1",
+  "media": [
+    "image"
+  ],
+  "source_url": "https://verify.meituan.com/v2",
+  "source_path": "meituan/image_1/sets/1613",
+  "collected_at": "unknown",
+  "prompt": "输入或识别图中字符",
+  "roles": {
+    "bg": "bg.jpg"
+  },
+  "answer_format": "text",
+  "status": "sample-only",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "partial",
+    "accuracy": "low",
+    "notes": "字符 51.6% / 全对 13.2%；提交未打通"
+  },
+  "review": {
+    "state": "pending",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "notes": "覆盖批次：样本中立收录；结果未纳入。字符 51.6% / 全对 13.2%；提交未打通",
+  "method": "DET+OCR",
+  "method_note": "YOLO26 字符检测/OCR；效果差"
+}

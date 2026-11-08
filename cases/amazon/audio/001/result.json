@@ -1,0 +1,67 @@
+{
+  "case_id": "amazon/audio/001",
+  "kind": "text",
+  "status": "result-pending-review",
+  "evidence": "unverified",
+  "confidence": "low",
+  "answer": {
+    "kind": "text",
+    "text": "doubled"
+  },
+  "solution": {
+    "set": "01",
+    "problem_type": "noisyneighbour-en-us",
+    "audio_s": 9.98,
+    "sep_s": 11.15,
+    "chosen_src": 0,
+    "sources": [
+      {
+        "src": 0,
+        "text": "Type one of the two following words spoken by me. Doubled. Stokes.",
+        "score": 12
+      },
+      {
+        "src": 1,
+        "text": "by the fact that this great problem can perhaps even the difference between analytical and algebraic of objects that is practical, so far as regards it.",
+        "score": 2
+      }
+    ],
+    "decodings": [
+      "Type one of the two following words spoken by me. Doubled. Stokes.",
+      "Type one of the two following words spoken by me."
+    ],
+    "candidates": [
+      "doubled",
+      "stokes"
+    ],
+    "candidate_probs": [
+      {
+        "word": "doubled",
+        "pos_from_instruction": 0,
+        "votes": 1,
+        "mean_prob": 0.6234
+      },
+      {
+        "word": "stokes",
+        "pos_from_instruction": 1,
+        "votes": 1,
+        "mean_prob": 0.5672
+      }
+    ],
+    "counts": {
+      "doubled": 1,
+      "stokes": 1
+    },
+    "answer": "doubled",
+    "asr_s": 23.99,
+    "review": {
+      "model": "large-v3-turbo",
+      "text": "Type one of the two following words spoken by me. Devil. Stunk.",
+      "tail": [
+        "devil",
+        "stunk"
+      ]
+    }
+  },
+  "notes": "两套 ASR 不一致，需人工听音频"
+}

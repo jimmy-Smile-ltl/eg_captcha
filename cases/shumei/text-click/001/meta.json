@@ -1,0 +1,35 @@
+{
+  "case_id": "shumei/text-click/001",
+  "vendor": "shumei",
+  "vendor_name": "数美",
+  "type": "text-click",
+  "type_name": "文字点选",
+  "variant": "classic",
+  "media": [
+    "image"
+  ],
+  "source_url": "https://www.ishumei.com/new/product/tw/code",
+  "source_path": "shumei/text-click/sets/01",
+  "collected_at": "unknown",
+  "prompt": "按顺序点击图中文字",
+  "roles": {
+    "bg": "bg.jpg"
+  },
+  "answer_format": "points",
+  "status": "sample-only",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "weak",
+    "accuracy": "low",
+    "notes": "风格化字体 OCR 0%，bbox 偏差大；参考价值有限"
+  },
+  "review": {
+    "state": "pending",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "notes": "覆盖批次：样本中立收录；结果未纳入。风格化字体 OCR 0%，bbox 偏差大；参考价值有限",
+  "method": "DET+OCR+VLM",
+  "method_note": "YOLO + OCR/Siamese + LLM 版；风格化字体导致效果差"
+}

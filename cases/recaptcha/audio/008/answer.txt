@@ -1,0 +1,4 @@
+answer: Give them instructions.
+unit: text
+source: unverified
+note: Whisper small.en 转写；源记录线上 15/15；单题待人工听音频

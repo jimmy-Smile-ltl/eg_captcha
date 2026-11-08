@@ -1,0 +1,35 @@
+{
+  "case_id": "hcaptcha/binary/002",
+  "vendor": "hcaptcha",
+  "vendor_name": "hCaptcha",
+  "type": "binary",
+  "type_name": "九宫格二分类",
+  "variant": "coffee_shop",
+  "media": [
+    "image"
+  ],
+  "source_url": "https://accounts.hcaptcha.com/demo",
+  "source_path": "hcaptcha/hcaptcha_binary_coffee_shop/sets/39",
+  "collected_at": "2026-11-06",
+  "prompt": "Click on things you can buy at a coffee shop",
+  "roles": {
+    "bg": "bg.png"
+  },
+  "answer_format": "indices",
+  "status": "sample-only",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "none",
+    "accuracy": "unknown",
+    "notes": "只采集题面，无验证答案"
+  },
+  "review": {
+    "state": "not-applicable",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "notes": "覆盖批次：样本中立收录；结果未纳入。只采集题面，无验证答案",
+  "method": "NONE(VLM)",
+  "method_note": "未撰写；建议 VLM 读格，起步便宜"
+}

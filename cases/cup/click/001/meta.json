@@ -1,0 +1,36 @@
+{
+  "case_id": "cup/click/001",
+  "vendor": "cup",
+  "vendor_name": "中国银联",
+  "type": "click",
+  "type_name": "通用点选",
+  "variant": "classic",
+  "media": [
+    "image"
+  ],
+  "source_url": "https://captcha.cup.com.cn/",
+  "source_path": "cup/click/sets/01",
+  "collected_at": "2026-07-23",
+  "prompt": "点击图中指定目标",
+  "roles": {
+    "bg": "bg.png",
+    "aux": "aux-01.png"
+  },
+  "answer_format": "points",
+  "status": "sample-only",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "none",
+    "accuracy": "unknown",
+    "notes": "有标注，未形成可用求解器"
+  },
+  "review": {
+    "state": "not-applicable",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "notes": "覆盖批次：样本中立收录；结果未纳入。有标注，未形成可用求解器",
+  "method": "NONE(VLM)",
+  "method_note": "未撰写；建议 VLM 直接读图，起步便宜"
+}

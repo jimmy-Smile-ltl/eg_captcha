@@ -1,0 +1,35 @@
+{
+  "case_id": "dingxiang/spatial/002",
+  "vendor": "dingxiang",
+  "vendor_name": "顶象",
+  "type": "spatial",
+  "type_name": "空间推理",
+  "variant": "classic",
+  "media": [
+    "image"
+  ],
+  "source_url": "https://www.dingxiang-inc.com/business/captcha",
+  "source_path": "dingxiang/spatial/sets/02",
+  "collected_at": "unknown",
+  "prompt": "根据空间关系点击目标",
+  "roles": {
+    "bg": "bg.webp"
+  },
+  "answer_format": "points",
+  "status": "sample-only",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "exists",
+    "accuracy": "high",
+    "notes": "源总表称 12/12，类型表标 —；待人工审查"
+  },
+  "review": {
+    "state": "pending",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "notes": "覆盖批次：样本中立收录；结果未纳入。受光比判别 + 字形匹配，12/12；待审",
+  "method": "CV",
+  "method_note": "受光比平面/立体判别 + 字形匹配；无 LLM"
+}

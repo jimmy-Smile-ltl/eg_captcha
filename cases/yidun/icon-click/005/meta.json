@@ -1,0 +1,35 @@
+{
+  "case_id": "yidun/icon-click/005",
+  "vendor": "yidun",
+  "vendor_name": "网易易盾",
+  "type": "icon-click",
+  "type_name": "图标点选",
+  "variant": "classic",
+  "media": [
+    "image"
+  ],
+  "source_url": "https://dun.163.com/trial",
+  "source_path": "yidun/icon-click/sets/05",
+  "collected_at": "unknown",
+  "prompt": "按顺序点击图中图标",
+  "roles": {
+    "bg": "bg.jpg"
+  },
+  "answer_format": "points",
+  "status": "sample-only",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "exists",
+    "accuracy": "unknown",
+    "notes": "源目录有求解输出，未统一验证"
+  },
+  "review": {
+    "state": "pending",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "notes": "覆盖批次：样本中立收录；结果未纳入。源目录有求解输出，未统一验证",
+  "method": "VLM+CV",
+  "method_note": "主路径视觉 LLM 读图，CV 兜底；VLM 无需训练，起步便宜"
+}

@@ -1,0 +1,36 @@
+{
+  "case_id": "meituan/slide/012",
+  "vendor": "meituan",
+  "vendor_name": "美团 Yoda",
+  "type": "slide",
+  "type_name": "滑动拼图",
+  "variant": "163",
+  "media": [
+    "image"
+  ],
+  "source_url": "https://verify.meituan.com/v2",
+  "source_path": "meituan/slider_163/sets/90",
+  "collected_at": "unknown",
+  "prompt": "拖动滑块，将拼图块补入缺口",
+  "roles": {
+    "bg": "bg.jpg",
+    "aux": "aux-01.png"
+  },
+  "answer_format": "offset-x",
+  "status": "sample-only",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "partial",
+    "accuracy": "high",
+    "notes": "图像 90/90；提交闭环未打通；71 无图仅静态逆向"
+  },
+  "review": {
+    "state": "pending",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "notes": "覆盖批次：样本中立收录；结果未纳入。图像 90/90；提交闭环未打通；71 无图仅静态逆向",
+  "method": "CV",
+  "method_note": "边缘 + 暗填充双信号；无 LLM"
+}

@@ -1,0 +1,36 @@
+{
+  "case_id": "shumei/slide/003",
+  "vendor": "shumei",
+  "vendor_name": "数美",
+  "type": "slide",
+  "type_name": "滑动拼图",
+  "variant": "classic",
+  "media": [
+    "image"
+  ],
+  "source_url": "https://www.ishumei.com/new/product/tw/code",
+  "source_path": "shumei/slide/sets/03",
+  "collected_at": "unknown",
+  "prompt": "拖动滑块，将拼图块补入缺口",
+  "roles": {
+    "bg": "bg.jpg",
+    "aux": "aux-01.png"
+  },
+  "answer_format": "offset-x",
+  "status": "sample-only",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "weak",
+    "accuracy": "low",
+    "notes": "服务端轨迹 ML 100% 拒绝模拟轨迹；图像答案无意义"
+  },
+  "review": {
+    "state": "pending",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "notes": "覆盖批次：样本中立收录；结果未纳入。服务端轨迹 ML 100% 拒绝模拟轨迹；图像答案无意义",
+  "method": "CV+ACT",
+  "method_note": "CV 定位缺口 + 轨迹；服务端轨迹 ML 拒绝，效果差"
+}

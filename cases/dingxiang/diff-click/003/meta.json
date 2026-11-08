@@ -1,0 +1,35 @@
+{
+  "case_id": "dingxiang/diff-click/003",
+  "vendor": "dingxiang",
+  "vendor_name": "顶象",
+  "type": "diff-click",
+  "type_name": "差异点击",
+  "variant": "classic",
+  "media": [
+    "image"
+  ],
+  "source_url": "https://www.dingxiang-inc.com/business/captcha",
+  "source_path": "dingxiang/diff-click/sets/03",
+  "collected_at": "unknown",
+  "prompt": "找出并点击差异位置",
+  "roles": {
+    "bg": "bg.webp"
+  },
+  "answer_format": "points",
+  "status": "sample-only",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "exists",
+    "accuracy": "high",
+    "notes": "源记录已攻克；待审"
+  },
+  "review": {
+    "state": "pending",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "notes": "覆盖批次：样本中立收录；结果未纳入。源记录已攻克；待审",
+  "method": "CV",
+  "method_note": "Canny + SSIM 离群；无 LLM"
+}

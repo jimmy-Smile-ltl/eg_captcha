@@ -1,0 +1,35 @@
+{
+  "case_id": "recaptcha/grid-split/012",
+  "vendor": "recaptcha",
+  "vendor_name": "Google reCAPTCHA",
+  "type": "grid-split",
+  "type_name": "整图切分九宫格",
+  "variant": "split",
+  "media": [
+    "image"
+  ],
+  "source_url": "https://www.google.com/sorry/index",
+  "source_path": "google reCaptcha/sets/split/12",
+  "collected_at": "2026-11-07",
+  "prompt": "Select all squares with motorcycles",
+  "roles": {
+    "bg": "bg.jpg"
+  },
+  "answer_format": "indices",
+  "method": "VLM",
+  "method_note": "视觉 LLM 直接读格；无需训练",
+  "status": "sample-only",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "exists",
+    "accuracy": "high",
+    "notes": "旧批次 33/33 离线、7/7 线上；新批次待补跑"
+  },
+  "review": {
+    "state": "pending",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "notes": "覆盖批次：新图片题样本；结果未纳入"
+}

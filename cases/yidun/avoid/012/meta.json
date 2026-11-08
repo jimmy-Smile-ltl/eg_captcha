@@ -1,0 +1,35 @@
+{
+  "case_id": "yidun/avoid/012",
+  "vendor": "yidun",
+  "vendor_name": "网易易盾",
+  "type": "avoid",
+  "type_name": "障碍躲避",
+  "variant": "classic",
+  "media": [
+    "image"
+  ],
+  "source_url": "https://dun.163.com/trial",
+  "source_path": "yidun/avoid/sets/24",
+  "collected_at": "unknown",
+  "prompt": "拖动滑块避开障碍",
+  "roles": {
+    "bg": "bg.jpg"
+  },
+  "answer_format": "path",
+  "status": "sample-only",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "exists",
+    "accuracy": "high",
+    "notes": "源 llm_solver 12/12；待审"
+  },
+  "review": {
+    "state": "pending",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "notes": "覆盖批次：样本中立收录；结果未纳入。未撰写求解器（仅采集）",
+  "method": "VLM+ACT",
+  "method_note": "视觉 LLM 识别目标/障碍 + 贝塞尔轨迹"
+}

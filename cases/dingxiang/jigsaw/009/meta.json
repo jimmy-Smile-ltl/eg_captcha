@@ -1,0 +1,35 @@
+{
+  "case_id": "dingxiang/jigsaw/009",
+  "vendor": "dingxiang",
+  "vendor_name": "顶象",
+  "type": "jigsaw",
+  "type_name": "乱序拼图",
+  "variant": "classic",
+  "media": [
+    "image"
+  ],
+  "source_url": "https://www.dingxiang-inc.com/business/captcha",
+  "source_path": "dingxiang/jigsaw/sets/09",
+  "collected_at": "unknown",
+  "prompt": "交换拼图块，还原完整图像",
+  "roles": {
+    "bg": "bg.webp"
+  },
+  "answer_format": "swap/order",
+  "status": "sample-only",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "exists",
+    "accuracy": "high",
+    "notes": "三信号切缝+阴影先验，12/12；待审"
+  },
+  "review": {
+    "state": "pending",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "notes": "覆盖批次：样本中立收录；结果未纳入。三信号切缝+阴影先验，12/12；待审",
+  "method": "CV",
+  "method_note": "切缝 + 半边 + 阴影先验；无 LLM"
+}

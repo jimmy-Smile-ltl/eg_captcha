@@ -1,0 +1,75 @@
+{
+  "case_id": "amazon/audio/008",
+  "kind": "text",
+  "status": "result-pending-review",
+  "evidence": "unverified",
+  "confidence": "medium",
+  "answer": {
+    "kind": "text",
+    "text": "existing"
+  },
+  "solution": {
+    "set": "08",
+    "problem_type": "noisyneighbour-en-us",
+    "audio_s": 9.98,
+    "sep_s": 12.09,
+    "chosen_src": 0,
+    "sources": [
+      {
+        "src": 0,
+        "text": "Type one of the two following words spoken by me. Existing. Connect.",
+        "score": 12
+      },
+      {
+        "src": 1,
+        "text": "For this purpose, near analysis is of course useless, because it will be the variety of which metaphysics treats, and the object of our synthetical op-",
+        "score": 2
+      }
+    ],
+    "decodings": [
+      "Type one of the two following words spoken by me. Existing. Connect.",
+      "Type one of the two following words spoken by me. Distinct."
+    ],
+    "candidates": [
+      "existing",
+      "distinct",
+      "connect"
+    ],
+    "candidate_probs": [
+      {
+        "word": "existing",
+        "pos_from_instruction": 0,
+        "votes": 1,
+        "mean_prob": 0.8265
+      },
+      {
+        "word": "distinct",
+        "pos_from_instruction": 0,
+        "votes": 1,
+        "mean_prob": 0.1188
+      },
+      {
+        "word": "connect",
+        "pos_from_instruction": 1,
+        "votes": 1,
+        "mean_prob": 0.0874
+      }
+    ],
+    "counts": {
+      "existing": 1,
+      "distinct": 1,
+      "connect": 1
+    },
+    "answer": "existing",
+    "asr_s": 24.16,
+    "review": {
+      "model": "large-v3-turbo",
+      "text": "Type one of the two following words spoken by me. Existing. Smart.",
+      "tail": [
+        "existing",
+        "smart"
+      ]
+    }
+  },
+  "notes": "两套 ASR 一致，仍待人工审查"
+}

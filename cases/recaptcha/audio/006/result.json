@@ -1,0 +1,46 @@
+{
+  "case_id": "recaptcha/audio/006",
+  "kind": "text",
+  "status": "result-pending-review",
+  "evidence": "unverified",
+  "confidence": "medium",
+  "answer": {
+    "kind": "text",
+    "text": "A weekday, a weekender."
+  },
+  "solution": {
+    "set": "06",
+    "set_path": "audio/06",
+    "transcript": "A weekday, a weekender.",
+    "words": [
+      [
+        "A",
+        0.0,
+        1.56
+      ],
+      [
+        "weekday,",
+        1.56,
+        2.04
+      ],
+      [
+        "a",
+        2.26,
+        2.34
+      ],
+      [
+        "weekender.",
+        2.34,
+        2.68
+      ]
+    ],
+    "duration": 4.3,
+    "language_probability": 1.0,
+    "prompt": "Press PLAY to listen / Enter what you hear",
+    "model": "small.en",
+    "elapsed_s": 3.6,
+    "solved_at": "2026-11-07 21:55:06",
+    "note": "音频题：Whisper 转写结果，可直接作为 #audio-response 提交"
+  },
+  "notes": "Whisper 转写，待人工听音频核对"
+}

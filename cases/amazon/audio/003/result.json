@@ -1,0 +1,73 @@
+{
+  "case_id": "amazon/audio/003",
+  "kind": "text",
+  "status": "result-pending-review",
+  "evidence": "unverified",
+  "confidence": "low",
+  "answer": {
+    "kind": "text",
+    "text": "i"
+  },
+  "solution": {
+    "set": "03",
+    "problem_type": "noisyneighbour-en-us",
+    "audio_s": 9.98,
+    "sep_s": 10.71,
+    "chosen_src": 1,
+    "sources": [
+      {
+        "src": 0,
+        "text": "Always be set, thus aiming unavoidably in skepticism, conceptions, a doctrine of the synthesis, to which our critique is entirely diverted, and",
+        "score": 2
+      },
+      {
+        "src": 1,
+        "text": "Type one of the two following words spoken by me. I mean it. I mean it. I mean it.",
+        "score": 12
+      }
+    ],
+    "decodings": [
+      "Type one of the two following words spoken by me. I mean it. I mean it. I mean it.",
+      "Type one of the truth-downling words spoken by me."
+    ],
+    "candidates": [
+      "i",
+      "mean"
+    ],
+    "candidate_probs": [
+      {
+        "word": "i",
+        "pos_from_instruction": 0,
+        "votes": 1,
+        "mean_prob": 0.4809
+      },
+      {
+        "word": "mean",
+        "pos_from_instruction": 1,
+        "votes": 1,
+        "mean_prob": 0.3761
+      },
+      {
+        "word": "i",
+        "pos_from_instruction": 2,
+        "votes": 1,
+        "mean_prob": 0.4116
+      }
+    ],
+    "counts": {
+      "i": 1,
+      "mean": 1
+    },
+    "answer": "i",
+    "asr_s": 21.96,
+    "review": {
+      "model": "large-v3-turbo",
+      "text": "Type one of the two following words spoken by me, and awareness.",
+      "tail": [
+        "and",
+        "awareness"
+      ]
+    }
+  },
+  "notes": "两套 ASR 不一致，需人工听音频"
+}

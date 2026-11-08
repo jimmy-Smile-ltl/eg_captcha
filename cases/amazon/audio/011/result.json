@@ -1,0 +1,67 @@
+{
+  "case_id": "amazon/audio/011",
+  "kind": "text",
+  "status": "result-pending-review",
+  "evidence": "unverified",
+  "confidence": "low",
+  "answer": {
+    "kind": "text",
+    "text": "please"
+  },
+  "solution": {
+    "set": "11",
+    "problem_type": "noisyneighbour-en-us",
+    "audio_s": 10.24,
+    "sep_s": 13.76,
+    "chosen_src": 1,
+    "sources": [
+      {
+        "src": 0,
+        "text": "Process is not of so great extent as to preclude the hope of its existence. Pristot herself, had long since ruined the reputation of every system of all sciences.",
+        "score": 2
+      },
+      {
+        "src": 1,
+        "text": "Type one of the two following words spoken by me. Please. Opposite.",
+        "score": 12
+      }
+    ],
+    "decodings": [
+      "Type one of the two following words spoken by me. Please. Opposite.",
+      "Type one of the two following words spoken by me."
+    ],
+    "candidates": [
+      "please",
+      "opposite"
+    ],
+    "candidate_probs": [
+      {
+        "word": "please",
+        "pos_from_instruction": 0,
+        "votes": 1,
+        "mean_prob": 0.6705
+      },
+      {
+        "word": "opposite",
+        "pos_from_instruction": 1,
+        "votes": 1,
+        "mean_prob": 0.7365
+      }
+    ],
+    "counts": {
+      "please": 1,
+      "opposite": 1
+    },
+    "answer": "please",
+    "asr_s": 25.76,
+    "review": {
+      "model": "large-v3-turbo",
+      "text": "Type one of the two following words spoken by me. Freeze. Opposite.",
+      "tail": [
+        "freeze",
+        "opposite"
+      ]
+    }
+  },
+  "notes": "两套 ASR 不一致，需人工听音频"
+}

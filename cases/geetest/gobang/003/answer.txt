@@ -1,0 +1,4 @@
+answer: swap=(0,4)<->(1,0); win_color=1; win_line=(0,0)-(1,0)-(2,0)-(3,0)-(4,0)
+unit: 棋盘格 (row,col)，0-based
+source: offline-verified
+note: 5x5 棋盘；交换后同色五连；源解与暴力校验一致

@@ -1,0 +1,36 @@
+{
+  "case_id": "human-security/press-hold/004",
+  "vendor": "human-security",
+  "vendor_name": "HUMAN Security",
+  "type": "press-hold",
+  "type_name": "按压",
+  "variant": "press-hold",
+  "media": [
+    "image"
+  ],
+  "source_url": "https://www.walmart.com/blocked",
+  "source_path": "HUMAN Security（PerimeterX）/press-hold/samples/cdp_g_b_none_control_2026-11-01",
+  "collected_at": "2026-11-01",
+  "prompt": "按住按钮完成验证",
+  "roles": {
+    "bg": "bg.png",
+    "aux": "aux-01.png"
+  },
+  "answer_format": "hold-ms",
+  "status": "sample-only",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "browser",
+    "accuracy": "high",
+    "notes": "真实浏览器可解；纯 HTTP 被拒；待审"
+  },
+  "review": {
+    "state": "pending",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "notes": "覆盖批次：样本中立收录；结果未纳入。真实浏览器可解；纯 HTTP 被拒；待审",
+  "method": "ACT",
+  "method_note": "真实浏览器按压；无题面/无 LLM"
+}

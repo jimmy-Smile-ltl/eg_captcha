@@ -1,0 +1,35 @@
+{
+  "case_id": "kgcaptcha/spatial/009",
+  "vendor": "kgcaptcha",
+  "vendor_name": "凯格",
+  "type": "spatial",
+  "type_name": "空间推理",
+  "variant": "classic",
+  "media": [
+    "image"
+  ],
+  "source_url": "https://www.kgcaptcha.com/",
+  "source_path": "kgcaptcha/spatial/sets/09",
+  "collected_at": "unknown",
+  "prompt": "根据空间关系点击目标",
+  "roles": {
+    "bg": "bg.png"
+  },
+  "answer_format": "points",
+  "status": "sample-only",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "none",
+    "accuracy": "unknown",
+    "notes": "仅采集，未撰写求解器"
+  },
+  "review": {
+    "state": "not-applicable",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "notes": "覆盖批次：样本中立收录；结果未纳入。仅采集，未撰写求解器",
+  "method": "NONE(VLM)",
+  "method_note": "未撰写；建议 VLM 空间推理"
+}

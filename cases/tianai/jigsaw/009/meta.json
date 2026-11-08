@@ -1,0 +1,35 @@
+{
+  "case_id": "tianai/jigsaw/009",
+  "vendor": "tianai",
+  "vendor_name": "天爱",
+  "type": "jigsaw",
+  "type_name": "乱序拼图",
+  "variant": "classic",
+  "media": [
+    "image"
+  ],
+  "source_url": "https://captcha.tianai.cloud/",
+  "source_path": "tianai/jigsaw/sets/09",
+  "collected_at": "unknown",
+  "prompt": "交换拼图块，还原完整图像",
+  "roles": {
+    "bg": "bg.jpg"
+  },
+  "answer_format": "swap/order",
+  "status": "sample-only",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "none",
+    "accuracy": "unknown",
+    "notes": "有样本，未撰写求解器"
+  },
+  "review": {
+    "state": "not-applicable",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "notes": "覆盖批次：样本中立收录；结果未纳入。有样本，未撰写求解器",
+  "method": "NONE(VLM)",
+  "method_note": "未撰写；建议 VLM 直接读图，起步便宜"
+}

@@ -1,0 +1,36 @@
+{
+  "case_id": "qingtongbu/slide/001",
+  "vendor": "qingtongbu",
+  "vendor_name": "企讯通",
+  "type": "slide",
+  "type_name": "滑动拼图",
+  "variant": "classic",
+  "media": [
+    "image"
+  ],
+  "source_url": "http://www.qingtongbu.com/#experience",
+  "source_path": "qingtongbu/slide/sets/01",
+  "collected_at": "2026-07-23",
+  "prompt": "拖动滑块，将拼图块补入缺口",
+  "roles": {
+    "bg": "bg.jpg",
+    "aux": "aux-01.png"
+  },
+  "answer_format": "offset-x",
+  "status": "sample-only",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "none",
+    "accuracy": "unknown",
+    "notes": "未撰写求解器（仅采集）"
+  },
+  "review": {
+    "state": "not-applicable",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "notes": "覆盖批次：样本中立收录；结果未纳入。未撰写求解器（仅采集）",
+  "method": "CV",
+  "method_note": "传统视觉：边缘/模板匹配；无 LLM，单次成本最低"
+}

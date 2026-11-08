@@ -1,0 +1,4 @@
+answer: himself
+unit: text
+source: unverified
+note: ASR 建议答案（small.en）；两套 ASR 一致，仍待人工审查

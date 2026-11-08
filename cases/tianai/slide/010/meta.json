@@ -1,0 +1,36 @@
+{
+  "case_id": "tianai/slide/010",
+  "vendor": "tianai",
+  "vendor_name": "天爱",
+  "type": "slide",
+  "type_name": "滑动拼图",
+  "variant": "v2",
+  "media": [
+    "image"
+  ],
+  "source_url": "https://captcha.tianai.cloud/",
+  "source_path": "tianai/slider2/sets/15",
+  "collected_at": "unknown",
+  "prompt": "拖动滑块，将拼图块补入缺口",
+  "roles": {
+    "bg": "bg.jpg",
+    "aux": "aux-01.png"
+  },
+  "answer_format": "offset-x",
+  "status": "sample-only",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "exists",
+    "accuracy": "high",
+    "notes": "v1 12/12；v2 单次约 10%，多次重试约 80%；待审"
+  },
+  "review": {
+    "state": "pending",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "notes": "覆盖批次：样本中立收录；结果未纳入。v1 12/12；v2 单次约 10%，多次重试约 80%；待审",
+  "method": "CV",
+  "method_note": "Canny 共识缺口定位；无 LLM"
+}

@@ -1,0 +1,89 @@
+{
+  "case_id": "geetest/icon-crush/003",
+  "kind": "swap",
+  "status": "solved",
+  "evidence": "offline-verified",
+  "confidence": "high",
+  "answer": {
+    "kind": "swap",
+    "swap": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "win_color": 3,
+    "win_cells": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ]
+    ]
+  },
+  "solution": {
+    "board": [
+      [
+        0,
+        3,
+        1
+      ],
+      [
+        0,
+        2,
+        3
+      ],
+      [
+        2,
+        3,
+        0
+      ]
+    ],
+    "solutions": [
+      {
+        "swap": [
+          {
+            "row": 1,
+            "col": 1
+          },
+          {
+            "row": 1,
+            "col": 2
+          }
+        ],
+        "win_color": [
+          3
+        ],
+        "win_cells": [
+          [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ]
+          ]
+        ]
+      }
+    ],
+    "total": 1
+  },
+  "notes": "交换后同色三连；win_cells 为获胜连线坐标"
+}

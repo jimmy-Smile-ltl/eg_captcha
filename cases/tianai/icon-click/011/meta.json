@@ -1,0 +1,36 @@
+{
+  "case_id": "tianai/icon-click/011",
+  "vendor": "tianai",
+  "vendor_name": "天爱",
+  "type": "icon-click",
+  "type_name": "图标点选",
+  "variant": "classic",
+  "media": [
+    "image"
+  ],
+  "source_url": "https://captcha.tianai.cloud/",
+  "source_path": "tianai/image_click/sets/11",
+  "collected_at": "unknown",
+  "prompt": "按顺序点击图中图标",
+  "roles": {
+    "bg": "bg.jpg",
+    "aux": "aux-01.png"
+  },
+  "answer_format": "points",
+  "status": "sample-only",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "weak",
+    "accuracy": "low",
+    "notes": "源记录约 33% 通过；参考价值有限"
+  },
+  "review": {
+    "state": "pending",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "notes": "覆盖批次：样本中立收录；结果未纳入。源记录约 33% 通过；参考价值有限",
+  "method": "DET+VLM",
+  "method_note": "YOLO + 视觉模型"
+}

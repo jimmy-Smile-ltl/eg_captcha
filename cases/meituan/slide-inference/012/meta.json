@@ -1,0 +1,35 @@
+{
+  "case_id": "meituan/slide-inference/012",
+  "vendor": "meituan",
+  "vendor_name": "美团 Yoda",
+  "type": "slide-inference",
+  "type_name": "滑动推理",
+  "variant": "202",
+  "media": [
+    "image"
+  ],
+  "source_url": "https://verify.meituan.com/v2",
+  "source_path": "meituan/sliderinf_202/sets/999",
+  "collected_at": "unknown",
+  "prompt": "拖动滑块，露出指定数量的目标后松开",
+  "roles": {
+    "bg": "bg.jpg"
+  },
+  "answer_format": "offset",
+  "status": "sample-only",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "partial",
+    "accuracy": "high",
+    "notes": "图像 1502/1502；提交闭环未打通"
+  },
+  "review": {
+    "state": "pending",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "notes": "覆盖批次：样本中立收录；结果未纳入。图像 1502/1502；提交闭环未打通",
+  "method": "CV",
+  "method_note": "CV 定位 + 计数规则；无 LLM"
+}

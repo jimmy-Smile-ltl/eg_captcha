@@ -1,0 +1,35 @@
+{
+  "case_id": "dingxiang/icon-click/004",
+  "vendor": "dingxiang",
+  "vendor_name": "顶象",
+  "type": "icon-click",
+  "type_name": "图标点选",
+  "variant": "classic",
+  "media": [
+    "image"
+  ],
+  "source_url": "https://www.dingxiang-inc.com/business/captcha",
+  "source_path": "dingxiang/icon-click/sets/04",
+  "collected_at": "unknown",
+  "prompt": "按顺序点击图中图标",
+  "roles": {
+    "bg": "bg.webp"
+  },
+  "answer_format": "points",
+  "status": "sample-only",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "exists",
+    "accuracy": "high",
+    "notes": "多尺度模板匹配；待审"
+  },
+  "review": {
+    "state": "pending",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "notes": "覆盖批次：样本中立收录；结果未纳入。多尺度模板匹配；待审",
+  "method": "CV+VLM",
+  "method_note": "多尺度模板匹配 + LLM 校验；VLM 用于兜底"
+}

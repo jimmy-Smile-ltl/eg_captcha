@@ -1,0 +1,36 @@
+{
+  "case_id": "dingxiang/rotate/009",
+  "vendor": "dingxiang",
+  "vendor_name": "顶象",
+  "type": "rotate",
+  "type_name": "旋转验证",
+  "variant": "classic",
+  "media": [
+    "image"
+  ],
+  "source_url": "https://www.dingxiang-inc.com/business/captcha",
+  "source_path": "dingxiang/rotate/sets/09",
+  "collected_at": "unknown",
+  "prompt": "拖动滑块，将图片旋转到正确方向",
+  "roles": {
+    "bg": "bg.webp",
+    "aux": "aux-01.webp"
+  },
+  "answer_format": "angle",
+  "status": "sample-only",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "none",
+    "accuracy": "unknown",
+    "notes": "源记录为待做，未撰写求解器"
+  },
+  "review": {
+    "state": "not-applicable",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "notes": "覆盖批次：样本中立收录；结果未纳入。源记录为待做，未撰写求解器",
+  "method": "NONE(CV+VLM)",
+  "method_note": "未撰写；建议 CV 角度估计 + VLM 兜底"
+}

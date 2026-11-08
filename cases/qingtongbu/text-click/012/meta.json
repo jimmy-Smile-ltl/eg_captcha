@@ -1,0 +1,36 @@
+{
+  "case_id": "qingtongbu/text-click/012",
+  "vendor": "qingtongbu",
+  "vendor_name": "企讯通",
+  "type": "text-click",
+  "type_name": "文字点选",
+  "variant": "classic",
+  "media": [
+    "image"
+  ],
+  "source_url": "http://www.qingtongbu.com/#experience",
+  "source_path": "qingtongbu/text-click/sets/12",
+  "collected_at": "2026-07-24",
+  "prompt": "按顺序点击图中文字",
+  "roles": {
+    "bg": "bg.jpg",
+    "aux": "aux-01.png"
+  },
+  "answer_format": "points",
+  "status": "sample-only",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "none",
+    "accuracy": "unknown",
+    "notes": "未撰写求解器（仅采集）"
+  },
+  "review": {
+    "state": "not-applicable",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "notes": "覆盖批次：样本中立收录；结果未纳入。未撰写求解器（仅采集）",
+  "method": "NONE(DET+OCR+VLM)",
+  "method_note": "未撰写；建议 YOLO+OCR+VLM 仲裁"
+}

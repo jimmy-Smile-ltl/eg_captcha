@@ -1,0 +1,37 @@
+{
+  "case_id": "geetest/gobang/005",
+  "vendor": "geetest",
+  "vendor_name": "极验 GeeTest",
+  "type": "gobang",
+  "type_name": "五子棋",
+  "variant": "winlinze",
+  "media": [
+    "image"
+  ],
+  "source_url": "https://www.geetest.com/en/adaptive-captcha-demo",
+  "source_path": "geetest/gobang/sets/05",
+  "collected_at": "2026-07-23",
+  "prompt": "交换两个棋子，使同色棋子五连",
+  "roles": {
+    "bg": "bg.png",
+    "annotated": "annotated.png"
+  },
+  "answer_format": "swap",
+  "status": "result-pending-review",
+  "evidence": "offline-verified",
+  "confidence": "high",
+  "notes": "源解经暴力枚举校验一致",
+  "solver": {
+    "status": "exists",
+    "accuracy": "high",
+    "notes": "棋盘解经枚举校验；结果待人工审查"
+  },
+  "review": {
+    "state": "pending",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "method": "PROTO",
+  "method_note": "棋盘矩阵枚举；无视觉模型"
+}

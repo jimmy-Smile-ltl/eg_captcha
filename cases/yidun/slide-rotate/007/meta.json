@@ -1,0 +1,36 @@
+{
+  "case_id": "yidun/slide-rotate/007",
+  "vendor": "yidun",
+  "vendor_name": "网易易盾",
+  "type": "slide-rotate",
+  "type_name": "旋转拼图",
+  "variant": "enhanced-rotate",
+  "media": [
+    "image"
+  ],
+  "source_url": "https://dun.163.com/trial",
+  "source_path": "yidun/jigsaw_new/sets/07",
+  "collected_at": "unknown",
+  "prompt": "拖动滑块，将旋转的拼图块补入缺口",
+  "roles": {
+    "bg": "bg.jpg",
+    "aux": "aux-01.png"
+  },
+  "answer_format": "offset+rotation",
+  "status": "sample-only",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "exists",
+    "accuracy": "high",
+    "notes": "源记录可过；结果待人工审查"
+  },
+  "review": {
+    "state": "pending",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "notes": "覆盖批次：样本中立收录；结果未纳入。源记录可过；结果待人工审查",
+  "method": "CV",
+  "method_note": "旋转几何 + 边缘方向一致性；无 LLM"
+}

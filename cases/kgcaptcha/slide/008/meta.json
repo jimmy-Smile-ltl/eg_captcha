@@ -1,0 +1,36 @@
+{
+  "case_id": "kgcaptcha/slide/008",
+  "vendor": "kgcaptcha",
+  "vendor_name": "凯格",
+  "type": "slide",
+  "type_name": "滑动拼图",
+  "variant": "classic",
+  "media": [
+    "image"
+  ],
+  "source_url": "https://www.kgcaptcha.com/",
+  "source_path": "kgcaptcha/slide/sets/08",
+  "collected_at": "unknown",
+  "prompt": "拖动滑块，将拼图块补入缺口",
+  "roles": {
+    "bg": "bg.png",
+    "aux": "aux-01.png"
+  },
+  "answer_format": "offset-x",
+  "status": "sample-only",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "none",
+    "accuracy": "unknown",
+    "notes": "仅采集，未撰写求解器"
+  },
+  "review": {
+    "state": "not-applicable",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "notes": "覆盖批次：样本中立收录；结果未纳入。仅采集，未撰写求解器",
+  "method": "NONE(CV)",
+  "method_note": "未撰写；建议 CV 边缘/模板，成本低"
+}

@@ -1,0 +1,41 @@
+{
+  "case_id": "recaptcha/audio/005",
+  "kind": "text",
+  "status": "result-pending-review",
+  "evidence": "unverified",
+  "confidence": "medium",
+  "answer": {
+    "kind": "text",
+    "text": "power windows, electronics,"
+  },
+  "solution": {
+    "set": "05",
+    "set_path": "audio/05",
+    "transcript": "power windows, electronics,",
+    "words": [
+      [
+        "power",
+        0.0,
+        2.06
+      ],
+      [
+        "windows,",
+        2.06,
+        2.58
+      ],
+      [
+        "electronics,",
+        3.3,
+        3.38
+      ]
+    ],
+    "duration": 5.16,
+    "language_probability": 1.0,
+    "prompt": "Press PLAY to listen / Enter what you hear",
+    "model": "small.en",
+    "elapsed_s": 3.5,
+    "solved_at": "2026-11-07 21:55:02",
+    "note": "音频题：Whisper 转写结果，可直接作为 #audio-response 提交"
+  },
+  "notes": "Whisper 转写，待人工听音频核对"
+}

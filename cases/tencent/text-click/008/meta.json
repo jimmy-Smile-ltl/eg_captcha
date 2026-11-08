@@ -1,0 +1,35 @@
+{
+  "case_id": "tencent/text-click/008",
+  "vendor": "tencent",
+  "vendor_name": "腾讯云验证码",
+  "type": "text-click",
+  "type_name": "文字点选",
+  "variant": "classic",
+  "media": [
+    "image"
+  ],
+  "source_url": "https://cloud.tencent.com/product/captcha",
+  "source_path": "tencent/text-click/sets/08",
+  "collected_at": "2026-07-24",
+  "prompt": "按顺序点击图中文字",
+  "roles": {
+    "bg": "bg.png"
+  },
+  "answer_format": "points",
+  "status": "sample-only",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "exists",
+    "accuracy": "high",
+    "notes": "源方案 12/12 离线 + 5/5 实机；待审"
+  },
+  "review": {
+    "state": "pending",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "notes": "覆盖批次：样本中立收录；结果未纳入。源方案 12/12 离线 + 5/5 实机；待审",
+  "method": "DET+OCR+VLM",
+  "method_note": "YOLO + Siamese + VLM 仲裁；VLM 只对分歧点调用"
+}

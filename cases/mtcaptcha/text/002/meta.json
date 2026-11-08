@@ -1,0 +1,37 @@
+{
+  "case_id": "mtcaptcha/text/002",
+  "vendor": "mtcaptcha",
+  "vendor_name": "MTCaptcha",
+  "type": "text",
+  "type_name": "字符识别",
+  "variant": "standard",
+  "media": [
+    "image",
+    "audio"
+  ],
+  "source_url": "https://service.mtcaptcha.com/mtcv1/demo/",
+  "source_path": "other/mtcaptcha/standard/sets/06",
+  "collected_at": "unknown",
+  "prompt": "输入或识别图中字符",
+  "roles": {
+    "bg": "bg.gif",
+    "audio": "audio.mp3"
+  },
+  "answer_format": "text",
+  "status": "sample-only",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "exists",
+    "accuracy": "medium",
+    "notes": "有标签子集 12/12；整体弱标签，待审"
+  },
+  "review": {
+    "state": "pending",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "notes": "覆盖批次：样本中立收录；结果未纳入。有标签子集 12/12；整体弱标签，待审",
+  "method": "ASR+OCR+VLM",
+  "method_note": "Whisper 为主，ddddocr 兜底，VLM 仲裁"
+}

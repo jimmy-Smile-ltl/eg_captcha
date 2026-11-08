@@ -1,0 +1,35 @@
+{
+  "case_id": "dingxiang/font/005",
+  "vendor": "dingxiang",
+  "vendor_name": "顶象",
+  "type": "font",
+  "type_name": "字体识别",
+  "variant": "classic",
+  "media": [
+    "image"
+  ],
+  "source_url": "https://www.dingxiang-inc.com/business/captcha",
+  "source_path": "dingxiang/font/sets/05",
+  "collected_at": "unknown",
+  "prompt": "识别并点击指定字体",
+  "roles": {
+    "bg": "bg.webp"
+  },
+  "answer_format": "points/text",
+  "status": "sample-only",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "exists",
+    "accuracy": "high",
+    "notes": "风格特征 + 稳健离群；类型表称已攻克；待审"
+  },
+  "review": {
+    "state": "pending",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "notes": "覆盖批次：样本中立收录；结果未纳入。源记录为待做，未撰写求解器",
+  "method": "CV",
+  "method_note": "风格特征 + 稳健离群；无 LLM"
+}

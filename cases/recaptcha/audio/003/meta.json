@@ -1,0 +1,36 @@
+{
+  "case_id": "recaptcha/audio/003",
+  "vendor": "recaptcha",
+  "vendor_name": "Google reCAPTCHA",
+  "type": "audio",
+  "type_name": "音频听写",
+  "variant": "recaptcha-v2-audio",
+  "media": [
+    "audio"
+  ],
+  "source_url": "https://test.cap.guru/demo/recap#recap2",
+  "source_path": "google reCaptcha/sets/audio/03",
+  "collected_at": "2026-11-07",
+  "prompt": "Press PLAY to listen / Enter what you hear",
+  "roles": {
+    "audio": "audio.mp3"
+  },
+  "answer_format": "text",
+  "method": "ASR",
+  "method_note": "faster-whisper small.en；待人工听音频",
+  "status": "result-pending-review",
+  "evidence": "unverified",
+  "confidence": "medium",
+  "solver": {
+    "status": "exists",
+    "accuracy": "high",
+    "notes": "源记录 20/20 离线、15/15 线上；待审"
+  },
+  "review": {
+    "state": "pending",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "notes": "音频题；Whisper 转写，待人工听音频核对"
+}

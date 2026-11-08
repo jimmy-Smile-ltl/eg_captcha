@@ -1,0 +1,36 @@
+{
+  "case_id": "amazon/audio/004",
+  "vendor": "amazon",
+  "vendor_name": "Amazon AWS WAF",
+  "type": "audio",
+  "type_name": "音频听写",
+  "variant": "noisyneighbour-en-us",
+  "media": [
+    "audio"
+  ],
+  "source_url": "https://www.wuxuwang.com/yljg",
+  "source_path": "amazon/grid_5/audio_sets/sets/04",
+  "collected_at": "2026-11-07",
+  "prompt": "听音频，输入两个英文单词中的任意一个",
+  "roles": {
+    "audio": "audio.aac"
+  },
+  "answer_format": "text",
+  "status": "result-pending-review",
+  "evidence": "unverified",
+  "confidence": "medium",
+  "solver": {
+    "status": "exists",
+    "accuracy": "high",
+    "notes": "源记录 45/46 轮最终通过（61 次提交 45 成功）；结果待人工审查"
+  },
+  "review": {
+    "state": "pending",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "notes": "覆盖批次：音频题样本；ASR 建议答案待人工审查。两套 ASR 一致，仍待人工审查",
+  "method": "ASR",
+  "method_note": "说话人分离 + Whisper；无视觉 LLM"
+}

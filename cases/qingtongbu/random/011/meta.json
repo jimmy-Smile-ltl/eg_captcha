@@ -1,0 +1,35 @@
+{
+  "case_id": "qingtongbu/random/011",
+  "vendor": "qingtongbu",
+  "vendor_name": "企讯通",
+  "type": "random",
+  "type_name": "智能随机",
+  "variant": "classic",
+  "media": [
+    "image"
+  ],
+  "source_url": "http://www.qingtongbu.com/#experience",
+  "source_path": "qingtongbu/random/sets/11",
+  "collected_at": "2026-07-24",
+  "prompt": "随机题型",
+  "roles": {
+    "bg": "bg.jpg"
+  },
+  "answer_format": "mixed",
+  "status": "sample-only",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "none",
+    "accuracy": "unknown",
+    "notes": "随机路由，未撰写求解器"
+  },
+  "review": {
+    "state": "not-applicable",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "notes": "覆盖批次：样本中立收录；结果未纳入。随机路由，未撰写求解器",
+  "method": "NONE",
+  "method_note": "随机路由，无独立题面"
+}

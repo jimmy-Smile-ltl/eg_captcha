@@ -1,0 +1,35 @@
+{
+  "case_id": "meituan/line-connect/011",
+  "vendor": "meituan",
+  "vendor_name": "美团 Yoda",
+  "type": "line-connect",
+  "type_name": "最短线连点",
+  "variant": "103",
+  "media": [
+    "image"
+  ],
+  "source_url": "https://verify.meituan.com/v2",
+  "source_path": "meituan/sudoku_103/sets/46",
+  "collected_at": "unknown",
+  "prompt": "用最短线连接目标",
+  "roles": {
+    "bg": "bg.png"
+  },
+  "answer_format": "path",
+  "status": "sample-only",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "partial",
+    "accuracy": "high",
+    "notes": "图像 50/50；提交闭环未打通"
+  },
+  "review": {
+    "state": "pending",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "notes": "覆盖批次：样本中立收录；结果未纳入。图像 50/50；提交闭环未打通",
+  "method": "CV",
+  "method_note": "颜色/连线规则；无 LLM"
+}
