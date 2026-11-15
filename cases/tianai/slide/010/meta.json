@@ -14,7 +14,10 @@
   "prompt": "拖动滑块，将拼图块补入缺口",
   "roles": {
     "bg": "bg.jpg",
-    "aux": "aux-01.png"
+    "aux": "aux-01.png",
+    "restored": "restored.jpg",
+    "solved": "solved.png",
+    "mark": "mark.png"
   },
   "answer_format": "offset-x",
   "status": "sample-only",

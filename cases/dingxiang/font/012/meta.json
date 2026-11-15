@@ -13,7 +13,9 @@
   "collected_at": "unknown",
   "prompt": "识别并点击指定字体",
   "roles": {
-    "bg": "bg.webp"
+    "bg": "bg.webp",
+    "restored": "restored.png",
+    "solved": "solved.png"
   },
   "answer_format": "points/text",
   "status": "sample-only",

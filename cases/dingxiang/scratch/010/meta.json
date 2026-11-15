@@ -13,7 +13,9 @@
   "collected_at": "unknown",
   "prompt": "拖动滑块刮开涂层",
   "roles": {
-    "bg": "bg.webp"
+    "bg": "bg.webp",
+    "restored": "restored.png",
+    "solved": "solved.png"
   },
   "answer_format": "points",
   "status": "sample-only",

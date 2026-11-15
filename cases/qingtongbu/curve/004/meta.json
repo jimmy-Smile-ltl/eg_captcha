@@ -13,7 +13,8 @@
   "collected_at": "2026-07-23",
   "prompt": "沿曲线拖动滑块",
   "roles": {
-    "bg": "bg.jpg"
+    "bg": "bg.jpg",
+    "solved": "solved.jpg"
   },
   "answer_format": "path",
   "status": "sample-only",

@@ -14,7 +14,8 @@
   "prompt": "交换拼图块，还原完整图像",
   "roles": {
     "bg": "bg.jpg",
-    "aux": "aux-01.png"
+    "aux": "aux-01.png",
+    "solved": "solved.png"
   },
   "answer_format": "swap/order",
   "status": "sample-only",

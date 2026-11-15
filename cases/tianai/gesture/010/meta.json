@@ -13,7 +13,9 @@
   "collected_at": "unknown",
   "prompt": "按提示绘制手势轨迹",
   "roles": {
-    "bg": "bg.jpg"
+    "bg": "bg.jpg",
+    "restored": "restored.jpg",
+    "solved": "solved.jpg"
   },
   "answer_format": "path",
   "status": "sample-only",

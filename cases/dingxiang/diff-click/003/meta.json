@@ -13,7 +13,9 @@
   "collected_at": "unknown",
   "prompt": "找出并点击差异位置",
   "roles": {
-    "bg": "bg.webp"
+    "bg": "bg.webp",
+    "restored": "restored.png",
+    "solved": "solved.png"
   },
   "answer_format": "points",
   "status": "sample-only",

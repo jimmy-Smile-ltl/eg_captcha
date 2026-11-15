@@ -15,7 +15,8 @@
   "roles": {
     "bg": "bg.png",
     "aux": "aux-01.png",
-    "annotated": "annotated.png"
+    "annotated": "annotated.png",
+    "solved": "solved.png"
   },
   "answer_format": "gap",
   "status": "result-pending-review",

@@ -113,11 +113,15 @@ cases/<vendor>/<type>/<NNN>/
 | `meta.json` | 是 | 来源、类型、变体、媒体、状态、求解器状态、审查状态 |
 | `bg.*` | 图像类必需 | 原始主图，保持原字节 |
 | `aux-01.*` | 可选 | 滑块块、提示图、第二画布等辅助图 |
+| `restored.*` | 可选 | 打乱背景还原后的底图 |
+| `solved.*` | 可选 | 最终结果 / 拼合效果图（源目录结果图，未复核） |
+| `mark.*` | 可选 | 目标 / 拼图位置标记图 |
+| `trajectory.*` | 可选 | 求解轨迹图 |
 | `annotated.png` | 有结果时必需 | 答案可视化：绿=答案，黄=候选，红=错误/排除 |
 | `answer.txt` | 有结果时必需 | 人类可读答案 |
 | `result.json` | 有结果时必需 | 原样求解结果（脱敏） |
 
-`status: sample-only` 的案例只放 `meta.json` + 媒体文件；没有可靠结果时不生成 `answer.txt` / `annotated.png` / `result.json`。
+`status: sample-only` 的案例只放 `meta.json` + 媒体文件；没有可靠结果时不生成 `answer.txt` / `annotated.png` / `result.json`。`restored.*` / `solved.*` / `mark.*` / `trajectory.*` 是可视化过程图，不改变 `status`，也不代表已通过审查。
 
 分支：
 

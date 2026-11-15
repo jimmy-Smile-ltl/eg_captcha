@@ -14,7 +14,9 @@
   "prompt": "拖动滑块，将拼图块补入缺口",
   "roles": {
     "bg": "bg.webp",
-    "aux": "aux-01.webp"
+    "aux": "aux-01.webp",
+    "restored": "restored.png",
+    "solved": "solved.png"
   },
   "answer_format": "offset-x",
   "status": "sample-only",

@@ -13,7 +13,8 @@
   "collected_at": "unknown",
   "prompt": "沿曲线拖动滑块",
   "roles": {
-    "bg": "bg.jpg"
+    "bg": "bg.jpg",
+    "restored": "restored.jpg"
   },
   "answer_format": "path",
   "status": "sample-only",

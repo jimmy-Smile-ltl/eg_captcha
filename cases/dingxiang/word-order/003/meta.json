@@ -13,7 +13,8 @@
   "collected_at": "unknown",
   "prompt": "按正确语序点击文字",
   "roles": {
-    "bg": "bg.webp"
+    "bg": "bg.webp",
+    "restored": "restored.png"
   },
   "answer_format": "points+order",
   "status": "sample-only",

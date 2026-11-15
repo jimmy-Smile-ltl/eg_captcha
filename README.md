@@ -45,7 +45,7 @@
 | 效果差 / 部分进展 / 需浏览器 | 7 / 7 / 2 个类型 |
 | 文档 | 26 篇 Markdown |
 | 代码 | 0 行（无 py/js/html/sh） |
-| 体积 | 约 77 MB（以图片、音频为主） |
+| 体积 | 约 143 MB（以图片、音频与过程图为主） |
 
 > 这些数字不是 KPI：`sample-only` 只代表有样本，`result-pending-review` 也不代表已通过。准确率来自源记录，未经本库复核；`review.state` 初始为 `pending` 或 `not-applicable`，等待人工回填。
 
@@ -136,6 +136,8 @@
 |---|---|
 | `meta.json` | 来源、类型、变体、媒体、`method`、`solver`、`review` |
 | `bg.*` / `aux-01.*` / `audio.*` | 原始主图、辅助图、音频 |
+| `restored.*` / `solved.*` | 背景还原图、最终结果 / 拼合效果图（源目录可视化，未复核） |
+| `mark.*` / `trajectory.*` | 定位标记、求解轨迹等过程图 |
 | `annotated.png` | 答案可视化，仅 `result-pending-review` 案例有 |
 | `answer.txt` / `result.json` | 答案与原始结果，仅 `result-pending-review` 案例有 |
 
@@ -164,7 +166,7 @@
 
 ## 最近更新
 
-- **2026-11-15**：在线浏览器改为“类型首页 → 同类型全部案例 → 左右对照详情”，覆盖 88 个厂商×类型（含 8 个仅文档），类型页补官方体验入口，详情支持 ↑↓ 切换案例。
+- **2026-11-15**：在线浏览器改为“类型首页 → 同类型全部案例 → 左右对照详情”，覆盖 88 个厂商×类型（含 8 个仅文档），类型页补官方体验入口；补齐 192 个背景还原图与 309 个结果图（源目录可视化，未复核），详情支持 ↑↓ 切换案例。
 - **2026-11-08**：仓库公开；新增 Claude Code skill；README 重构；在线浏览器上线：[eg-captcha-viewer](https://eg-captcha-viewer.jimmysmileltl.workers.dev/)。
 - **2026-11-07**：Google reCAPTCHA 扩到 4 类：新增音频 12 组、v3 documented-only；Amazon 新增音频 12 组；全部案例补方法标签。
 - 当前 72 个结果待人工审查；审查结果会回填到案例 `meta.json`。

@@ -14,7 +14,8 @@
   "prompt": "拖动滑块，将旋转的拼图块补入缺口",
   "roles": {
     "bg": "bg.jpg",
-    "aux": "aux-01.png"
+    "aux": "aux-01.png",
+    "solved": "solved.png"
   },
   "answer_format": "offset+rotation",
   "status": "sample-only",

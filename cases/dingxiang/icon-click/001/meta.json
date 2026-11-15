@@ -13,7 +13,8 @@
   "collected_at": "unknown",
   "prompt": "按顺序点击图中图标",
   "roles": {
-    "bg": "bg.webp"
+    "bg": "bg.webp",
+    "solved": "solved.png"
   },
   "answer_format": "points",
   "status": "sample-only",

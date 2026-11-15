@@ -13,7 +13,8 @@
   "collected_at": "unknown",
   "prompt": "拖动滑块，将错位图像还原",
   "roles": {
-    "bg": "bg.webp"
+    "bg": "bg.webp",
+    "solved": "solved.png"
   },
   "answer_format": "shift",
   "status": "sample-only",

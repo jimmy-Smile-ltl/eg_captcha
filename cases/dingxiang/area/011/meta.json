@@ -13,7 +13,8 @@
   "collected_at": "unknown",
   "prompt": "点击指定面积的区域",
   "roles": {
-    "bg": "bg.webp"
+    "bg": "bg.webp",
+    "solved": "solved.png"
   },
   "answer_format": "points",
   "status": "sample-only",

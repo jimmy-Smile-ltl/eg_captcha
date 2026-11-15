@@ -13,7 +13,8 @@
   "collected_at": "unknown",
   "prompt": "交换拼图块，还原完整图像",
   "roles": {
-    "bg": "bg.jpg"
+    "bg": "bg.jpg",
+    "solved": "solved.png"
   },
   "answer_format": "swap/order",
   "status": "sample-only",
