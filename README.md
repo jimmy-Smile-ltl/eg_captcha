@@ -20,7 +20,7 @@
 
 > ⭐ 如果这个库帮你省下收集样本或技术选型的时间，点个 Star，让更多人找到它。
 >
-> **在线浏览**：[eg-captcha-viewer.jimmysmileltl.workers.dev](https://eg-captcha-viewer.jimmysmileltl.workers.dev/) — 首页按类型聚合，详情左原始数据、右最终结果，支持音频与 ↑↓ 切换。
+> **在线浏览**：[eg-captcha-viewer.jimmysmileltl.workers.dev](https://eg-captcha-viewer.jimmysmileltl.workers.dev/) — 首页按类型聚合（88 个类型，含 8 个仅文档），详情左原始数据、右最终结果，支持音频与 ↑↓ 切换。
 
 ## 为什么值得收藏
 
@@ -164,7 +164,7 @@
 
 ## 最近更新
 
-- **2026-11-15**：在线浏览器改为“类型首页 → 同类型全部案例 → 左右对照详情”，详情支持 ↑↓ 切换案例。
+- **2026-11-15**：在线浏览器改为“类型首页 → 同类型全部案例 → 左右对照详情”，覆盖 88 个厂商×类型（含 8 个仅文档），详情支持 ↑↓ 切换案例。
 - **2026-11-08**：仓库公开；新增 Claude Code skill；README 重构；在线浏览器上线：[eg-captcha-viewer](https://eg-captcha-viewer.jimmysmileltl.workers.dev/)。
 - **2026-11-07**：Google reCAPTCHA 扩到 4 类：新增音频 12 组、v3 documented-only；Amazon 新增音频 12 组；全部案例补方法标签。
 - 当前 72 个结果待人工审查；审查结果会回填到案例 `meta.json`。
