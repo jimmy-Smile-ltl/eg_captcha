@@ -1,0 +1,36 @@
+{
+  "case_id": "yidun/inference/006",
+  "vendor": "yidun",
+  "vendor_name": "网易易盾",
+  "type": "inference",
+  "type_name": "乱序拼图",
+  "variant": "inference",
+  "media": [
+    "image"
+  ],
+  "source_url": "https://dun.163.com/trial",
+  "source_path": "yidun/inference/sets/06",
+  "collected_at": "unknown",
+  "prompt": "拖动交换两个图块，还原完整图片",
+  "roles": {
+    "bg": "bg.jpg",
+    "solved": "solved.png"
+  },
+  "answer_format": "swap/order",
+  "status": "sample-only",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "exists",
+    "accuracy": "medium",
+    "notes": "打乱背景不稳定；结果待人工审查"
+  },
+  "review": {
+    "state": "pending",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "notes": "覆盖批次：样本中立收录；源目录 yidun/inference 为 8 块换位乱序拼图；结果未纳入；待人工审查",
+  "method": "CV",
+  "method_note": "切缝断裂度 + 断裂段签名 + 全排列优化；无 LLM"
+}
