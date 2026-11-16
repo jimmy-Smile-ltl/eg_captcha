@@ -1,4 +1,4 @@
-answer: gap_x=116, gap_y=67, ypos=69
+answer: gap_x=118, gap_y=69, ypos=69
 unit: px
 source: offline-verified
-note: 300x200 背景；缺口左上角 (116,67)；ypos=69 为 API 给定，容差 ±4px
+note: 300x200 背景；缺口左上角 (118,69)；ypos=69 为 API 给定；masked 梯度匹配

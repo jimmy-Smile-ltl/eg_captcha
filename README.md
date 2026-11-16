@@ -1,14 +1,14 @@
 # eg_captcha — 零代码验证码知识库
 
 ![vendors](https://img.shields.io/badge/vendors-16-brightgreen?style=flat-square)
-![vendor types](https://img.shields.io/badge/vendor_types-88-blue?style=flat-square)
-![cases](https://img.shields.io/badge/cases-896-blueviolet?style=flat-square)
+![vendor types](https://img.shields.io/badge/vendor_types-89-blue?style=flat-square)
+![cases](https://img.shields.io/badge/cases-908-blueviolet?style=flat-square)
 ![code](https://img.shields.io/badge/code-0_lines-red?style=flat-square)
 ![review](https://img.shields.io/badge/review-72_pending-orange?style=flat-square)
 ![license](https://img.shields.io/badge/license-CC_BY--NC--SA_4.0-lightgrey?style=flat-square)
 [![live viewer](https://img.shields.io/badge/live-viewer-5eead4?style=flat-square)](https://eg-captcha-viewer.jimmysmileltl.workers.dev/)
 
-> **16 家厂商 · 88 个厂商×类型 · 896 组真实样本 · 0 行代码**
+> **16 家厂商 · 89 个厂商×类型 · 908 组真实样本 · 0 行代码**
 >
 > 一个不发放武器、只沉淀知识的验证码档案库：样本、方法、成本、失败原因，按厂商与类型整理。
 >
@@ -16,16 +16,16 @@
 
 **一句话**：按厂商/类型查样本，按方法/成本选路线，按审查状态看可信度。
 
-**English**：A zero-code CAPTCHA knowledge base — 16 vendors, 88 vendor×type combinations, 896 real samples, method tags (CV/DET/OCR/VLM/ASR/PROTO/ACT), cost notes, and honest failure records.
+**English**：A zero-code CAPTCHA knowledge base — 16 vendors, 89 vendor×type combinations, 908 real samples, method tags (CV/DET/OCR/VLM/ASR/PROTO/ACT), cost notes, and honest failure records.
 
 > ⭐ 如果这个库帮你省下收集样本或技术选型的时间，点个 Star，让更多人找到它。
 >
-> **在线浏览**：[eg-captcha-viewer.jimmysmileltl.workers.dev](https://eg-captcha-viewer.jimmysmileltl.workers.dev/) — 首页按类型聚合（88 个类型，含 8 个仅文档），类型页附官方体验入口，详情左原始数据、右最终结果，支持人工审核、音频与 ↑↓ 切换。
+> **在线浏览**：[eg-captcha-viewer.jimmysmileltl.workers.dev](https://eg-captcha-viewer.jimmysmileltl.workers.dev/) — 首页按类型聚合（89 个类型，含 8 个仅文档），类型页附官方体验入口，详情左原始数据、右最终结果，支持人工审核、音频与 ↑↓ 切换。
 
 ## 为什么值得收藏
 
 - **16 家厂商，一张地图**：极验、易盾、腾讯、数美、顶象、天爱、银联、企讯通、凯格、美团、Amazon、reCAPTCHA、hCaptcha、HUMAN、DataDome、MTCaptcha，主流与长尾都在。
-- **896 组真实样本，不是手绘示意图**：来自公开 demo、体验页或公开挑战页；每组都有来源、类型、方法和状态。
+- **908 组真实样本，不是手绘示意图**：来自公开 demo、体验页或公开挑战页；每组都有来源、类型、方法和状态。
 - **方法 + 成本，一起给**：CV / DET / OCR / VLM / ASR / PROTO / ACT，标明是否借助多模态 LLM，以及量大时该不该换路线。
 - **失败也归档**：29 个类型暂无求解器、7 个效果差、7 个部分进展；为什么没解，往往比“能解”更有信息量。
 - **0 行代码，分享无压力**：没有 solver、token、密钥或原始报文；适合在公司内部、课堂和团队里传阅。
@@ -38,14 +38,14 @@
 | 指标 | 数值 |
 |---|---|
 | 厂商 | 16 家 |
-| 厂商×类型 | 88 个（41 个主类型，含无图/仅文档类型） |
-| 案例 | 896 组（824 个纯样本 + 72 个结果待审） |
+| 厂商×类型 | 89 个（42 个主类型，含无图/仅文档类型） |
+| 案例 | 908 组（788 个纯样本 + 120 个结果待审） |
 | 有求解器记录 | 43 个类型 |
 | 暂无求解器 | 29 个类型 |
 | 效果差 / 部分进展 / 需浏览器 | 7 / 7 / 2 个类型 |
 | 文档 | 26 篇 Markdown |
 | 代码 | 0 行（无 py/js/html/sh） |
-| 体积 | 约 143 MB（以图片、音频与过程图为主） |
+| 体积 | 约 273 MB（以图片、音频与过程图为主） |
 
 > 这些数字不是 KPI：`sample-only` 只代表有样本，`result-pending-review` 也不代表已通过。准确率来自源记录，未经本库复核；`review.state` 初始为 `pending` 或 `not-applicable`，等待人工回填。
 
@@ -79,7 +79,7 @@
 
 | 极验 | 网易易盾 | 腾讯云 | 数美 |
 |---|---|---|---|
-| <img src="cases/geetest/slide/001/bg.png" width="150" alt="极验 GeeTest 滑动拼图验证码样本"> | <img src="cases/yidun/jigsaw/001/bg.jpg" width="150" alt="网易易盾 乱序拼图验证码样本"> | <img src="cases/tencent/slide/001/bg.png" width="150" alt="腾讯云 滑动拼图验证码样本"> | <img src="cases/shumei/slide/001/bg.jpg" width="150" alt="数美 滑动拼图验证码样本"> |
+| <img src="cases/geetest/slide/001/bg.png" width="150" alt="极验 GeeTest 滑动拼图验证码样本"> | <img src="cases/yidun/jigsaw/001/bg.jpg" width="150" alt="网易易盾 滑块拼图验证码样本"> | <img src="cases/tencent/slide/001/bg.png" width="150" alt="腾讯云 滑动拼图验证码样本"> | <img src="cases/shumei/slide/001/bg.jpg" width="150" alt="数美 滑动拼图验证码样本"> |
 
 | 顶象 | 天爱 | 中国银联 | 企讯通 |
 |---|---|---|---|
@@ -137,18 +137,19 @@
 | `meta.json` | 来源、类型、变体、媒体、`method`、`solver`、`review` |
 | `bg.*` / `aux-01.*` / `audio.*` | 原始主图、辅助图、音频 |
 | `restored.*` / `solved.*` | 背景还原图、最终结果 / 拼合效果图（源目录可视化，未复核） |
-| `mark.*` / `trajectory.*` | 定位标记、求解轨迹等过程图 |
+| `denoised.*` / `split.*` | 去噪对照图、字符 / 图标拆分图 |
+| `mark.*` / `trajectory.*` / `process-NN-*.*` | 定位标记、求解轨迹、源求解器过程图（按 `meta.process` 顺序展示） |
 | `annotated.png` | 答案可视化，仅 `result-pending-review` 案例有 |
 | `answer.txt` / `result.json` | 答案与原始结果，仅 `result-pending-review` 案例有 |
 
-案例 `001`：`CV`（Canny + NCC），12/12 离线，无线上记录，审查 `pending`。`sample-only` 案例只有 `meta.json` + 媒体，没有答案。
+案例 `001`：`CV`（masked 梯度 + NCC），12/12 离线，无线上记录，审查 `pending`。`sample-only` 案例只有 `meta.json` + 媒体，没有答案。
 
 ## 厂商总览
 
 | 厂商 | 类型 | 案例 | 方法重点 | 文档 |
 |---|---:|---:|---|---|
 | 极验 GeeTest | 4 | 48 | CV / PROTO | [geetest.md](docs/geetest.md) |
-| 网易易盾 | 10 | 96 | CV / VLM / DET+OCR+VLM | [yidun.md](docs/yidun.md) |
+| 网易易盾 | 11 | 108 | CV / VLM / DET+OCR+VLM | [yidun.md](docs/yidun.md) |
 | 腾讯云验证码 | 5 | 48 | CV / DET+OCR+VLM | [tencent.md](docs/tencent.md) |
 | 数美 | 5 | 50 | CV / DET+OCR+VLM（效果差） | [shumei.md](docs/shumei.md) |
 | 顶象 | 13 | 156 | CV / VLM / CV+VLM | [dingxiang.md](docs/dingxiang.md) |
@@ -166,10 +167,14 @@
 
 ## 最近更新
 
-- **2026-11-15**：在线浏览器改为“类型首页 → 同类型全部案例 → 左右对照详情”，覆盖 88 个厂商×类型（含 8 个仅文档），类型页补官方体验入口；补齐 192 个背景还原图与 309 个结果图（源目录可视化，未复核）；详情页新增人工审核（本地 + Cloudflare Worker/KV 远端），支持 ↑↓ 切换案例。
+- **2026-11-16**：全面回填案例题面：129 组从源 hint/instruction 恢复实际 prompt，239 组补充 `pass_criteria` 通过条件；viewer 将题目要求移到原图上方优先展示。
+- **2026-11-16**：企讯通滑块 `qingtongbu/slide` 增加局部 Sobel 梯度精修，修正 004 的 `(389,33) → (396,27)`；12 组结果纳入知识库。
+- **2026-11-16**：顶象滑块 `dingxiang/slide` 在 Canny/色差斑块判定后增加局部 Sobel 梯度精修，修正 003/004/005/007/009/010 的数像素偏差，12 组结果纳入知识库。
+- **2026-11-16**：网易易盾缺口滑块 `yidun/jigsaw` 改用 masked Sobel 梯度 + alpha mask 匹配，修正 set 03 的 10px 偏移及 004/007/011 的数像素误差；12 组答案/结果正式纳入知识库。
+- **2026-11-15**：修正网易易盾分类：`yidun/jigsaw` 收录源目录全部 12 组缺口滑块，`yidun/inference` 单独收录 12 组 8 块换位乱序拼图；在线浏览器改为“类型首页 → 同类型全部案例 → 左右对照详情”，覆盖 89 个厂商×类型（含 8 个仅文档），类型页补官方体验入口；补齐 192 个背景还原图与 309 个结果图（源目录可视化，未复核）；详情页新增人工审核（本地 + Cloudflare Worker/KV 远端），支持 ↑↓ 切换案例。
 - **2026-11-08**：仓库公开；新增 Claude Code skill；README 重构；在线浏览器上线：[eg-captcha-viewer](https://eg-captcha-viewer.jimmysmileltl.workers.dev/)。
 - **2026-11-07**：Google reCAPTCHA 扩到 4 类：新增音频 12 组、v3 documented-only；Amazon 新增音频 12 组；全部案例补方法标签。
-- 当前 72 个结果待人工审查；审查结果会回填到案例 `meta.json`。
+- 当前 120 个结果待人工审查；审查结果会回填到案例 `meta.json`。
 
 ## 热门体验入口
 
@@ -221,7 +226,7 @@
 
 不能。它是知识库，不含求解器、API、token、签名或调用代码；它帮你判断题型、方法、成本与可信度。需要实现请自行编写或使用对应的 solver 项目。
 
-**Q：896 组样本都能商用吗？**
+**Q：908 组样本都能商用吗？**
 
 不能。样本版权归各厂商，仅用于研究与教学；文档采用 CC BY-NC-SA 4.0，样本不在文档许可范围内。
 
@@ -231,7 +236,7 @@
 
 **Q：准确率数字可信吗？**
 
-文档里的准确率来自源记录，未经本库复核；72 个结果待人工审查。`sample-only` 只代表有样本，不代表已解；`result-pending-review` 也不代表已通过。
+文档里的准确率来自源记录，未经本库复核；120 个结果待人工审查。`sample-only` 只代表有样本，不代表已解；`result-pending-review` 也不代表已通过。
 
 **Q：和 solver / 模型仓库有什么区别？**
 

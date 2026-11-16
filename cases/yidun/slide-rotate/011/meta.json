@@ -15,7 +15,8 @@
   "roles": {
     "bg": "bg.jpg",
     "aux": "aux-01.png",
-    "solved": "solved.png"
+    "solved": "solved.png",
+    "trajectory": "trajectory.png"
   },
   "answer_format": "offset+rotation",
   "status": "sample-only",

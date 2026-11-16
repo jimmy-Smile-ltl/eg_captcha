@@ -11,9 +11,10 @@
   "source_url": "https://www.dingxiang-inc.com/business/captcha",
   "source_path": "dingxiang/spatial/sets/05",
   "collected_at": "unknown",
-  "prompt": "根据空间关系点击目标",
+  "prompt": "请点击颜色与立方体一致的图形",
   "roles": {
-    "bg": "bg.webp"
+    "bg": "bg.webp",
+    "annotated": "annotated.png"
   },
   "answer_format": "points",
   "status": "sample-only",
@@ -31,5 +32,6 @@
   },
   "notes": "覆盖批次：样本中立收录；结果未纳入。受光比判别 + 字形匹配，12/12；待审",
   "method": "CV",
-  "method_note": "受光比平面/立体判别 + 字形匹配；无 LLM"
+  "method_note": "受光比平面/立体判别 + 字形匹配；无 LLM",
+  "pass_criteria": "按提示点击唯一正确的对象；点错或点多均不通过。"
 }

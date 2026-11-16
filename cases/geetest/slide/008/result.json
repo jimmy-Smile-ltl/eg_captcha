@@ -7,16 +7,17 @@
   "answer": {
     "kind": "slide",
     "gap_x": 132,
-    "gap_y": 99,
+    "gap_y": 100,
     "ypos": 102
   },
   "solution": {
     "ypos": 102,
     "gap": [
       132,
-      99
+      100
     ],
-    "score": 0.20996031165122986
+    "score": 0.5020187497138977,
+    "method": "gradient"
   },
-  "notes": "Canny 边缘 + 归一化互相关模板匹配；gap 为缺口左上角"
+  "notes": "masked Sobel 梯度 + alpha mask NCC；gap 为缺口左上角"
 }

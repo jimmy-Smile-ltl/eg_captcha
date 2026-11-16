@@ -14,7 +14,7 @@ description: 查询与使用 eg_captcha 验证码知识库：按厂商/类型给
 - 求解器状态：`none` / `exists` / `weak` / `partial` / `browser`
 - 人工审查状态：`pending` / `not-applicable`（等待回填）
 
-当前快照（以仓库 README 为准）：16 家厂商、88 个厂商×类型组合、896 个案例（824 个 `sample-only` + 72 个 `result-pending-review`）。
+当前快照（以仓库 README 为准）：16 家厂商、89 个厂商×类型组合、908 个案例（788 个 `sample-only` + 120 个 `result-pending-review`）。
 
 ## 定位仓库
 

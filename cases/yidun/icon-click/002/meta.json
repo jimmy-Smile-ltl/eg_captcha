@@ -32,5 +32,16 @@
   },
   "notes": "覆盖批次：样本中立收录；结果未纳入。源目录有求解输出，未统一验证",
   "method": "VLM+CV",
-  "method_note": "主路径视觉 LLM 读图，CV 兜底；VLM 无需训练，起步便宜"
+  "method_note": "主路径视觉 LLM 读图，CV 兜底；VLM 无需训练，起步便宜",
+  "process": [
+    {
+      "file": "process-01-split.png",
+      "label": "图标拆分"
+    },
+    {
+      "file": "process-02-candidates.png",
+      "label": "候选区域"
+    }
+  ],
+  "process_note": "源目录已将目标图标拆成单图；过程图展示拆分出的图标与候选区域，最终结果见右侧。"
 }

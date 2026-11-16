@@ -13,7 +13,8 @@
   "collected_at": "2026-07-24",
   "prompt": "拖动滑块，调整到指定角度",
   "roles": {
-    "bg": "bg.jpg"
+    "bg": "bg.jpg",
+    "solved": "solved.png"
   },
   "answer_format": "angle",
   "status": "sample-only",

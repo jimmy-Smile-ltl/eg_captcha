@@ -13,7 +13,8 @@
   "collected_at": "2026-11-01",
   "prompt": "请选择所有包含摩托车的图片",
   "roles": {
-    "bg": "bg.jpg"
+    "bg": "bg.jpg",
+    "solved": "solved.png"
   },
   "answer_format": "indices",
   "status": "sample-only",

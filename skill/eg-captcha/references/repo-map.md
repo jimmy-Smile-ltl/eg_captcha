@@ -21,7 +21,7 @@
 | slug | 厂商 | 文档 | 类型数 | 样本 | 方法重点 |
 |---|---|---|---:|---:|---|
 | `geetest` | 极验 GeeTest | `docs/geetest.md` | 4 | 48 | CV（slide/icon）、PROTO（棋盘） |
-| `yidun` | 网易易盾 | `docs/yidun.md` | 10 | 96 | CV、VLM+CV、DET+OCR+VLM、VLM+ACT |
+| `yidun` | 网易易盾 | `docs/yidun.md` | 11 | 108 | CV、VLM+CV、DET+OCR+VLM、VLM+ACT |
 | `tencent` | 腾讯云验证码 | `docs/tencent.md` | 5 | 48 | CV、DET+OCR+VLM |
 | `shumei` | 数美 | `docs/shumei.md` | 5 | 50 | CV、DET+OCR+VLM（效果差） |
 | `dingxiang` | 顶象 | `docs/dingxiang.md` | 13 | 156 | CV、VLM、CV+VLM |
@@ -60,6 +60,6 @@
 
 ## 快照统计
 
-- 16 家厂商、88 个厂商×类型组合、896 个案例（824 `sample-only` + 72 `result-pending-review`）。
+- 16 家厂商、89 个厂商×类型组合、908 个案例（788 `sample-only` + 120 `result-pending-review`）。
 - 类型级求解器状态：`exists` 43 / `none` 29 / `weak` 7 / `partial` 7 / `browser` 2。
 - 以 `README.md` 当前数字为准，更新仓库后请重读。

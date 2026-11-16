@@ -33,5 +33,16 @@
   },
   "notes": "覆盖批次：样本中立收录；结果未纳入。源记录约 33% 通过；参考价值有限",
   "method": "DET+VLM",
-  "method_note": "YOLO + 视觉模型"
+  "method_note": "YOLO + 视觉模型",
+  "process": [
+    {
+      "file": "process-01-denoise.png",
+      "label": "去噪"
+    },
+    {
+      "file": "process-02-split.png",
+      "label": "拆分"
+    }
+  ],
+  "process_note": "源方案先清洗模板，再按水平投影拆分字符/图标，最后与还原背景匹配；最终结果见右侧。"
 }

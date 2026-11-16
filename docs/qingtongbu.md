@@ -8,7 +8,7 @@
 
 | 类型 | 中文 | 变体 | 样本 | 方法 | 求解器 / 源记录 | 审查 | 思路与说明 |
 |---|---|---|---:|---|---|---|---|
-| `slide` | 滑动拼图 | classic | 12 | CV | 无求解器（none）· 未知 | not-applicable | 传统视觉：边缘/模板匹配；无 LLM，单次成本最低 |
+| `slide` | 滑动拼图 | classic | 12 | CV | 有求解器（exists）· 中 | pending | alpha/RGB 双模板 + 局部 Sobel 梯度精修；无 LLM；结果已纳入，待人工审查 |
 | `text-click` | 文字点选 | classic | 12 | NONE(DET+OCR+VLM) | 无求解器（none）· 未知 | not-applicable | 未撰写；建议 YOLO+OCR+VLM 仲裁 |
 | `icon-click` | 图标点选 | classic | 12 | NONE(VLM) | 无求解器（none）· 未知 | not-applicable | 未撰写；建议 VLM 读图 + 坐标点击 |
 | `angle` | 角度验证 | classic | 12 | CV | 效果差（weak）· 低 | pending | 角度估计；MAE 5.56°，通过率 73%；MAE 5.56°，通过率 73.33%；参考价值有限 |
@@ -42,12 +42,17 @@
 
 | 类型 | 样本 | 方法 | 准确率（源记录） | 说明 |
 |---|---:|---|---|---|
-| `slide` | 12 | CV | 未知 | 传统视觉：边缘/模板匹配；无 LLM，单次成本最低 |
 | `text-click` | 12 | NONE(DET+OCR+VLM) | 未知 | 未撰写；建议 YOLO+OCR+VLM 仲裁 |
 | `icon-click` | 12 | NONE(VLM) | 未知 | 未撰写；建议 VLM 读图 + 坐标点击 |
 | `rotate` | 12 | NONE(CV+VLM) | 未知 | 未撰写；建议 CV 角度估计 + VLM 兜底 |
 | `curve` | 12 | NONE(VLM+ACT) | 未知 | 未撰写；建议 VLM 理解曲线 + 轨迹 |
 | `random` | 12 | NONE | 未知 | 随机路由，无独立题面 |
+
+### 有求解器、待人工审查（exists）
+
+| 类型 | 样本 | 方法 | 准确率（源记录） | 说明 |
+|---|---:|---|---|---|
+| `slide` | 12 | CV | 中 | alpha/RGB 双模板 + 局部 Sobel 梯度精修；无 LLM；结果已纳入，待人工审查 |
 
 ### 求解器效果差 / 参考价值有限（weak）
 

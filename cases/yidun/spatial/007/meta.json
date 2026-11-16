@@ -13,7 +13,8 @@
   "collected_at": "unknown",
   "prompt": "根据空间关系点击目标",
   "roles": {
-    "bg": "bg.jpg"
+    "bg": "bg.jpg",
+    "annotated": "annotated.png"
   },
   "answer_format": "points",
   "status": "sample-only",

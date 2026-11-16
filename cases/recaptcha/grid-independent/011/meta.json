@@ -13,7 +13,8 @@
   "collected_at": "2026-11-01",
   "prompt": "请选择所有包含公交车的图片。在没有新图片可以点按后，请点击“验证”。",
   "roles": {
-    "bg": "bg.jpg"
+    "bg": "bg.jpg",
+    "solved": "solved.png"
   },
   "answer_format": "indices",
   "status": "sample-only",

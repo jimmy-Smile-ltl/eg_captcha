@@ -13,7 +13,8 @@
   "collected_at": "unknown",
   "prompt": "按顺序点击图中图标",
   "roles": {
-    "bg": "bg.webp"
+    "bg": "bg.webp",
+    "annotated": "annotated.png"
   },
   "answer_format": "points",
   "status": "sample-only",
@@ -31,5 +32,12 @@
   },
   "notes": "覆盖批次：样本中立收录；结果未纳入。多尺度模板匹配；待审",
   "method": "CV+VLM",
-  "method_note": "多尺度模板匹配 + LLM 校验；VLM 用于兜底"
+  "method_note": "多尺度模板匹配 + LLM 校验；VLM 用于兜底",
+  "process": [
+    {
+      "file": "process-01-split.png",
+      "label": "图标拆分"
+    }
+  ],
+  "process_note": "源目录已将目标图标拆成单图；最终结果见右侧。"
 }

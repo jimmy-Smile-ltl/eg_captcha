@@ -13,7 +13,8 @@
   "collected_at": "2026-11-01",
   "prompt": "请选择包含红绿灯的所有图块",
   "roles": {
-    "bg": "bg.jpg"
+    "bg": "bg.jpg",
+    "solved": "solved.png"
   },
   "answer_format": "indices",
   "status": "sample-only",

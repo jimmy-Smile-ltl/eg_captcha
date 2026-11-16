@@ -11,9 +11,10 @@
   "source_url": "https://captcha.cup.com.cn/",
   "source_path": "cup/scene-click/sets/03",
   "collected_at": "2026-07-23",
-  "prompt": "按场景语义点击目标",
+  "prompt": "请点击所有兔子在草地的图片",
   "roles": {
-    "bg": "bg.png"
+    "bg": "bg.png",
+    "annotated": "annotated.png"
   },
   "answer_format": "points",
   "status": "sample-only",
@@ -31,5 +32,6 @@
   },
   "notes": "覆盖批次：样本中立收录；结果未纳入。源记录已搁置",
   "method": "VLM",
-  "method_note": "视觉 LLM 场景语义点选"
+  "method_note": "视觉 LLM 场景语义点选",
+  "pass_criteria": "点击所有符合场景描述的图片；漏选或误选均不通过。"
 }

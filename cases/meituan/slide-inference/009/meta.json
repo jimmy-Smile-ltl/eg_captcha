@@ -11,7 +11,7 @@
   "source_url": "https://verify.meituan.com/v2",
   "source_path": "meituan/sliderinf_202/sets/627",
   "collected_at": "unknown",
-  "prompt": "拖动滑块，露出指定数量的目标后松开",
+  "prompt": "拖动滑块刚露出完整的1茄子就松开",
   "roles": {
     "bg": "bg.jpg",
     "solved": "solved.png"
@@ -32,5 +32,6 @@
   },
   "notes": "覆盖批次：样本中立收录；结果未纳入。图像 1502/1502；提交闭环未打通",
   "method": "CV",
-  "method_note": "CV 定位 + 计数规则；无 LLM"
+  "method_note": "CV 定位 + 计数规则；无 LLM",
+  "pass_criteria": "拖动滑块，直到提示数量的目标完整露出时松开；服务端校验最终位置。"
 }

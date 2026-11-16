@@ -37,7 +37,7 @@
 
 ## 示例
 
-- 极验 slide：`CV`（Canny + NCC），未用 LLM，单次成本最低。
+- 极验 slide：`CV`（masked Sobel 梯度 + NCC），未用 LLM，单次成本最低。
 - 易盾 / 腾讯 text-click：`DET+OCR+VLM`，VLM 只做分歧仲裁。
 - reCAPTCHA / Amazon grid：`VLM`，直接读格，无需训练检测器。
 - Amazon audio / reCAPTCHA audio：`ASR`，说话人分离 + Whisper。

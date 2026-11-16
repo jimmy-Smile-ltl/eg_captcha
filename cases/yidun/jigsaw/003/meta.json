@@ -3,27 +3,27 @@
   "vendor": "yidun",
   "vendor_name": "网易易盾",
   "type": "jigsaw",
-  "type_name": "乱序拼图",
+  "type_name": "滑块",
   "variant": "classic",
   "media": [
     "image"
   ],
   "source_url": "https://dun.163.com/trial",
-  "source_path": "yidun/jigsaw/sets/05",
+  "source_path": "yidun/jigsaw/sets/03",
   "collected_at": "unknown",
-  "prompt": "交换拼图块，还原完整图像",
+  "prompt": "拖动滑块，将拼图块对准背景缺口",
   "roles": {
     "bg": "bg.jpg",
     "aux": "aux-01.png",
     "solved": "solved.png"
   },
-  "answer_format": "swap/order",
-  "status": "sample-only",
+  "answer_format": "offset-x",
+  "status": "result-pending-review",
   "sample_state": "neutral",
   "solver": {
     "status": "exists",
-    "accuracy": "medium",
-    "notes": "打乱背景不稳定；结果待人工审查"
+    "accuracy": "high",
+    "notes": "masked 梯度匹配；源记录 12/12 离线求解；结果待人工审查"
   },
   "review": {
     "state": "pending",
@@ -31,7 +31,9 @@
     "reviewed_at": "",
     "notes": ""
   },
-  "notes": "覆盖批次：样本中立收录；结果未纳入。模板匹配；打乱背景不稳定；结果待人工审查",
+  "notes": "覆盖批次：样本中立收录；源目录 yidun/jigsaw；masked 梯度匹配已修正缺口位置（gap=155,2）；结果已纳入，待人工审查",
   "method": "CV",
-  "method_note": "Canny α-边缘模板匹配；无 LLM"
+  "method_note": "masked Sobel 梯度 + alpha mask NCC；无 LLM",
+  "evidence": "offline-verified",
+  "confidence": "high"
 }

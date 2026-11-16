@@ -11,9 +11,10 @@
   "source_url": "https://verify.meituan.com/v2",
   "source_path": "meituan/icon_130/sets/83",
   "collected_at": "unknown",
-  "prompt": "按顺序点击图中图标",
+  "prompt": "请依次点击下图图标",
   "roles": {
-    "bg": "bg.png"
+    "bg": "bg.png",
+    "restored": "restored.png"
   },
   "answer_format": "points",
   "status": "sample-only",
@@ -31,5 +32,7 @@
   },
   "notes": "覆盖批次：样本中立收录；结果未纳入。图像 83/83；提交闭环未打通",
   "method": "CV",
-  "method_note": "模板/滑窗匹配；无 LLM"
+  "method_note": "模板/滑窗匹配；无 LLM",
+  "pass_criteria": "按图中图标的顺序依次点击；顺序错误不通过。",
+  "process_note": "该组源目录只有还原背景、缺提示条，无法拆出目标图标；此处展示背景还原结果。"
 }

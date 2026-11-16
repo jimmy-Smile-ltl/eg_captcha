@@ -22,11 +22,11 @@
   "status": "result-pending-review",
   "evidence": "offline-verified",
   "confidence": "high",
-  "notes": "源方案 12/12 离线验证，Δy ≤ 4px",
+  "notes": "源方案 12/12 离线验证；已用 masked 梯度匹配修正缺口水平偏移",
   "solver": {
     "status": "exists",
     "accuracy": "high",
-    "notes": "源方案离线 12/12；结果待人工审查"
+    "notes": "源方案离线 12/12；masked 梯度匹配；结果待人工审查"
   },
   "review": {
     "state": "pending",
@@ -35,5 +35,5 @@
     "notes": ""
   },
   "method": "CV",
-  "method_note": "Canny 边缘 + NCC 模板匹配；无 LLM，单次成本最低"
+  "method_note": "Sobel 梯度 + masked NCC；无 LLM，单次成本最低"
 }

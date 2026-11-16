@@ -11,10 +11,11 @@
   "source_url": "https://cloud.tencent.com/product/captcha",
   "source_path": "tencent/icon-click/sets/07",
   "collected_at": "2026-07-24",
-  "prompt": "按顺序点击图中图标",
+  "prompt": "请依次点击图中提示的图标",
   "roles": {
     "bg": "bg.png",
-    "aux": "aux-01.png"
+    "aux": "aux-01.png",
+    "annotated": "annotated.png"
   },
   "answer_format": "points",
   "status": "sample-only",
@@ -32,5 +33,17 @@
   },
   "notes": "覆盖批次：样本中立收录；结果未纳入。有样本，未撰写求解器",
   "method": "NONE(VLM)",
-  "method_note": "未撰写；建议 VLM 读图 + 坐标点击"
+  "method_note": "未撰写；建议 VLM 读图 + 坐标点击",
+  "pass_criteria": "按图中提示的图标顺序依次点击；顺序错误不通过。",
+  "process": [
+    {
+      "file": "process-01-split.png",
+      "label": "图标拆分"
+    },
+    {
+      "file": "process-02-compare.png",
+      "label": "双方案对比"
+    }
+  ],
+  "process_note": "源方案先拆分提示图标，再用本地模板与直接定位两套方案对比并仲裁；最终结果见右侧。"
 }

@@ -11,10 +11,12 @@
   "source_url": "https://verify.meituan.com/v2",
   "source_path": "meituan/icon_130/sets/31",
   "collected_at": "unknown",
-  "prompt": "按顺序点击图中图标",
+  "prompt": "请依次点击下图图标",
   "roles": {
     "bg": "bg.png",
-    "solved": "solved.png"
+    "solved": "solved.png",
+    "aux": "aux-01.jpg",
+    "restored": "restored.png"
   },
   "answer_format": "points",
   "status": "sample-only",
@@ -32,5 +34,13 @@
   },
   "notes": "覆盖批次：样本中立收录；结果未纳入。图像 83/83；提交闭环未打通",
   "method": "CV",
-  "method_note": "模板/滑窗匹配；无 LLM"
+  "method_note": "模板/滑窗匹配；无 LLM",
+  "pass_criteria": "按图中图标的顺序依次点击；顺序错误不通过。",
+  "process": [
+    {
+      "file": "process-01-split.png",
+      "label": "提示条拆分"
+    }
+  ],
+  "process_note": "源方案先还原打乱背景，再把提示条拆成 4 个图标，在还原图上做多尺度/旋转模板匹配；最终结果见右侧。"
 }

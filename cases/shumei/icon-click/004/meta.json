@@ -14,7 +14,8 @@
   "prompt": "按顺序点击图中图标",
   "roles": {
     "bg": "bg.jpg",
-    "aux": "aux-01.png"
+    "aux": "aux-01.png",
+    "annotated": "annotated.png"
   },
   "answer_format": "points",
   "status": "sample-only",
@@ -32,5 +33,13 @@
   },
   "notes": "覆盖批次：样本中立收录；结果未纳入。源方案 10/10，置信度 0.679；待审",
   "method": "CV",
-  "method_note": "红色像素 + 多角度 NCC + 匈牙利；无 LLM"
+  "method_note": "红色像素 + 多角度 NCC + 匈牙利；无 LLM",
+  "pass_criteria": "按图中图标顺序依次点击；顺序错误不通过。",
+  "process": [
+    {
+      "file": "process-01-split.png",
+      "label": "图标拆分"
+    }
+  ],
+  "process_note": "源方案从提示条切出 4 个参考图标，再做多角度模板匹配；最终结果见右侧。"
 }

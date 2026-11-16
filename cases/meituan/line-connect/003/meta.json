@@ -11,9 +11,10 @@
   "source_url": "https://verify.meituan.com/v2",
   "source_path": "meituan/sudoku_103/sets/10",
   "collected_at": "unknown",
-  "prompt": "用最短线连接目标",
+  "prompt": "用最短线依次连接所有目标点",
   "roles": {
-    "bg": "bg.png"
+    "bg": "bg.png",
+    "restored": "restored.webp"
   },
   "answer_format": "path",
   "status": "sample-only",
@@ -31,5 +32,6 @@
   },
   "notes": "覆盖批次：样本中立收录；结果未纳入。图像 50/50；提交闭环未打通",
   "method": "CV",
-  "method_note": "颜色/连线规则；无 LLM"
+  "method_note": "颜色/连线规则；无 LLM",
+  "pass_criteria": "用最短路径依次连接全部目标；漏连或连线过长不通过。"
 }

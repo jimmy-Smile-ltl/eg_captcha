@@ -6,17 +6,18 @@
   "confidence": "high",
   "answer": {
     "kind": "slide",
-    "gap_x": 110,
-    "gap_y": 51,
+    "gap_x": 112,
+    "gap_y": 52,
     "ypos": 52
   },
   "solution": {
     "ypos": 52,
     "gap": [
-      110,
-      51
+      112,
+      52
     ],
-    "score": 0.2084168642759323
+    "score": 0.6149376630783081,
+    "method": "gradient"
   },
-  "notes": "Canny 边缘 + 归一化互相关模板匹配；gap 为缺口左上角"
+  "notes": "masked Sobel 梯度 + alpha mask NCC；gap 为缺口左上角"
 }

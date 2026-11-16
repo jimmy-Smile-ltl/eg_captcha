@@ -13,7 +13,8 @@
   "collected_at": "unknown",
   "prompt": "选出并排列正确词语",
   "roles": {
-    "bg": "bg.jpg"
+    "bg": "bg.jpg",
+    "annotated": "annotated.png"
   },
   "answer_format": "points+order",
   "status": "sample-only",

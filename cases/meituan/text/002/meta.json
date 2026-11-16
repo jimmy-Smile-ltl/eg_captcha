@@ -11,7 +11,7 @@
   "source_url": "https://verify.meituan.com/v2",
   "source_path": "meituan/image_1/sets/1147",
   "collected_at": "unknown",
-  "prompt": "输入或识别图中字符",
+  "prompt": "请输入图片中的内容",
   "roles": {
     "bg": "bg.jpg"
   },
@@ -31,5 +31,6 @@
   },
   "notes": "覆盖批次：样本中立收录；结果未纳入。字符 51.6% / 全对 13.2%；提交未打通",
   "method": "DET+OCR",
-  "method_note": "YOLO26 字符检测/OCR；效果差"
+  "method_note": "YOLO26 字符检测/OCR；效果差",
+  "pass_criteria": "输入图片中显示的完整字符；字符错误不通过。"
 }

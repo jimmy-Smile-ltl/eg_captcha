@@ -31,5 +31,6 @@
   },
   "notes": "覆盖批次：样本中立收录；结果未纳入。有样本，未撰写求解器",
   "method": "NONE(VLM)",
-  "method_note": "未撰写；建议 VLM 空间推理"
+  "method_note": "未撰写；建议 VLM 空间推理",
+  "pass_criteria": "按题目提示点击对应的空间对象；点错不通过。"
 }

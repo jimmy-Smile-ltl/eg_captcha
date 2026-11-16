@@ -14,7 +14,8 @@
   "prompt": "拖动滑块避开障碍",
   "roles": {
     "bg": "bg.jpg",
-    "aux": "aux-01.png"
+    "aux": "aux-01.png",
+    "annotated": "annotated.png"
   },
   "answer_format": "path",
   "status": "sample-only",

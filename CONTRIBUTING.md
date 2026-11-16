@@ -67,7 +67,8 @@ cases/<vendor>/<type>/<NNN>/
 | `slide-inference` | 滑动推理 | sliderinf_202 |
 | `slide-restore` | 滑动还原 | concat, slide-restore |
 | `slide-rotate` | 旋转拼图 | jigsaw_new |
-| `jigsaw` | 乱序拼图 | inference, jigsaw |
+| `jigsaw` | 拼图（易盾为缺口滑块） | jigsaw |
+| `inference` | 8 块换位乱序拼图 | inference（易盾） |
 | `rotate` | 旋转验证 | rotate |
 | `angle` | 角度验证 | rotate_degree, angle |
 | `curve` | 曲线滑动 | curve, curve2, curve3 |
@@ -117,6 +118,9 @@ cases/<vendor>/<type>/<NNN>/
 | `solved.*` | 可选 | 最终结果 / 拼合效果图（源目录结果图，未复核） |
 | `mark.*` | 可选 | 目标 / 拼图位置标记图 |
 | `trajectory.*` | 可选 | 求解轨迹图 |
+| `denoised.*` | 可选 | 去噪 / 去干扰后的题面或提示图（可含前后对照） |
+| `split.*` | 可选 | 切分出的单字、图标或提示块（可含多块拼图） |
+| `process-NN-*.*` | 可选 | 其他源求解器中间产物，按 `meta.process` 顺序展示 |
 | `annotated.png` | 有结果时必需 | 答案可视化：绿=答案，黄=候选，红=错误/排除 |
 | `answer.txt` | 有结果时必需 | 人类可读答案 |
 | `result.json` | 有结果时必需 | 原样求解结果（脱敏） |
@@ -142,8 +146,11 @@ cases/<vendor>/<type>/<NNN>/
 | `source_url` | 是 | 公开来源 URL，不带 token/query |
 | `source_path` | 否 | 源相对路径，便于复核 |
 | `collected_at` | 是 | `YYYY-MM-DD` |
-| `prompt` | 否 | 题面/操作提示 |
+| `prompt` | 否 | **该组实际题面/操作提示**；优先从源数据字段或 hint 文件提取，不要只写类型级泛化描述 |
+| `pass_criteria` | 否 | 通过条件/判定行为：点几个、拖到哪里、顺序要求、由服务端校验什么 |
 | `roles` | 是 | 文件角色映射 |
+| `process` | 否 | 源求解器过程图数组：`file` + `label`；按数组顺序展示 |
+| `process_note` | 否 | 求解过程说明（无去噪/拆分产物时的处理方式也写在这里） |
 | `answer_format` | 是 | `offset-x` / `points` / `angle` / `text` / `indices` / `swap` / `path` 等 |
 | `method` | 是 | 方法标签：`CV` / `DET` / `OCR` / `VLM` / `ASR` / `PROTO` / `ACT` / `AUDIO` / `NONE`，可组合 |
 | `method_note` | 是 | 是否用 LLM、成本/适用性、建议路线 |
@@ -236,6 +243,7 @@ note: 缺口左上角坐标 (178, 96)，图为 320x160
 - [ ] `meta.json` 必填字段齐全，来源可公开访问
 - [ ] `solver.status` / `solver.accuracy` / `review.state` 在枚举内
 - [ ] `sample-only` 案例只有 `meta.json` + 媒体，无 `answer/annotated/result`
+- [ ] `meta.process` 中的每个 `file` 都存在，且按求解顺序标注
 - [ ] `result-pending-review` 案例的 `answer.txt` ↔ `annotated.png` ↔ `result.json` 数值一致
 - [ ] 未解/无结果案例不伪造答案
 - [ ] 无 token/cookie/个人信息/原始报文

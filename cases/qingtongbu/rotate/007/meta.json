@@ -14,7 +14,8 @@
   "prompt": "拖动滑块，将图片旋转到正确方向",
   "roles": {
     "bg": "bg.jpg",
-    "aux": "aux-01.png"
+    "aux": "aux-01.png",
+    "solved": "solved.png"
   },
   "answer_format": "angle",
   "status": "sample-only",

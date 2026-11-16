@@ -34,5 +34,32 @@
     "notes": ""
   },
   "method": "CV",
-  "method_note": "颜色连通 + 轮廓 chamfer + 匈牙利；无 LLM"
+  "method_note": "颜色连通 + 轮廓 chamfer + 匈牙利；无 LLM",
+  "process": [
+    {
+      "file": "process-01-split.png",
+      "label": "图标拆分"
+    },
+    {
+      "file": "process-02-regions.png",
+      "label": "图标区域检测"
+    },
+    {
+      "file": "process-03-contour.png",
+      "label": "轮廓距离场"
+    },
+    {
+      "file": "process-04-match-1.png",
+      "label": "模板匹配 1"
+    },
+    {
+      "file": "process-05-match-2.png",
+      "label": "模板匹配 2"
+    },
+    {
+      "file": "process-06-match-3.png",
+      "label": "模板匹配 3"
+    }
+  ],
+  "process_note": "源方案按目标图标 → 区域检测 → 轮廓距离 → 多模板匹配的顺序求解；最终结果见右侧。"
 }

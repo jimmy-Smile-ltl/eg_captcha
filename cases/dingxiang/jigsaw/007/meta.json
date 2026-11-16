@@ -13,7 +13,9 @@
   "collected_at": "unknown",
   "prompt": "交换拼图块，还原完整图像",
   "roles": {
-    "bg": "bg.webp"
+    "bg": "bg.webp",
+    "annotated": "annotated.png",
+    "restored": "restored.webp"
   },
   "answer_format": "swap/order",
   "status": "sample-only",

@@ -13,7 +13,8 @@
   "collected_at": "unknown",
   "prompt": "按顺序点击图中文字",
   "roles": {
-    "bg": "bg.jpg"
+    "bg": "bg.jpg",
+    "annotated": "annotated.png"
   },
   "answer_format": "points",
   "status": "sample-only",
@@ -31,5 +32,13 @@
   },
   "notes": "覆盖批次：样本中立收录；结果未纳入。风格化字体 OCR 0%，bbox 偏差大；参考价值有限",
   "method": "DET+OCR+VLM",
-  "method_note": "YOLO + OCR/Siamese + LLM 版；风格化字体导致效果差"
+  "method_note": "YOLO + OCR/Siamese + LLM 版；风格化字体导致效果差",
+  "pass_criteria": "按图中文字顺序依次点击；顺序错误不通过。",
+  "process": [
+    {
+      "file": "process-01-candidates.png",
+      "label": "候选切分"
+    }
+  ],
+  "process_note": "源方案先切出候选字符块，再逐块识别与定位；最终结果见右侧。"
 }

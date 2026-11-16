@@ -31,34 +31,34 @@
 
 #### 求解思路
 
-缺口像素与拼图块颜色并不一致，纯色/SSD/NCC 像素匹配得分很低；有效的是 **Canny 边缘 + 归一化互相关模板匹配**：拼图块的 alpha 轮廓与缺口边界形状一致，用边缘图匹配更稳。`ypos` 直接取 API 值，只解 X。
+缺口像素与拼图块颜色并不一致，纯色/SSD/直接 RGB NCC 像素匹配得分很低；有效的是 **Sobel 梯度幅值 + alpha mask 归一化互相关**：保留边缘强弱信息，用拼图块 alpha 屏蔽透明区，直接在 `ypos ± 4` 约束下对齐缺口内部结构。Canny 二值轮廓保留为低置信度回退。`ypos` 直接取 API 值。
 
-**方法标签：`CV`（Canny + NCC）**；未使用多模态 LLM，单次成本最低，适合大量重复题。
+**方法标签：`CV`（masked 梯度 + NCC）**；未使用多模态 LLM，单次成本最低，适合大量重复题。
 
 #### 代表案例
 
 | 样本 | 标注 | 答案 |
 |---|---|---|
-| <img src="../cases/geetest/slide/001/bg.png" width="220" alt="极验 滑动拼图 001 原始题面"> | <img src="../cases/geetest/slide/001/annotated.png" width="220" alt="极验 滑动拼图 001 标注图"> | [001](../cases/geetest/slide/001/)：gap_x=117, gap_y=66, ypos=68 |
-| <img src="../cases/geetest/slide/002/bg.png" width="220" alt="极验 滑动拼图 002 原始题面"> | <img src="../cases/geetest/slide/002/annotated.png" width="220" alt="极验 滑动拼图 002 标注图"> | [002](../cases/geetest/slide/002/)：gap_x=101, gap_y=111, ypos=111 |
-| <img src="../cases/geetest/slide/004/bg.png" width="220" alt="极验 滑动拼图 004 原始题面"> | <img src="../cases/geetest/slide/004/annotated.png" width="220" alt="极验 滑动拼图 004 标注图"> | [004](../cases/geetest/slide/004/)：gap_x=129, gap_y=103, ypos=102 |
+| <img src="../cases/geetest/slide/001/bg.png" width="220" alt="极验 滑动拼图 001 原始题面"> | <img src="../cases/geetest/slide/001/annotated.png" width="220" alt="极验 滑动拼图 001 标注图"> | [001](../cases/geetest/slide/001/)：gap_x=118, gap_y=68, ypos=68 |
+| <img src="../cases/geetest/slide/002/bg.png" width="220" alt="极验 滑动拼图 002 原始题面"> | <img src="../cases/geetest/slide/002/annotated.png" width="220" alt="极验 滑动拼图 002 标注图"> | [002](../cases/geetest/slide/002/)：gap_x=103, gap_y=111, ypos=111 |
+| <img src="../cases/geetest/slide/004/bg.png" width="220" alt="极验 滑动拼图 004 原始题面"> | <img src="../cases/geetest/slide/004/annotated.png" width="220" alt="极验 滑动拼图 004 标注图"> | [004](../cases/geetest/slide/004/)：gap_x=133, gap_y=102, ypos=102 |
 
 #### 12 组案例
 
 | # | 答案 | 证据 | 置信度 |
 |---|---|---|---|
-| [001](../cases/geetest/slide/001/) | gap_x=117, gap_y=66, ypos=68 | offline-verified | high |
-| [002](../cases/geetest/slide/002/) | gap_x=101, gap_y=111, ypos=111 | offline-verified | high |
-| [003](../cases/geetest/slide/003/) | gap_x=101, gap_y=24, ypos=23 | offline-verified | high |
-| [004](../cases/geetest/slide/004/) | gap_x=129, gap_y=103, ypos=102 | offline-verified | high |
-| [005](../cases/geetest/slide/005/) | gap_x=188, gap_y=36, ypos=40 | offline-verified | high |
-| [006](../cases/geetest/slide/006/) | gap_x=184, gap_y=99, ypos=97 | offline-verified | high |
-| [007](../cases/geetest/slide/007/) | gap_x=133, gap_y=93, ypos=94 | offline-verified | high |
-| [008](../cases/geetest/slide/008/) | gap_x=132, gap_y=99, ypos=102 | offline-verified | high |
-| [009](../cases/geetest/slide/009/) | gap_x=190, gap_y=22, ypos=24 | offline-verified | high |
-| [010](../cases/geetest/slide/010/) | gap_x=110, gap_y=51, ypos=52 | offline-verified | high |
-| [011](../cases/geetest/slide/011/) | gap_x=127, gap_y=59, ypos=62 | offline-verified | high |
-| [012](../cases/geetest/slide/012/) | gap_x=116, gap_y=67, ypos=69 | offline-verified | high |
+| [001](../cases/geetest/slide/001/) | gap_x=118, gap_y=68, ypos=68 | offline-verified | high |
+| [002](../cases/geetest/slide/002/) | gap_x=103, gap_y=111, ypos=111 | offline-verified | high |
+| [003](../cases/geetest/slide/003/) | gap_x=108, gap_y=23, ypos=23 | offline-verified | high |
+| [004](../cases/geetest/slide/004/) | gap_x=133, gap_y=102, ypos=102 | offline-verified | high |
+| [005](../cases/geetest/slide/005/) | gap_x=191, gap_y=40, ypos=40 | offline-verified | high |
+| [006](../cases/geetest/slide/006/) | gap_x=186, gap_y=97, ypos=97 | offline-verified | high |
+| [007](../cases/geetest/slide/007/) | gap_x=131, gap_y=94, ypos=94 | offline-verified | high |
+| [008](../cases/geetest/slide/008/) | gap_x=132, gap_y=100, ypos=102 | offline-verified | high |
+| [009](../cases/geetest/slide/009/) | gap_x=195, gap_y=23, ypos=24 | offline-verified | high |
+| [010](../cases/geetest/slide/010/) | gap_x=112, gap_y=52, ypos=52 | offline-verified | high |
+| [011](../cases/geetest/slide/011/) | gap_x=133, gap_y=62, ypos=62 | offline-verified | high |
+| [012](../cases/geetest/slide/012/) | gap_x=118, gap_y=69, ypos=69 | offline-verified | high |
 
 #### 难点与边界
 
@@ -207,7 +207,7 @@
 
 | 现象 | 根因 | 结论 |
 |---|---|---|
-| slide 纯色/SSD/NCC 匹配得分极低 | 缺口偏暗，拼图块是彩色，像素分布不一致 | 改用边缘轮廓匹配 |
+| slide 直接 RGB 匹配得分极低 | 缺口偏暗，拼图块是彩色，像素分布不一致 | 改用 Sobel 梯度 + alpha mask 匹配 |
 | icon 部分组只命中 2/3 | 图标与场景色带同色、被画幅裁剪、或存在相似干扰物 | 颜色连通分割 + 轮廓匹配的边界，不是参数问题 |
 | gobang/icon-crush 多解 | 棋盘可能存在多个有效交换 | 只要求其一；本库取第一个源解 |
 | 全部类型无线上记录 | 未做提交闭环 | 统一标 `offline-verified`，不冒充线上通过 |
@@ -216,7 +216,7 @@
 
 | 类型 | 样本 | 结论 | 日期 |
 |---|---:|---|---|
-| slide | 12 | 离线 12/12，Δy ≤ 4px | 2026-07-23 |
+| slide | 12 | 离线 12/12，Δy ≤ 2px | 2026-11-16 |
 | icon-click | 12 | 可验证集 23/27 ≈ 85%（±20px） | 2026-07-23 |
 | gobang | 12 | 12/12 棋盘解经枚举校验；07–12 为矩阵重建 | 2026-07-23/24 |
 | icon-crush | 12 | 12/12 源解经枚举校验 | 2026-07-23 |
@@ -229,7 +229,7 @@
 
 | 类型 | 求解器 | 源记录准确率 | 审查状态 | 备注 |
 |---|---|---|---|---|
-| slide | exists | high | pending | 源方案离线 12/12，Δy ≤ 4px |
+| slide | exists | high | pending | 源方案离线 12/12，Δy ≤ 2px |
 | icon-click | exists | medium | pending | 源方案可验证集 23/27 ≈ 85% |
 | gobang | exists | high | pending | 棋盘解唯一，已枚举校验 |
 | icon-crush | exists | high | pending | 源解有效，已枚举校验 |

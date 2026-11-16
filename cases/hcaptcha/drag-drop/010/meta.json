@@ -32,5 +32,6 @@
   },
   "notes": "覆盖批次：样本中立收录；结果未纳入。只采集题面，无验证答案",
   "method": "NONE(VLM)",
-  "method_note": "未撰写；建议 VLM 读图 + 拖拽"
+  "method_note": "未撰写；建议 VLM 读图 + 拖拽",
+  "pass_criteria": "把正确的元素拖到目标位置；放置错误不通过。"
 }

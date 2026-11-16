@@ -8,7 +8,7 @@
 
 | 类型 | 中文 | 变体 | 样本 | 方法 | 求解器 / 源记录 | 审查 | 思路与说明 |
 |---|---|---|---:|---|---|---|---|
-| `slide` | 滑动拼图 | classic | 12 | CV | 部分攻克（partial）· 未知 | pending | 背景还原 + 缺口检测；无 LLM；源记录冲突：总表称已攻克，类型表称缺口检测待做；待审 |
+| `slide` | 滑动拼图 | classic | 12 | CV | 有求解器（exists）· 高 | pending | 背景还原 + Canny 候选 + 色差斑块判别 + Sobel 梯度精修；无 LLM；结果已纳入，待人工审查 |
 | `text-click` | 文字点选 | classic | 12 | VLM | 有求解器（exists）· 高 | pending | DeepSeek 视觉多视角投票直接坐标；DeepSeek 视觉多视角投票，类型表称实机验证；总表称待做；待审 |
 | `icon-click` | 图标点选 | classic | 12 | CV+VLM | 有求解器（exists）· 高 | pending | 多尺度模板匹配 + LLM 校验；VLM 用于兜底；多尺度模板匹配；待审 |
 | `word-order` | 语序点选 | classic | 12 | NONE(OCR+VLM) | 无求解器（none）· 未知 | not-applicable | 未撰写；建议 OCR + VLM 语序 |
@@ -64,7 +64,7 @@
 
 | 类型 | 样本 | 方法 | 准确率（源记录） | 说明 |
 |---|---:|---|---|---|
-| `slide` | 12 | CV | 未知 | 背景还原 + 缺口检测；无 LLM；源记录冲突：总表称已攻克，类型表称缺口检测待做；待审 |
+| `slide` | 12 | CV | 高 | 背景还原 + Canny 候选 + 色差斑块 + 梯度精修；无 LLM；结果已纳入，待人工审查 |
 | `scratch` | 12 | CV | 未知 | 背景还原/刮刮卡区域；无 LLM；源记录冲突：总表称已攻克，类型表称仅背景还原；待审 |
 
 ### 有求解器、待人工审查（exists）

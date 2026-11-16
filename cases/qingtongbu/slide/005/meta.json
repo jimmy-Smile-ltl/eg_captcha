@@ -18,12 +18,12 @@
     "solved": "solved.png"
   },
   "answer_format": "offset-x",
-  "status": "sample-only",
+  "status": "result-pending-review",
   "sample_state": "neutral",
   "solver": {
-    "status": "none",
-    "accuracy": "unknown",
-    "notes": "未撰写求解器（仅采集）"
+    "status": "exists",
+    "accuracy": "medium",
+    "notes": "双模板交叉验证 + 局部梯度精修；待人工审查"
   },
   "review": {
     "state": "not-applicable",
@@ -31,7 +31,9 @@
     "reviewed_at": "",
     "notes": ""
   },
-  "notes": "覆盖批次：样本中立收录；结果未纳入。未撰写求解器（仅采集）",
+  "notes": "覆盖批次：样本中立收录；双模板 + 局部梯度精修（gap=205,170）；结果已纳入，待人工审查",
   "method": "CV",
-  "method_note": "传统视觉：边缘/模板匹配；无 LLM，单次成本最低"
+  "method_note": "alpha/RGB 双模板 + 局部 Sobel 梯度精修；无 LLM",
+  "evidence": "unverified",
+  "confidence": "medium"
 }

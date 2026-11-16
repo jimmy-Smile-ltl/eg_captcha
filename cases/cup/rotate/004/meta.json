@@ -13,7 +13,8 @@
   "collected_at": "2026-07-23",
   "prompt": "拖动滑块，将图片旋转到正确方向",
   "roles": {
-    "bg": "bg.png"
+    "bg": "bg.png",
+    "solved": "solved.png"
   },
   "answer_format": "angle",
   "status": "sample-only",

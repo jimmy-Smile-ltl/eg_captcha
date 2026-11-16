@@ -15,7 +15,9 @@
   "roles": {
     "bg": "bg.jpg",
     "aux": "aux-01.png",
-    "solved": "solved.png"
+    "solved": "solved.png",
+    "denoised": "denoised.png",
+    "split": "split.png"
   },
   "answer_format": "points",
   "status": "sample-only",
@@ -33,5 +35,6 @@
   },
   "notes": "覆盖批次：样本中立收录；结果未纳入。未撰写求解器（仅采集）",
   "method": "NONE(VLM)",
-  "method_note": "未撰写；建议 VLM 读图 + 坐标点击"
+  "method_note": "未撰写；建议 VLM 读图 + 坐标点击",
+  "process_note": "提示图图标先保留灰色、剔除彩色干扰线和圆圈，再按列聚类切成 4 个图标后逐个匹配；最终结果见右侧。"
 }

@@ -11,7 +11,7 @@
   "source_url": "https://cloud.tencent.com/product/captcha",
   "source_path": "tencent/slider/sets/09",
   "collected_at": "2026-07-24",
-  "prompt": "拖动滑块，将拼图块补入缺口",
+  "prompt": "拖动下方滑块完成拼图",
   "roles": {
     "bg": "bg.png",
     "aux": "aux-01.png",
@@ -33,5 +33,6 @@
   },
   "notes": "覆盖批次：样本中立收录；结果未纳入。源记录 100%；结果待人工审查",
   "method": "CV",
-  "method_note": "mask 模板匹配 + alpha 合成；无 LLM"
+  "method_note": "mask 模板匹配 + alpha 合成；无 LLM",
+  "pass_criteria": "拖动滑块，使拼图块与缺口对齐；服务端校验最终位置与行为。"
 }

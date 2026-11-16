@@ -14,7 +14,8 @@
   "prompt": "点击图中指定目标",
   "roles": {
     "bg": "bg.png",
-    "aux": "aux-01.png"
+    "aux": "aux-01.png",
+    "annotated": "annotated.png"
   },
   "answer_format": "points",
   "status": "sample-only",

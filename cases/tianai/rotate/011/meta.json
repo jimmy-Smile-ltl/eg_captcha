@@ -15,15 +15,16 @@
   "roles": {
     "bg": "bg.jpg",
     "aux": "aux-01.png",
-    "restored": "restored.jpg"
+    "restored": "restored.jpg",
+    "solved": "solved.jpg"
   },
   "answer_format": "angle",
-  "status": "sample-only",
+  "status": "result-pending-review",
   "sample_state": "neutral",
   "solver": {
     "status": "exists",
     "accuracy": "medium",
-    "notes": "源报告部分通过；待审"
+    "notes": "源报告部分通过（8/50）；结果已纳入，待人工审核"
   },
   "review": {
     "state": "pending",
@@ -31,7 +32,9 @@
     "reviewed_at": "",
     "notes": ""
   },
-  "notes": "覆盖批次：样本中立收录；结果未纳入。源报告部分通过；待审",
+  "notes": "覆盖批次：样本中立收录；已补充源求解器最终结果 complete.jpg、角度与 result.json；tip_anchor；待人工审核",
   "method": "CV+VLM",
-  "method_note": "SIFT/ORB + 视觉模型兜底"
+  "method_note": "SIFT/ORB + 视觉模型兜底",
+  "evidence": "unverified",
+  "confidence": "medium"
 }
