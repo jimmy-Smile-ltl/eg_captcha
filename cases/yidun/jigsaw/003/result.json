@@ -1,0 +1,23 @@
+{
+  "case_id": "yidun/jigsaw/003",
+  "kind": "slide",
+  "status": "solved",
+  "evidence": "offline-verified",
+  "confidence": "high",
+  "answer": {
+    "kind": "slide",
+    "gap_x": 155,
+    "gap_y": 2
+  },
+  "solution": {
+    "gap": [
+      155,
+      2
+    ],
+    "score": 0.788,
+    "method": "gradient",
+    "display_scale": 0.6666666666666666,
+    "slider_distance": 103.3
+  },
+  "notes": "masked Sobel 梯度 + alpha mask NCC；gap 为缺口左上角"
+}

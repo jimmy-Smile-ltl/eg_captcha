@@ -1,0 +1,4 @@
+answer: gap_x=150, gap_y=60
+unit: px
+source: offline-verified
+note: 400x200 还原背景；缺口左上角 (150,60)；Canny 候选 + 色差斑块 + 梯度精修

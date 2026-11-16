@@ -1,0 +1,4 @@
+answer: gap_x=230, gap_y=1
+unit: px
+source: offline-verified
+note: 320x160 背景；缺口左上角 (230,1)；拖动距离 153.3px（2/3 缩放）；gradient score=0.734

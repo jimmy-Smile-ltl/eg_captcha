@@ -1,0 +1,27 @@
+{
+  "case_id": "qingtongbu/slide/005",
+  "kind": "slide",
+  "status": "solved",
+  "evidence": "unverified",
+  "confidence": "medium",
+  "answer": {
+    "kind": "slide",
+    "gap_x": 205,
+    "gap_y": 170
+  },
+  "solution": {
+    "gap": [
+      205,
+      170
+    ],
+    "puzzle_size": [
+      84,
+      84
+    ],
+    "alpha_score": 0.43948039412498474,
+    "rgb_score": 0.3364632725715637,
+    "consensus": true,
+    "gradient_refine": null
+  },
+  "notes": "alpha/RGB 双模板 + 局部 Sobel 梯度精修；gap 为缺口左上角"
+}

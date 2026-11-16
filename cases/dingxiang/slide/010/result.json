@@ -1,0 +1,21 @@
+{
+  "case_id": "dingxiang/slide/010",
+  "kind": "slide",
+  "status": "solved",
+  "evidence": "offline-verified",
+  "confidence": "high",
+  "answer": {
+    "kind": "slide",
+    "gap_x": 223,
+    "gap_y": 90
+  },
+  "solution": {
+    "gap": [
+      223,
+      90
+    ],
+    "score": 1.614,
+    "method": "canny-candidate+shape-ratio+gradient-refine"
+  },
+  "notes": "背景还原 + Canny 候选 + 色差斑块判别 + 局部 Sobel 梯度精修；gap 为缺口左上角"
+}

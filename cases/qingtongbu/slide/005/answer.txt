@@ -1,0 +1,4 @@
+answer: gap_x=205, gap_y=170
+unit: px
+source: unverified
+note: 600x360 背景；84x84 拼图；缺口左上角 (205,170)；双模板 + 梯度精修
