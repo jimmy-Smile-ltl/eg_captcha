@@ -1,0 +1,30 @@
+{
+  "case_id": "tianai/rotate/008",
+  "kind": "rotate",
+  "status": "solved",
+  "evidence": "offline-verified",
+  "confidence": "high",
+  "answer": {
+    "angle": 159.1,
+    "slider_distance": 159.1
+  },
+  "solution": {
+    "method": "library",
+    "inliers": 100,
+    "scale": 0.8
+  },
+  "geometry": {
+    "hole": {
+      "cx": 309.3,
+      "cy": 166,
+      "r": 153
+    },
+    "disc": {
+      "cx": 99.5,
+      "cy": 179.5,
+      "r_alpha": 99.5,
+      "r_solid": 97.5
+    }
+  },
+  "notes": "angle = 圆盘当前逆时针旋转量; 转正 = 顺时针旋转 angle 度; 滑块右拖 distance = angle (若拖拽方向相反请用 360-angle)"
+}

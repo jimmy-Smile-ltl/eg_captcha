@@ -1,0 +1,4 @@
+answer: angle=77.8°
+unit: degree
+source: unverified
+note: 顺时针旋转 77.8° 使圆盘转正；滑块右拖距离 77.8（1:1 映射）
