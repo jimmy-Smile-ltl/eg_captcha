@@ -1,0 +1,74 @@
+{
+  "case_id": "yidun/text-click-enhanced/009",
+  "kind": "points",
+  "status": "result-pending-review",
+  "evidence": "manual",
+  "confidence": "medium",
+  "instruction": "方 → 课 → 尘",
+  "answer": {
+    "kind": "points",
+    "points": [
+      [
+        139,
+        95
+      ],
+      [
+        50,
+        98
+      ],
+      [
+        266,
+        72
+      ]
+    ],
+    "chars": [
+      "方",
+      "课",
+      "尘"
+    ]
+  },
+  "solution": {
+    "method": "standalone-ocr + color-layer-split + fragment-ratio + font-chamfer",
+    "note": "独立框走 YOLO + 多角度 RapidOCR 定 1 个字；两组重叠对按墨色分层，按连通域碎片度判上下层，摆正后字体 chamfer 定字，锚点取目标自身露出笔画的最厚处。",
+    "partial": false,
+    "solved": 3,
+    "total": 3,
+    "clicks": [
+      {
+        "order": 1,
+        "char": "方",
+        "x": 139,
+        "y": 95,
+        "role": "pair",
+        "confidence": "medium",
+        "pair": 3,
+        "member": "lower",
+        "color": "绿",
+        "anchor_mode": "exposed",
+        "reason": "P3 鲜绿层（hue 38-60 / S≥140 / V≥170，152px，k-means 簇 BGR 64,203,122）碎成 点·横·钩·底块 四片 = 下层，白字压在它上面（两色叠加图可见绿笔画被红切断）；摆正后为 亠+力 形，chamfer 方 5.50 居首（为 5.82 / 京 5.96 / 力 7.49）；白色上层为密排方框字（曹/曲/典 类）。锚点取绿字最大块的最厚处（距边界 2.2px，BGR 45,211,116），落在目标自己的露出笔画上"
+      },
+      {
+        "order": 2,
+        "char": "课",
+        "x": 50,
+        "y": 98,
+        "role": "pair",
+        "confidence": "medium",
+        "pair": 2,
+        "member": "lower",
+        "color": "近黑",
+        "anchor_mode": "exposed",
+        "reason": "P2 白色上层旋转 +60° 立正后读作「五」（单块 330px 未被打断 = 上层，chamfer 落在 占/田/点 族）→ 非目标；下层近黑墨（k-means 簇 BGR 17,23,6，408px）被白字切断成多块 = 下层，按离墨色距离 d≤45 的骨架见右部 田/目 状方框叠内横、左部斜笔碎块，与 课=讠+果 形近，按目标表判为 课。锚点取黑字最大块（19×22，164px）的最厚处（距边界 3.0px，BGR 26,16,6），落在自己的露出笔画上"
+      },
+      {
+        "order": 3,
+        "char": "尘",
+        "x": 266,
+        "y": 72,
+        "role": "standalone",
+        "confidence": "high",
+        "reason": "独立框 S1 [246,53,286,91]，rapidocr 45° 读 尘 conf 0.9691；原始 12× 摆正后在 +45° 可见上部 小（竖+两侧点）压下部 土（横竖横）。同组另两个独立框均为干扰：S0 亮蓝是 朱/未 族（chamfer 朱 2.78 领先，单一竖穿横+撇捺，无 小/土 上下分段），S4 靛蓝是 宀+木 类（+50° 读作 案/宋 形，chamfer 束 2.17 / 棵 2.23 / 果 2.80 均优于 课 2.88，即无 讠 的形近字）"
+      }
+    ]
+  }
+}

@@ -22,16 +22,16 @@
   "solver": {
     "status": "exists",
     "accuracy": "medium",
-    "notes": "打乱背景不稳定；结果待人工审查"
+    "notes": "切缝断裂度 + 断裂段签名 + 双全排列；另加亮度不变的全切缝成本（原始 + 高通 I-GaussianBlur(σ=5)，暗色遮罩下只看轮廓/纹理）作28 选 1 主投票；无 LLM；源记录 12/12（2026-11-20 修正 08/09 两组的旧 swap）"
   },
   "review": {
-    "state": "pending",
-    "result": "",
-    "reviewed_at": "",
+    "state": "pass",
+    "result": "correct",
+    "reviewed_at": "2026-11-15",
     "notes": ""
   },
-  "notes": "覆盖批次：样本中立收录；源目录 yidun/inference 为 8 块换位乱序拼图；结果未纳入；待人工审查",
+  "notes": "覆盖批次：样本中立收录；源目录 yidun/inference 为 8 块换位乱序拼图；2026-11-20 用亮度不变切缝成本修正 08（0,2→0,1）与 09（0,1→1,7）并重生成 solved.png；结果待重新审核",
   "method": "CV",
-  "method_note": "切缝断裂度 + 断裂段签名 + 全排列优化；无 LLM",
+  "method_note": "切缝断裂度 + 断裂段签名 + 全排列 + 亮度不变全切缝成本；暗色遮罩/明暗渐变下用高通轮廓投票；无 LLM",
   "legacy_case_id": "yidun/jigsaw/007"
 }

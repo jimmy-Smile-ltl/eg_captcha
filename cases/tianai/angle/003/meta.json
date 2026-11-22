@@ -14,7 +14,8 @@
   "prompt": "拖动滑块，调整到指定角度",
   "roles": {
     "bg": "bg.jpg",
-    "restored": "restored.jpg"
+    "restored": "restored.jpg",
+    "solved": "solved.jpg"
   },
   "answer_format": "angle",
   "status": "sample-only",
@@ -25,12 +26,13 @@
     "notes": "源报告部分通过；待审"
   },
   "review": {
-    "state": "pending",
-    "result": "",
-    "reviewed_at": "",
-    "notes": ""
+    "state": "pass",
+    "result": "correct",
+    "notes": "",
+    "reviewed_at": "2026-11-20T16:23:24.156Z"
   },
-  "notes": "覆盖批次：样本中立收录；结果未纳入。源报告部分通过；待审",
+  "notes": "覆盖批次：样本中立收录；结果未纳入。源报告部分通过；待审；2026-11-21 修正展示：restored.jpg 改回「背景还原（块序还原、仍旋转）」，solved.jpg 使用回正后的彩色最终结果；此前把背景还原误当最终结果",
   "method": "CV+VLM",
-  "method_note": "霍夫线 + 视觉模型兜底"
+  "method_note": "霍夫线 + 视觉模型兜底",
+  "process_note": "bg.jpg=原始打乱+旋转题面；restored.jpg=4×4 块序还原后的背景（仍带旋转，不是最终结果）；solved.jpg=回正后的彩色最终求解结果。"
 }

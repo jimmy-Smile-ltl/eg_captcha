@@ -1,64 +1,53 @@
 {
-  "case_id": "amazon/audio/006",
-  "kind": "text",
-  "status": "result-pending-review",
-  "evidence": "unverified",
-  "confidence": "low",
-  "answer": {
-    "kind": "text",
-    "text": "aircraft"
+  "set": "06",
+  "audio_s": 9.98,
+  "female_src": 0,
+  "male_src": 1,
+  "f0_hz": {
+    "0": 228.6,
+    "1": 108.1
   },
-  "solution": {
-    "set": "06",
-    "problem_type": "noisyneighbour-en-us",
-    "audio_s": 9.98,
-    "sep_s": 11.53,
-    "chosen_src": 0,
-    "sources": [
-      {
-        "src": 0,
-        "text": "Type one of the two following words spoken by me. Aircraft. Office.",
-        "score": 12
+  "female_is_chosen": true,
+  "speakers": [
+    {
+      "gender": "female",
+      "role": "questioner",
+      "role_note": "出题人；她念的两个词是正确答案",
+      "src": 0,
+      "f0_hz": 228.6,
+      "transcript": "Type one of the two following words spoken by me. Aircraft. Office.",
+      "transcript_note": "按已知指令句 + 多模型定稿的两个词重建",
+      "transcript_asr": {
+        "small.en · 女声轨": "Type one of the two following words spoken by me. Aircraft. Office.",
+        "large-v3-turbo · 女声轨": "Type one of the two following words spoken by name, aircraft, office.",
+        "large-v3-turbo · 混音": "Type one of the two following words spoken by me, aircraft, office, and"
       },
-      {
-        "src": 1,
-        "text": "Critique of pure reason, therefore, belong well that constitutes transcendental flow into empirical sources of cognition as possible a priori of objects, and",
-        "score": 2
-      }
-    ],
-    "decodings": [
-      "Type one of the two following words spoken by me. Aircraft. Office.",
-      "Type one of the two following words spoken by me."
-    ],
-    "candidates": [
-      "aircraft",
-      "office"
-    ],
-    "candidate_probs": [
-      {
-        "word": "aircraft",
-        "pos_from_instruction": 0,
-        "votes": 1,
-        "mean_prob": 0.9615
-      },
-      {
-        "word": "office",
-        "pos_from_instruction": 1,
-        "votes": 1,
-        "mean_prob": 0.6463
-      }
-    ],
-    "counts": {
-      "aircraft": 1,
-      "office": 1
+      "words": [
+        "aircraft",
+        "office"
+      ]
     },
-    "answer": "aircraft",
-    "asr_s": 22.21,
-    "review": {
-      "model": "large-v3-turbo",
-      "text": "Type one of the two following words spoken by name, aircraft, office.",
-      "tail": []
+    {
+      "gender": "male",
+      "role": "narrator",
+      "role_note": "背景旁白（noisy neighbour）；不是答案",
+      "src": 1,
+      "f0_hz": 108.1,
+      "transcript": "Critique of pure reason, therefore, belong well that constitutes transcendental flow into empirical sources of cognition as possible a priori of objects, and",
+      "transcript_note": "旁白是干扰；显示 small.en / large-v3-turbo 中质量较高的一版，原始两版见各模型转写",
+      "transcript_asr": {
+        "small.en · 旁白轨": "Critique of pure reason, therefore, belong well that constitutes transcendental flow into empirical sources of cognition as possible a priori of objects, and",
+        "large-v3-turbo · 旁白轨": "critique of pure reason therefore belonging all that constitutes transcendental flowing to empirical sources of cognition is possible not really of objects"
+      },
+      "words": []
     }
-  },
-  "notes": "两套 ASR 中仅一套有结果，需人工听音频"
+  ],
+  "words": [
+    "aircraft",
+    "office"
+  ],
+  "words_alt": [],
+  "answer": "aircraft",
+  "agreement": "high",
+  "note": "女声轨 small.en 与 large-v3-turbo 都给出 aircraft/office。"
 }

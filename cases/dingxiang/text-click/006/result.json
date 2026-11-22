@@ -1,0 +1,25 @@
+{
+  "cw": "召否首",
+  "clicks": [
+    {
+      "char": "召",
+      "x": 158,
+      "y": 106
+    },
+    {
+      "char": "否",
+      "x": 233,
+      "y": 75
+    },
+    {
+      "char": "首",
+      "x": 109,
+      "y": 73
+    }
+  ],
+  "evidence": "live-pass",
+  "verified_at": "2026-11-19",
+  "verification": "官方 demo POST /api/v2 返回 success=true；点击坐标即服务端接受的序列",
+  "solver": "detect-ensemble (YOLO best_v3 + VLM 四视角投票 + direct 兜底)",
+  "source": "_verified/live2_08"
+}

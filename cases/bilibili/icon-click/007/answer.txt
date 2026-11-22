@@ -1,0 +1,4 @@
+answer: 1:(172,92); 2:(175,39); 3:(91,47)
+unit: px (300x200)
+source: manual-review
+note: 三次复核：icon0=蓝色菱形 P 标志、icon1=蓝色窗格、icon2=左上黄色秒表；2026-11-21 复审顺序与坐标正确

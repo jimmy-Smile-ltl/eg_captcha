@@ -1,0 +1,25 @@
+{
+  "cw": "竟欲片",
+  "clicks": [
+    {
+      "char": "竟",
+      "x": 204,
+      "y": 107
+    },
+    {
+      "char": "欲",
+      "x": 97,
+      "y": 54
+    },
+    {
+      "char": "片",
+      "x": 172,
+      "y": 51
+    }
+  ],
+  "evidence": "live-pass",
+  "verified_at": "2026-11-19",
+  "verification": "官方 demo POST /api/v2 返回 success=true；点击坐标即服务端接受的序列",
+  "solver": "detect-ensemble (YOLO best_v3 + VLM 四视角投票 + direct 兜底)",
+  "source": "_verified/live_06"
+}

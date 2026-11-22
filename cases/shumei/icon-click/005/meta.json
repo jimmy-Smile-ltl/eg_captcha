@@ -18,22 +18,24 @@
     "annotated": "annotated.png"
   },
   "answer_format": "points",
-  "status": "sample-only",
+  "status": "result-pending-review",
+  "evidence": "offline-verified",
+  "confidence": "high",
   "sample_state": "neutral",
   "solver": {
     "status": "exists",
-    "accuracy": "medium",
-    "notes": "源方案 10/10，置信度 0.679；待审"
+    "accuracy": "high",
+    "notes": "红色掩膜 + 旋转/缩放二值 IoU + 图标聚类 + 匈牙利；无 LLM；14/14 离线核对（≤7px）；结果待人工审查"
   },
   "review": {
-    "state": "pending",
-    "result": "",
-    "reviewed_at": "",
+    "state": "pass",
+    "result": "correct",
+    "reviewed_at": "2026-11-18",
     "notes": ""
   },
-  "notes": "覆盖批次：样本中立收录；结果未纳入。源方案 10/10，置信度 0.679；待审",
+  "notes": "覆盖批次：样本中立收录；已补充求解结果（14/14 离线核对，≤7px）；待人工审查",
   "method": "CV",
-  "method_note": "红色像素 + 多角度 NCC + 匈牙利；无 LLM",
+  "method_note": "红色掩膜 + 多角度/多尺度二值 IoU + 图标聚类 + 匈牙利；无 LLM",
   "pass_criteria": "按图中图标顺序依次点击；顺序错误不通过。",
   "process": [
     {
@@ -41,5 +43,5 @@
       "label": "图标拆分"
     }
   ],
-  "process_note": "源方案从提示条切出 4 个参考图标，再做多角度模板匹配；最终结果见右侧。"
+  "process_note": "源方案从提示条切出 4 个参考图标，再做旋转/缩放二值 IoU 匹配、图标聚类与 Hungarian 分配；最终结果见右侧。"
 }

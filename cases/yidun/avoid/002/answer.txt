@@ -1,0 +1,6 @@
+answer: start=(20,140) target=(229,102) path_points=22
+target: 带十字的圆形轮盘（救生圈/轮子图标）
+target_bbox: (213,86,31,30)
+unit: px (320x160)
+source: unverified
+note: 纯 CV 求解：场景库差分 + 条带字形旋转匹配 + A* 避障；无 LLM

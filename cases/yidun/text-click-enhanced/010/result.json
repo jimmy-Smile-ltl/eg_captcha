@@ -1,0 +1,74 @@
+{
+  "case_id": "yidun/text-click-enhanced/010",
+  "kind": "points",
+  "status": "result-pending-review",
+  "evidence": "manual",
+  "confidence": "medium",
+  "instruction": "般 → 虽 → 祸",
+  "answer": {
+    "kind": "points",
+    "points": [
+      [
+        119,
+        21
+      ],
+      [
+        177,
+        121
+      ],
+      [
+        259,
+        117
+      ]
+    ],
+    "chars": [
+      "般",
+      "虽",
+      "祸"
+    ]
+  },
+  "solution": {
+    "method": "standalone-ocr + color-layer-split + fragment-ratio + font-chamfer",
+    "note": "独立框走 YOLO + 多角度 RapidOCR 定 1 个字；两组重叠对按墨色分层，按连通域碎片度判上下层，摆正后字体 chamfer 定字，锚点取目标自身露出笔画的最厚处。",
+    "partial": false,
+    "solved": 3,
+    "total": 3,
+    "clicks": [
+      {
+        "order": 1,
+        "char": "般",
+        "x": 119,
+        "y": 21,
+        "role": "pair",
+        "confidence": "high",
+        "pair": 0,
+        "member": "lower",
+        "color": "黄",
+        "anchor_mode": "exposed",
+        "reason": "P0 框内黄层 S246 V255（天色 S≤201 排除），摆正可见 舟+殳 = 般；同框橄榄绿层（股）压在上面、笔画连续，黄层被切开 = 下层。锚点取黄层露出笔画最厚处 (119,21) 厚 3.2px，像素 H23 S246 V255"
+      },
+      {
+        "order": 2,
+        "char": "虽",
+        "x": 177,
+        "y": 121,
+        "role": "pair",
+        "confidence": "medium",
+        "pair": 5,
+        "member": "lower",
+        "color": "黑",
+        "anchor_mode": "exposed",
+        "reason": "P5 框内黄层 = 谁（讠+隹，上层，笔画连续），纯黑层（S255 V<45，排除 S15 V33 的灰影）摆正可见 口+虫 = 虽，被黄层切断 = 下层。锚点取黑层露出笔画最厚处 (177,121) 厚 2.2px，像素 H0 S255 V11"
+      },
+      {
+        "order": 3,
+        "char": "祸",
+        "x": 259,
+        "y": 117,
+        "role": "standalone",
+        "confidence": "high",
+        "reason": "独立框 7 [250,98,286,133]，薄荷绿 S108-134 V249；框内单块 418px 完整，多角度 OCR 0° 读 祸 0.992。锚点取自身笔画最厚处 (259,117) 厚 3.6px，像素 H74 S134 V249"
+      }
+    ]
+  }
+}

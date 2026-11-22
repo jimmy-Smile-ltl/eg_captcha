@@ -1,0 +1,37 @@
+{
+ "type": "CURVE",
+ "answer_moveX": 202.5,
+ "answer_pct_of_track": 83.7,
+ "pct_of_bg": 0.675,
+ "display_width": 300,
+ "image_width": 600,
+ "track_end": 242,
+ "tolerance_display_px": 15.0,
+ "tolerance_note": "±5% of width（实测：±30 图像 px 通过、+35 拒绝）",
+ "stroke_model": "chromatic",
+ "stroke_coverage": 1.0,
+ "P0": [
+  116.0,
+  22.0
+ ],
+ "P3": [
+  501.0,
+  27.0
+ ],
+ "ctrlY": 221.0,
+ "ctrlX_image": 405.0,
+ "fit_error_px": 1.4,
+ "fit_p95_px": 3.0,
+ "band_coverage": 1.0,
+ "on_stroke": 0.93,
+ "fit_quality": 76.7,
+ "method": "reference stroke color model + line-response ctrlX scan",
+ "source": "shipinren",
+ "p_raw": "04.3192333313333333303330.061111111111111110.8350.0750.6138888888888889",
+ "captcha_id": "CURVE_2ee7402fa9f447069e1b2b80b53275d7",
+ "check_code": 200,
+ "check_msg": "OK",
+ "endpoint_refined": true,
+ "endpoint_delta_px": null,
+ "fit_residual_gt_px": null
+}

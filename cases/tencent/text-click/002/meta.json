@@ -25,9 +25,9 @@
     "notes": "源方案 12/12 离线 + 5/5 实机；待审"
   },
   "review": {
-    "state": "pending",
-    "result": "",
-    "reviewed_at": "",
+    "state": "pass",
+    "result": "correct",
+    "reviewed_at": "2026-11-18",
     "notes": ""
   },
   "notes": "覆盖批次：样本中立收录；结果未纳入。源方案 12/12 离线 + 5/5 实机；待审",

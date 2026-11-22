@@ -1,0 +1,74 @@
+{
+  "case_id": "yidun/text-click-enhanced/003",
+  "kind": "points",
+  "status": "result-pending-review",
+  "evidence": "manual",
+  "confidence": "medium",
+  "instruction": "业 → 织 → 略",
+  "answer": {
+    "kind": "points",
+    "points": [
+      [
+        127,
+        71
+      ],
+      [
+        278,
+        95
+      ],
+      [
+        48,
+        50
+      ]
+    ],
+    "chars": [
+      "业",
+      "织",
+      "略"
+    ]
+  },
+  "solution": {
+    "method": "standalone-ocr + color-layer-split + fragment-ratio + font-chamfer",
+    "note": "独立框走 YOLO + 多角度 RapidOCR 定 1 个字；两组重叠对按墨色分层，按连通域碎片度判上下层，摆正后字体 chamfer 定字，锚点取目标自身露出笔画的最厚处。",
+    "partial": false,
+    "solved": 3,
+    "total": 3,
+    "clicks": [
+      {
+        "order": 1,
+        "char": "业",
+        "x": 127,
+        "y": 71,
+        "role": "pair",
+        "confidence": "medium",
+        "pair": 5,
+        "member": "lower",
+        "color": "蓝",
+        "anchor_mode": "overlap",
+        "reason": "P5 蓝色下层 chamfer 业 3.98 领先 亚 4.51/並 4.36；白色上层为 並/并 类干扰"
+      },
+      {
+        "order": 2,
+        "char": "织",
+        "x": 278,
+        "y": 95,
+        "role": "pair",
+        "confidence": "medium",
+        "pair": 6,
+        "member": "lower",
+        "color": "蓝",
+        "anchor_mode": "exposed",
+        "reason": "P6 白色上层为「羊」（333px 两大块未被打断），蓝色下层（k-means 簇 BGR 188,76,28）被白字切成 5 片，含 只 的口+八，chamfer 织/帜/积 同档（左偏旁被压），取织。锚点取最大蓝块（口框 16×15，67px）的最厚处 (278,95)，BGR 213,70,8，落在目标自己的露出笔画上（旧点 (283,107) 离蓝墨 82，落在黄底空隙里）"
+      },
+      {
+        "order": 3,
+        "char": "略",
+        "x": 48,
+        "y": 50,
+        "role": "standalone",
+        "confidence": "high",
+        "reason": ""
+      }
+    ]
+  }
+}

@@ -3,26 +3,26 @@
   "kind": "rotate",
   "status": "solved",
   "evidence": "unverified",
-  "confidence": "medium",
+  "confidence": "high",
   "answer": {
-    "angle": 77.8,
-    "slider_distance": 77.8
+    "angle": 215.3,
+    "slider_distance": 215.3
   },
   "solution": {
-    "method": "tip_anchor",
-    "angle_alt": 257.8,
-    "note": "tip锚点(word_click/04, 3x稳定77.8) + 12↔15约束83.0° + 天空(+0.23)"
+    "method": "library_scene_reference",
+    "angle_alt": 35.3,
+    "note": "与 scrape/sets/962/bg_restored 同一张直立场景匹配，angle=215.3°"
   },
   "geometry": {
     "hole": {
       "cx": 299.5,
       "cy": 179.5,
-      "r": 97
+      "r": 97.0
     },
     "disc": {
-      "cx": 114,
+      "cx": 114.0,
       "cy": 179.5,
-      "r_alpha": 104,
+      "r_alpha": 104.0,
       "r_solid": 97.5
     }
   },

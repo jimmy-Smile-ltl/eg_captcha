@@ -1,0 +1,5 @@
+answer: 稳如泰山
+order: 稳(110,53) -> 如(161,116) -> 泰(239,69) -> 山(42,113)
+unit: px
+source: offline-solver (unverified)
+note: 按成语语序点击 4 字；坐标为字形颜色轮廓中心；图中编号见 annotated.png；未实机验证

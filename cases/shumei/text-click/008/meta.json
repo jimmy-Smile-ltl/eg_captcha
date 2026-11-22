@@ -11,7 +11,7 @@
   "source_url": "https://www.ishumei.com/new/product/tw/code",
   "source_path": "shumei/text-click/sets/08",
   "collected_at": "unknown",
-  "prompt": "按顺序点击图中文字",
+  "prompt": "请依次点击：此 → 理 → 半 → 落",
   "roles": {
     "bg": "bg.jpg",
     "annotated": "annotated.png"
@@ -25,9 +25,9 @@
     "notes": "风格化字体 OCR 0%，bbox 偏差大；参考价值有限"
   },
   "review": {
-    "state": "pending",
-    "result": "",
-    "reviewed_at": "",
+    "state": "pass",
+    "result": "correct",
+    "reviewed_at": "2026-11-18",
     "notes": ""
   },
   "notes": "覆盖批次：样本中立收录；结果未纳入。风格化字体 OCR 0%，bbox 偏差大；参考价值有限",

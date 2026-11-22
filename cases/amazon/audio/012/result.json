@@ -1,75 +1,53 @@
 {
-  "case_id": "amazon/audio/012",
-  "kind": "text",
-  "status": "result-pending-review",
-  "evidence": "unverified",
-  "confidence": "medium",
-  "answer": {
-    "kind": "text",
-    "text": "inform"
+  "set": "12",
+  "audio_s": 9.98,
+  "female_src": 1,
+  "male_src": 0,
+  "f0_hz": {
+    "0": 108.1,
+    "1": 200.0
   },
-  "solution": {
-    "set": "12",
-    "problem_type": "noisyneighbour-en-us",
-    "audio_s": 9.98,
-    "sep_s": 12.75,
-    "chosen_src": 1,
-    "sources": [
-      {
-        "src": 0,
-        "text": "He remained in so vacillating a state of uncertainty and contradiction, and only Prus' self, had long since ruined the reputation of every system of the analysis.",
-        "score": 2
+  "female_is_chosen": true,
+  "speakers": [
+    {
+      "gender": "female",
+      "role": "questioner",
+      "role_note": "出题人；她念的两个词是正确答案",
+      "src": 1,
+      "f0_hz": 200.0,
+      "transcript": "Type one of the two following words spoken by me. Stream. Inform.",
+      "transcript_note": "按已知指令句 + 多模型定稿的两个词重建",
+      "transcript_asr": {
+        "small.en · 女声轨": "Type one of the two following words spoken by me. Stream. Inform.",
+        "large-v3-turbo · 女声轨": "Type one of the two following words spoken by me, stream, inform.",
+        "large-v3-turbo · 混音": "Type one of the two following words spoken by me. Stream. Inform."
       },
-      {
-        "src": 1,
-        "text": "Type one of the two following words spoken by me. Stream. Inform.",
-        "score": 12
-      }
-    ],
-    "decodings": [
-      "Type one of the two following words spoken by me. Stream. Inform.",
-      "Type one of the two following words spoken by me. Dream. Inform."
-    ],
-    "candidates": [
-      "stream",
-      "dream",
-      "inform"
-    ],
-    "candidate_probs": [
-      {
-        "word": "inform",
-        "pos_from_instruction": 1,
-        "votes": 2,
-        "mean_prob": 0.6986
-      },
-      {
-        "word": "stream",
-        "pos_from_instruction": 0,
-        "votes": 1,
-        "mean_prob": 0.5849
-      },
-      {
-        "word": "dream",
-        "pos_from_instruction": 0,
-        "votes": 1,
-        "mean_prob": 0.0938
-      }
-    ],
-    "counts": {
-      "inform": 2,
-      "stream": 1,
-      "dream": 1
-    },
-    "answer": "inform",
-    "asr_s": 25.64,
-    "review": {
-      "model": "large-v3-turbo",
-      "text": "Type one of the two following words spoken by me, stream, inform.",
-      "tail": [
+      "words": [
         "stream",
         "inform"
       ]
+    },
+    {
+      "gender": "male",
+      "role": "narrator",
+      "role_note": "背景旁白（noisy neighbour）；不是答案",
+      "src": 0,
+      "f0_hz": 108.1,
+      "transcript": "He remained in so vacillating a state of uncertainty and contradiction, is only for himself, had long-dance ruined the reputation of every system of the analysis.",
+      "transcript_note": "旁白是干扰；显示 small.en / large-v3-turbo 中质量较高的一版，原始两版见各模型转写",
+      "transcript_asr": {
+        "small.en · 旁白轨": "He remained in so vacillating a state of uncertainty and contradiction, and only Prus' self, had long since ruined the reputation of every system of the analysis.",
+        "large-v3-turbo · 旁白轨": "He remained in so vacillating a state of uncertainty and contradiction, is only for himself, had long-dance ruined the reputation of every system of the analysis."
+      },
+      "words": []
     }
-  },
-  "notes": "两套 ASR 一致，仍待人工审查"
+  ],
+  "words": [
+    "stream",
+    "inform"
+  ],
+  "words_alt": [],
+  "answer": "stream",
+  "agreement": "high",
+  "note": "女声轨 small.en 与 large-v3-turbo 都给出 stream/inform。"
 }

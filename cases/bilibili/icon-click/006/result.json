@@ -1,0 +1,23 @@
+{
+  "set": "06",
+  "clicks": [
+    {
+      "order": 1,
+      "x": 110,
+      "y": 97
+    },
+    {
+      "order": 2,
+      "x": 183,
+      "y": 75
+    },
+    {
+      "order": 3,
+      "x": 253,
+      "y": 134
+    }
+  ],
+  "total_score": null,
+  "source": "override",
+  "note": "人工/VLM 复核：icon0=云(蓝色心形轮廓)、icon1=拖车(蓝格)、icon2=时钟(橙圈)；原 icon0 误点篮子形干扰项"
+}

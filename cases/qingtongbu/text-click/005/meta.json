@@ -20,21 +20,24 @@
     "split": "split.png"
   },
   "answer_format": "points",
-  "status": "sample-only",
+  "status": "result-pending-review",
   "sample_state": "neutral",
   "solver": {
-    "status": "none",
-    "accuracy": "unknown",
-    "notes": "未撰写求解器（仅采集）"
+    "status": "exists",
+    "accuracy": "high",
+    "notes": "v3 本地背景 Lab 色差掩码提取彩色字块，多角度 OCR + Siamese 三矩阵 + 匈牙利；源记录 12/12 人工复核"
   },
   "review": {
-    "state": "not-applicable",
-    "result": "",
-    "reviewed_at": "",
+    "state": "pass",
+    "result": "correct",
+    "reviewed_at": "2026-11-15",
     "notes": ""
   },
-  "notes": "覆盖批次：样本中立收录；结果未纳入。未撰写求解器（仅采集）",
-  "method": "NONE(DET+OCR+VLM)",
-  "method_note": "未撰写；建议 YOLO+OCR+VLM 仲裁",
-  "process_note": "提示图和背景图先保留灰色文字、剔除彩色干扰线/圆圈，再按列聚类切成单字后逐个匹配；最终结果见右侧。"
+  "notes": "覆盖批次：结果已纳入，待人工审查；v3 局部背景 Lab 色差掩码提取彩色字块；源记录 12/12 人工复核",
+  "method": "DET+OCR+CV",
+  "method_note": "YOLO 检测 + 多角度 OCR + Siamese 三矩阵；彩色背景用局部背景 Lab 色差掩码去旋转，无 LLM",
+  "process_note": "提示图保灰去彩并拆成单字；背景图用局部背景 Lab 色差掩码提取彩色字块并去旋转；最终按提示顺序匹配。",
+  "pass_criteria": "按提示顺序依次点击 4 个目标字；顺序错误不通过。",
+  "evidence": "unverified",
+  "confidence": "high"
 }

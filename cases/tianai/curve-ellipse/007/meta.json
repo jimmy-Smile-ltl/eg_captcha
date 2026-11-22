@@ -1,0 +1,41 @@
+{
+  "case_id": "tianai/curve-ellipse/007",
+  "vendor": "tianai",
+  "vendor_name": "天爱",
+  "type": "curve-ellipse",
+  "type_name": "椭圆曲线",
+  "variant": "CURVE2",
+  "media": [
+    "image"
+  ],
+  "source_url": "https://captcha.tianai.cloud/",
+  "source_path": "tianai/curve2/sets/07",
+  "collected_at": "unknown",
+  "prompt": "沿曲线拖动滑块",
+  "roles": {
+    "bg": "bg.jpg",
+    "restored": "restored.jpg",
+    "solved": "solve.png",
+    "trajectory": "trajectory.png"
+  },
+  "answer_format": "offset-x",
+  "status": "result-pending-review",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "exists",
+    "accuracy": "medium",
+    "notes": "CURVE2 v1（2026-11-20）：族椭圆 ridge 响应识别目标曲线；目标为内侧细曲线、外侧醒目曲线多为诱饵；答案 moveX=300·s；12/12 有结果图，待服务端/人工复核"
+  },
+  "review": {
+    "state": "pass",
+    "result": "correct",
+    "notes": "待复核：结果为离线视觉估计（moveX=300·s），未逐题实拖",
+    "reviewed_at": "2026-11-20T13:40:41.374Z"
+  },
+  "notes": "覆盖批次：新增 solve/trajectory 结果图（2026-11-20）；目标曲线识别 + 滑块距离换算；外侧醒目曲线多为诱饵。",
+  "method": "CV+ACT",
+  "method_note": "沿族椭圆 (s·attr1, s·attr2, s·attr3°) 的法线颜色差 ridge 响应；s → moveX=300·s；无 LLM",
+  "pass_criteria": "拖动到 moveX=300·s，使客户端椭圆与背景目标曲线重合；服务端 moveX/300 与目标比例差 ≤ 0.02，且轨迹需过行为校验。",
+  "evidence": "unverified",
+  "confidence": "medium"
+}

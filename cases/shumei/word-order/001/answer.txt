@@ -1,0 +1,5 @@
+answer: 一无所知
+order: 一(369,104) -> 无(83,63) -> 所(196,215) -> 知(410,238)
+unit: px
+source: offline-solver (unverified)
+note: 按四字词语语序点击 4 字；坐标为检测框正中；图中编号见 annotated.png；未实机验证

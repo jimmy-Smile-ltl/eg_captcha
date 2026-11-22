@@ -1,0 +1,51 @@
+{
+  "set": "02",
+  "clicks": [
+    {
+      "order": 1,
+      "x": 38,
+      "y": 59,
+      "score": 0.8039,
+      "rotation": 40,
+      "scale": 27,
+      "candidate": {
+        "x": 5,
+        "y": 16,
+        "w": 27,
+        "h": 26,
+        "k": 5
+      }
+    },
+    {
+      "order": 2,
+      "x": 143,
+      "y": 39,
+      "score": 0.8051,
+      "rotation": 335,
+      "scale": 26,
+      "candidate": {
+        "x": 59,
+        "y": 7,
+        "w": 24,
+        "h": 24,
+        "k": 5
+      }
+    },
+    {
+      "order": 3,
+      "x": 232,
+      "y": 41,
+      "score": 0.6966,
+      "rotation": 355,
+      "scale": 28,
+      "candidate": {
+        "x": 103,
+        "y": 8,
+        "w": 25,
+        "h": 24,
+        "k": 8
+      }
+    }
+  ],
+  "total_score": 2.1533
+}

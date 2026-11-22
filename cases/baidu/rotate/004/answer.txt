@@ -1,0 +1,4 @@
+answer: angle=106°
+model: 101.10°
+error: 4.90°
+note: 真值为人工标注；回正 = PIL rotate(+angle)；模型 conv_0203_ft_0205_pl_0206

@@ -1,0 +1,5 @@
+answer: 他山之石
+order: 他(107,176) -> 山(315,81) -> 之(224,233) -> 石(299,249)
+unit: px
+source: offline-solver (unverified)
+note: 按四字词语语序点击 4 字；坐标为检测框正中；图中编号见 annotated.png；未实机验证

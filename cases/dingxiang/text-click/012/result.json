@@ -1,0 +1,25 @@
+{
+  "cw": "的笔残",
+  "clicks": [
+    {
+      "char": "的",
+      "x": 114,
+      "y": 83
+    },
+    {
+      "char": "笔",
+      "x": 58,
+      "y": 32
+    },
+    {
+      "char": "残",
+      "x": 138,
+      "y": 36
+    }
+  ],
+  "evidence": "live-pass",
+  "verified_at": "2026-11-19",
+  "verification": "官方 demo POST /api/v2 返回 success=true；点击坐标即服务端接受的序列",
+  "solver": "detect-ensemble (YOLO best_v3 + VLM 四视角投票 + direct 兜底)",
+  "source": "_verified/live_09"
+}

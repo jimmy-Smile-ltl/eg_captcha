@@ -1,0 +1,256 @@
+{
+  "case_id": "shumei/word-order/002",
+  "kind": "points+order",
+  "status": "solved",
+  "evidence": "unverified",
+  "confidence": "high",
+  "method": "DET+OCR+CV",
+  "method_detail": "YOLO(best_v3) locate + merged-box split + thin-bar detect + color-contour CV + RapidOCR/ddddocr multi-angle + idiom/phrase fuzzy match",
+  "idiom": "名存实亡",
+  "score": 2.833,
+  "margin": 1.356,
+  "cover": 4,
+  "top1_hits": 3,
+  "order": [
+    {
+      "step": 1,
+      "char": "名",
+      "glyph_index": 3,
+      "box": [
+        246,
+        159,
+        300,
+        223
+      ],
+      "center": [
+        273,
+        191
+      ],
+      "ocr_votes": 15
+    },
+    {
+      "step": 2,
+      "char": "存",
+      "glyph_index": 4,
+      "box": [
+        200,
+        155,
+        267,
+        216
+      ],
+      "center": [
+        233,
+        185
+      ],
+      "ocr_votes": 10
+    },
+    {
+      "step": 3,
+      "char": "实",
+      "glyph_index": 1,
+      "box": [
+        142,
+        30,
+        207,
+        97
+      ],
+      "center": [
+        174,
+        63
+      ],
+      "ocr_votes": 16
+    },
+    {
+      "step": 4,
+      "char": "亡",
+      "glyph_index": 2,
+      "box": [
+        196,
+        63,
+        255,
+        127
+      ],
+      "center": [
+        225,
+        95
+      ],
+      "ocr_votes": 3
+    }
+  ],
+  "ocr_reads": [
+    [
+      [
+        "实",
+        16
+      ],
+      [
+        "头",
+        5
+      ],
+      [
+        "球",
+        3
+      ],
+      [
+        "体",
+        2
+      ],
+      [
+        "造",
+        1
+      ]
+    ],
+    [
+      [
+        "广",
+        3
+      ],
+      [
+        "亡",
+        3
+      ],
+      [
+        "工",
+        3
+      ],
+      [
+        "门",
+        2
+      ],
+      [
+        "入",
+        2
+      ],
+      [
+        "信",
+        1
+      ],
+      [
+        "汇",
+        1
+      ],
+      [
+        "心",
+        1
+      ]
+    ],
+    [
+      [
+        "名",
+        15
+      ],
+      [
+        "的",
+        2
+      ],
+      [
+        "芦",
+        2
+      ],
+      [
+        "召",
+        1
+      ],
+      [
+        "印",
+        1
+      ],
+      [
+        "心",
+        1
+      ]
+    ],
+    [
+      [
+        "存",
+        10
+      ],
+      [
+        "食",
+        3
+      ],
+      [
+        "信",
+        2
+      ],
+      [
+        "双",
+        2
+      ],
+      [
+        "安",
+        2
+      ],
+      [
+        "使",
+        2
+      ],
+      [
+        "付",
+        2
+      ],
+      [
+        "中",
+        1
+      ],
+      [
+        "多",
+        1
+      ],
+      [
+        "三",
+        1
+      ],
+      [
+        "白",
+        1
+      ],
+      [
+        "巨",
+        1
+      ]
+    ]
+  ],
+  "candidates": [
+    {
+      "idiom": "名存实亡",
+      "score": 2.833,
+      "total": 4.395,
+      "prior": 0.723,
+      "cover": 4,
+      "top1": 3
+    },
+    {
+      "idiom": "有名亡实",
+      "score": 2.138,
+      "total": 3.038,
+      "prior": 0.0,
+      "cover": 3,
+      "top1": 2
+    },
+    {
+      "idiom": "名副其实",
+      "score": 1.974,
+      "total": 3.029,
+      "prior": 0.909,
+      "cover": 2,
+      "top1": 2
+    },
+    {
+      "idiom": "实至名归",
+      "score": 1.974,
+      "total": 2.949,
+      "prior": 0.749,
+      "cover": 2,
+      "top1": 2
+    },
+    {
+      "idiom": "名不副实",
+      "score": 1.974,
+      "total": 2.918,
+      "prior": 0.687,
+      "cover": 2,
+      "top1": 2
+    }
+  ]
+}

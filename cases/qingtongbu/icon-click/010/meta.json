@@ -20,21 +20,24 @@
     "split": "split.png"
   },
   "answer_format": "points",
-  "status": "sample-only",
+  "status": "result-pending-review",
   "sample_state": "neutral",
   "solver": {
-    "status": "none",
-    "accuracy": "unknown",
-    "notes": "未撰写求解器（仅采集）"
+    "status": "exists",
+    "accuracy": "high",
+    "notes": "v5 颜色(笔画感知)+形状双通道匹配 + 匈牙利一对一指派；源记录 12/12 人工目检"
   },
   "review": {
-    "state": "not-applicable",
-    "result": "",
-    "reviewed_at": "",
+    "state": "pass",
+    "result": "correct",
+    "reviewed_at": "2026-11-18",
     "notes": ""
   },
-  "notes": "覆盖批次：样本中立收录；结果未纳入。未撰写求解器（仅采集）",
-  "method": "NONE(VLM)",
-  "method_note": "未撰写；建议 VLM 读图 + 坐标点击",
-  "process_note": "提示图图标先保留灰色、剔除彩色干扰线和圆圈，再按列聚类切成 4 个图标后逐个匹配；最终结果见右侧。"
+  "notes": "覆盖批次：结果已纳入，待人工审查；v5 颜色+形状匹配求解器，12/12 人工目检通过",
+  "method": "CV",
+  "method_note": "提示图保灰去彩、开运算去共享架线，按列质量最小点切成 4 图标；背景图用绝对灰/相对去饱和/细笔画对比构建软墨迹图，颜色覆盖率+倒角形状+IoU 多尺度打分，匈牙利一对一指派；无 LLM",
+  "process_note": "提示图先去噪（保灰去彩），删除 1~2px 共享架线后按 4 槽列质量最小点切分成 4 个图标（顺序=点击顺序）；在彩色背景图上用颜色+形状匹配定位，匈牙利全局指派保证 4 个图标各占一个不同位置（干扰图标自然落选）；最终按顺序标注点击位置。",
+  "pass_criteria": "按提示顺序依次点击 4 个目标图标；顺序错误不通过。",
+  "evidence": "unverified",
+  "confidence": "high"
 }

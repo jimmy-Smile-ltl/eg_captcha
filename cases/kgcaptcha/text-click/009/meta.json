@@ -11,7 +11,7 @@
   "source_url": "https://www.kgcaptcha.com/",
   "source_path": "kgcaptcha/text-click/sets/09",
   "collected_at": "unknown",
-  "prompt": "按顺序点击图中文字",
+  "prompt": "请依次点击：缰 → 醅",
   "roles": {
     "bg": "bg.png",
     "annotated": "annotated.png",
@@ -22,18 +22,18 @@
   "status": "sample-only",
   "sample_state": "neutral",
   "solver": {
-    "status": "none",
-    "accuracy": "unknown",
-    "notes": "仅采集，未撰写求解器"
+    "status": "weak",
+    "accuracy": "low",
+    "notes": "本地 v2（不调用 LLM）：DBNet 文本框 + 残差图 + 框内颜色拆分 + Canny 边缘候选（中空/细线字）+ 骨架/子区域过滤 + 20+ 字体×24 角度实心/描边模板双向 chamfer + RapidOCR 旋转读字；2026-11-20 针对中空/极细字体补充墨迹收紧与边缘候先后，用户复核 01/02/03/05/06 通过，10 的中空「罴」与 12 的「骇」已修正；04/07/08/09/11 与 12 的「泖」仍受形近/中空字体限制"
   },
   "review": {
-    "state": "not-applicable",
-    "result": "",
-    "reviewed_at": "",
-    "notes": ""
+    "state": "fail",
+    "result": "incorrect",
+    "notes": "",
+    "reviewed_at": "2026-11-19T13:57:15.658Z"
   },
-  "notes": "覆盖批次：样本中立收录；结果未纳入。仅采集，未撰写求解器",
-  "method": "NONE(OCR+VLM)",
-  "method_note": "未撰写；建议 OCR + VLM，起步便宜",
-  "process_note": "源方案先去干扰并探测候选文字，再标注目标字并排序；最终结果见右侧。"
+  "notes": "覆盖批次：样本中立收录；结果未纳入。仅采集，未撰写求解器；2026-11-19 算法 v2 重做（纯本地）并更新可视化；review 为上一版结果的人工结论，新结果待复核；2026-11-20 针对中空/极细字体更新（墨迹收紧、边缘候选、细体字体、子区域过滤）并再次更新可视化；review 为更早结果的人工结论，新结果待复核",
+  "method": "DET+CV+OCR",
+  "method_note": "全本地、无 LLM、无训练：DBNet 先验 + 残差/颜色拆分 + Canny 边缘候选定位（中空/细体），多字体多角度 chamfer 匹配目标字，RapidOCR 旋转读字做加分；中空/极细 + 波变形变仍是最主要误差源",
+  "process_note": "denoised=候选掩码只留字形像素；mark=去重后的候选框；annotated=按提示顺序的点击点（绿=答案，数字=点击顺序，标签为提示字）"
 }

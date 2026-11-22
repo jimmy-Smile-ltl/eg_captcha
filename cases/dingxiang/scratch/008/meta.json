@@ -11,27 +11,43 @@
   "source_url": "https://www.dingxiang-inc.com/business/captcha",
   "source_path": "dingxiang/scratch/sets/08",
   "collected_at": "unknown",
-  "prompt": "拖动滑块刮开涂层",
+  "prompt": "请使用尽量少的区域，刮出完整图案",
   "roles": {
     "bg": "bg.webp",
     "restored": "restored.png",
     "solved": "solved.png"
   },
-  "answer_format": "points",
-  "status": "sample-only",
+  "answer_format": "contour/bitmap",
+  "status": "result-pending-review",
   "sample_state": "neutral",
   "solver": {
-    "status": "partial",
+    "status": "exists",
     "accuracy": "unknown",
-    "notes": "源记录冲突：总表称已攻克，类型表称仅背景还原；待审"
+    "notes": "完整轮廓 + 30×15 最小刮擦位图；离线 12/12，未实机提交；待审"
   },
   "review": {
-    "state": "pending",
-    "result": "",
-    "reviewed_at": "",
+    "state": "pass",
+    "result": "correct",
+    "reviewed_at": "2026-11-17",
     "notes": ""
   },
-  "notes": "覆盖批次：样本中立收录；结果未纳入。源记录已攻克；待审",
-  "method": "CV",
-  "method_note": "背景还原/刮刮卡区域；无 LLM"
+  "notes": "覆盖批次：结果已纳入，待人工审查；U²-Netp 显著目标分割 + 完整轮廓 + 30×15 最小刮擦位图；离线 12/12 完整覆盖，未实机提交",
+  "method": "CV+DET",
+  "method_note": "U²-Netp 显著目标分割 + 完整轮廓 + 最小刮擦位图；无 LLM",
+  "pass_criteria": "用尽量少的刮开面积露出完整图案；图案不完整或刮开区域过大不通过。",
+  "process": [
+    {
+      "file": "mask.png",
+      "label": "目标掩膜",
+      "hint": "U²-Netp 显著性分割得到的完整目标区域；轮廓内即最小刮擦区"
+    },
+    {
+      "file": "scratch.png",
+      "label": "刮擦方案",
+      "hint": "黄=最小 30×15 位图单元；蓝=23px 笔刷擦除区；红=扫描路径"
+    }
+  ],
+  "process_note": "目标掩膜确定完整轮廓（轮廓内即最小刮擦区）；刮擦方案把轮廓量化为 30×15 位图并生成 23px 笔刷路径。",
+  "evidence": "offline-verified",
+  "confidence": "high"
 }

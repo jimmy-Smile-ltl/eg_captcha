@@ -1,67 +1,58 @@
 {
-  "case_id": "amazon/audio/009",
-  "kind": "text",
-  "status": "result-pending-review",
-  "evidence": "unverified",
-  "confidence": "medium",
-  "answer": {
-    "kind": "text",
-    "text": "emerge"
+  "set": "09",
+  "audio_s": 10.18,
+  "female_src": 1,
+  "male_src": 0,
+  "f0_hz": {
+    "0": 103.9,
+    "1": 200.0
   },
-  "solution": {
-    "set": "09",
-    "problem_type": "noisyneighbour-en-us",
-    "audio_s": 10.18,
-    "sep_s": 13.64,
-    "chosen_src": 1,
-    "sources": [
-      {
-        "src": 0,
-        "text": "Science, nevertheless has a special crime, in its universality. Prestigations imputable to the power of judging completely of our a priori was impossible.",
-        "score": 2
+  "female_is_chosen": true,
+  "speakers": [
+    {
+      "gender": "female",
+      "role": "questioner",
+      "role_note": "出题人；她念的两个词是正确答案",
+      "src": 1,
+      "f0_hz": 200.0,
+      "transcript": "Type one of the two following words spoken by me. Emerge. General.",
+      "transcript_note": "按已知指令句 + 多模型定稿的两个词重建",
+      "transcript_asr": {
+        "small.en · 女声轨": "Type one of the two following words spoken by me. Emerge. General.",
+        "large-v3-turbo · 女声轨": "Type one of the two following words spoken by me. Emerge Jimbo",
+        "distil-large-v3 · 女声轨": "Type one of the two following words spoken by name. Emerge. GIMO GIMO.",
+        "large-v3-turbo · 混音": "Type one of the two following words spoken by me. Emerge. General.",
+        "distil-large-v3 · 混音": "Type one of the two following words spoken by me. Emerge. Emerge. Judging completely of our a priori was impossible."
       },
-      {
-        "src": 1,
-        "text": "Type one of the two following words spoken by me. Emerge. General.",
-        "score": 12
-      }
-    ],
-    "decodings": [
-      "Type one of the two following words spoken by me. Emerge. General.",
-      "Type one of the two following words spoken by me."
-    ],
-    "candidates": [
-      "emerge",
-      "general"
-    ],
-    "candidate_probs": [
-      {
-        "word": "emerge",
-        "pos_from_instruction": 0,
-        "votes": 1,
-        "mean_prob": 0.7923
-      },
-      {
-        "word": "general",
-        "pos_from_instruction": 1,
-        "votes": 1,
-        "mean_prob": 0.4062
-      }
-    ],
-    "counts": {
-      "emerge": 1,
-      "general": 1
-    },
-    "answer": "emerge",
-    "asr_s": 25.64,
-    "review": {
-      "model": "large-v3-turbo",
-      "text": "Type one of the two following words spoken by me. Emerge Jimbo",
-      "tail": [
+      "words": [
         "emerge",
-        "jimbo"
+        "general"
       ]
+    },
+    {
+      "gender": "male",
+      "role": "narrator",
+      "role_note": "背景旁白（noisy neighbour）；不是答案",
+      "src": 0,
+      "f0_hz": 103.9,
+      "transcript": "Science, nevertheless as a special client, in its universality, prostagations imputable to the power of judging completely of our a priori was impossible.",
+      "transcript_note": "旁白是干扰；显示 small.en / large-v3-turbo 中质量较高的一版，原始两版见各模型转写",
+      "transcript_asr": {
+        "small.en · 旁白轨": "Science, nevertheless has a special crime, in its universality. Prestigations imputable to the power of judging completely of our a priori was impossible.",
+        "large-v3-turbo · 旁白轨": "Science, nevertheless as a special client, in its universality, prostagations imputable to the power of judging completely of our a priori was impossible."
+      },
+      "words": []
     }
-  },
-  "notes": "两套 ASR 一致，仍待人工审查"
+  ],
+  "words": [
+    "emerge",
+    "general"
+  ],
+  "words_alt": [
+    "jimbo",
+    "gimo"
+  ],
+  "answer": "emerge",
+  "agreement": "medium",
+  "note": "small.en 女声轨与混音 large 都给 general；分离轨 turbo/distil 听成 Jimbo。按混音（前景女声）与词表常用度取 general。"
 }

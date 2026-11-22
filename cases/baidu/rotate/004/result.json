@@ -1,0 +1,22 @@
+{
+  "case_id": "baidu/rotate/004",
+  "kind": "angle",
+  "status": "solved",
+  "evidence": "manual",
+  "confidence": "high",
+  "answer": {
+    "angle": 106
+  },
+  "methods": {
+    "convnext_pl_0206": {
+      "model": "rotate_captcha_solver/models/conv_0203_ft_0205_pl_0206.pth",
+      "head": "sin/cos regression",
+      "angle": 101.1,
+      "error_deg": 4.9,
+      "chosen": true,
+      "result_image": "solved.png"
+    }
+  },
+  "source_file": "95_rot106_00_95.png",
+  "notes": "angle = 图片当前旋转角度；回正 = PIL rotate(+angle)。"
+}

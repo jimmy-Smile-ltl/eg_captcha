@@ -1,0 +1,4 @@
+answer: angle=182°
+unit: degree
+source: manual
+note: 回正 = rotate(360-angle)；ResNet50 置信度 0.795；对照 ConvNeXt 176.73°（回正方向偏差明显）

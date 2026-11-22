@@ -36,12 +36,16 @@
 | HUMAN Security | 公开拦截页 |
 | DataDome | 公开拦截页 |
 | MTCaptcha | <https://service.mtcaptcha.com/mtcv1/demo/> |
+| 百度 Baidu | <https://aiqicha.baidu.com/>（wappass spin，触发式） |
+| 哔哩哔哩 B站 | <https://passport.bilibili.com/login>（极验 GeeTest v3/v4） |
 
-## 四、无代码声明
+## 四、无可执行代码声明
 
 本库**不包含**求解器、SDK、脚本、网页、WASM、密钥、签名实现、参数构造方法或接口利用步骤。仓库内没有 `.py`、`.js`、`.html`、`.sh` 等可执行文件。
 
-样本按类型中立收录，不因求解器质量筛选；没有求解器、求解器效果差或提交未打通，只记录在案例的 `solver` 字段与厂商文档中。
+类型页允许 `text` 代码块中的伪代码、算法公式与参数链路，仅用于表达思路，不可直接运行；不包含真实命令、完整加密步骤、密钥或 token。
+
+样本按类型中立收录，不因求解器质量筛选；没有求解器、求解器效果差或提交未打通，只记录在案例的 `solver` 字段、类型页与厂商索引中。
 
 ## 五、商标与关联
 

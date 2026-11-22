@@ -1,0 +1,18 @@
+{
+ "type": "CURVE",
+ "image_fit_moveX": 169.3,
+ "formula_midpoint_moveX": 144.0,
+ "delta_display": 25.3,
+ "formula_within_tolerance": false,
+ "answer_pct_of_track": 70.0,
+ "display_width": 300,
+ "image_width": 600,
+ "track_end": 242,
+ "tolerance_display_px": 6.0,
+ "image_fit_cx_600": 338.7,
+ "ridge_score": 52.56,
+ "ridge_coverage": 0.96,
+ "ridge_width": 13.0,
+ "method": "top-hat ridge + symmetric ridge-pair + preview-family scan",
+ "note": "目标控制点 x（randomX）不在 p 里；图像拟合为可见参考，服务端提交待在线复核"
+}

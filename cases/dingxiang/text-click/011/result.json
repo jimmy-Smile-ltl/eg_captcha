@@ -1,0 +1,25 @@
+{
+  "cw": "河能仙",
+  "clicks": [
+    {
+      "char": "河",
+      "x": 70,
+      "y": 93
+    },
+    {
+      "char": "能",
+      "x": 253,
+      "y": 80
+    },
+    {
+      "char": "仙",
+      "x": 122,
+      "y": 77
+    }
+  ],
+  "evidence": "live-pass",
+  "verified_at": "2026-11-19",
+  "verification": "官方 demo POST /api/v2 返回 success=true；点击坐标即服务端接受的序列",
+  "solver": "detect-ensemble (YOLO best_v3 + VLM 四视角投票 + direct 兜底)",
+  "source": "_verified/live_07"
+}

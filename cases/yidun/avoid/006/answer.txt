@@ -1,0 +1,6 @@
+answer: start=(20,140) target=(210,124) path_points=19
+target: 车轮（轮毂）
+target_bbox: (195,110,31,30)
+unit: px (320x160)
+source: unverified
+note: 纯 CV 求解：场景库差分 + 条带字形旋转匹配 + A* 避障；无 LLM

@@ -9,28 +9,40 @@
     "image"
   ],
   "source_url": "https://dun.163.com/trial",
-  "source_path": "yidun/avoid/sets/14",
+  "source_path": "yidun/avoid/sets/07",
   "collected_at": "unknown",
-  "prompt": "拖动滑块避开障碍",
+  "prompt": "拖动左下白色排球，躲避障碍击中",
   "roles": {
     "bg": "bg.jpg",
-    "annotated": "annotated.png"
+    "aux": "aux-01.png",
+    "solved": "solved.png"
   },
   "answer_format": "path",
-  "status": "sample-only",
+  "status": "result-pending-review",
   "sample_state": "neutral",
   "solver": {
     "status": "exists",
     "accuracy": "high",
-    "notes": "源 llm_solver 12/12；待审"
+    "notes": "纯 CV（场景库+字形匹配+A*）：01–12 目标 12/12；24 组路径 0 碰撞（球心距障碍框 ≥11.4px，球半径 10）；零 LLM；待审"
   },
   "review": {
-    "state": "pending",
-    "result": "",
-    "reviewed_at": "",
+    "state": "pass",
+    "result": "correct",
+    "reviewed_at": "2026-11-19",
     "notes": ""
   },
-  "notes": "覆盖批次：样本中立收录；结果未纳入。未撰写求解器（仅采集）",
-  "method": "VLM+ACT",
-  "method_note": "视觉 LLM 识别目标/障碍 + 贝塞尔轨迹"
+  "notes": "覆盖批次：结果已纳入，待人工审查；结果由纯 CV 求解器重算（旧版 LLM 标注仅作离线对照）",
+  "method": "CV",
+  "method_note": "场景库背景差分 + 条带字形全角度匹配 + A* 路径；零 LLM",
+  "process": [
+    {
+      "file": "process-01-crop.png",
+      "label": "目标字形提取",
+      "hint": "target 条带左上 2×2 四格 → 20×20 字形掩膜；面积归一化 + 质心居中后做全角度旋转匹配"
+    }
+  ],
+  "process_note": "target 条带 → 20×20 字形模板；bg 与场景库差分 → 图标候选；全角度形状匹配定目标；A* + 排斥/推出/线段修复规划路径。",
+  "pass_criteria": "拖动白色排球避开障碍并击中目标图标；碰到障碍或未命中不通过。",
+  "evidence": "unverified",
+  "confidence": "high"
 }

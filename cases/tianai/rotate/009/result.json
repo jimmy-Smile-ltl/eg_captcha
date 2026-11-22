@@ -3,25 +3,25 @@
   "kind": "rotate",
   "status": "solved",
   "evidence": "unverified",
-  "confidence": "medium",
+  "confidence": "high",
   "answer": {
-    "angle": 160.8,
-    "slider_distance": 160.8
+    "angle": 298.0,
+    "slider_distance": 298.0
   },
   "solution": {
-    "method": "tip_anchor",
-    "angle_alt": 340.8,
-    "note": "tip锚点(word_click/04, 3x稳定77.8@15) + 12↔15约束83.0° + 天空(+0.33)"
+    "method": "library_scene_reference",
+    "angle_alt": 118.0,
+    "note": "重建直立场景库匹配 scrape/sets/928/bg_marked，50 内点"
   },
   "geometry": {
     "hole": {
       "cx": 299.5,
       "cy": 179.5,
-      "r": 96
+      "r": 96.0
     },
     "disc": {
       "cx": 114.5,
-      "cy": 180,
+      "cy": 180.0,
       "r_alpha": 103.5,
       "r_solid": 97.5
     }

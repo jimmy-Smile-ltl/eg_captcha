@@ -26,9 +26,9 @@
     "notes": "图像 90/90；提交闭环未打通；71 无图仅静态逆向"
   },
   "review": {
-    "state": "pending",
-    "result": "",
-    "reviewed_at": "",
+    "state": "pass",
+    "result": "correct",
+    "reviewed_at": "2026-11-15",
     "notes": ""
   },
   "notes": "覆盖批次：样本中立收录；结果未纳入。图像 90/90；全尺寸预填贴合；提交闭环未打通；71 无图仅静态逆向",

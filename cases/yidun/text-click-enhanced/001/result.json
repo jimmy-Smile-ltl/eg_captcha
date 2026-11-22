@@ -1,0 +1,73 @@
+{
+  "case_id": "yidun/text-click-enhanced/001",
+  "kind": "points",
+  "status": "result-pending-review",
+  "evidence": "manual",
+  "confidence": "high",
+  "instruction": "趋 → 前 → 比",
+  "answer": {
+    "kind": "points",
+    "points": [
+      [
+        269,
+        116
+      ],
+      [
+        76,
+        113
+      ],
+      [
+        183,
+        84
+      ]
+    ],
+    "chars": [
+      "趋",
+      "前",
+      "比"
+    ]
+  },
+  "solution": {
+    "method": "standalone-ocr + color-layer-split + fragment-ratio + font-chamfer",
+    "note": "独立框走 YOLO + 多角度 RapidOCR 定 1 个字；两组重叠对按墨色分层，按连通域碎片度判上下层，摆正后字体 chamfer 定字，锚点取目标自身露出笔画的最厚处。",
+    "partial": false,
+    "solved": 3,
+    "total": 3,
+    "clicks": [
+      {
+        "order": 1,
+        "char": "趋",
+        "x": 269,
+        "y": 116,
+        "role": "pair",
+        "confidence": "high",
+        "pair": 4,
+        "member": "lower",
+        "color": "蓝",
+        "reason": ""
+      },
+      {
+        "order": 2,
+        "char": "前",
+        "x": 76,
+        "y": 113,
+        "role": "pair",
+        "confidence": "high",
+        "pair": 3,
+        "member": "lower",
+        "color": "白",
+        "anchor_mode": "exposed",
+        "reason": "P3 白层摆正可见 丷+一+月+刂 = 前（5 块 639px、最大块 0.70 = 被压下层）；黑层 2361px 大半是照片暗部（3 块、最大 0.51）不是字。锚点取白层最大块最厚处 (76,113) S2 V255 厚 3.6px（旧点 (73,108) 落在红墙背景 H179 S180 上）"
+      },
+      {
+        "order": 3,
+        "char": "比",
+        "x": 183,
+        "y": 84,
+        "role": "standalone",
+        "confidence": "high",
+        "reason": ""
+      }
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "case_id": "yidun/text-click-enhanced/001",
+  "vendor": "yidun",
+  "vendor_name": "网易易盾",
+  "type": "text-click-enhanced",
+  "type_name": "增强文字点选",
+  "variant": "enhanced",
+  "media": [
+    "image"
+  ],
+  "source_url": "https://dun.163.com/trial",
+  "source_path": "yidun/text_click_new/sets/01",
+  "collected_at": "unknown",
+  "prompt": "请依次点击：趋 → 前 → 比",
+  "pass_criteria": "按提示顺序依次点击 3 个目标字；顺序错误不通过。",
+  "roles": {
+    "bg": "bg.jpg",
+    "annotated": "annotated.png"
+  },
+  "answer_format": "points",
+  "status": "result-pending-review",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "exists",
+    "accuracy": "3/3（人工逐字判读）",
+    "notes": "三连点全部给出：1 个字来自独立框 OCR，另外 2 个字分属两组重叠对，按颜色分层 + 碎片度判上下层 + 字体 chamfer 定字。坐标为点击点，顺序 = 题面字序。"
+  },
+  "review": {
+    "notes": "",
+    "result": "correct",
+    "reviewed_at": "2026-11-21T22:42:03.620Z",
+    "state": "pass"
+  },
+  "notes": "增强版布局：6 个左右检测框 = 若干重叠对（每组 2 字，一上一下叠放）+ 若干独立单字框。三目标不一定是「1 独立 + 2 对」：006 经审核确认三个目标全在重叠对里，所以先按「框内是否出现两种异色墨迹」把框分成单字 / 重叠对，再按目标数分配。分层判据：露在表面的一层完整可读，是被压那层的诱饵；被压的一层碎片化，才是要点的目标。实测最稳的次序是亮层=上层、暗层/异色层=下层（006 的青色「异」压住褐色「重」即此型）；碎片度（连通域多、最大块占比低）只在两层亮度接近时才拿来辅助。点击点取目标自身墨色层露出笔画的最厚处（距离变换峰值），不点重叠区中心，更不点可读的诱饵字。 本组：趋 = 重叠对 P4 的下层（蓝）；前 = 重叠对 P3 的下层（白）；比 来自独立框。",
+  "method": "DET+CV+OCR",
+  "method_note": "YOLO 定位 → 按墨色 k-means 聚簇把重叠对拆成上下两层 → 连通域碎片度判上下层（完整者在上）→ 12 字体 × 13 角度 chamfer 定字 → 距离变换取目标自身露出笔画的最厚处；独立框另走多角度 RapidOCR（≥3 票）。",
+  "process": [
+    {
+      "file": "process-01-standalone.png",
+      "label": "独立框那 1 个目标：检测框 → 颜色掩码 → 摆正 → 锚点"
+    },
+    {
+      "file": "process-02-pairs.png",
+      "label": "两组重叠对：分组裁剪 → 全图位置 → 锚点与上下层 → 判读结论"
+    }
+  ],
+  "process_note": "process-01：独立框四格（框剪 → 色掩 → 正字 → 锚点）。process-02：每个重叠对一行——左为框内放大（虚线框标出对的位置），中为全图定位，右为锚点十字与坐标，末列为判读依据文字。结果图 annotated.png 头部三枚芯片为 ①②③ 目标与置信度，圆盘心即点击坐标。",
+  "legacy_case_id": "yidun/text-click/007",
+  "confidence": "high",
+  "evidence": "manual"
+}

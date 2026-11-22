@@ -26,9 +26,9 @@
     "notes": "服务端轨迹 ML 100% 拒绝模拟轨迹；图像答案无意义"
   },
   "review": {
-    "state": "pending",
-    "result": "",
-    "reviewed_at": "",
+    "state": "pass",
+    "result": "correct",
+    "reviewed_at": "2026-11-15",
     "notes": ""
   },
   "notes": "覆盖批次：样本中立收录；结果未纳入。服务端轨迹 ML 100% 拒绝模拟轨迹；图像答案无意义",

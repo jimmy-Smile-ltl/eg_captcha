@@ -1,0 +1,74 @@
+{
+  "case_id": "yidun/text-click-enhanced/002",
+  "kind": "points",
+  "status": "result-pending-review",
+  "evidence": "manual",
+  "confidence": "medium",
+  "instruction": "允 → 擦 → 赞",
+  "answer": {
+    "kind": "points",
+    "points": [
+      [
+        65,
+        97
+      ],
+      [
+        99,
+        33
+      ],
+      [
+        244,
+        93
+      ]
+    ],
+    "chars": [
+      "允",
+      "擦",
+      "赞"
+    ]
+  },
+  "solution": {
+    "method": "standalone-ocr + color-layer-split + fragment-ratio + font-chamfer",
+    "note": "独立框走 YOLO + 多角度 RapidOCR 定 1 个字；两组重叠对按墨色分层，按连通域碎片度判上下层，摆正后字体 chamfer 定字，锚点取目标自身露出笔画的最厚处。",
+    "partial": false,
+    "solved": 3,
+    "total": 3,
+    "clicks": [
+      {
+        "order": 1,
+        "char": "允",
+        "x": 65,
+        "y": 97,
+        "role": "pair",
+        "confidence": "medium",
+        "pair": 3,
+        "member": "lower",
+        "color": "绿",
+        "anchor_mode": "exposed",
+        "reason": "P3 白色上层为「倍/培」类干扰（279px 两大块未被打断，有 立+口）；下层鲜绿（k-means 簇 BGR 125,200,62）碎成 6 片 = 下层，其中 (62–68,96–99) 一块 6×4 实心绿离白字 2.5px 以上（绿像素到白字距离 p50 2.2 / max 7.2），确非白字的色边。锚点取该块最厚处 (65,97)，BGR 124,215,36，落在目标自己的露出笔画上（旧点 (61,109) 在白字墨上）"
+      },
+      {
+        "order": 2,
+        "char": "擦",
+        "x": 99,
+        "y": 33,
+        "role": "pair",
+        "confidence": "medium",
+        "pair": 1,
+        "member": "upper",
+        "color": "白",
+        "anchor_mode": "exposed",
+        "reason": "P1 白层摆正可见 扌+宀+祭 = 擦（4 块 823px、最大 0.77）；黑层是暗背景。锚点取白字最大块最厚处 (99,33) S17 V209 厚 5.2px（旧点 (86,32) S32 V174 只是照片灰边）"
+      },
+      {
+        "order": 3,
+        "char": "赞",
+        "x": 244,
+        "y": 93,
+        "role": "standalone",
+        "confidence": "high",
+        "reason": ""
+      }
+    ]
+  }
+}

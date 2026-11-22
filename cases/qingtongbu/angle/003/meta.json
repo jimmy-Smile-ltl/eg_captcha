@@ -17,20 +17,30 @@
     "solved": "solved.png"
   },
   "answer_format": "angle",
-  "status": "sample-only",
+  "status": "result-pending-review",
   "sample_state": "neutral",
   "solver": {
-    "status": "weak",
-    "accuracy": "low",
-    "notes": "MAE 5.56°，通过率 73.33%；参考价值有限"
+    "status": "exists",
+    "accuracy": "medium",
+    "notes": "ResNet50 360 类分类（aqc_spin_v2）回正；12 组目检回正方向均优于/持平 ConvNeXt 对照；未做在线提交校验"
   },
   "review": {
-    "state": "pending",
-    "result": "",
-    "reviewed_at": "",
-    "notes": ""
+    "state": "pass",
+    "result": "correct",
+    "notes": "",
+    "reviewed_at": "2026-11-20T16:23:53.620Z"
   },
-  "notes": "覆盖批次：样本中立收录；结果未纳入。MAE 5.56°，通过率 73.33%；参考价值有限",
+  "notes": "覆盖批次：样本中立收录；ResNet50 回正 angle=192°（conf 0.066），ConvNeXt 对照 170.17°；结果已纳入，待人工审查",
   "method": "CV",
-  "method_note": "角度估计；MAE 5.56°，通过率 73%"
+  "method_note": "ResNet50 360 类分类回正（aqc_spin_v2）；ConvNeXt-T (sin,cos) 回归为对照",
+  "evidence": "manual",
+  "confidence": "medium",
+  "process": [
+    {
+      "file": "process-01-compare-methods.jpg",
+      "label": "方法对比",
+      "hint": "原图 / ResNet50 回正 / ConvNeXt 回正（角度见标注）"
+    }
+  ],
+  "process_note": "三联对比：原图 / ResNet50 回正 / ConvNeXt 回正。本案例取 ResNet50 结果，ConvNeXt 仅作对照。"
 }

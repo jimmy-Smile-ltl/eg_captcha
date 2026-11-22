@@ -1,0 +1,74 @@
+{
+  "case_id": "yidun/text-click-enhanced/008",
+  "kind": "points",
+  "status": "result-pending-review",
+  "evidence": "manual",
+  "confidence": "medium",
+  "instruction": "仆 → 多 → 深",
+  "answer": {
+    "kind": "points",
+    "points": [
+      [
+        33,
+        63
+      ],
+      [
+        128,
+        53
+      ],
+      [
+        253,
+        67
+      ]
+    ],
+    "chars": [
+      "仆",
+      "多",
+      "深"
+    ]
+  },
+  "solution": {
+    "method": "standalone-ocr + color-layer-split + fragment-ratio + font-chamfer",
+    "note": "独立框走 YOLO + 多角度 RapidOCR 定 1 个字；两组重叠对按墨色分层，按连通域碎片度判上下层，摆正后字体 chamfer 定字，锚点取目标自身露出笔画的最厚处。",
+    "partial": false,
+    "solved": 3,
+    "total": 3,
+    "clicks": [
+      {
+        "order": 1,
+        "char": "仆",
+        "x": 33,
+        "y": 63,
+        "role": "pair",
+        "confidence": "medium",
+        "pair": 1,
+        "member": "lower",
+        "color": "蓝",
+        "anchor_mode": "exposed",
+        "reason": "P1 蓝色层为「仆」：左侧 亻 撇+竖、右侧 卜 竖+点，共 4 块连通域（96/22/21/20px）；白色「乙」形单笔压在蓝字上（蓝竖在 y57–63 被白笔截断后于 x44–46 复现），白=上层、蓝=下层；锚点取左竖实心蓝（33,63），在白字覆盖范围之外，两种 z 序都命中"
+      },
+      {
+        "order": 2,
+        "char": "多",
+        "x": 128,
+        "y": 53,
+        "role": "pair",
+        "confidence": "medium",
+        "pair": 0,
+        "member": "upper",
+        "color": "白",
+        "anchor_mode": "exposed",
+        "reason": "P0 白层 513px 是框内唯一可读字形：摆正可见上下两个 夕（撇+横撇+点）= 多；深色下层压在植被上不可见、无字形证据，不能当依据。锚点取白字最大块最厚处 (128,53) 厚 4.0px（旧点 (122,45) 白墨仅 1.4px 厚）"
+      },
+      {
+        "order": 3,
+        "char": "深",
+        "x": 253,
+        "y": 67,
+        "role": "standalone",
+        "confidence": "high",
+        "reason": ""
+      }
+    ]
+  }
+}

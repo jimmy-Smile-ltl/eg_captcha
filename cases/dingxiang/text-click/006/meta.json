@@ -9,30 +9,42 @@
     "image"
   ],
   "source_url": "https://www.dingxiang-inc.com/business/captcha",
-  "source_path": "dingxiang/text-click/sets/06",
-  "collected_at": "unknown",
-  "prompt": "按顺序点击图中文字",
+  "source_path": "dingxiang/text-click/_verified/live2_08",
+  "collected_at": "2026-11-19",
+  "prompt": "请依次点击：召 → 否 → 首",
   "roles": {
     "bg": "bg.webp",
     "restored": "restored.png",
     "solved": "solved.png"
   },
   "answer_format": "points",
-  "status": "sample-only",
-  "sample_state": "neutral",
+  "status": "solved",
+  "evidence": "live-pass",
+  "sample_state": "verified",
   "solver": {
     "status": "exists",
     "accuracy": "high",
-    "notes": "DeepSeek 视觉多视角投票，类型表称实机验证；总表称待做；待审"
+    "notes": "YOLO(best_v3.onnx) 多尺度检测字符框 + 视觉模型局部四视角识别投票 + direct 坐标兜底；本案例为实机 verify success 成功样本（live-pass）"
   },
   "review": {
-    "state": "pending",
-    "result": "",
-    "reviewed_at": "",
-    "notes": ""
+    "state": "pass",
+    "result": "correct",
+    "reviewed_at": "2026-11-19",
+    "notes": "服务端 verify success（live-pass）；点击坐标即当时服务端接受的序列"
   },
-  "notes": "覆盖批次：样本中立收录；结果未纳入。源记录为待做，未撰写求解器",
-  "method": "VLM",
-  "method_note": "DeepSeek 视觉多视角投票直接坐标",
-  "process_note": "源方案为视觉大模型整图识别，没有去噪/拆分中间图；此处展示打乱背景的还原结果，最终结果见右侧。"
+  "notes": "本案例为 2026-11-19 实机成功样本（live2_08），非离线猜测；题目目标来自源 cw，点击序列经官方 demo 服务端验证通过。",
+  "method": "CV+VLM",
+  "method_note": "YOLO 检测字符框 + 视觉大模型逐格识别/序列分配投票；direct 整图坐标仅作补充与漏检兜底",
+  "process": [
+    {
+      "file": "process-01-detect.png",
+      "label": "字符检测（YOLO 多尺度）"
+    },
+    {
+      "file": "process-02-crops.png",
+      "label": "字符裁片（放大识别输入）"
+    }
+  ],
+  "process_note": "检测阶段用多尺度 YOLO 在还原图上定位全部字符框；识别阶段把每个框裁出放大，由视觉模型在候选序列约束下逐格识别，再一对一分配。最终点击见右侧。",
+  "pass_criteria": "按提示顺序依次点击 3 个目标字；顺序错误不通过。"
 }

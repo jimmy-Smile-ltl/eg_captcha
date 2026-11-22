@@ -15,7 +15,7 @@
   "roles": {
     "bg": "bg.webp",
     "annotated": "annotated.png",
-    "restored": "restored.webp"
+    "solved": "restored.webp"
   },
   "answer_format": "swap/order",
   "status": "sample-only",
@@ -26,12 +26,13 @@
     "notes": "三信号切缝+阴影先验，12/12；待审"
   },
   "review": {
-    "state": "pending",
-    "result": "",
-    "reviewed_at": "",
+    "state": "pass",
+    "result": "correct",
+    "reviewed_at": "2026-11-16",
     "notes": ""
   },
   "notes": "覆盖批次：样本中立收录；结果未纳入。三信号切缝+阴影先验，12/12；待审",
   "method": "CV",
-  "method_note": "切缝 + 半边 + 阴影先验；无 LLM"
+  "method_note": "切缝 + 半边 + 阴影先验；无 LLM",
+  "process_note": "标注图为切缝/阴影调试可视化；最终结果见右侧还原图。"
 }

@@ -1,0 +1,49 @@
+{
+ "set": "11",
+ "attr1": [
+  220.56074766355138,
+  76.63551401869158,
+  22.429906542056074
+ ],
+ "method": "ridge-response + family-ellipse fit (sign = client rotation)",
+ "answer": {
+  "moveX": 162.6,
+  "s": 0.542,
+  "percentage": 0.542
+ },
+ "fit": {
+  "score": 0.8776,
+  "coverage": 0.9375,
+  "angle_coverage": 1.0
+ },
+ "candidates": [
+  {
+   "s": 0.542,
+   "moveX": 162.6,
+   "score": 0.8776,
+   "coverage": 0.9375,
+   "angle_coverage": 1.0
+  },
+  {
+   "s": 0.572,
+   "moveX": 171.6,
+   "score": 0.705,
+   "coverage": 0.9313,
+   "angle_coverage": 1.0
+  },
+  {
+   "s": 0.512,
+   "moveX": 153.6,
+   "score": 0.6838,
+   "coverage": 0.8917,
+   "angle_coverage": 1.0
+  }
+ ],
+ "decoy_mirror": {
+  "s": 0.374,
+  "moveX": 112.2,
+  "score": 0.7097,
+  "drawn": true
+ },
+ "note": "moveX 为客户端拖动距离；服务端百分比 = moveX/300；目标曲线为背景内侧细曲线，外侧醒目曲线多为诱饵。"
+}

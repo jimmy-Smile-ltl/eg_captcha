@@ -1,0 +1,5 @@
+answer: 小桥流水
+order: 小(57,219) -> 桥(431,162) -> 流(252,195) -> 水(463,121)
+unit: px
+source: offline-solver (unverified)
+note: 按四字词语语序点击 4 字；坐标为检测框正中；图中编号见 annotated.png；未实机验证

@@ -26,9 +26,9 @@
     "notes": "有标注，未形成可用求解器"
   },
   "review": {
-    "state": "not-applicable",
-    "result": "",
-    "reviewed_at": "",
+    "state": "fail",
+    "result": "incorrect",
+    "reviewed_at": "2026-11-18",
     "notes": ""
   },
   "notes": "覆盖批次：样本中立收录；结果未纳入。有标注，未形成可用求解器",

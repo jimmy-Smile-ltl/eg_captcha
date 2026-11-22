@@ -1,0 +1,28 @@
+{
+  "case_id": "qingtongbu/angle/003",
+  "kind": "angle",
+  "status": "solved",
+  "evidence": "manual",
+  "confidence": "medium",
+  "answer": {
+    "angle": 192
+  },
+  "methods": {
+    "resnet50": {
+      "model": "aqc_spin_v2/model_13.pth",
+      "head": "360-way classification",
+      "angle": 192,
+      "confidence": 0.0663,
+      "chosen": true,
+      "result_image": "solved.png"
+    },
+    "convnext_t": {
+      "model": "rotate-captcha-solver/conv_0203_ft_0205_pl_0206.pth",
+      "head": "sin/cos regression",
+      "angle": 170.17,
+      "chosen": false
+    }
+  },
+  "compare_image": "process-01-compare-methods.jpg",
+  "notes": "angle = 图片相对正立方向的倾角；回正 = rotate(360-angle)。无在线提交校验；人工目检 ResNet50 回正方向正确。"
+}

@@ -1,0 +1,3 @@
+moveX=236
+s=0.7860
+percentage=0.7860

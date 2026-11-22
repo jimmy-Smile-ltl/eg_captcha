@@ -1,0 +1,44 @@
+{
+  "case_id": "shumei/text-click/012",
+  "vendor": "shumei",
+  "vendor_name": "数美",
+  "type": "text-click",
+  "type_name": "文字点选",
+  "variant": "classic",
+  "media": [
+    "image"
+  ],
+  "source_url": "https://www.ishumei.com/new/product/tw/code",
+  "source_path": "shumei/text-click/sets/12",
+  "collected_at": "2026-11-18",
+  "prompt": "请依次点击：富 → 汶 → 在 → 规",
+  "roles": {
+    "bg": "bg.jpg",
+    "annotated": "annotated.png"
+  },
+  "answer_format": "points",
+  "status": "sample-only",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "exists",
+    "accuracy": "high",
+    "notes": "本地 RapidOCR 求解 4/4 字形正确（零 LLM）；类型整体仍弱；待审"
+  },
+  "review": {
+    "state": "pass",
+    "result": "correct",
+    "reviewed_at": "2026-11-18",
+    "notes": ""
+  },
+  "notes": "覆盖批次：样本中立收录；结果未纳入。本地 RapidOCR 4/4 字形正确，未实机提交；待审",
+  "method": "DET+OCR",
+  "method_note": "YOLO 候选 + RapidOCR 识别 + 匈牙利指派；本地零 LLM",
+  "pass_criteria": "按图中文字顺序依次点击；顺序错误不通过。",
+  "process": [
+    {
+      "file": "process-01-candidates.png",
+      "label": "候选切分"
+    }
+  ],
+  "process_note": "本地方案先检测候选字符块，RapidOCR 识别后按 order 指派；最终结果见右侧。"
+}

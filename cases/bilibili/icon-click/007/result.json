@@ -1,0 +1,23 @@
+{
+  "set": "07",
+  "clicks": [
+    {
+      "order": 1,
+      "x": 172,
+      "y": 92
+    },
+    {
+      "order": 2,
+      "x": 175,
+      "y": 39
+    },
+    {
+      "order": 3,
+      "x": 91,
+      "y": 47
+    }
+  ],
+  "total_score": null,
+  "source": "override",
+  "note": "三次复核：icon0=蓝色菱形 P 标志、icon1=蓝色窗格、icon2=左上黄色秒表；黄色 P 方框为干扰项"
+}

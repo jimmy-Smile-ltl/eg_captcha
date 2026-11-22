@@ -1,0 +1,191 @@
+{
+  "case_id": "qingtongbu/text-click/007",
+  "kind": "text-click",
+  "status": "solved",
+  "evidence": "unverified",
+  "confidence": "high",
+  "answer": {
+    "kind": "points",
+    "points": [
+      {
+        "order": 1,
+        "char": "惟",
+        "x": 548,
+        "y": 246
+      },
+      {
+        "order": 2,
+        "char": "芜",
+        "x": 102,
+        "y": 249
+      },
+      {
+        "order": 3,
+        "char": "经",
+        "x": 248,
+        "y": 248
+      },
+      {
+        "order": 4,
+        "char": "育",
+        "x": 401,
+        "y": 248
+      }
+    ]
+  },
+  "solution": {
+    "set": "07",
+    "tip_chars": [
+      "惟",
+      "芜",
+      "经",
+      "育"
+    ],
+    "tip_rapidocr": [
+      "惟",
+      "芜",
+      "经",
+      "育"
+    ],
+    "tip_bounds": [
+      [
+        0,
+        74
+      ],
+      [
+        74,
+        144
+      ],
+      [
+        144,
+        213
+      ],
+      [
+        213,
+        286
+      ]
+    ],
+    "bg_detections": 5,
+    "bg_labels": [
+      {
+        "idx": 0,
+        "label": "惟",
+        "deskew_angle": 0.0
+      },
+      {
+        "idx": 1,
+        "label": "统",
+        "deskew_angle": 0.0
+      },
+      {
+        "idx": 2,
+        "label": "",
+        "deskew_angle": 0.0
+      },
+      {
+        "idx": 3,
+        "label": "育",
+        "deskew_angle": 0.0
+      },
+      {
+        "idx": 4,
+        "label": "曼",
+        "deskew_angle": 0.0
+      }
+    ],
+    "clicks": [
+      {
+        "order": 1,
+        "char": "惟",
+        "box": [
+          506,
+          202,
+          591,
+          290
+        ],
+        "x": 548,
+        "y": 246,
+        "siamese_sim": 0.9492,
+        "sim_source": "M1",
+        "confidence": "high",
+        "ocr_evidence": [
+          "0°",
+          "15°",
+          "30°",
+          "45°",
+          "60°"
+        ],
+        "bg_raw_ocr": "惟"
+      },
+      {
+        "order": 2,
+        "char": "芜",
+        "box": [
+          59,
+          206,
+          145,
+          292
+        ],
+        "x": 102,
+        "y": 249,
+        "siamese_sim": 0.9508,
+        "sim_source": "M1",
+        "confidence": "high",
+        "ocr_evidence": [],
+        "bg_raw_ocr": ""
+      },
+      {
+        "order": 3,
+        "char": "经",
+        "box": [
+          206,
+          204,
+          291,
+          293
+        ],
+        "x": 248,
+        "y": 248,
+        "siamese_sim": 0.9494,
+        "sim_source": "M1",
+        "confidence": "high",
+        "ocr_evidence": [
+          "15°",
+          "30°",
+          "45°",
+          "60°",
+          "75°",
+          "90°"
+        ],
+        "bg_raw_ocr": "统"
+      },
+      {
+        "order": 4,
+        "char": "育",
+        "box": [
+          362,
+          207,
+          441,
+          290
+        ],
+        "x": 401,
+        "y": 248,
+        "siamese_sim": 0.9485,
+        "sim_source": "M3",
+        "confidence": "high",
+        "ocr_evidence": [
+          "-30°",
+          "-15°",
+          "0°",
+          "15°",
+          "30°",
+          "45°",
+          "60°",
+          "75°"
+        ],
+        "bg_raw_ocr": "育"
+      }
+    ],
+    "matched": true
+  },
+  "notes": "v3 本地背景 Lab 色差掩码提取彩色字块，多角度 OCR + Siamese 三矩阵 + 匈牙利；源记录 12/12 人工复核"
+}

@@ -1,0 +1,4 @@
+answer: 1:(110,97); 2:(183,75); 3:(253,134)
+unit: px (300x200)
+source: manual-review
+note: 人工/VLM 复核：icon0=云、icon1=拖车、icon2=时钟；已修正 icon0；2026-11-21 复审顺序与坐标正确

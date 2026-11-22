@@ -1,0 +1,5 @@
+answer: 啼笑皆非
+order: 啼(443,120) -> 笑(183,230) -> 皆(545,110) -> 非(234,235)
+unit: px
+source: offline-solver (unverified)
+note: 按四字词语语序点击 4 字；坐标为检测框正中；图中编号见 annotated.png；未实机验证

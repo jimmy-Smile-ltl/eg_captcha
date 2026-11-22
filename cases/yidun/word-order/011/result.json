@@ -1,0 +1,184 @@
+{
+  "case_id": "yidun/word-order/011",
+  "kind": "points+order",
+  "status": "solved",
+  "evidence": "unverified",
+  "confidence": "high",
+  "method": "DET+OCR+CV",
+  "method_detail": "YOLO(best_v3) locate + color-contour CV + RapidOCR multi-angle + idiom fuzzy match",
+  "idiom": "四平八稳",
+  "score": 4.181,
+  "margin": 1.583,
+  "cover": 4,
+  "top1_hits": 4,
+  "order": [
+    {
+      "step": 1,
+      "char": "四",
+      "glyph_index": 2,
+      "box": [
+        42,
+        77,
+        82,
+        116
+      ],
+      "center": [
+        63,
+        98
+      ],
+      "ocr_votes": 19
+    },
+    {
+      "step": 2,
+      "char": "平",
+      "glyph_index": 3,
+      "box": [
+        173,
+        60,
+        212,
+        98
+      ],
+      "center": [
+        188,
+        84
+      ],
+      "ocr_votes": 2
+    },
+    {
+      "step": 3,
+      "char": "八",
+      "glyph_index": 4,
+      "box": [
+        258,
+        97,
+        301,
+        136
+      ],
+      "center": [
+        280,
+        118
+      ],
+      "ocr_votes": 13
+    },
+    {
+      "step": 4,
+      "char": "稳",
+      "glyph_index": 1,
+      "box": [
+        111,
+        17,
+        154,
+        53
+      ],
+      "center": [
+        134,
+        36
+      ],
+      "ocr_votes": 17
+    }
+  ],
+  "ocr_reads": [
+    [
+      [
+        "稳",
+        17
+      ],
+      [
+        "稱",
+        4
+      ],
+      [
+        "像",
+        1
+      ],
+      [
+        "租",
+        1
+      ]
+    ],
+    [
+      [
+        "四",
+        19
+      ],
+      [
+        "日",
+        3
+      ]
+    ],
+    [
+      [
+        "平",
+        2
+      ],
+      [
+        "人",
+        1
+      ],
+      [
+        "無",
+        1
+      ],
+      [
+        "靈",
+        1
+      ],
+      [
+        "金",
+        1
+      ]
+    ],
+    [
+      [
+        "八",
+        13
+      ],
+      [
+        "广",
+        1
+      ]
+    ]
+  ],
+  "candidates": [
+    {
+      "idiom": "四平八稳",
+      "score": 4.181,
+      "total": 4.495,
+      "prior": 0.626,
+      "cover": 4,
+      "top1": 4
+    },
+    {
+      "idiom": "四面八方",
+      "score": 2.492,
+      "total": 2.912,
+      "prior": 0.839,
+      "cover": 2,
+      "top1": 2
+    },
+    {
+      "idiom": "四通八达",
+      "score": 2.492,
+      "total": 2.884,
+      "prior": 0.783,
+      "cover": 2,
+      "top1": 2
+    },
+    {
+      "idiom": "四方八面",
+      "score": 2.492,
+      "total": 2.676,
+      "prior": 0.368,
+      "cover": 2,
+      "top1": 2
+    },
+    {
+      "idiom": "八万四千",
+      "score": 2.492,
+      "total": 2.659,
+      "prior": 0.334,
+      "cover": 2,
+      "top1": 2
+    }
+  ]
+}

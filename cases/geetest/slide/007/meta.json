@@ -29,9 +29,9 @@
     "notes": "源方案离线 12/12；masked 梯度匹配；结果待人工审查"
   },
   "review": {
-    "state": "pending",
-    "result": "",
-    "reviewed_at": "",
+    "state": "pass",
+    "result": "correct",
+    "reviewed_at": "2026-11-15",
     "notes": ""
   },
   "method": "CV",

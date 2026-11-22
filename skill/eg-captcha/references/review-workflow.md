@@ -6,37 +6,40 @@
 
 | 字段 | 值 |
 |---|---|
-| `status` | `sample-only` / `result-pending-review` / `reviewed-pass` / `reviewed-fail` |
+| `status` | `sample-only` / `result-pending-review` / `solved`（结果/媒体收录程度，审核不改它） |
 | `solver.status` | `none` / `exists` / `weak` / `partial` / `browser` |
 | `solver.accuracy` | `unknown` / `low` / `medium` / `high`（源记录，不代表已复核） |
 | `solver.notes` | 未撰写原因、效果差原因、提交闭环状态 |
-| `review.state` | `pending` / `not-applicable` → 审查后 `pass` / `fail` |
-| `review.result` | 审查结论 |
+| `review.state` | `pending` / `not-applicable` → 审查后 `pass` / `partial` / `fail` |
+| `review.result` | `correct` / `partial` / `incorrect`（viewer 评分码） |
 | `review.reviewed_at` | 审查日期 `YYYY-MM-DD` |
 | `review.notes` | 审查备注 |
 
 ## 状态机
 
-- `sample-only`：只有样本，没有答案/标注/结果；`review.state` 通常 `not-applicable`。
+- `sample-only`：只有样本（或只有可视化结果图）；`review.state` 初始 `pending` / `not-applicable`。
 - `result-pending-review`：有求解器输出（`answer.txt` / `result.json`，可能有 `annotated.png`）；`review.state: pending`。
-- 审查通过：`review.state: pass`，`status: reviewed-pass`。
-- 审查不通过：`review.state: fail`，`status: reviewed-fail`；保留原结果作为失败证据，不要删除。
-- `sample-only` 不允许直接改成 `reviewed-pass`；必须先有答案/结果。
+- 人工审核只改 `review.state` / `review.result` / `review.reviewed_at` / `review.notes`；
+  **不改 `status`**——`status` 表示结果/媒体收录程度，不表示审核质量。
+- 审查通过：`review.state: pass`、`review.result: correct`。
+- 部分正确：`review.state: partial`、`review.result: partial`。
+- 审查不通过：`review.state: fail`、`review.result: incorrect`；保留原结果作为失败证据，不要删除。
+
+> viewer 在 localhost 使用 `scripts/serve.mjs` 时，点审核会自动写 `meta.json`（三层：localStorage → meta → 可选 Worker KV）。本流程用于批量回填、修正、或从审核导出 JSON 恢复。
 
 ## 回填步骤
 
 1. 确认厂商、类型、案例编号、用户结论。用户说“全部通过”时，先确认范围（哪些类型/编号），不要擅自批量。
 2. 读 `cases/<vendor>/<type>/<NNN>/meta.json`；有结果时同时读 `answer.txt` / `result.json`。
 3. 更新：
-   - `review.state`: `pass` / `fail`
-   - `review.result`: 用用户给的原话或简短结论
-   - `review.reviewed_at`: 当天日期
+   - `review.state`: `pass` / `partial` / `fail`
+   - `review.result`: `correct` / `partial` / `incorrect`
+   - `review.reviewed_at`: 审查日期 `YYYY-MM-DD`
    - `review.notes`: 证据/备注（如“人工听音频一致”“与标注图一致”）
-   - `status`: `reviewed-pass` / `reviewed-fail`
+   - **不要改 `status`**（结果/媒体收录程度与审核质量分开）
 4. 校验：
    - `case_id` 与路径一致；
-   - `review.state` / `status` 在枚举内；
-   - `reviewed-pass` 应有 `answer.txt`；
+   - `review.state` / `review.result` 在枚举内；
    - 没有写入 token/cookie/密钥/个人信息；
    - 没有伪造答案或把 ASR/VLM 建议写成真值。
 5. 报告改动的文件和字段；不要改 `solver.status` / `solver.accuracy`，除非用户明确给出新的求解器证据。
@@ -49,15 +52,15 @@
 
 | 字段 | 值 |
 |---|---|
-| `status` | `reviewed-pass` |
+| `status` | `result-pending-review`（保持不变） |
 | `review.state` | `pass` |
-| `review.result` | `人工听音频一致` |
+| `review.result` | `correct` |
 | `review.reviewed_at` | `2026-11-07` |
 | `review.notes` | `人工听 audio.mp3 与转写一致` |
 
 用户说：`recaptcha/audio/001 转写错了，实际是 ...`
 
-处理：`review.state: fail`、`status: reviewed-fail`、`review.result` 写实际答案/结论，保留原 `answer.txt` 作为失败证据；在 `review.notes` 说明差异。
+处理：`review.state: fail`、`review.result: incorrect`、`status` 保持不变，`review.notes` 写实际答案/结论与差异；保留原 `answer.txt` 作为失败证据。
 
 ## 不要做
 

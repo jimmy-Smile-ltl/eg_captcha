@@ -1,0 +1,4 @@
+answer: 1:(229,161); 2:(161,91); 3:(214,286)
+unit: px (344x344)
+source: offline
+note: YOLO 字符检测 + Siamese 匹配；离线求解，未线上验证

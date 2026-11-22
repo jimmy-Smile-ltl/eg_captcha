@@ -1,0 +1,74 @@
+{
+  "case_id": "yidun/text-click-enhanced/012",
+  "kind": "points",
+  "status": "result-pending-review",
+  "evidence": "manual",
+  "confidence": "medium",
+  "instruction": "工 → 骤 → 追",
+  "answer": {
+    "kind": "points",
+    "points": [
+      [
+        53,
+        80
+      ],
+      [
+        193,
+        71
+      ],
+      [
+        262,
+        110
+      ]
+    ],
+    "chars": [
+      "工",
+      "骤",
+      "追"
+    ]
+  },
+  "solution": {
+    "method": "standalone-ocr + color-layer-split + fragment-ratio + font-chamfer",
+    "note": "独立框走 YOLO + 多角度 RapidOCR 定 1 个字；两组重叠对按墨色分层，按连通域碎片度判上下层，摆正后字体 chamfer 定字，锚点取目标自身露出笔画的最厚处。",
+    "partial": false,
+    "solved": 3,
+    "total": 3,
+    "clicks": [
+      {
+        "order": 1,
+        "char": "工",
+        "x": 53,
+        "y": 80,
+        "role": "pair",
+        "confidence": "high",
+        "pair": 2,
+        "member": "lower",
+        "color": "蓝紫",
+        "anchor_mode": "exposed",
+        "reason": "P2 蓝紫层（H128–136 S175+ V165+）就是 工：上横在 (38–63,65–70)、中竖在 (51–54,75–86)；框内其余浅色大块是奶油色背景。锚点取中竖中心 (53,80) 厚 2.0px（旧点 (78,53) 已在框外右上，落在暗红背景 H177 上）"
+      },
+      {
+        "order": 2,
+        "char": "骤",
+        "x": 193,
+        "y": 71,
+        "role": "pair",
+        "confidence": "medium",
+        "pair": 1,
+        "member": "upper",
+        "color": "白",
+        "anchor_mode": "exposed",
+        "reason": "P1 白层 4 块、最大 0.70，摆正可见 聚 的长横+底部密笔，即 骤；青色层为密排干扰。锚点取白字最厚处 (193,71) 纯白 S3 V255 厚 3.2px（旧点 (189,68) 白墨仅 1.4px 厚）"
+      },
+      {
+        "order": 3,
+        "char": "追",
+        "x": 262,
+        "y": 110,
+        "role": "standalone",
+        "confidence": "medium",
+        "reason": "独立框 S [233,77,294,138]，米黄层（k-means 簇 BGR 149,220,248）4 块 262+82+27 组成一个字；锚点 (262,110) BGR 113,169,216 落在米黄笔画上"
+      }
+    ]
+  }
+}

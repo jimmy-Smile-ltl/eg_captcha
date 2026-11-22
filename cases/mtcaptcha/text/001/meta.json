@@ -10,7 +10,7 @@
     "audio"
   ],
   "source_url": "https://service.mtcaptcha.com/mtcv1/demo/",
-  "source_path": "other/mtcaptcha/standard/sets/01",
+  "source_path": "other/mtcaptcha/text/sets/01",
   "collected_at": "unknown",
   "prompt": "输入或识别图中字符",
   "roles": {
@@ -22,8 +22,8 @@
   "sample_state": "neutral",
   "solver": {
     "status": "exists",
-    "accuracy": "medium",
-    "notes": "有标签子集 12/12；整体弱标签，待审"
+    "accuracy": "high",
+    "notes": "音频单模态 large-v3-turbo + distil 二次意见：12 组本地 + 14 组 oracle 真值 26/26（开发集，待独立批次验证）；融合路径 ASR+OCR，整体弱标签待审"
   },
   "review": {
     "state": "pending",

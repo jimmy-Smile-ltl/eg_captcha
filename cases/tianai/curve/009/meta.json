@@ -4,33 +4,47 @@
   "vendor_name": "天爱",
   "type": "curve",
   "type_name": "曲线滑动",
-  "variant": "v3",
+  "variant": "CURVE",
   "media": [
     "image"
   ],
   "source_url": "https://captcha.tianai.cloud/",
-  "source_path": "tianai/curve3/sets/01",
+  "source_path": "tianai/curve/sets/07",
   "collected_at": "unknown",
   "prompt": "沿曲线拖动滑块",
   "roles": {
-    "bg": "bg.jpg",
-    "restored": "restored.jpg"
+    "bg": "restored.jpg",
+    "solved": "solved.png"
   },
-  "answer_format": "path",
+  "answer_format": "offset-x",
   "status": "sample-only",
   "sample_state": "neutral",
   "solver": {
     "status": "exists",
     "accuracy": "medium",
-    "notes": "源报告部分通过；待审"
+    "notes": "图像拟合（可见参考）moveX=91.0px；旧公式中点 148.5px，Δ=57.5px；ridge score 29.1 cov 1.00。randomX 不在 p 中；在线提交待复核。"
   },
   "review": {
-    "state": "pending",
-    "result": "",
-    "reviewed_at": "",
-    "notes": ""
+    "state": "pass",
+    "result": "correct",
+    "notes": "",
+    "reviewed_at": "2026-11-20T14:17:56.339Z"
   },
-  "notes": "覆盖批次：样本中立收录；结果未纳入。源报告部分通过；待审",
-  "method": "VLM+ACT",
-  "method_note": "视觉模型理解曲线 + 贝塞尔轨迹；VLM 起步便宜"
+  "notes": "CURVE；p 只含端点 + ctrlY，randomX 由背景可见曲线恢复；背景可能有第二条共享端点的干扰曲线，只拟合参考；旧“端点中点”公式只是部分样本的巧合；bg.jpg 为 API 原始打乱图（页面主图用 restored.jpg）；样本中立收录，在线验证待复核。",
+  "method": "CV+ACT",
+  "method_note": "纯 CV：白度 top-hat 亮脊 + 法线对称亮脊对 + 预览族内一维扫描；目标控制点 x（服务端 randomX）不在 p 里，只能从背景可见曲线恢复；背景第二条曲线按干扰排除；提交仍为 ACT 拖动。",
+  "pass_criteria": "拖动滑块使预览曲线与背景里可见的参考曲线重合；服务端按 moveX/bgImageWidth 与 randomX/600 比对，容差 ±0.02（300px 展示宽下 ±6px）；另含轨迹时长/点数/首点/步进/末段减速检查。",
+  "process": [
+    {
+      "file": "process-01-fit.png",
+      "label": "图像拟合参考：moveX=91.0px（600 坐标 cx=182.0）；旧公式中点 148.5px，Δ=57.5px",
+      "hint": "绿线=拟合参考；青色=拟合位置预览；洋红虚线=旧公式中点；另一条曲线为干扰"
+    },
+    {
+      "file": "process-02-score.png",
+      "label": "与图像参考的偏差 vs 滑块位移：最小点 91.0px；旧公式中点 148.5px（Δ 57.5px）",
+      "hint": "绿带=图像拟合 ±6px；绿线=图像拟合；红虚线=旧公式中点"
+    }
+  ],
+  "process_note": "还原背景 → 白度 top-hat 亮脊 → 法线对称亮脊对打分 → 预览族内一维扫描 + 抛物线细化；另一条曲线不在族里，被自然排除。"
 }

@@ -1,0 +1,39 @@
+{
+  "case_id": "bilibili/text-click/006",
+  "vendor": "bilibili",
+  "vendor_name": "哔哩哔哩 B站",
+  "type": "text-click",
+  "type_name": "文字点选",
+  "variant": "geetest-v3/word",
+  "media": [
+    "image"
+  ],
+  "source_url": "https://passport.bilibili.com/login",
+  "source_path": "other/bilibili/text-click/sets/06",
+  "collected_at": "2026-07-03",
+  "prompt": "按提示文字顺序，依次点击背景图中对应的字符",
+  "pass_criteria": "按提示文字顺序点击对应字符；顺序错误不通过。",
+  "roles": {
+    "bg": "bg.jpg",
+    "aux": "text_prompt.png",
+    "solved": "solve_result.jpg"
+  },
+  "answer_format": "points",
+  "status": "result-pending-review",
+  "evidence": "offline",
+  "confidence": "medium",
+  "notes": "GeeTest v3 word 历史样本；B站 2026-11 已切换 v4 icon，文字点选无法复采。",
+  "solver": {
+    "status": "exists",
+    "accuracy": "high",
+    "notes": "YOLO(best_v3.onnx) 字符检测 + Siamese(pre_model_v7.onnx) 相似度匹配；6/6 离线输出，未线上验证"
+  },
+  "review": {
+    "state": "pass",
+    "result": "correct",
+    "notes": "",
+    "reviewed_at": "2026-11-21T04:53:43.741Z"
+  },
+  "method": "CV",
+  "method_note": "YOLO 字符检测 + Siamese 相似度矩阵 + 贪心唯一分配；无 LLM"
+}

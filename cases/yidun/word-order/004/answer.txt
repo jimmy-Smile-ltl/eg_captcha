@@ -1,0 +1,5 @@
+answer: 固若金汤
+order: 固(213,70) -> 若(74,106) -> 金(144,40) -> 汤(40,38)
+unit: px
+source: offline-solver (unverified)
+note: 按成语语序点击 4 字；坐标为字形颜色轮廓中心；图中编号见 annotated.png；未实机验证

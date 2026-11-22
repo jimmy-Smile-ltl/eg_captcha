@@ -1,0 +1,23 @@
+{
+  "set": "04",
+  "clicks": [
+    {
+      "order": 1,
+      "x": 246,
+      "y": 121
+    },
+    {
+      "order": 2,
+      "x": 196,
+      "y": 118
+    },
+    {
+      "order": 3,
+      "x": 157,
+      "y": 48
+    }
+  ],
+  "total_score": null,
+  "source": "override",
+  "note": "人工/VLM 复核：icon0=粉环头像、icon1=白云菱形皇冠(人工补点)、icon2=交叉剑"
+}

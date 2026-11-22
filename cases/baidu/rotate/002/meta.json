@@ -1,0 +1,38 @@
+{
+  "case_id": "baidu/rotate/002",
+  "vendor": "baidu",
+  "vendor_name": "百度",
+  "type": "rotate",
+  "type_name": "旋转验证",
+  "variant": "spin",
+  "media": [
+    "image"
+  ],
+  "source_url": "https://aiqicha.baidu.com/",
+  "source_path": "other/baidu/rotate/sets/labeled/121_rot73_00_121.png",
+  "collected_at": "2026-09",
+  "prompt": "拖动滑块，将图片旋转到正确方向",
+  "roles": {
+    "bg": "bg.png",
+    "solved": "solved.png"
+  },
+  "answer_format": "angle",
+  "status": "result-pending-review",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "exists",
+    "accuracy": "high",
+    "notes": "ConvNeXt Tiny conv_0203_ft_0205_pl_0206；200 张标注 MAE 10.50°、acc@10° 81.0%；本案例预测误差 3.12°"
+  },
+  "review": {
+    "state": "pending",
+    "result": "",
+    "reviewed_at": "",
+    "notes": ""
+  },
+  "notes": "从 200 张标注样本中选取（角度覆盖 60°~301°）；solved.png 为模型预测回正；真值/预测/误差见 answer.txt 与 result.json",
+  "method": "CV+PROTO",
+  "method_note": "ConvNeXt Tiny (sin/cos regression) 角度识别 + wappass 纯协议提交（PoW / 双层 AES）",
+  "evidence": "manual",
+  "confidence": "high"
+}

@@ -1,0 +1,23 @@
+{
+  "set": "10",
+  "clicks": [
+    {
+      "order": 1,
+      "x": 167,
+      "y": 130
+    },
+    {
+      "order": 2,
+      "x": 195,
+      "y": 63
+    },
+    {
+      "order": 3,
+      "x": 67,
+      "y": 119
+    }
+  ],
+  "total_score": null,
+  "source": "override",
+  "note": "人工/VLM 复核：icon0=笔+闪电(蓝)、icon1=菱形箭头(黄)、icon2=P 标志(蓝菱形)；原 icon0 点为空"
+}

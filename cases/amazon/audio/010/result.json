@@ -1,67 +1,53 @@
 {
-  "case_id": "amazon/audio/010",
-  "kind": "text",
-  "status": "result-pending-review",
-  "evidence": "unverified",
-  "confidence": "medium",
-  "answer": {
-    "kind": "text",
-    "text": "economic"
+  "set": "10",
+  "audio_s": 9.98,
+  "female_src": 1,
+  "male_src": 0,
+  "f0_hz": {
+    "0": 102.6,
+    "1": 200.0
   },
-  "solution": {
-    "set": "10",
-    "problem_type": "noisyneighbour-en-us",
-    "audio_s": 9.98,
-    "sep_s": 12.16,
-    "chosen_src": 1,
-    "sources": [
-      {
-        "src": 0,
-        "text": "The above problem is that the foundation names instruction of all the act of others with his own, which have themselves just as little foundations.",
-        "score": 2
+  "female_is_chosen": true,
+  "speakers": [
+    {
+      "gender": "female",
+      "role": "questioner",
+      "role_note": "出题人；她念的两个词是正确答案",
+      "src": 1,
+      "f0_hz": 200.0,
+      "transcript": "Type one of the two following words spoken by me. Economic. Training.",
+      "transcript_note": "按已知指令句 + 多模型定稿的两个词重建",
+      "transcript_asr": {
+        "small.en · 女声轨": "Type one of the two following words spoken by me, economic training.",
+        "large-v3-turbo · 女声轨": "Type one of the two following words spoken by me, economic training.",
+        "large-v3-turbo · 混音": "Type one of the two following words spoken by me. Economic. Training. It belongs to..."
       },
-      {
-        "src": 1,
-        "text": "Type one of the two following words spoken by me, economic training.",
-        "score": 10
-      }
-    ],
-    "decodings": [
-      "Type one of the two following words spoken by me, economic training.",
-      "Type one of the two following words spoken by me economic training"
-    ],
-    "candidates": [
-      "economic",
-      "training"
-    ],
-    "candidate_probs": [
-      {
-        "word": "economic",
-        "pos_from_instruction": 0,
-        "votes": 2,
-        "mean_prob": 0.4273
-      },
-      {
-        "word": "training",
-        "pos_from_instruction": 1,
-        "votes": 2,
-        "mean_prob": 0.8423
-      }
-    ],
-    "counts": {
-      "economic": 2,
-      "training": 2
-    },
-    "answer": "economic",
-    "asr_s": 23.98,
-    "review": {
-      "model": "large-v3-turbo",
-      "text": "Type one of the two following words spoken by me, economic training.",
-      "tail": [
+      "words": [
         "economic",
         "training"
       ]
+    },
+    {
+      "gender": "male",
+      "role": "narrator",
+      "role_note": "背景旁白（noisy neighbour）；不是答案",
+      "src": 0,
+      "f0_hz": 102.6,
+      "transcript": "and synthetically. The above problem is that the foundation and construction of albeit of others with his own, which have themselves just as little foundations, it belongs to",
+      "transcript_note": "旁白是干扰；显示 small.en / large-v3-turbo 中质量较高的一版，原始两版见各模型转写",
+      "transcript_asr": {
+        "small.en · 旁白轨": "The above problem is that the foundation names instruction of all the act of others with his own, which have themselves just as little foundations.",
+        "large-v3-turbo · 旁白轨": "and synthetically. The above problem is that the foundation and construction of albeit of others with his own, which have themselves just as little foundations, it belongs to"
+      },
+      "words": []
     }
-  },
-  "notes": "两套 ASR 一致，仍待人工审查"
+  ],
+  "words": [
+    "economic",
+    "training"
+  ],
+  "words_alt": [],
+  "answer": "economic",
+  "agreement": "high",
+  "note": "女声轨 small.en 与 large-v3-turbo 都给出 economic/training。"
 }

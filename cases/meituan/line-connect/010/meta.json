@@ -11,27 +11,48 @@
   "source_url": "https://verify.meituan.com/v2",
   "source_path": "meituan/sudoku_103/sets/41",
   "collected_at": "unknown",
-  "prompt": "用最短线依次连接所有目标点",
+  "prompt": "从 1.png 读取颜色，用最短线连接背景图中该颜色的两个点",
   "roles": {
     "bg": "bg.png",
-    "restored": "restored.webp"
+    "aux": "aux-01.png",
+    "solved": "solved.png"
   },
-  "answer_format": "path",
-  "status": "sample-only",
+  "answer_format": "line/points",
+  "status": "result-pending-review",
   "sample_state": "neutral",
   "solver": {
     "status": "partial",
     "accuracy": "high",
-    "notes": "图像 50/50；提交闭环未打通"
+    "notes": "50/50 颜色识别与两点定位；最短直线；提交闭环未打通；待审"
   },
   "review": {
-    "state": "pending",
-    "result": "",
-    "reviewed_at": "",
+    "state": "pass",
+    "result": "correct",
+    "reviewed_at": "2026-11-18",
     "notes": ""
   },
-  "notes": "覆盖批次：样本中立收录；结果未纳入。图像 50/50；提交闭环未打通",
+  "notes": "覆盖批次：结果已纳入，待人工审查；1.png 颜色识别 + 同色两点 + 最短直线；图像 50/50；提交闭环未打通",
   "method": "CV",
-  "method_note": "颜色/连线规则；无 LLM",
-  "pass_criteria": "用最短路径依次连接全部目标；漏连或连线过长不通过。"
+  "method_note": "背景还原 + 1.png 颜色模板匹配 + 同色连通域 + 最短直线；无 LLM",
+  "process": [
+    {
+      "file": "process-01-restored.png",
+      "label": "背景还原",
+      "hint": "hint 还原后的 0.png（白底合成）"
+    },
+    {
+      "file": "process-02-text.png",
+      "label": "颜色文字提取",
+      "hint": "从 1.png 识别待连接的颜色"
+    },
+    {
+      "file": "process-03-points.png",
+      "label": "同色两点定位",
+      "hint": "在还原图中框出该颜色的两个点"
+    }
+  ],
+  "process_note": "1.png → 颜色文字识别；0.png → hint 还原背景；按颜色取两点 → 最短直线连接。",
+  "pass_criteria": "按 1.png 指定颜色找到两个同色点，用最短直线连接；连错点或绕行不通过。",
+  "evidence": "offline-verified",
+  "confidence": "high"
 }

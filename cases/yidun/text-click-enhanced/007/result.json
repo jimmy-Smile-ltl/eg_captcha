@@ -1,0 +1,74 @@
+{
+  "case_id": "yidun/text-click-enhanced/007",
+  "kind": "points",
+  "status": "result-pending-review",
+  "evidence": "manual",
+  "confidence": "medium",
+  "instruction": "病 → 遵 → 沿",
+  "answer": {
+    "kind": "points",
+    "points": [
+      [
+        161,
+        108
+      ],
+      [
+        70,
+        103
+      ],
+      [
+        266,
+        88
+      ]
+    ],
+    "chars": [
+      "病",
+      "遵",
+      "沿"
+    ]
+  },
+  "solution": {
+    "method": "standalone-ocr + color-layer-split + fragment-ratio + font-chamfer",
+    "note": "独立框走 YOLO + 多角度 RapidOCR 定 1 个字；两组重叠对按墨色分层，按连通域碎片度判上下层，摆正后字体 chamfer 定字，锚点取目标自身露出笔画的最厚处。",
+    "partial": false,
+    "solved": 3,
+    "total": 3,
+    "clicks": [
+      {
+        "order": 1,
+        "char": "病",
+        "x": 161,
+        "y": 108,
+        "role": "pair",
+        "confidence": "medium",
+        "pair": 4,
+        "member": "lower",
+        "color": "深绿",
+        "anchor_mode": "exposed",
+        "reason": "P4 白字为 曲/典 类方框叠字（chamfer 曹2.59/曲2.85/典3.00 同档），非目标；深绿下层压在亮网底上，只露出 疒 的长撇+竖（该处 V≈60 而周围背景 V≈200，局部差 20+ 稳定成块），VLM 读作「线」形；病在目标候选里以 2.78 居首"
+      },
+      {
+        "order": 2,
+        "char": "遵",
+        "x": 70,
+        "y": 103,
+        "role": "pair",
+        "confidence": "medium",
+        "pair": 3,
+        "member": "lower",
+        "color": "黑",
+        "anchor_mode": "exposed",
+        "reason": "P3 白色上层为 坏/还 类（chamfer 坏 2.22 明显第一，遺/遵 2.65 次之），黑色下层是密排黑色字：丷+酉(带内横的方框)+寸+底部辶的捺，VLM 三次一致读作「薄」= 同为艹/密集上部+长底笔的形；锚点取下层黑色竖笔（该列三行 V<56），在白字右缘外露出"
+      },
+      {
+        "order": 3,
+        "char": "沿",
+        "x": 266,
+        "y": 88,
+        "role": "standalone",
+        "confidence": "high",
+        "reason": ""
+      }
+    ]
+  }
+}

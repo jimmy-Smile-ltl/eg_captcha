@@ -11,7 +11,7 @@
   "source_url": "https://dun.163.com/trial",
   "source_path": "yidun/text_click/sets/06",
   "collected_at": "unknown",
-  "prompt": "按顺序点击图中文字",
+  "prompt": "请依次点击：元 → 安 → 库",
   "roles": {
     "bg": "bg.jpg",
     "annotated": "annotated.png"
@@ -25,19 +25,20 @@
     "notes": "源方案 12/12；结果待人工审查"
   },
   "review": {
-    "state": "pending",
-    "result": "",
-    "reviewed_at": "",
-    "notes": ""
+    "state": "pass",
+    "result": "correct",
+    "notes": "",
+    "reviewed_at": "2026-11-19T15:45:41.198Z"
   },
-  "notes": "覆盖批次：样本中立收录；结果未纳入。源方案 12/12；结果待人工审查",
+  "notes": "覆盖批次：样本中立收录；结果未纳入。源方案 12/12；结果待人工审查；题面目标来自源 data.front=元安库；2026-11-19 颜色轮廓 OCR 证据复核最终解：库 框 (47,111)→(150,100)（final 点击框被 OCR 读作非目标字 / OCR 目标票充足）；原审核结论针对旧最终解，需重新审核；2026-11-20 混合识别复核：元(60,52)、安(222,61)、库(150,100)，与 OCR 复核结果一致",
   "method": "DET+OCR+VLM",
   "method_note": "YOLO 检测 + Siamese 字形 + VLM 仲裁；VLM 只对分歧点调用",
   "process": [
     {
       "file": "process-01-compare.png",
-      "label": "双方案对比"
+      "label": "四方案点击顺序对比"
     }
   ],
-  "process_note": "源方案为本地 CV 与直接定位双方案对比；过程图展示对比面板，最终结果见右侧。"
+  "process_note": "四方案对比：本地 Siamese、本地 OCR+形状（混合识别：OCR 读字 + Siamese 形状，过滤非字符框与强干扰框）、VLM 直点、仲裁最终。图上 ①②③ 为点击顺序与目标字，栏顶为逐击证据（相似度 / 混合的票数与形状分 / OCR「读X×n」/ VLM 读字 / 仲裁来源），底部裁片为各方案实际点中的字形；无可用框的目标显示「缺失」。同一目标字点到不同位置时，对照原图与裁片即可判断哪个方案匹配正确。",
+  "pass_criteria": "按提示顺序依次点击 3 个目标字；顺序错误不通过。"
 }

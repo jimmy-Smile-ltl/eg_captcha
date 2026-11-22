@@ -1,0 +1,74 @@
+{
+  "case_id": "yidun/text-click-enhanced/004",
+  "kind": "points",
+  "status": "result-pending-review",
+  "evidence": "manual",
+  "confidence": "medium",
+  "instruction": "润 → 以 → 念",
+  "answer": {
+    "kind": "points",
+    "points": [
+      [
+        75,
+        48
+      ],
+      [
+        242,
+        87
+      ],
+      [
+        161,
+        101
+      ]
+    ],
+    "chars": [
+      "润",
+      "以",
+      "念"
+    ]
+  },
+  "solution": {
+    "method": "standalone-ocr + color-layer-split + fragment-ratio + font-chamfer",
+    "note": "独立框走 YOLO + 多角度 RapidOCR 定 1 个字；两组重叠对按墨色分层，按连通域碎片度判上下层，摆正后字体 chamfer 定字，锚点取目标自身露出笔画的最厚处。",
+    "partial": false,
+    "solved": 3,
+    "total": 3,
+    "clicks": [
+      {
+        "order": 1,
+        "char": "润",
+        "x": 75,
+        "y": 48,
+        "role": "pair",
+        "confidence": "medium",
+        "pair": 0,
+        "member": "lower",
+        "color": "白",
+        "anchor_mode": "exposed",
+        "reason": "P0 白层摆正可见 氵（左侧三短笔）+ 门（框）+ 王（框内横）= 润；5 块 639px、最大块 0.77，比蓝层（4 块、最大 0.89）更碎 = 被压的下层；蓝层是无氵的门框干扰（闰/国 类）。锚点取白层最大块最厚处 (75,48) S7 V255 厚 5.4px"
+      },
+      {
+        "order": 2,
+        "char": "以",
+        "x": 242,
+        "y": 87,
+        "role": "pair",
+        "confidence": "high",
+        "pair": 1,
+        "member": "lower",
+        "color": "黄",
+        "anchor_mode": "overlap",
+        "reason": "P1 黄色下层为「以」（左乚+点、右人）；白色上层为「饭/似」类干扰"
+      },
+      {
+        "order": 3,
+        "char": "念",
+        "x": 161,
+        "y": 101,
+        "role": "standalone",
+        "confidence": "high",
+        "reason": ""
+      }
+    ]
+  }
+}

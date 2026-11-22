@@ -1,0 +1,62 @@
+{
+  "case_id": "qingtongbu/curve/015",
+  "vendor": "qingtongbu",
+  "vendor_name": "企讯通",
+  "type": "curve",
+  "type_name": "曲线滑动",
+  "variant": "CURVE",
+  "media": [
+    "image"
+  ],
+  "source_url": "http://www.shipinren.com/",
+  "source_path": "qingtongbu/curve/sets/15",
+  "collected_at": "2026-11-20",
+  "prompt": "拖动滑块使曲线匹配",
+  "roles": {
+    "bg": "bg.jpg",
+    "solved": "solved.png"
+  },
+  "answer_format": "offset-x",
+  "status": "result-pending-review",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "exists",
+    "accuracy": "high",
+    "notes": "灰白描边模型（greywhite，cov=66%）；moveX=109.0px（ctrlX=218.0），贴合误差 2.80px，贴合度 53.4；在线 check code=200（live-pass）；待人工审查"
+  },
+  "review": {
+    "state": "pass",
+    "result": "correct",
+    "notes": "",
+    "reviewed_at": "2026-11-20T15:15:01.945Z"
+  },
+  "notes": "CURVE；参考/预览同为三次贝塞尔，两个控制点重合且 x=滑块位移；描边分彩色（Lab 色度模型）与灰白（灰晕/白芯+线响应）两型，端点用颜色骨架吸附避免被星形/鹅卵石/云朵干扰。",
+  "method": "CV+ACT",
+  "method_note": "双色模型提取描边 + 端点吸附；彩色走 Lab 色调/彩度，灰白走局部无彩度/明度差+线响应；提交为 ACT 拖动，服务端比 moveX/bgW 与 randomX/600，容差 5%。",
+  "pass_criteria": "拖动滑块使预览曲线与背景参考描边重合；服务端 |moveX/bgImageWidth − randomX/600| ≤ 5%（300px 展示宽下 ±15px；同平台实测 ±30 图像 px 通过、+35 拒绝）。",
+  "process": [
+    {
+      "file": "process-01-fit.png",
+      "label": "描边带（绿）+ 拟合：ctrlX=218.0，ctrlY=363.0｜灰白模型",
+      "hint": "绿=颜色/线响应描边证据；黄白=拟合预览；端点为 P0/P3"
+    },
+    {
+      "file": "process-02-score.png",
+      "label": "贴合误差 vs 滑块位置：最优 moveX=109.0px，红带=通过窗 ±15px",
+      "hint": "纵轴=曲线相对描边带的法向质心偏移（px）"
+    },
+    {
+      "file": "process-03-mechanism.png",
+      "label": "机制示意：moveX=0 / 答案 / 242 三条曲线与控制点",
+      "hint": "两个控制点重合于 (moveX×2, ctrlY)"
+    },
+    {
+      "file": "process-04-compare.png",
+      "label": "同一题 5 个滑块位置的曲线形态对比",
+      "hint": "左偏/窗左缘/最优/窗右缘/右偏"
+    }
+  ],
+  "process_note": "端点优先用 p（新样本）/颜色骨架吸附（旧样本）；ctrlX 由族拟合或线响应集成扫描给出；贴合度=法向质心偏移，描边按彩色/灰白两型分别建模。",
+  "evidence": "live-pass",
+  "confidence": "high"
+}

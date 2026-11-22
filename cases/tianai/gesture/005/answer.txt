@@ -1,0 +1,7 @@
+answer: path
+coordinate_space: restored 600x360
+start: [558.7, 218.1]
+end: [48.6, 179.1]
+points: 141
+source: solver v7（CV 自动求解）
+note: 沿曲线拖动；起终点为两端圆帽中心（还原图坐标）

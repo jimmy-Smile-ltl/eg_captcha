@@ -1,0 +1,7 @@
+answer: path
+coordinate_space: restored 600x360
+start: [217.4, 128.2]
+end: [155.6, 321.4]
+points: 151
+source: annotation（人工标注 ground truth）
+note: 沿曲线拖动；起终点为两端圆帽中心（还原图坐标）

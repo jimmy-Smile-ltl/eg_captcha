@@ -21,29 +21,25 @@
   "status": "sample-only",
   "sample_state": "neutral",
   "solver": {
-    "status": "none",
-    "accuracy": "unknown",
-    "notes": "有样本，未撰写求解器"
+    "status": "exists",
+    "accuracy": "high",
+    "notes": "纯 CV 本地求解：黑色掩膜候选 + 旋转/尺度模板 IoU + 尺度一致峰值修正；3/3 图标正确；零 LLM；待审"
   },
   "review": {
-    "state": "not-applicable",
-    "result": "",
-    "reviewed_at": "",
+    "state": "fail",
+    "result": "incorrect",
+    "reviewed_at": "2026-11-16",
     "notes": ""
   },
-  "notes": "覆盖批次：样本中立收录；结果未纳入。有样本，未撰写求解器",
-  "method": "NONE(VLM)",
-  "method_note": "未撰写；建议 VLM 读图 + 坐标点击",
+  "notes": "覆盖批次：结果已纳入，待人工审核；修复 #3 定位：叠在羚羊角上的黑色 7（不再落到白云）；纯 CV，零 LLM",
+  "method": "CV",
+  "method_note": "黑色图标掩膜 + 模板 IoU + 尺度一致峰值；整列投影切分；零 LLM",
   "pass_criteria": "按图中提示的图标顺序依次点击；顺序错误不通过。",
   "process": [
     {
       "file": "process-01-split.png",
       "label": "图标拆分"
-    },
-    {
-      "file": "process-02-compare.png",
-      "label": "双方案对比"
     }
   ],
-  "process_note": "源方案先拆分提示图标，再用本地模板与直接定位两套方案对比并仲裁；最终结果见右侧。"
+  "process_note": "整列投影切分三个完整目标图标；本地纯 CV 以黑色掩膜 + 尺度一致峰值定位（无 LLM）。最终结果见右侧。"
 }

@@ -1,4 +1,4 @@
-answer: angle=160.8°
+answer: angle=298.0°
 unit: degree
 source: unverified
-note: 顺时针旋转 160.8° 使圆盘转正；滑块右拖距离 160.8（1:1 映射）
+note: 圆盘当前逆时针旋转量；转正=顺时针旋转 298.0°；滑块右拖距离=298.0（1:1）；直立场景库匹配

@@ -25,9 +25,9 @@
     "notes": "源记录待优化；参考价值有限"
   },
   "review": {
-    "state": "pending",
-    "result": "",
-    "reviewed_at": "",
+    "state": "fail",
+    "result": "incorrect",
+    "reviewed_at": "2026-11-16",
     "notes": ""
   },
   "notes": "覆盖批次：样本中立收录；结果未纳入。源记录待优化；参考价值有限",

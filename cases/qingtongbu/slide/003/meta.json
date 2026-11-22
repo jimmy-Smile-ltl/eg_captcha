@@ -26,9 +26,9 @@
     "notes": "双模板交叉验证 + 局部梯度精修；待人工审查"
   },
   "review": {
-    "state": "not-applicable",
-    "result": "",
-    "reviewed_at": "",
+    "state": "pass",
+    "result": "correct",
+    "reviewed_at": "2026-11-15",
     "notes": ""
   },
   "notes": "覆盖批次：样本中立收录；双模板 + 局部梯度精修（gap=458,188）；结果已纳入，待人工审查",

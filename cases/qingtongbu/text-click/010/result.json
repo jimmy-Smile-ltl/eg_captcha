@@ -1,0 +1,186 @@
+{
+  "case_id": "qingtongbu/text-click/010",
+  "kind": "text-click",
+  "status": "solved",
+  "evidence": "unverified",
+  "confidence": "high",
+  "answer": {
+    "kind": "points",
+    "points": [
+      {
+        "order": 1,
+        "char": "妄",
+        "x": 549,
+        "y": 247
+      },
+      {
+        "order": 2,
+        "char": "噬",
+        "x": 100,
+        "y": 98
+      },
+      {
+        "order": 3,
+        "char": "炊",
+        "x": 396,
+        "y": 249
+      },
+      {
+        "order": 4,
+        "char": "鳞",
+        "x": 100,
+        "y": 248
+      }
+    ]
+  },
+  "solution": {
+    "set": "10",
+    "tip_chars": [
+      "妄",
+      "噬",
+      "炊",
+      "鳞"
+    ],
+    "tip_rapidocr": [
+      "妄",
+      "噬",
+      "炊",
+      "鳞"
+    ],
+    "tip_bounds": [
+      [
+        0,
+        74
+      ],
+      [
+        74,
+        143
+      ],
+      [
+        143,
+        213
+      ],
+      [
+        213,
+        286
+      ]
+    ],
+    "bg_detections": 5,
+    "bg_labels": [
+      {
+        "idx": 0,
+        "label": "靡",
+        "deskew_angle": 0.0
+      },
+      {
+        "idx": 1,
+        "label": "坎",
+        "deskew_angle": 0.0
+      },
+      {
+        "idx": 2,
+        "label": "繁",
+        "deskew_angle": 0.0
+      },
+      {
+        "idx": 3,
+        "label": "妄",
+        "deskew_angle": 0.0
+      },
+      {
+        "idx": 4,
+        "label": "汞",
+        "deskew_angle": 0.0
+      }
+    ],
+    "clicks": [
+      {
+        "order": 1,
+        "char": "妄",
+        "box": [
+          505,
+          204,
+          593,
+          291
+        ],
+        "x": 549,
+        "y": 247,
+        "siamese_sim": 0.949,
+        "sim_source": "M3",
+        "confidence": "high",
+        "ocr_evidence": [
+          "-15°",
+          "0°",
+          "15°",
+          "30°",
+          "45°",
+          "60°"
+        ],
+        "bg_raw_ocr": "妄"
+      },
+      {
+        "order": 2,
+        "char": "噬",
+        "box": [
+          58,
+          60,
+          142,
+          137
+        ],
+        "x": 100,
+        "y": 98,
+        "siamese_sim": 0.4958,
+        "sim_source": "M1",
+        "confidence": "high",
+        "ocr_evidence": [
+          "60°",
+          "75°",
+          "90°"
+        ],
+        "bg_raw_ocr": "靡"
+      },
+      {
+        "order": 3,
+        "char": "炊",
+        "box": [
+          349,
+          203,
+          444,
+          295
+        ],
+        "x": 396,
+        "y": 249,
+        "siamese_sim": 0.9508,
+        "sim_source": "M1",
+        "confidence": "high",
+        "ocr_evidence": [
+          "30°",
+          "45°",
+          "60°",
+          "75°",
+          "90°"
+        ],
+        "bg_raw_ocr": "坎"
+      },
+      {
+        "order": 4,
+        "char": "鳞",
+        "box": [
+          56,
+          206,
+          145,
+          290
+        ],
+        "x": 100,
+        "y": 248,
+        "siamese_sim": 0.9486,
+        "sim_source": "M1",
+        "confidence": "high",
+        "ocr_evidence": [],
+        "bg_raw_ocr": "繁"
+      }
+    ],
+    "matched": true
+  },
+  "notes": "v3 本地背景 Lab 色差掩码提取彩色字块，多角度 OCR + Siamese 三矩阵 + 匈牙利；源记录 12/12 人工复核"
+}

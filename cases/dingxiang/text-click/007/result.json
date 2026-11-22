@@ -1,0 +1,25 @@
+{
+  "cw": "光扁谷",
+  "clicks": [
+    {
+      "char": "光",
+      "x": 146,
+      "y": 39
+    },
+    {
+      "char": "扁",
+      "x": 39,
+      "y": 98
+    },
+    {
+      "char": "谷",
+      "x": 198,
+      "y": 114
+    }
+  ],
+  "evidence": "live-pass",
+  "verified_at": "2026-11-19",
+  "verification": "官方 demo POST /api/v2 返回 success=true；点击坐标即服务端接受的序列",
+  "solver": "detect-ensemble (YOLO best_v3 + VLM 四视角投票 + direct 兜底)",
+  "source": "_verified/live2_09"
+}

@@ -1,0 +1,5 @@
+answer: 一无所获
+order: 一(276,209) -> 无(442,145) -> 所(179,168) -> 获(544,164)
+unit: px
+source: offline-solver (unverified)
+note: 按四字词语语序点击 4 字；坐标为检测框正中；图中编号见 annotated.png；未实机验证

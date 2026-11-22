@@ -1,0 +1,204 @@
+{
+  "case_id": "yidun/word-order/009",
+  "kind": "points+order",
+  "status": "solved",
+  "evidence": "unverified",
+  "confidence": "high",
+  "method": "DET+OCR+CV",
+  "method_detail": "YOLO(best_v3) locate + color-contour CV + RapidOCR multi-angle + idiom fuzzy match",
+  "idiom": "四平八稳",
+  "score": 3.58,
+  "margin": 1.081,
+  "cover": 4,
+  "top1_hits": 3,
+  "order": [
+    {
+      "step": 1,
+      "char": "四",
+      "glyph_index": 4,
+      "box": [
+        120,
+        88,
+        165,
+        130
+      ],
+      "center": [
+        144,
+        111
+      ],
+      "ocr_votes": 17
+    },
+    {
+      "step": 2,
+      "char": "平",
+      "glyph_index": 1,
+      "box": [
+        29,
+        10,
+        67,
+        46
+      ],
+      "center": [
+        48,
+        30
+      ],
+      "ocr_votes": 11
+    },
+    {
+      "step": 3,
+      "char": "八",
+      "glyph_index": 2,
+      "box": [
+        204,
+        73,
+        244,
+        112
+      ],
+      "center": [
+        224,
+        93
+      ],
+      "ocr_votes": 9
+    },
+    {
+      "step": 4,
+      "char": "稳",
+      "glyph_index": 3,
+      "box": [
+        40,
+        92,
+        80,
+        133
+      ],
+      "center": [
+        61,
+        113
+      ],
+      "ocr_votes": 2
+    }
+  ],
+  "ocr_reads": [
+    [
+      [
+        "平",
+        11
+      ],
+      [
+        "杰",
+        1
+      ],
+      [
+        "以",
+        1
+      ],
+      [
+        "西",
+        1
+      ],
+      [
+        "为",
+        1
+      ],
+      [
+        "母",
+        1
+      ]
+    ],
+    [
+      [
+        "八",
+        9
+      ],
+      [
+        "人",
+        2
+      ],
+      [
+        "儿",
+        1
+      ],
+      [
+        "小",
+        1
+      ]
+    ],
+    [
+      [
+        "福",
+        2
+      ],
+      [
+        "中",
+        2
+      ],
+      [
+        "稳",
+        2
+      ],
+      [
+        "服",
+        1
+      ],
+      [
+        "嗨",
+        1
+      ],
+      [
+        "英",
+        1
+      ],
+      [
+        "玲",
+        1
+      ]
+    ],
+    [
+      [
+        "四",
+        17
+      ]
+    ]
+  ],
+  "candidates": [
+    {
+      "idiom": "四平八稳",
+      "score": 3.58,
+      "total": 3.893,
+      "prior": 0.626,
+      "cover": 4,
+      "top1": 3
+    },
+    {
+      "idiom": "四面八方",
+      "score": 2.392,
+      "total": 2.812,
+      "prior": 0.839,
+      "cover": 2,
+      "top1": 2
+    },
+    {
+      "idiom": "四通八达",
+      "score": 2.392,
+      "total": 2.784,
+      "prior": 0.783,
+      "cover": 2,
+      "top1": 2
+    },
+    {
+      "idiom": "四海升平",
+      "score": 2.388,
+      "total": 2.581,
+      "prior": 0.387,
+      "cover": 2,
+      "top1": 2
+    },
+    {
+      "idiom": "四方八面",
+      "score": 2.392,
+      "total": 2.576,
+      "prior": 0.368,
+      "cover": 2,
+      "top1": 2
+    }
+  ]
+}

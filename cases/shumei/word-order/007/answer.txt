@@ -1,0 +1,5 @@
+answer: 按部就班
+order: 按(158,103) -> 部(253,54) -> 就(350,185) -> 班(166,217)
+unit: px
+source: offline-solver (unverified)
+note: 按四字词语语序点击 4 字；坐标为检测框正中；图中编号见 annotated.png；未实机验证

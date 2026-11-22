@@ -1,0 +1,260 @@
+{
+  "case_id": "shumei/word-order/006",
+  "kind": "points+order",
+  "status": "solved",
+  "evidence": "unverified",
+  "confidence": "high",
+  "method": "DET+OCR+CV",
+  "method_detail": "YOLO(best_v3) locate + merged-box split + thin-bar detect + color-contour CV + RapidOCR/ddddocr multi-angle + idiom/phrase fuzzy match",
+  "idiom": "啼笑皆非",
+  "score": 2.323,
+  "margin": 1.513,
+  "cover": 4,
+  "top1_hits": 3,
+  "order": [
+    {
+      "step": 1,
+      "char": "啼",
+      "glyph_index": 1,
+      "box": [
+        414,
+        89,
+        473,
+        151
+      ],
+      "center": [
+        443,
+        120
+      ],
+      "ocr_votes": 4
+    },
+    {
+      "step": 2,
+      "char": "笑",
+      "glyph_index": 3,
+      "box": [
+        154,
+        198,
+        213,
+        263
+      ],
+      "center": [
+        183,
+        230
+      ],
+      "ocr_votes": 11
+    },
+    {
+      "step": 3,
+      "char": "皆",
+      "glyph_index": 2,
+      "box": [
+        514,
+        80,
+        576,
+        141
+      ],
+      "center": [
+        545,
+        110
+      ],
+      "ocr_votes": 5
+    },
+    {
+      "step": 4,
+      "char": "非",
+      "glyph_index": 4,
+      "box": [
+        209,
+        203,
+        260,
+        267
+      ],
+      "center": [
+        234,
+        235
+      ],
+      "ocr_votes": 10
+    }
+  ],
+  "ocr_reads": [
+    [
+      [
+        "啼",
+        4
+      ],
+      [
+        "瞬",
+        4
+      ],
+      [
+        "院",
+        4
+      ],
+      [
+        "原",
+        3
+      ],
+      [
+        "锈",
+        2
+      ],
+      [
+        "资",
+        2
+      ],
+      [
+        "滁",
+        2
+      ],
+      [
+        "脐",
+        2
+      ],
+      [
+        "味",
+        1
+      ],
+      [
+        "建",
+        1
+      ],
+      [
+        "断",
+        1
+      ],
+      [
+        "崎",
+        1
+      ]
+    ],
+    [
+      [
+        "省",
+        6
+      ],
+      [
+        "皆",
+        5
+      ],
+      [
+        "账",
+        2
+      ],
+      [
+        "时",
+        2
+      ],
+      [
+        "管",
+        2
+      ],
+      [
+        "售",
+        2
+      ],
+      [
+        "一",
+        1
+      ]
+    ],
+    [
+      [
+        "笑",
+        11
+      ],
+      [
+        "美",
+        2
+      ],
+      [
+        "平",
+        2
+      ],
+      [
+        "毕",
+        2
+      ],
+      [
+        "关",
+        2
+      ],
+      [
+        "哭",
+        2
+      ],
+      [
+        "彩",
+        2
+      ],
+      [
+        "来",
+        2
+      ]
+    ],
+    [
+      [
+        "非",
+        10
+      ],
+      [
+        "韭",
+        6
+      ],
+      [
+        "出",
+        4
+      ],
+      [
+        "毛",
+        2
+      ],
+      [
+        "北",
+        1
+      ]
+    ]
+  ],
+  "candidates": [
+    {
+      "idiom": "啼笑皆非",
+      "score": 2.323,
+      "total": 3.903,
+      "prior": 0.759,
+      "cover": 4,
+      "top1": 3
+    },
+    {
+      "idiom": "似笑非笑",
+      "score": 1.575,
+      "total": 2.39,
+      "prior": 0.43,
+      "cover": 2,
+      "top1": 2
+    },
+    {
+      "idiom": "一笑了之",
+      "score": 0.84,
+      "total": 1.76,
+      "prior": 0.64,
+      "cover": 2,
+      "top1": 1
+    },
+    {
+      "idiom": "一笑置之",
+      "score": 0.84,
+      "total": 1.743,
+      "prior": 0.606,
+      "cover": 2,
+      "top1": 1
+    },
+    {
+      "idiom": "一颦一笑",
+      "score": 0.84,
+      "total": 1.726,
+      "prior": 0.572,
+      "cover": 2,
+      "top1": 1
+    }
+  ]
+}

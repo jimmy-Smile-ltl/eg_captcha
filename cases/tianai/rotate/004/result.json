@@ -3,25 +3,25 @@
   "kind": "rotate",
   "status": "solved",
   "evidence": "unverified",
-  "confidence": "medium",
+  "confidence": "high",
   "answer": {
-    "angle": 146.2,
-    "slider_distance": 146.2
+    "angle": 317.5,
+    "slider_distance": 317.5
   },
   "solution": {
-    "method": "vision_consensus",
-    "angle_alt": 326.2,
-    "note": "vision二分共识 2/3"
+    "method": "library_scene_reference",
+    "angle_alt": 137.5,
+    "note": "重建直立场景库匹配 scrape/sets/1012/bg_restored，66 内点"
   },
   "geometry": {
     "hole": {
       "cx": 299.5,
       "cy": 179.5,
-      "r": 97
+      "r": 97.0
     },
     "disc": {
       "cx": 114.5,
-      "cy": 180,
+      "cy": 180.0,
       "r_alpha": 103.5,
       "r_solid": 98.5
     }

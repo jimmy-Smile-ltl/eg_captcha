@@ -18,20 +18,22 @@
     "solved": "solved.jpg"
   },
   "answer_format": "path",
-  "status": "sample-only",
+  "status": "result-pending-review",
   "sample_state": "neutral",
   "solver": {
     "status": "exists",
     "accuracy": "medium",
-    "notes": "Vision 理解图形 + 贝塞尔轨迹；待审"
+    "notes": "v7 曲线检测器（2026-11-19）：21 组标注 19/21 < 15px；本案例路径来源：自动求解；待人工审查"
   },
   "review": {
-    "state": "pending",
-    "result": "",
-    "reviewed_at": "",
-    "notes": ""
+    "state": "pass",
+    "result": "correct",
+    "notes": "",
+    "reviewed_at": "2026-11-19T13:55:47.095Z"
   },
-  "notes": "覆盖批次：样本中立收录；结果未纳入。未撰写求解器（仅采集）",
-  "method": "VLM+ACT",
-  "method_note": "视觉模型理解图形 + 贝塞尔轨迹"
+  "notes": "覆盖批次：手势轨迹精选样本；已附求解结果（CV v7 自动求解），待人工审查",
+  "method": "CV+ACT",
+  "method_note": "纯 CV 曲线检测（v7 胶囊管 + 端帽拟合）+ 合成拖动轨迹；无 LLM",
+  "evidence": "offline-verified",
+  "confidence": "medium"
 }

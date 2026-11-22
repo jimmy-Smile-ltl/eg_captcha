@@ -1,0 +1,6 @@
+answer: start=(20,140) target=(228,79) path_points=23
+target: 四格方块（方格窗/十字分隔的方块）
+target_bbox: (214,65,29,31)
+unit: px (320x160)
+source: unverified
+note: 纯 CV 求解：场景库差分 + 条带字形旋转匹配 + A* 避障；无 LLM

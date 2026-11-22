@@ -1,0 +1,23 @@
+{
+  "set": "08",
+  "clicks": [
+    {
+      "order": 1,
+      "x": 64,
+      "y": 135
+    },
+    {
+      "order": 2,
+      "x": 139,
+      "y": 35
+    },
+    {
+      "order": 3,
+      "x": 213,
+      "y": 111
+    }
+  ],
+  "total_score": null,
+  "source": "override",
+  "note": "人工/VLM 复核：icon0=苹果(左环)、icon1=手表(顶部黄菱形)、icon2=房子监控(右侧)；原 icon1 点为空"
+}

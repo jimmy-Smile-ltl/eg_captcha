@@ -21,18 +21,18 @@
   "sample_state": "neutral",
   "solver": {
     "status": "exists",
-    "accuracy": "unknown",
-    "notes": "源目录有求解输出，未统一验证"
+    "accuracy": "medium",
+    "notes": "黑/白双色图标分割 + 旋转模板匹配；12 组按目标轮廓复核（含旋转/反色）；无 LLM；待审"
   },
   "review": {
-    "state": "pending",
-    "result": "",
-    "reviewed_at": "",
+    "state": "pass",
+    "result": "correct",
+    "reviewed_at": "2026-11-19",
     "notes": ""
   },
-  "notes": "覆盖批次：样本中立收录；结果未纳入。源目录有求解输出，未统一验证",
-  "method": "VLM+CV",
-  "method_note": "主路径视觉 LLM 读图，CV 兜底；VLM 无需训练，起步便宜",
+  "notes": "覆盖批次：结果已纳入，待人工审核；12 组双色图标按目标轮廓逐点复核",
+  "method": "CV",
+  "method_note": "黑/白双色掩膜 + 旋转模板 + 坐标复核；无 LLM",
   "process": [
     {
       "file": "process-01-split.png",

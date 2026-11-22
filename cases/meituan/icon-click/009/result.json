@@ -1,0 +1,47 @@
+{
+  "case_id": "meituan/icon-click/009",
+  "kind": "points",
+  "status": "solved",
+  "evidence": "manual",
+  "confidence": "high",
+  "answer": {
+    "kind": "points",
+    "points": [
+      {
+        "icon": 1,
+        "x": 198,
+        "y": 219,
+        "conf": 0.942
+      },
+      {
+        "icon": 2,
+        "x": 182,
+        "y": 128,
+        "conf": 0.984
+      },
+      {
+        "icon": 3,
+        "x": 370,
+        "y": 243,
+        "conf": 0.877
+      },
+      {
+        "icon": 4,
+        "x": 471,
+        "y": 221,
+        "conf": 0.884
+      }
+    ],
+    "order": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "solver": {
+    "name": "icon_solver v3",
+    "restored": true,
+    "cn": 4
+  }
+}

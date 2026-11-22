@@ -1,0 +1,5 @@
+answer: 四平八稳
+order: 四(140,42) -> 平(58,105) -> 八(274,111) -> 稳(207,82)
+unit: px
+source: offline-solver (unverified)
+note: 按成语语序点击 4 字；坐标为字形颜色轮廓中心；图中编号见 annotated.png；未实机验证

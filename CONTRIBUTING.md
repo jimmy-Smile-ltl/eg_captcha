@@ -2,7 +2,9 @@
 
 本库只收三类东西：**初始样本、最终求解结果、求解思路**。规则的目标是让结构统一、可核对、不夹带工具。
 
-## 一、零代码
+## 一、无可执行代码
+
+本库不收录可运行的求解器、脚本、命令或 SDK；`tests/`、生成器、检查脚本一律放在仓库外。文档中的**伪代码/公式/参数链路**是知识表达，不是可执行实现：只允许 `text` 或无语言标记的代码块，禁止 `python`、`js`、`sh` 等语言标签，禁止 `import`、`pip`、`npm`、`curl` 等真实命令。
 
 ### 允许的文件
 
@@ -23,19 +25,22 @@
 | 原始报文 | `cookies.json`、`probe.json`、`load_response.json`、`raw_*`、`challenge.js`、`frame.html`、日志 |
 | 训练/评估产物 | `yolo_dataset/`、`runs/`、`weights/`、`negative/`、`contact_sheet*` |
 
-文档中不得出现可执行代码或命令片段；只允许无语言标记的纯文本目录树/链路示意。
+文档中允许下列**不可执行**内容：目录树、链路示意、伪代码、算法公式、参数解码过程。伪代码必须是对现有求解记录的直译，不写完整可运行函数、真实命令、密钥或 token；语言标记只用 `text`。
 
 `skill/` 目录只放 Markdown（`SKILL.md` + `references/`），不放求解器脚本、密钥、token 或可执行代码；它只是知识库的索引、方法选型与审查流程。开源版不包含个人绝对路径，路径由 `EG_CAPTCHA_ROOT` 或 skill 相对位置确定。
 
 ## 二、目录与命名
 
 ```
-cases/<vendor>/<type>/<NNN>/
+cases/<vendor>/<type>/
+├── README.md               # 类型页：题面 / 样本 / 思路 / 伪代码 / 结果 / 失败
+└── <NNN>/                  # 单组案例：meta.json + 媒体 + 可选答案/结果
 ```
 
 - `<vendor>`：小写英文 slug，见下表。
 - `<type>`：受控主 slug，见下表；变体写进 `meta.json`，不建子目录。
-- `<NNN>`：三位编号 `001`–`012`，先精选后编号，入库后不重排、不复用。
+- `<NNN>`：三位编号，先精选后编号，入库后不重排、不复用；默认每类最多 12 组，超过时按多样性精选（例外：`qingtongbu/curve` 24 组 = 旧 12 + 新 12，`shumei/icon-click` 14 组）。
+- `README.md`：每个有案例目录的类型必须有且只有一个 `.md`；图片引用同目录相对路径，案例链接写 `[001](001/)`。
 
 ### 厂商 slug
 
@@ -57,6 +62,8 @@ cases/<vendor>/<type>/<NNN>/
 | `human-security` | HUMAN Security |
 | `datadome` | DataDome |
 | `mtcaptcha` | MTCaptcha |
+| `baidu` | 百度（爱企查 wappass） |
+| `bilibili` | 哔哩哔哩 B站（极验实现） |
 
 ### 类型 slug（主名 + 别名）
 
@@ -71,12 +78,15 @@ cases/<vendor>/<type>/<NNN>/
 | `inference` | 8 块换位乱序拼图 | inference（易盾） |
 | `rotate` | 旋转验证 | rotate |
 | `angle` | 角度验证 | rotate_degree, angle |
-| `curve` | 曲线滑动 | curve, curve2, curve3 |
+| `curve` | 曲线滑动 | curve |
+| `curve-ellipse` | 椭圆曲线 | curve2 |
+| `curve-bezier` | 双贝塞尔曲线 | curve3 |
 | `gesture` | 手势轨迹 | gesture |
 | `scratch` | 刮刮卡 | scrape, scratch |
 | `click` | 通用点选 | click |
 | `icon-click` | 图标点选 | image_click, icon_130, icon |
-| `text-click` | 文字点选 | text_click, text_click_new, picture-click, word_image_click |
+| `text-click` | 文字点选 | text_click, picture-click, word_image_click |
+| `text-click-enhanced` | 增强文字点选 | text_click_new |
 | `word-order` | 语序点选 | word_order_image_click, word-order |
 | `word-group` | 语序选词 | word-group |
 | `scene-click` | 场景语义点选 | scene-click |
@@ -103,7 +113,11 @@ cases/<vendor>/<type>/<NNN>/
 | `press-hold` | 按压 | press-hold |
 | `accessible-email` | 无障碍邮件码 | accessible-email |
 | `sms` | 短信上行 | sms |
-| `random` | 智能随机 | random |
+
+> 天爱曲线按 API `type` 拆分：`CURVE`→`curve`、`CURVE2`→`curve-ellipse`、`CURVE3`→`curve-bezier`；三者绘制与参数机制不同，不能合并为变体。
+>
+> `random` 不是类型：体验页的「智能随机」只是从该厂商其他类型中随机返回一种，无独立题面；
+> 不建 `cases/<vendor>/random/`，在厂商文档中说明即可。
 
 ## 三、单案例契约
 
@@ -154,12 +168,12 @@ cases/<vendor>/<type>/<NNN>/
 | `answer_format` | 是 | `offset-x` / `points` / `angle` / `text` / `indices` / `swap` / `path` 等 |
 | `method` | 是 | 方法标签：`CV` / `DET` / `OCR` / `VLM` / `ASR` / `PROTO` / `ACT` / `AUDIO` / `NONE`，可组合 |
 | `method_note` | 是 | 是否用 LLM、成本/适用性、建议路线 |
-| `status` | 是 | `sample-only` / `result-pending-review` / `reviewed-pass` / `reviewed-fail` |
+| `status` | 是 | `sample-only` / `result-pending-review` / `solved`；**审查结论不写进 `status`**，只写 `review` |
 | `solver.status` | 是 | `none` / `exists` / `weak` / `partial` / `browser` |
 | `solver.accuracy` | 是 | `unknown` / `low` / `medium` / `high`（以源记录为准，不代表本库已复核） |
 | `solver.notes` | 是 | 未撰写原因、准确率问题、提交闭环状态等 |
-| `review.state` | 是 | `pending` / `not-applicable`；人工审查后改为 `pass` / `fail` |
-| `review.result` | 否 | 审查结论，初始为空 |
+| `review.state` | 是 | `pending` / `not-applicable`；人工审查后改为 `pass` / `partial` / `fail` |
+| `review.result` | 否 | 审查结论：`correct` / `partial` / `incorrect`，初始为空 |
 | `review.reviewed_at` | 否 | 审查日期，初始为空 |
 | `notes` | 否 | 弱标签、取舍、失败原因 |
 
@@ -201,7 +215,7 @@ note: 缺口左上角坐标 (178, 96)，图为 320x160
 
 ## 五、求解器状态与人工审查
 
-每个类型必须在厂商文档的类型表中写明：
+每个类型必须在厂商索引的类型表与类型页中写明：
 
 - 是否有求解器：`none` / `exists` / `weak` / `partial` / `browser`。
 - 源记录准确率：`unknown` / `low` / `medium` / `high`；没有数据就写 `unknown`，不得猜。
@@ -213,21 +227,30 @@ note: 缺口左上角坐标 (178, 96)，图为 320x160
 
 ## 六、文档规则
 
-每家厂商一篇：`docs/<vendor>.md`。覆盖批次统一为四段：
+文档分两层：厂商索引 + 类型页。详细内容只写一处，避免两处漂移。
 
-1. **类型总表**：类型 / 中文 / 变体 / 样本 / 求解器 / 准确率（源记录）/ 审查 / 说明。
-2. **样本速览**：每类 1 张代表样本，完整样本留在 `cases/`。
-3. **求解器与人工审查**：按 `none` / `weak` / `partial` / `browser` / `exists` 分组，写清无求解器原因或效果差原因。
-4. **来源**：公开来源、采集日期、版权说明。
+### 1. 厂商索引 `docs/<vendor>.md`（约 60–90 行）
 
-深度拆解（形态 / 识别思路 / 提交链路 / 失败记录）作为可选附录，成熟后再补；极验文档是深度样板的例外。
+1. **厂商概览**：来源、类型数/样本数、方法重点、一句话结论。
+2. **8 列类型总表**：类型 / 中文 / 变体 / 样本 / 方法 / 求解器 / 审查 / 说明 + 类型页链接。列结构固定，第 4 列必须是纯数字；viewer 的 `build.mjs` 依赖该表识别 `sampleCount=0` 的 documented-only 类型。documented-only 行第 8 列用纯文本，不放 Markdown 链接。
+3. **代表样本**：每类 1 张缩略图或音频链接，点击进类型页。
+4. **厂商级结论**：强项、难点、已暴露的失败、证据边界。
+5. **来源与版权**。
+
+厂商索引不再放大段算法拆解、逐组答案表和失败档案；这些只在类型页。
+
+### 2. 类型页 `cases/<vendor>/<type>/README.md`
+
+固定八节：一、速览；二、题面与判定；三、样本长什么样；四、形态与难点；五、求解思路（C 档为“建议路线”）；六、结果与审查（C 档为“为什么没有结果”）；七、失败与边界；八、相关。A 档完整迁移深度拆解与逐组结果；B 档写步骤表与已知参数；C 档只写形态、建议路线、为何未解与边界，不写准确率。
 
 写作要求：
 
-- 中文；表格优先；不写代码、命令、密钥、签名实现、完整加密步骤。
-- 准确率必须标为“源记录”，并注明日期或来源；没有日期就写 `unknown`，不得写成已复核。
+- 中文；每节先用 1–2 句白话说明，再上表格/图；表格优先。
+- 事实以案例 `meta.json` 为准；准确率标“源记录”；审查统计按 meta 现算；不把离线写成线上。
+- 允许 `text` 伪代码/公式，仅当现有记录支持；不写可运行代码、命令、密钥、签名实现。
 - 失败记录统一格式：**现象 → 根因 → 证据 → 结论**。
-- 图库用相对路径的图片；尺寸控制仅允许 `<img src="..." width="..." alt="...">`，禁止 script/style/iframe。
+- 图片用相对路径 `<img src="001/bg.jpg" width="..." alt="...">`；禁止 script/style/iframe 和外链图片。
+- 案例链接写 `[001](001/)`；指回厂商索引用 `../../../docs/<vendor>.md`。
 
 ## 七、脱敏
 
@@ -248,11 +271,44 @@ note: 缺口左上角坐标 (178, 96)，图为 320x160
 - [ ] 未解/无结果案例不伪造答案
 - [ ] 无 token/cookie/个人信息/原始报文
 
+类型页：
+
+- [ ] 每个有案例的类型目录都有且只有一个 `README.md`，八节齐全
+- [ ] 速览/结果中的样本数、求解器、审查统计与案例 `meta.json` 重算一致
+- [ ] 图片、案例、厂商索引的相对链接全部存在
+- [ ] 只用 `text` 或无语言标记的代码块；无 `python/js/sh` 标签、无真实命令
+- [ ] 音频类型有音频链接或说明；无图类型不硬套图库
+
 全库：
 
 - [ ] 每个厂商的每个类型都有样本条目或 documented-only 条目
+- [ ] 厂商索引保持 8 列类型表，第 4 列为纯数字；documented-only 行仍为 0
 - [ ] 黑名单扩展名为 0
 - [ ] 文档无可执行代码/命令
 - [ ] 图片相对路径全部存在
 - [ ] README 计数与目录实际一致
 - [ ] 全库体积 ≤300MB
+
+## 九、外部项目并入流程
+
+从 samples、其他仓库或临时采集目录并入本库时，按以下顺序执行，不能只搬图片或只写厂商表。
+
+1. **素材归集**：只取公开来源的题面/媒体、答案/结果、过程图、标注；剔除源码、模型权重、原始报文、cookie/token、调试产物与个人信息。保留 `source_url` 与采集日期。
+2. **案例落地**：`cases/<vendor>/<type>/<NNN>/` + `meta.json` + 媒体；有结果时放 `answer.txt` / `result.json` / `annotated.png`；`sample-only` 只放 meta+媒体，不伪造答案。
+3. **类型页**：写 `cases/<vendor>/<type>/README.md` 八节；A/B/C 分档；4–8 张图；统计从 `meta.json` 现算；准确率标「源记录」；失败写「现象 → 根因 → 证据 → 结论」；伪代码只 `text`。
+4. **厂商索引**：`docs/<vendor>.md` 保持 8 列类型表（第 4 列纯数字；documented-only 行写 0 且第 8 列纯文本）；第 8 列链到类型页；补代表样本、厂商级结论、来源。
+5. **全局索引**：`docs/types.md` 厂商覆盖链到类型页；新厂商补 README 厂商总览、`docs/demos.md`、NOTICE 来源、本文厂商 slug 表；重算 README 的厂商/类型/案例/审查计数。
+6. **skill**：更新 `skill/eg-captcha/references/repo-map.md` 的厂商表、类型页路径与快照统计；`SKILL.md` 路由保持「厂商索引 → 类型页 → meta.json」。
+7. **校验**：仓库外脚本检查 README 覆盖、链接/图片、8 列表格、代码围栏；用 meta 重算样本数与审查统计。
+8. **viewer**：重新 `npm run build`，确认厂商数 / 厂商×类型数 / 案例数符合预期（当前 18 / 93 / 995，其中 7 个 documented-only），并打开类型页与案例页检查布局。
+
+**外部并入检查清单**：
+
+- [ ] 新增/变更的类型都有 `README.md`，且没有第二个 `.md`
+- [ ] 厂商索引 8 列表格第 4 列与案例目录数一致；documented-only 仍为 0
+- [ ] `docs/types.md` 链接数 = 有案例的厂商×类型数（当前 86）
+- [ ] 案例媒体/答案/结果没有被外部项目的临时文件、模型或原始报文污染
+- [ ] viewer 构建输出与 README/skill 统计一致
+- [ ] 三个仓库已按「强制同步规则」一起更新
+
+**不要**：把外部项目目录结构原样搬入；把厂商索引写成第二个类型页；为 documented-only 类型建空案例目录/README；用改 `status` 的方式表达审查结论。

@@ -1,0 +1,101 @@
+{
+  "case_id": "qingtongbu/icon-click/004",
+  "kind": "icon-click",
+  "status": "solved",
+  "evidence": "unverified",
+  "confidence": "high",
+  "answer": {
+    "kind": "points",
+    "points": [
+      {
+        "order": 1,
+        "x": 103,
+        "y": 101
+      },
+      {
+        "order": 2,
+        "x": 101,
+        "y": 250
+      },
+      {
+        "order": 3,
+        "x": 400,
+        "y": 98
+      },
+      {
+        "order": 4,
+        "x": 400,
+        "y": 250
+      }
+    ]
+  },
+  "solution": {
+    "solver": "icon_solver v5",
+    "set": "04",
+    "click_order": "img1 从左到右",
+    "splits": [
+      104,
+      201,
+      301
+    ],
+    "clicks": [
+      {
+        "order": 1,
+        "x": 103,
+        "y": 101,
+        "score": 0.72,
+        "scale": 1.0,
+        "confidence": "high",
+        "match_box": [
+          61,
+          64,
+          141,
+          136
+        ]
+      },
+      {
+        "order": 2,
+        "x": 101,
+        "y": 250,
+        "score": 0.728,
+        "scale": 1.0,
+        "confidence": "high",
+        "match_box": [
+          64,
+          210,
+          139,
+          282
+        ]
+      },
+      {
+        "order": 3,
+        "x": 400,
+        "y": 98,
+        "score": 0.755,
+        "scale": 1.0,
+        "confidence": "high",
+        "match_box": [
+          361,
+          59,
+          440,
+          141
+        ]
+      },
+      {
+        "order": 4,
+        "x": 400,
+        "y": 250,
+        "score": 0.824,
+        "scale": 1.0,
+        "confidence": "high",
+        "match_box": [
+          362,
+          214,
+          440,
+          289
+        ]
+      }
+    ]
+  },
+  "notes": "v5 颜色(笔画感知)+形状双通道匹配 + 匈牙利一对一指派；12/12 人工目检"
+}

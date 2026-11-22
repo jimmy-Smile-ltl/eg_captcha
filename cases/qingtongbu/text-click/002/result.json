@@ -1,0 +1,192 @@
+{
+  "case_id": "qingtongbu/text-click/002",
+  "kind": "text-click",
+  "status": "solved",
+  "evidence": "unverified",
+  "confidence": "high",
+  "answer": {
+    "kind": "points",
+    "points": [
+      {
+        "order": 1,
+        "char": "腆",
+        "x": 549,
+        "y": 247
+      },
+      {
+        "order": 2,
+        "char": "毒",
+        "x": 254,
+        "y": 96
+      },
+      {
+        "order": 3,
+        "char": "柑",
+        "x": 400,
+        "y": 246
+      },
+      {
+        "order": 4,
+        "char": "鹤",
+        "x": 99,
+        "y": 247
+      }
+    ]
+  },
+  "solution": {
+    "set": "02",
+    "tip_chars": [
+      "腆",
+      "毒",
+      "柑",
+      "鹤"
+    ],
+    "tip_rapidocr": [
+      "",
+      "毒",
+      "柑",
+      "鹤"
+    ],
+    "tip_bounds": [
+      [
+        0,
+        74
+      ],
+      [
+        74,
+        144
+      ],
+      [
+        144,
+        213
+      ],
+      [
+        213,
+        286
+      ]
+    ],
+    "bg_detections": 5,
+    "bg_labels": [
+      {
+        "idx": 0,
+        "label": "鹤",
+        "deskew_angle": 17.2
+      },
+      {
+        "idx": 1,
+        "label": "柑",
+        "deskew_angle": 0.0
+      },
+      {
+        "idx": 2,
+        "label": "患",
+        "deskew_angle": -9.1
+      },
+      {
+        "idx": 3,
+        "label": "",
+        "deskew_angle": 0.0
+      },
+      {
+        "idx": 4,
+        "label": "县",
+        "deskew_angle": 22.0
+      }
+    ],
+    "clicks": [
+      {
+        "order": 1,
+        "char": "腆",
+        "box": [
+          505,
+          203,
+          594,
+          291
+        ],
+        "x": 549,
+        "y": 247,
+        "siamese_sim": 0.9228,
+        "sim_source": "M3",
+        "confidence": "high",
+        "ocr_evidence": [],
+        "bg_raw_ocr": ""
+      },
+      {
+        "order": 2,
+        "char": "毒",
+        "box": [
+          216,
+          55,
+          293,
+          138
+        ],
+        "x": 254,
+        "y": 96,
+        "siamese_sim": 0.9467,
+        "sim_source": "M3",
+        "confidence": "high",
+        "ocr_evidence": [
+          "15°",
+          "30°",
+          "45°",
+          "60°",
+          "75°",
+          "90°"
+        ],
+        "bg_raw_ocr": "患"
+      },
+      {
+        "order": 3,
+        "char": "柑",
+        "box": [
+          355,
+          205,
+          445,
+          288
+        ],
+        "x": 400,
+        "y": 246,
+        "siamese_sim": 0.9245,
+        "sim_source": "M3",
+        "confidence": "high",
+        "ocr_evidence": [
+          "0°",
+          "15°",
+          "30°",
+          "45°",
+          "60°",
+          "75°",
+          "90°"
+        ],
+        "bg_raw_ocr": "柑"
+      },
+      {
+        "order": 4,
+        "char": "鹤",
+        "box": [
+          60,
+          206,
+          138,
+          288
+        ],
+        "x": 99,
+        "y": 247,
+        "siamese_sim": 0.951,
+        "sim_source": "M1",
+        "confidence": "high",
+        "ocr_evidence": [
+          "-15°",
+          "0°",
+          "15°",
+          "30°",
+          "45°",
+          "60°",
+          "75°"
+        ],
+        "bg_raw_ocr": "鹤"
+      }
+    ],
+    "matched": true
+  },
+  "notes": "v3 本地背景 Lab 色差掩码提取彩色字块，多角度 OCR + Siamese 三矩阵 + 匈牙利；源记录 12/12 人工复核"
+}

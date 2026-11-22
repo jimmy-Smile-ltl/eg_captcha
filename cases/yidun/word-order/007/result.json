@@ -1,0 +1,180 @@
+{
+  "case_id": "yidun/word-order/007",
+  "kind": "points+order",
+  "status": "solved",
+  "evidence": "unverified",
+  "confidence": "high",
+  "method": "DET+OCR+CV",
+  "method_detail": "YOLO(best_v3) locate + color-contour CV + RapidOCR multi-angle + idiom fuzzy match",
+  "idiom": "稳如泰山",
+  "score": 4.577,
+  "margin": 0.98,
+  "cover": 4,
+  "top1_hits": 4,
+  "order": [
+    {
+      "step": 1,
+      "char": "稳",
+      "glyph_index": 1,
+      "box": [
+        73,
+        38,
+        113,
+        79
+      ],
+      "center": [
+        93,
+        60
+      ],
+      "ocr_votes": 9
+    },
+    {
+      "step": 2,
+      "char": "如",
+      "glyph_index": 2,
+      "box": [
+        177,
+        78,
+        215,
+        116
+      ],
+      "center": [
+        197,
+        99
+      ],
+      "ocr_votes": 12
+    },
+    {
+      "step": 3,
+      "char": "泰",
+      "glyph_index": 3,
+      "box": [
+        257,
+        73,
+        294,
+        107
+      ],
+      "center": [
+        277,
+        91
+      ],
+      "ocr_votes": 7
+    },
+    {
+      "step": 4,
+      "char": "山",
+      "glyph_index": 4,
+      "box": [
+        23,
+        101,
+        61,
+        138
+      ],
+      "center": [
+        43,
+        122
+      ],
+      "ocr_votes": 18
+    }
+  ],
+  "ocr_reads": [
+    [
+      [
+        "稳",
+        9
+      ],
+      [
+        "确",
+        4
+      ],
+      [
+        "恭",
+        1
+      ],
+      [
+        "魏",
+        1
+      ],
+      [
+        "每",
+        1
+      ],
+      [
+        "盛",
+        1
+      ]
+    ],
+    [
+      [
+        "如",
+        12
+      ]
+    ],
+    [
+      [
+        "泰",
+        7
+      ],
+      [
+        "義",
+        2
+      ],
+      [
+        "一",
+        1
+      ]
+    ],
+    [
+      [
+        "山",
+        18
+      ],
+      [
+        "价",
+        1
+      ]
+    ]
+  ],
+  "candidates": [
+    {
+      "idiom": "稳如泰山",
+      "score": 4.577,
+      "total": 4.852,
+      "prior": 0.551,
+      "cover": 4,
+      "top1": 4
+    },
+    {
+      "idiom": "安如泰山",
+      "score": 3.697,
+      "total": 3.872,
+      "prior": 0.349,
+      "cover": 3,
+      "top1": 3
+    },
+    {
+      "idiom": "堆积如山",
+      "score": 2.647,
+      "total": 3.021,
+      "prior": 0.747,
+      "cover": 2,
+      "top1": 2
+    },
+    {
+      "idiom": "铁证如山",
+      "score": 2.647,
+      "total": 2.988,
+      "prior": 0.682,
+      "cover": 2,
+      "top1": 2
+    },
+    {
+      "idiom": "执法如山",
+      "score": 2.647,
+      "total": 2.92,
+      "prior": 0.546,
+      "cover": 2,
+      "top1": 2
+    }
+  ]
+}

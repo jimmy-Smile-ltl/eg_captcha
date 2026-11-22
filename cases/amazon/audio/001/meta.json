@@ -12,7 +12,7 @@
   "source_url": "https://www.wuxuwang.com/yljg",
   "source_path": "amazon/grid_5/audio_sets/sets/01",
   "collected_at": "2026-11-07",
-  "prompt": "听音频，输入两个英文单词中的任意一个",
+  "prompt": "听音频，输入女声（出题人）念的两个英文单词中的任意一个",
   "roles": {
     "audio": "audio.aac",
     "bg": "bg.png"
@@ -20,19 +20,19 @@
   "answer_format": "text",
   "status": "result-pending-review",
   "evidence": "unverified",
-  "confidence": "low",
+  "confidence": "medium",
   "solver": {
     "status": "exists",
     "accuracy": "high",
     "notes": "源记录 45/46 轮最终通过（61 次提交 45 成功）；结果待人工审查"
   },
   "review": {
-    "state": "pending",
-    "result": "",
-    "reviewed_at": "",
-    "notes": ""
+    "state": "pass",
+    "result": "correct",
+    "notes": "",
+    "reviewed_at": "2026-11-20T21:12:44.042Z"
   },
-  "notes": "覆盖批次：音频题样本；ASR 建议答案待人工审查。两套 ASR 不一致，需人工听音频",
+  "notes": "双人分离：女声=出题人（正确），男声=旁白（干扰）；三模型（small.en / large-v3-turbo / distil-large-v3）+ 原混音融合定稿两个词，并给出双方完整转录；答案仍待人工听音复核",
   "method": "ASR",
-  "method_note": "说话人分离 + Whisper；无视觉 LLM"
+  "method_note": "F0 判男女 + SepFormer 双人分离 + 三模型 ASR 融合 + 混音复核"
 }

@@ -1,0 +1,50 @@
+{
+  "case_id": "tianai/curve-bezier/009",
+  "vendor": "tianai",
+  "vendor_name": "天爱",
+  "type": "curve-bezier",
+  "type_name": "双贝塞尔曲线",
+  "variant": "CURVE3",
+  "media": [
+    "image"
+  ],
+  "source_url": "https://captcha.tianai.cloud/",
+  "source_path": "tianai/curve3/sets/09",
+  "collected_at": "unknown",
+  "prompt": "拖动滑块使曲线匹配背景参考曲线",
+  "roles": {
+    "bg": "bg.jpg",
+    "restored": "restored.jpg",
+    "solved": "solved.png",
+    "trajectory": "trajectory.png"
+  },
+  "answer_format": "offset-x",
+  "status": "sample-only",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "partial",
+    "accuracy": "medium",
+    "notes": "白管两壁中线拟合（12/12，管轴残差 0.26–2.24px）；目标 x_ref/600 → moveX@300=195.6px；旧公式 A/B 偏差 47.8/42.1px（全库 A 0/12、B 2/12 偶然命中）；在线提交待实测，待审。"
+  },
+  "review": {
+    "state": "pass",
+    "result": "correct",
+    "notes": "",
+    "reviewed_at": "2026-11-20T14:11:26.277Z"
+  },
+  "notes": "CURVE3；背景参考曲线由服务端按 x_ref 绘制；滑块目标 = x_ref/600（D=300 时 x_ref/2）；旧公式对照见 docs/tianai.md；样本中立收录，结果未纳入审查。 结果图为白管两壁中线的拟合可视化（solved.png）：绿色曲线=管轴目标 x_ref，顶部标注目标百分比与 moveX@300；离线管轴拟合，未在线验证。",
+  "method": "CV+ACT",
+  "method_note": "纯 CV：亮边先验 + 白管两壁峰中线（管轴）拟合；两段二次贝塞尔，滑块按 moveX/D 等比缩放控制点；提交仍为 ACT 拖动。",
+  "pass_criteria": "拖动滑块使绘制曲线与背景白色参考管贴合；服务端按 moveX/bgImageWidth 与 x_ref/600 比对，容差 ±0.02；另有轨迹时长/点数/首点/步进/后段减速检查。",
+  "process": [
+    {
+      "file": "process-01-fit.png",
+      "label": "白管两壁中线拟合：x_ref=391.2px（65.2%），管轴残差 1.71px"
+    },
+    {
+      "file": "process-02-score.png",
+      "label": "贴合度 vs 滑块位置：最优 x_ref=391.2px，±2% 容差带"
+    }
+  ],
+  "process_note": "还原打乱背景 → 亮边 ridge 先验 → 沿曲线法线取白度剖面，找白管两壁亮峰并取中点（管轴）→ 一维搜索与 0.5px 细化；12/12，管轴残差 0.26–2.24px。 轨迹图为滑块 12%→92% 扫描时各位置生成的曲线族叠加，绿色为最优 x_ref。"
+}

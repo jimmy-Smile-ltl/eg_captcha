@@ -11,7 +11,7 @@
   "source_url": "https://cloud.tencent.com/product/captcha",
   "source_path": "tencent/spatial/sets/08",
   "collected_at": "2026-07-24",
-  "prompt": "根据空间关系点击目标",
+  "prompt": "请点击正方体上面的字母",
   "roles": {
     "bg": "bg.png"
   },

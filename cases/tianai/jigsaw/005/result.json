@@ -1,0 +1,68 @@
+{
+  "case_id": "tianai/jigsaw/005",
+  "kind": "swap",
+  "status": "solved",
+  "evidence": "unverified",
+  "confidence": "high",
+  "answer": {
+    "kind": "swap",
+    "swap": [
+      1,
+      2
+    ],
+    "drag_centers": [
+      [
+        226,
+        44
+      ],
+      [
+        74,
+        136
+      ]
+    ]
+  },
+  "solver": {
+    "name": "solve_jigsaw v2",
+    "input": "bg.jpg",
+    "verdict": "LOW",
+    "decision": "color",
+    "margin": 1.15,
+    "color_gap": 6.71,
+    "restored_cost": 45.21,
+    "second_cost": 51.92,
+    "edge_score": 1.024,
+    "edge_runner_up": 0.864
+  },
+  "candidates": [
+    {
+      "swap": [
+        1,
+        2
+      ],
+      "color": 45.21,
+      "color_v": 42.3,
+      "color_h": 48.1,
+      "edge": 1.024
+    },
+    {
+      "swap": [
+        0,
+        3
+      ],
+      "color": 51.92,
+      "color_v": 48.7,
+      "color_h": 55.2,
+      "edge": 0.864
+    },
+    {
+      "swap": [
+        0,
+        1
+      ],
+      "color": 60.67,
+      "color_v": 54.8,
+      "color_h": 66.5,
+      "edge": 0.864
+    }
+  ]
+}

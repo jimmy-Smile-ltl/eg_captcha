@@ -1,67 +1,57 @@
 {
-  "case_id": "amazon/audio/011",
-  "kind": "text",
-  "status": "result-pending-review",
-  "evidence": "unverified",
-  "confidence": "low",
-  "answer": {
-    "kind": "text",
-    "text": "please"
+  "set": "11",
+  "audio_s": 10.24,
+  "female_src": 1,
+  "male_src": 0,
+  "f0_hz": {
+    "0": 106.7,
+    "1": 250.0
   },
-  "solution": {
-    "set": "11",
-    "problem_type": "noisyneighbour-en-us",
-    "audio_s": 10.24,
-    "sep_s": 13.76,
-    "chosen_src": 1,
-    "sources": [
-      {
-        "src": 0,
-        "text": "Process is not of so great extent as to preclude the hope of its existence. Pristot herself, had long since ruined the reputation of every system of all sciences.",
-        "score": 2
+  "female_is_chosen": true,
+  "speakers": [
+    {
+      "gender": "female",
+      "role": "questioner",
+      "role_note": "出题人；她念的两个词是正确答案",
+      "src": 1,
+      "f0_hz": 250.0,
+      "transcript": "Type one of the two following words spoken by me. Freeze. Opposite.",
+      "transcript_note": "按已知指令句 + 多模型定稿的两个词重建",
+      "transcript_asr": {
+        "small.en · 女声轨": "Type one of the two following words spoken by me. Please. Opposite.",
+        "large-v3-turbo · 女声轨": "Type one of the two following words spoken by me. Freeze. Opposite.",
+        "distil-large-v3 · 女声轨": "Type one of the two following words spoken by me. Freeze. Opposite.",
+        "large-v3-turbo · 混音": "Type one of the two following words spoken by me, freeze, opposite.",
+        "distil-large-v3 · 混音": "The process is not of so great extent as to prove the two following words spoken by me. Press with herself, have long since ruined the reputation of every system of all sciences."
       },
-      {
-        "src": 1,
-        "text": "Type one of the two following words spoken by me. Please. Opposite.",
-        "score": 12
-      }
-    ],
-    "decodings": [
-      "Type one of the two following words spoken by me. Please. Opposite.",
-      "Type one of the two following words spoken by me."
-    ],
-    "candidates": [
-      "please",
-      "opposite"
-    ],
-    "candidate_probs": [
-      {
-        "word": "please",
-        "pos_from_instruction": 0,
-        "votes": 1,
-        "mean_prob": 0.6705
-      },
-      {
-        "word": "opposite",
-        "pos_from_instruction": 1,
-        "votes": 1,
-        "mean_prob": 0.7365
-      }
-    ],
-    "counts": {
-      "please": 1,
-      "opposite": 1
-    },
-    "answer": "please",
-    "asr_s": 25.76,
-    "review": {
-      "model": "large-v3-turbo",
-      "text": "Type one of the two following words spoken by me. Freeze. Opposite.",
-      "tail": [
+      "words": [
         "freeze",
         "opposite"
       ]
+    },
+    {
+      "gender": "male",
+      "role": "narrator",
+      "role_note": "背景旁白（noisy neighbour）；不是答案",
+      "src": 0,
+      "f0_hz": 106.7,
+      "transcript": "Process is not of so great extent as to preclude the hope of its existence. Prista herself, had long since ruined the reputation of every system of all sciences.",
+      "transcript_note": "旁白是干扰；显示 small.en / large-v3-turbo 中质量较高的一版，原始两版见各模型转写",
+      "transcript_asr": {
+        "small.en · 旁白轨": "Process is not of so great extent as to preclude the hope of its existence. Pristot herself, had long since ruined the reputation of every system of all sciences.",
+        "large-v3-turbo · 旁白轨": "Process is not of so great extent as to preclude the hope of its existence. Prista herself, had long since ruined the reputation of every system of all sciences."
+      },
+      "words": []
     }
-  },
-  "notes": "两套 ASR 不一致，需人工听音频"
+  ],
+  "words": [
+    "freeze",
+    "opposite"
+  ],
+  "words_alt": [
+    "please"
+  ],
+  "answer": "freeze",
+  "agreement": "high",
+  "note": "女声轨 turbo/distil 与混音 large 都给出 freeze/opposite；small.en 女声轨的 please 是唯一异读，判为分离失真。"
 }

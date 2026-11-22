@@ -1,0 +1,5 @@
+answer: swap 2 <-> 3 (0-based, row-major 0 1 / 2 3)
+drag: (74,136) <-> (226,136)
+unit: px (matrix 300x180)
+source: offline-verified
+note: 600x360 图；交换两块后还原；v2 求解，人工复核通过

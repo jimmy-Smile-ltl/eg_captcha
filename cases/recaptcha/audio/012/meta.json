@@ -27,10 +27,10 @@
     "notes": "源记录 20/20 离线、15/15 线上；待审"
   },
   "review": {
-    "state": "pending",
-    "result": "",
-    "reviewed_at": "",
-    "notes": ""
+    "state": "pass",
+    "result": "correct",
+    "notes": "",
+    "reviewed_at": "2026-11-20T21:17:06.302Z"
   },
   "notes": "音频题；Whisper 转写，待人工听音频核对"
 }

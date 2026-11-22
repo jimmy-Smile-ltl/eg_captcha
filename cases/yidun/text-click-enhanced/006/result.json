@@ -1,0 +1,78 @@
+{
+  "case_id": "yidun/text-click-enhanced/006",
+  "kind": "points",
+  "status": "result-pending-review",
+  "evidence": "manual",
+  "confidence": "low",
+  "instruction": "驱 → 重 → 灭",
+  "answer": {
+    "kind": "points",
+    "points": [
+      [
+        283,
+        103
+      ],
+      [
+        185,
+        67
+      ],
+      [
+        62,
+        84
+      ]
+    ],
+    "chars": [
+      "驱",
+      "重",
+      "灭"
+    ]
+  },
+  "solution": {
+    "method": "color-layer-split + brightness-order + fragment-ratio + font-chamfer",
+    "note": "本组三个目标都在重叠对里：按墨色把每个对拆成亮层（完整可读 = 上层诱饵）与暗层（被压的下层 = 目标），锚点取下层露出碎片的重心。",
+    "partial": false,
+    "solved": 3,
+    "total": 3,
+    "clicks": [
+      {
+        "order": 1,
+        "char": "驱",
+        "x": 283,
+        "y": 103,
+        "role": "pair",
+        "confidence": "medium",
+        "pair": 2,
+        "member": "lower",
+        "color": "暗绿",
+        "anchor_mode": "layer_centroid",
+        "reason": "框 2 (247,84)-(292,122)：可读的青色 马+区=驱 是上层诱饵（346px/4 块/mr 0.47，重心 (263,99)）；下层是非青暗层（rgb 51,55,45，429px/2 块/mr 0.96，重心 (283,101)，bbox (263,84)-(291,121)）。按「点被压的下层」把锚点从青字 (275,100) 移到暗层重心 (283,103)。"
+      },
+      {
+        "order": 2,
+        "char": "重",
+        "x": 185,
+        "y": 67,
+        "role": "pair",
+        "confidence": "medium",
+        "pair": 0,
+        "member": "lower",
+        "color": "褐",
+        "anchor_mode": "layer_centroid",
+        "reason": "框 0 (144,38)-(184,72) 中上区域：上层是亮青 #1DEFF1≈#00FCF6 的「异」（595px，V196，完整可读=诱饵）；下层褐色笔画压在它右下（褐色像元 R>G>B 连通块 359px，重心 (193,66)，bbox (180,46)-(200,92)）。锚点取褐块重心往框内收 (185,67)。旧判 (198,106) 在框 4（橄榄枝误检）上，已废弃。"
+      },
+      {
+        "order": 3,
+        "char": "灭",
+        "x": 62,
+        "y": 84,
+        "role": "pair",
+        "confidence": "medium",
+        "pair": 1,
+        "member": "lower",
+        "color": "暗",
+        "anchor_mode": "layer_centroid",
+        "reason": "框 1 (31,58)-(75,100)：上层粉色「灭」完整可读（520px/1 块/mr 1.00）=诱饵；下层暗色碎块 333px/5 块/mr 0.68（与 001「前」下层白 5 块 639px mr 0.70 同型），重心 (62,84)。改为点下层，不再算独立单字。"
+      }
+    ]
+  }
+}

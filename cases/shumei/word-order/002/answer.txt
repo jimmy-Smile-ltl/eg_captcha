@@ -1,0 +1,5 @@
+answer: 名存实亡
+order: 名(273,191) -> 存(233,185) -> 实(174,63) -> 亡(225,95)
+unit: px
+source: offline-solver (unverified)
+note: 按四字词语语序点击 4 字；坐标为检测框正中；图中编号见 annotated.png；未实机验证

@@ -1,67 +1,63 @@
 {
-  "case_id": "amazon/audio/001",
-  "kind": "text",
-  "status": "result-pending-review",
-  "evidence": "unverified",
-  "confidence": "low",
-  "answer": {
-    "kind": "text",
-    "text": "doubled"
+  "set": "01",
+  "audio_s": 9.98,
+  "female_src": 0,
+  "male_src": 1,
+  "f0_hz": {
+    "0": 205.1,
+    "1": 108.1
   },
-  "solution": {
-    "set": "01",
-    "problem_type": "noisyneighbour-en-us",
-    "audio_s": 9.98,
-    "sep_s": 11.15,
-    "chosen_src": 0,
-    "sources": [
-      {
-        "src": 0,
-        "text": "Type one of the two following words spoken by me. Doubled. Stokes.",
-        "score": 12
+  "female_is_chosen": true,
+  "speakers": [
+    {
+      "gender": "female",
+      "role": "questioner",
+      "role_note": "出题人；她念的两个词是正确答案",
+      "src": 0,
+      "f0_hz": 205.1,
+      "transcript": "Type one of the two following words spoken by me. Double. Stroke.",
+      "transcript_note": "按已知指令句 + 多模型定稿的两个词重建",
+      "transcript_asr": {
+        "small.en · 女声轨": "Type one of the two following words spoken by me. Doubled. Stokes.",
+        "large-v3-turbo · 女声轨": "Type one of the two following words spoken by me. Devil. Stunk.",
+        "distil-large-v3 · 女声轨": "Type one of the two following words spoken by me. Dibble. Stoke.",
+        "small.en · 混音": "Type one of the two following words spoken by me. Devil. Strokes.",
+        "large-v3-turbo · 混音": "Type one of the two following words spoken by me, double stroke.",
+        "distil-large-v3 · 混音": "By the fact that this great problem type one of the two following words spoken by me. Double. That is practical. So far as regards. Strokes."
       },
-      {
-        "src": 1,
-        "text": "by the fact that this great problem can perhaps even the difference between analytical and algebraic of objects that is practical, so far as regards it.",
-        "score": 2
-      }
-    ],
-    "decodings": [
-      "Type one of the two following words spoken by me. Doubled. Stokes.",
-      "Type one of the two following words spoken by me."
-    ],
-    "candidates": [
-      "doubled",
-      "stokes"
-    ],
-    "candidate_probs": [
-      {
-        "word": "doubled",
-        "pos_from_instruction": 0,
-        "votes": 1,
-        "mean_prob": 0.6234
-      },
-      {
-        "word": "stokes",
-        "pos_from_instruction": 1,
-        "votes": 1,
-        "mean_prob": 0.5672
-      }
-    ],
-    "counts": {
-      "doubled": 1,
-      "stokes": 1
-    },
-    "answer": "doubled",
-    "asr_s": 23.99,
-    "review": {
-      "model": "large-v3-turbo",
-      "text": "Type one of the two following words spoken by me. Devil. Stunk.",
-      "tail": [
-        "devil",
-        "stunk"
+      "words": [
+        "double",
+        "stroke"
       ]
+    },
+    {
+      "gender": "male",
+      "role": "narrator",
+      "role_note": "背景旁白（noisy neighbour）；不是答案",
+      "src": 1,
+      "f0_hz": 108.1,
+      "transcript": "by the fact that this great problem can perhaps even the difference between analytical and algebraic of objects that is practical, so far as regards it.",
+      "transcript_note": "旁白是干扰；显示 small.en / large-v3-turbo 中质量较高的一版，原始两版见各模型转写",
+      "transcript_asr": {
+        "small.en · 旁白轨": "by the fact that this great problem can perhaps even the difference between analytical and algebraic of objects that is practical, so far as regards it.",
+        "large-v3-turbo · 旁白轨": "by the fact that this great problem, and perhaps even the difference between any medical and knowledge operator of objects, that is practical, so far as regards it."
+      },
+      "words": []
     }
-  },
-  "notes": "两套 ASR 不一致，需人工听音频"
+  ],
+  "words": [
+    "double",
+    "stroke"
+  ],
+  "words_alt": [
+    "doubled",
+    "stokes",
+    "devil",
+    "stunk",
+    "dibble",
+    "stoke"
+  ],
+  "answer": "double",
+  "agreement": "medium",
+  "note": "女声轨：small.en doubled/stokes、turbo devil/stunk、distil dibble/stoke；混音：turbo double/stroke、distil Double/Strokes。按音近合并取 double/stroke。"
 }

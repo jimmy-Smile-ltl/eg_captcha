@@ -1,0 +1,23 @@
+{
+  "set": "05",
+  "clicks": [
+    {
+      "order": 1,
+      "x": 73,
+      "y": 85
+    },
+    {
+      "order": 2,
+      "x": 132,
+      "y": 134
+    },
+    {
+      "order": 3,
+      "x": 197,
+      "y": 145
+    }
+  ],
+  "total_score": null,
+  "source": "override",
+  "note": "人工/VLM 复核：icon0=黄色信号灯、icon1=菱形拱形、icon2=伞形"
+}

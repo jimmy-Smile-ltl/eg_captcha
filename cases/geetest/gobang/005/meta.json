@@ -27,9 +27,9 @@
     "notes": "棋盘解经枚举校验；结果待人工审查"
   },
   "review": {
-    "state": "pending",
-    "result": "",
-    "reviewed_at": "",
+    "state": "pass",
+    "result": "correct",
+    "reviewed_at": "2026-11-15",
     "notes": ""
   },
   "method": "PROTO",

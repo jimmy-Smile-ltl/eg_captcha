@@ -1,0 +1,4 @@
+answer: 1:(64,135); 2:(139,35); 3:(213,111)
+unit: px (300x200)
+source: manual-review
+note: 人工/VLM 复核：icon0=苹果、icon1=手表、icon2=房子监控；已修正 icon1；2026-11-21 复审顺序与坐标正确

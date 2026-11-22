@@ -25,9 +25,9 @@
     "notes": "图像 1502/1502；提交闭环未打通"
   },
   "review": {
-    "state": "pending",
-    "result": "",
-    "reviewed_at": "",
+    "state": "pass",
+    "result": "correct",
+    "reviewed_at": "2026-11-16",
     "notes": ""
   },
   "notes": "覆盖批次：样本中立收录；结果未纳入。图像 1502/1502；提交闭环未打通",

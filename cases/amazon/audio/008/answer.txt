@@ -1,4 +1,5 @@
 answer: existing
+words: existing / threat
 unit: text
 source: unverified
-note: ASR 建议答案（small.en）；两套 ASR 一致，仍待人工审查
+note: 女声出题人念的两个词，任选其一；男声旁白是干扰。完整双人转录见 result.json

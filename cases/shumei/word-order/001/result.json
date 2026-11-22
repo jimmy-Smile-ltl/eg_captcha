@@ -1,0 +1,196 @@
+{
+  "case_id": "shumei/word-order/001",
+  "kind": "points+order",
+  "status": "solved",
+  "evidence": "unverified",
+  "confidence": "high",
+  "method": "DET+OCR+CV",
+  "method_detail": "YOLO(best_v3) locate + merged-box split + thin-bar detect + color-contour CV + RapidOCR/ddddocr multi-angle + idiom/phrase fuzzy match",
+  "idiom": "一无所知",
+  "score": 4.128,
+  "margin": 1.196,
+  "cover": 4,
+  "top1_hits": 4,
+  "order": [
+    {
+      "step": 1,
+      "char": "一",
+      "glyph_index": 4,
+      "box": [
+        350,
+        91,
+        389,
+        118
+      ],
+      "center": [
+        369,
+        104
+      ],
+      "ocr_votes": 2
+    },
+    {
+      "step": 2,
+      "char": "无",
+      "glyph_index": 1,
+      "box": [
+        48,
+        29,
+        119,
+        97
+      ],
+      "center": [
+        83,
+        63
+      ],
+      "ocr_votes": 18
+    },
+    {
+      "step": 3,
+      "char": "所",
+      "glyph_index": 2,
+      "box": [
+        164,
+        182,
+        228,
+        248
+      ],
+      "center": [
+        196,
+        215
+      ],
+      "ocr_votes": 24
+    },
+    {
+      "step": 4,
+      "char": "知",
+      "glyph_index": 3,
+      "box": [
+        376,
+        206,
+        445,
+        270
+      ],
+      "center": [
+        410,
+        238
+      ],
+      "ocr_votes": 10
+    }
+  ],
+  "ocr_reads": [
+    [
+      [
+        "无",
+        18
+      ],
+      [
+        "天",
+        7
+      ],
+      [
+        "代",
+        2
+      ],
+      [
+        "飞",
+        2
+      ],
+      [
+        "千",
+        1
+      ],
+      [
+        "公",
+        1
+      ],
+      [
+        "不",
+        1
+      ]
+    ],
+    [
+      [
+        "所",
+        24
+      ],
+      [
+        "品",
+        2
+      ],
+      [
+        "可",
+        1
+      ]
+    ],
+    [
+      [
+        "知",
+        10
+      ],
+      [
+        "和",
+        4
+      ],
+      [
+        "新",
+        2
+      ],
+      [
+        "他",
+        2
+      ],
+      [
+        "吉",
+        1
+      ]
+    ],
+    [
+      [
+        "一",
+        2
+      ]
+    ]
+  ],
+  "candidates": [
+    {
+      "idiom": "一无所知",
+      "score": 4.128,
+      "total": 5.735,
+      "prior": 0.814,
+      "cover": 4,
+      "top1": 4
+    },
+    {
+      "idiom": "一无所获",
+      "score": 3.251,
+      "total": 4.539,
+      "prior": 0.776,
+      "cover": 3,
+      "top1": 3
+    },
+    {
+      "idiom": "一无所有",
+      "score": 3.251,
+      "total": 4.525,
+      "prior": 0.747,
+      "cover": 3,
+      "top1": 3
+    },
+    {
+      "idiom": "一无所得",
+      "score": 3.251,
+      "total": 4.368,
+      "prior": 0.433,
+      "cover": 3,
+      "top1": 3
+    },
+    {
+      "idiom": "一无所成",
+      "score": 3.251,
+      "total": 4.365,
+      "prior": 0.428,
+      "cover": 3,
+      "top1": 3
+    }
+  ]
+}

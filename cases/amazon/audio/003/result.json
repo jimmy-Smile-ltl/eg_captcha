@@ -1,73 +1,55 @@
 {
-  "case_id": "amazon/audio/003",
-  "kind": "text",
-  "status": "result-pending-review",
-  "evidence": "unverified",
-  "confidence": "low",
-  "answer": {
-    "kind": "text",
-    "text": "i"
+  "set": "03",
+  "audio_s": 9.98,
+  "female_src": 1,
+  "male_src": 0,
+  "f0_hz": {
+    "0": 109.6,
+    "1": 177.9
   },
-  "solution": {
-    "set": "03",
-    "problem_type": "noisyneighbour-en-us",
-    "audio_s": 9.98,
-    "sep_s": 10.71,
-    "chosen_src": 1,
-    "sources": [
-      {
-        "src": 0,
-        "text": "Always be set, thus aiming unavoidably in skepticism, conceptions, a doctrine of the synthesis, to which our critique is entirely diverted, and",
-        "score": 2
+  "female_is_chosen": true,
+  "speakers": [
+    {
+      "gender": "female",
+      "role": "questioner",
+      "role_note": "出题人；她念的两个词是正确答案",
+      "src": 1,
+      "f0_hz": 177.9,
+      "transcript": "Type one of the two following words spoken by me. Island. Awareness.",
+      "transcript_note": "按已知指令句 + 多模型定稿的两个词重建",
+      "transcript_asr": {
+        "small.en · 女声轨": "Type one of the two following words spoken by me. I mean it. I mean it. I mean it.",
+        "large-v3-turbo · 女声轨": "Type one of the two following words spoken by me, and awareness.",
+        "large-v3-turbo · 混音": "Type one of the two following words spoken by me. Island. Awareness."
       },
-      {
-        "src": 1,
-        "text": "Type one of the two following words spoken by me. I mean it. I mean it. I mean it.",
-        "score": 12
-      }
-    ],
-    "decodings": [
-      "Type one of the two following words spoken by me. I mean it. I mean it. I mean it.",
-      "Type one of the truth-downling words spoken by me."
-    ],
-    "candidates": [
-      "i",
-      "mean"
-    ],
-    "candidate_probs": [
-      {
-        "word": "i",
-        "pos_from_instruction": 0,
-        "votes": 1,
-        "mean_prob": 0.4809
-      },
-      {
-        "word": "mean",
-        "pos_from_instruction": 1,
-        "votes": 1,
-        "mean_prob": 0.3761
-      },
-      {
-        "word": "i",
-        "pos_from_instruction": 2,
-        "votes": 1,
-        "mean_prob": 0.4116
-      }
-    ],
-    "counts": {
-      "i": 1,
-      "mean": 1
-    },
-    "answer": "i",
-    "asr_s": 21.96,
-    "review": {
-      "model": "large-v3-turbo",
-      "text": "Type one of the two following words spoken by me, and awareness.",
-      "tail": [
-        "and",
+      "words": [
+        "island",
         "awareness"
       ]
+    },
+    {
+      "gender": "male",
+      "role": "narrator",
+      "role_note": "背景旁白（noisy neighbour）；不是答案",
+      "src": 0,
+      "f0_hz": 109.6,
+      "transcript": "Always be set, thus aiming unavoidably in skepticism, conceptions, a doctrine of the synthesis, to which our critique is entirely devoted, and",
+      "transcript_note": "旁白是干扰；显示 small.en / large-v3-turbo 中质量较高的一版，原始两版见各模型转写",
+      "transcript_asr": {
+        "small.en · 旁白轨": "Always be set, thus aiming unavoidably in skepticism, conceptions, a doctrine of the synthesis, to which our critique is entirely diverted, and",
+        "large-v3-turbo · 旁白轨": "Always be set, thus aiming unavoidably in skepticism, conceptions, a doctrine of the synthesis, to which our critique is entirely devoted, and"
+      },
+      "words": []
     }
-  },
-  "notes": "两套 ASR 不一致，需人工听音频"
+  ],
+  "words": [
+    "island",
+    "awareness"
+  ],
+  "words_alt": [
+    "mean"
+  ],
+  "answer": "island",
+  "agreement": "medium",
+  "note": "分离轨小模型把 island 听成 I mean it 并重复；turbo/distil 听成 and awareness；混音 large 明确 Island/Awareness（两词置信度 0.88/1.00）。"
 }

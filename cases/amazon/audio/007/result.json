@@ -1,67 +1,53 @@
 {
-  "case_id": "amazon/audio/007",
-  "kind": "text",
-  "status": "result-pending-review",
-  "evidence": "unverified",
-  "confidence": "medium",
-  "answer": {
-    "kind": "text",
-    "text": "himself"
+  "set": "07",
+  "audio_s": 9.98,
+  "female_src": 1,
+  "male_src": 0,
+  "f0_hz": {
+    "0": 101.3,
+    "1": 186.0
   },
-  "solution": {
-    "set": "07",
-    "problem_type": "noisyneighbour-en-us",
-    "audio_s": 9.98,
-    "sep_s": 12.13,
-    "chosen_src": 1,
-    "sources": [
-      {
-        "src": 0,
-        "text": "Physician, possible. The power of speculation, the truth of the faculties is necessary to the existence of the above problem is at the foundation and construction of",
-        "score": 2
+  "female_is_chosen": true,
+  "speakers": [
+    {
+      "gender": "female",
+      "role": "questioner",
+      "role_note": "出题人；她念的两个词是正确答案",
+      "src": 1,
+      "f0_hz": 186.0,
+      "transcript": "Type one of the two following words spoken by me. Himself. Infant.",
+      "transcript_note": "按已知指令句 + 多模型定稿的两个词重建",
+      "transcript_asr": {
+        "small.en · 女声轨": "Type one of the two following words spoken by me. Himself. Infant.",
+        "large-v3-turbo · 女声轨": "Type one of the two following words spoken by me, himself, infant.",
+        "large-v3-turbo · 混音": "Type one of the two following words spoken by me, himself, infant."
       },
-      {
-        "src": 1,
-        "text": "Type one of the two following words spoken by me. Himself. Infant.",
-        "score": 12
-      }
-    ],
-    "decodings": [
-      "Type one of the two following words spoken by me. Himself. Infant.",
-      "Type one of the two following words spoken by me... himself."
-    ],
-    "candidates": [
-      "himself",
-      "infant"
-    ],
-    "candidate_probs": [
-      {
-        "word": "himself",
-        "pos_from_instruction": 0,
-        "votes": 2,
-        "mean_prob": 0.3166
-      },
-      {
-        "word": "infant",
-        "pos_from_instruction": 1,
-        "votes": 1,
-        "mean_prob": 0.778
-      }
-    ],
-    "counts": {
-      "himself": 2,
-      "infant": 1
-    },
-    "answer": "himself",
-    "asr_s": 24.26,
-    "review": {
-      "model": "large-v3-turbo",
-      "text": "Type one of the two following words spoken by me, himself, infant.",
-      "tail": [
+      "words": [
         "himself",
         "infant"
       ]
+    },
+    {
+      "gender": "male",
+      "role": "narrator",
+      "role_note": "背景旁白（noisy neighbour）；不是答案",
+      "src": 0,
+      "f0_hz": 101.3,
+      "transcript": "physician, possible. The power of speculation, the proof of the faculties is necessary to the existence of the above problem is at the foundation in construction of",
+      "transcript_note": "旁白是干扰；显示 small.en / large-v3-turbo 中质量较高的一版，原始两版见各模型转写",
+      "transcript_asr": {
+        "small.en · 旁白轨": "Physician, possible. The power of speculation, the truth of the faculties is necessary to the existence of the above problem is at the foundation and construction of",
+        "large-v3-turbo · 旁白轨": "physician, possible. The power of speculation, the proof of the faculties is necessary to the existence of the above problem is at the foundation in construction of"
+      },
+      "words": []
     }
-  },
-  "notes": "两套 ASR 一致，仍待人工审查"
+  ],
+  "words": [
+    "himself",
+    "infant"
+  ],
+  "words_alt": [],
+  "answer": "himself",
+  "agreement": "high",
+  "note": "女声轨 small.en 与 large-v3-turbo 都给出 himself/infant。"
 }

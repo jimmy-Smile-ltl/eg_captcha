@@ -1,0 +1,6 @@
+color: 蓝
+answer: 1=(270,410); 2=(410,410)
+line: straight-shortest, distance=140.0px
+unit: px (540x540 restored)
+source: offline-verified
+note: 从 1.png 读取颜色，取同色两点，最短直线连接

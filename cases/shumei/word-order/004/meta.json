@@ -17,21 +17,49 @@
     "annotated": "annotated.png"
   },
   "answer_format": "points+order",
-  "status": "sample-only",
+  "status": "result-pending-review",
   "sample_state": "neutral",
   "solver": {
-    "status": "none",
-    "accuracy": "unknown",
-    "notes": "未撰写求解器（仅采集）"
+    "status": "exists",
+    "accuracy": "high",
+    "notes": "定位 10/10 组 4/4 字框（set 02 并框拆分、set 05 细长横条兜底）；OCR+词库 10/10 匹配，全部 high；set 02 由逐字 OCR 纠正旧 LLM 的「实至名归」为「名存实亡」；未实机验证；待人工审查"
   },
   "review": {
-    "state": "not-applicable",
-    "result": "",
-    "reviewed_at": "",
-    "notes": ""
+    "state": "pass",
+    "result": "correct",
+    "notes": "",
+    "reviewed_at": "2026-11-21T09:40:30.135Z"
   },
-  "notes": "覆盖批次：样本中立收录；结果未纳入。未撰写求解器（仅采集）",
-  "method": "NONE(OCR+VLM)",
-  "method_note": "未撰写；建议 OCR + VLM 语序",
-  "pass_criteria": "按正确语序依次点击文字；顺序错误不通过。"
+  "notes": "覆盖批次：样本中立收录；零 LLM 求解器已跑通 10/10；set 02 的 LLM 时代判定「实至名归」已由双 OCR + 词库纠正为「名存实亡」；结果待审",
+  "method": "DET+OCR+CV",
+  "method_note": "零 LLM 两步求解：YOLO(best_v3) 定位 + 数美专项（相邻字并框拆分、细长笔画）+ 传统 CV 轮廓；RapidOCR + ddddocr 多角度读字，33,753 条词库（29,502 成语 + 4,251 四字常用语）模糊匹配定语序。仅 CPU，无 API 成本；10/10 离线匹配，待实机验证",
+  "pass_criteria": "按正确语序依次点击图中 4 个汉字（组成四字词语/成语），顺序由服务端判定。",
+  "evidence": "unverified",
+  "process": [
+    {
+      "file": "detect_stages.png",
+      "label": "检测阶段",
+      "hint": "YOLO 原始框（黄）→ 并框拆分/细长笔画补充（青）→ 最终 4 框（绿）"
+    },
+    {
+      "file": "cv_annotated.png",
+      "label": "定位标注",
+      "hint": "4 个字框与颜色轮廓（编号为空间顺序，不按语序）"
+    },
+    {
+      "file": "cv_glyphs.png",
+      "label": "颜色轮廓",
+      "hint": "4 个字按颜色提取的轮廓：原始裁片 / 覆盖 / 二值"
+    },
+    {
+      "file": "ocr_votes.png",
+      "label": "OCR 读字投票",
+      "hint": "每个字框的 top-5 读字与票数（RapidOCR 双路线 + ddddocr 合并，绿=选中字）"
+    },
+    {
+      "file": "order_candidates.png",
+      "label": "词库候选",
+      "hint": "词库 4! 分配后的 top-N 候选与打分分解（证据/先验/覆盖/top1）"
+    }
+  ]
 }

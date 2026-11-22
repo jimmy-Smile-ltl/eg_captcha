@@ -1,0 +1,4 @@
+answer: 1:(167,130); 2:(195,63); 3:(67,119)
+unit: px (300x200)
+source: manual-review
+note: 人工/VLM 复核：icon0=笔、icon1=箭头、icon2=P 标志；已修正顺序与点位；2026-11-21 复审顺序与坐标正确

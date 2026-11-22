@@ -7,14 +7,14 @@ description: 查询与使用 eg_captcha 验证码知识库：按厂商/类型给
 
 ## 这是什么
 
-`eg_captcha` 是一个**零代码验证码知识库**：只收样本、标注/结果、元数据与中文文档，不收求解器、脚本或密钥。它按“厂商 → 类型 → 案例”组织，每个类型标注：
+`eg_captcha` 是一个**无可执行代码的验证码知识库**：只收样本、标注/结果、元数据与中文文档（类型页可含 `text` 伪代码/公式），不收求解器、脚本、密钥或命令。它按“厂商 → 类型 → 案例”组织，每个类型标注：
 
 - 方法标签：`CV` / `DET` / `OCR` / `VLM` / `ASR` / `PROTO` / `ACT` / `AUDIO` / `NONE`
 - 是否借助多模态 LLM
 - 求解器状态：`none` / `exists` / `weak` / `partial` / `browser`
 - 人工审查状态：`pending` / `not-applicable`（等待回填）
 
-当前快照（以仓库 README 为准）：16 家厂商、89 个厂商×类型组合、908 个案例（788 个 `sample-only` + 120 个 `result-pending-review`）。
+当前快照（以仓库 README 为准）：18 家厂商、93 个厂商×类型组合、995 个案例（641 个 `sample-only` + 318 个 `result-pending-review` + 36 个 `solved`）；已审查 745 组（通过 703 / 部分正确 10 / 未通过 32）、待审 146、不适用 104。
 
 ## 定位仓库
 
@@ -31,12 +31,13 @@ description: 查询与使用 eg_captcha 验证码知识库：按厂商/类型给
 不要一次加载全部文档；按问题逐层读：
 
 1. 先读 `README.md`：当前统计、厂商总表、方法/成本图例、demo 入口。
-2. 再读 `docs/<vendor>.md`：该厂商的类型表（方法、求解器状态、审查、思路说明）。
-3. 需要具体样本时读 `cases/<vendor>/<type>/<NNN>/meta.json`。
+2. 再读 `docs/<vendor>.md`：厂商索引（类型表、代表样本、厂商级结论）。
+3. 需要题面/思路/结果时读 `cases/<vendor>/<type>/README.md`：类型页（八节，含样本图、求解思路、伪代码、失败边界）。
+4. 需要具体样本时读 `cases/<vendor>/<type>/<NNN>/meta.json`。
    - `sample-only`：只有 `meta.json` + 媒体，没有答案/标注/结果。
    - `result-pending-review`：另有 `answer.txt` / `result.json`，可能有 `annotated.png`。
-4. 需要方法论或失败档案时读 `docs/00-methodology.md`；需要整理规则时读 `CONTRIBUTING.md`。
-5. 需要全量类型清单读 `docs/types.md`；需要官方/第三方体验入口读 `docs/demos.md`。
+5. 需要方法论或失败档案时读 `docs/00-methodology.md`；需要整理规则时读 `CONTRIBUTING.md`。
+6. 需要全量类型清单读 `docs/types.md`；需要官方/第三方体验入口读 `docs/demos.md`。
 
 ## 回答模板
 
@@ -48,7 +49,7 @@ description: 查询与使用 eg_captcha 验证码知识库：按厂商/类型给
 2. 方法标签与理由：为什么选 CV / DET / OCR / VLM / ASR / PROTO。
 3. 是否用 LLM：用了就明说；混合方案写清 VLM 只在哪一步调用。
 4. 成本：VLM 起步便宜（无需训练、按调用计费）；量大时 CV 更便宜；混合常见。
-5. 样本与文档：给出 `docs/<vendor>.md` 与代表性案例路径。
+5. 样本与文档：给出 `docs/<vendor>.md`、`cases/<vendor>/<type>/README.md` 与代表性案例路径。
 6. 状态与边界：`sample-only` / `result-pending-review` / `weak` / `partial` / `browser` 如实说。
 
 ### B. 样本 / 类型查询
@@ -65,7 +66,7 @@ description: 查询与使用 eg_captcha 验证码知识库：按厂商/类型给
 
 - 确认厂商/类型/案例编号与结论；
 - 更新 `review.state` / `review.result` / `review.reviewed_at` / `review.notes`；
-- 通过 → `status: reviewed-pass`；不通过 → `reviewed-fail`；
+- 只改 `review.state` / `review.result` / `review.reviewed_at` / `review.notes`，不改 `status`；通过 `pass/correct`、部分 `partial/partial`、不通过 `fail/incorrect`；
 - 校验枚举、路径、答案/结果一致性；不要伪造答案或把 ASR/VLM 建议当真值。
 
 ## 方法标签速查
@@ -89,10 +90,11 @@ description: 查询与使用 eg_captcha 验证码知识库：按厂商/类型给
 - **不把 `sample-only` 说成已解**；没有答案就是没有答案。
 - **不把 ASR/VLM 输出当真值**；只能说“建议/待审”，除非用户明确人工确认。
 - **不批量改 review** 除非用户明确给出适用范围（例如“recaptcha 全部音频都通过”也要确认具体案例）。
-- 回答时引用 `docs/<vendor>.md` 与案例路径，不要复制整篇文档或整库内容。
+- 回答时引用 `docs/<vendor>.md`、类型页 `cases/<vendor>/<type>/README.md` 与案例路径，不要复制整篇文档或整库内容。
+- 新增/并入厂商或类型时，按 `CONTRIBUTING.md` 第九节执行：类型页八节、厂商索引 8 列表、`docs/types.md`/README/skill 统计同步，最后重建 viewer。
 
 ## 参考文件
 
-- `references/repo-map.md` — 16 家厂商 → 文档/类型/样本/方法的索引。
+- `references/repo-map.md` — 18 家厂商 → 厂商索引/类型页/样本/方法的索引。
 - `references/method-cost.md` — 方法标签、选型规则、成本模型。
 - `references/review-workflow.md` — `meta.json` 字段、审查状态机、校验清单。

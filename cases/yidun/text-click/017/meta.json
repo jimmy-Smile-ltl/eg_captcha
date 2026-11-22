@@ -1,0 +1,45 @@
+{
+  "case_id": "yidun/text-click/017",
+  "vendor": "yidun",
+  "vendor_name": "网易易盾",
+  "type": "text-click",
+  "type_name": "文字点选",
+  "variant": "classic",
+  "media": [
+    "image"
+  ],
+  "source_url": "https://dun.163.com/trial",
+  "source_path": "yidun/text_click/sets/04",
+  "collected_at": "unknown",
+  "prompt": "请依次点击：元 → 验 → 扩",
+  "roles": {
+    "bg": "bg.jpg",
+    "annotated": "annotated.png"
+  },
+  "answer_format": "points",
+  "status": "sample-only",
+  "sample_state": "neutral",
+  "solver": {
+    "status": "exists",
+    "accuracy": "high",
+    "notes": "源方案 12/12；结果待人工审查"
+  },
+  "review": {
+    "state": "pass",
+    "result": "correct",
+    "notes": "",
+    "reviewed_at": "2026-11-20T11:43:49.243Z"
+  },
+  "review_reset_at": "2026-11-20T01:29:59.310724+00:00",
+  "notes": "2026-11-20 替换样本：原 017（set 21，front=全元验）front 与图不匹配（图中无「元」字形），改用 set 04（元验扩）；混合识别 元17票/sim0.87、验2票/sim0.91、扩5票/sim0.95，四方案一致；题面目标来自源 data.front=元验扩",
+  "method": "DET+OCR+VLM",
+  "method_note": "YOLO 检测 + Siamese 字形 + OCR 颜色轮廓 + VLM；混合识别按证据融合",
+  "process": [
+    {
+      "file": "process-01-compare.png",
+      "label": "四方案点击顺序对比"
+    }
+  ],
+  "process_note": "四方案对比：本地 Siamese、本地 OCR+形状（混合识别：OCR 读字 + Siamese 形状，过滤非字符框与强干扰框）、VLM 直点、仲裁最终。图上 ①②③ 为点击顺序与目标字，栏顶为逐击证据（相似度 / 混合的票数与形状分 / OCR「读X×n」/ VLM 读字 / 仲裁来源），底部裁片为各方案实际点中的字形；无可用框的目标显示「缺失」。同一目标字点到不同位置时，对照原图与裁片即可判断哪个方案匹配正确。",
+  "pass_criteria": "按提示顺序依次点击 3 个目标字；顺序错误不通过。"
+}

@@ -1,0 +1,84 @@
+{
+  "case_id": "shumei/icon-click/014",
+  "kind": "click",
+  "status": "result-pending-review",
+  "evidence": "offline-verified",
+  "confidence": "high",
+  "answer": {
+    "kind": "click",
+    "points": [
+      {
+        "order": 1,
+        "x": 493,
+        "y": 169,
+        "label": "icon0",
+        "score": 0.78
+      },
+      {
+        "order": 2,
+        "x": 411,
+        "y": 118,
+        "label": "icon1",
+        "score": 0.635
+      },
+      {
+        "order": 3,
+        "x": 330,
+        "y": 167,
+        "label": "icon2",
+        "score": 0.845
+      },
+      {
+        "order": 4,
+        "x": 222,
+        "y": 109,
+        "label": "icon3",
+        "score": 0.789
+      }
+    ]
+  },
+  "solution": {
+    "icons": [
+      {
+        "template": 0,
+        "x": 493,
+        "y": 169,
+        "score": 0.78,
+        "rotation": 323.0,
+        "scale": 1.86,
+        "margin": 0.437
+      },
+      {
+        "template": 1,
+        "x": 411,
+        "y": 118,
+        "score": 0.635,
+        "rotation": 20.0,
+        "scale": 1.86,
+        "margin": 0.215
+      },
+      {
+        "template": 2,
+        "x": 330,
+        "y": 167,
+        "score": 0.845,
+        "rotation": 25.0,
+        "scale": 1.86,
+        "margin": 0.405
+      },
+      {
+        "template": 3,
+        "x": 222,
+        "y": 109,
+        "score": 0.789,
+        "rotation": 323.0,
+        "scale": 1.78,
+        "margin": 0.347
+      }
+    ],
+    "num_candidates": 6,
+    "num_icons": 6,
+    "mean_iou": 0.762
+  },
+  "notes": "覆盖批次：样本中立收录；已补充求解结果（14/14 离线核对，≤7px）；待人工审查"
+}

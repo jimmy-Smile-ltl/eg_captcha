@@ -26,9 +26,9 @@
     "notes": "masked 梯度匹配；源记录 12/12 离线求解；结果待人工审查"
   },
   "review": {
-    "state": "pending",
-    "result": "",
-    "reviewed_at": "",
+    "state": "pass",
+    "result": "correct",
+    "reviewed_at": "2026-11-15",
     "notes": ""
   },
   "notes": "覆盖批次：样本中立收录；源目录 yidun/jigsaw；masked 梯度匹配已修正缺口位置（gap=73,1）；结果已纳入，待人工审查",

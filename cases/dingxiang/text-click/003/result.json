@@ -1,0 +1,30 @@
+{
+  "cw": "肝扣素否",
+  "clicks": [
+    {
+      "char": "肝",
+      "x": 235,
+      "y": 83
+    },
+    {
+      "char": "扣",
+      "x": 30,
+      "y": 76
+    },
+    {
+      "char": "素",
+      "x": 83,
+      "y": 110
+    },
+    {
+      "char": "否",
+      "x": 135,
+      "y": 92
+    }
+  ],
+  "evidence": "live-pass",
+  "verified_at": "2026-11-19",
+  "verification": "官方 demo POST /api/v2 返回 success=true；点击坐标即服务端接受的序列",
+  "solver": "detect-ensemble (YOLO best_v3 + VLM 四视角投票 + direct 兜底)",
+  "source": "_verified/live2_03"
+}

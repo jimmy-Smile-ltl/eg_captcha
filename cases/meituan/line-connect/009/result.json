@@ -1,0 +1,75 @@
+{
+  "case_id": "meituan/line-connect/009",
+  "kind": "line/points",
+  "status": "solved",
+  "evidence": "offline-verified",
+  "confidence": "high",
+  "answer": {
+    "kind": "line",
+    "color": "红",
+    "points": [
+      {
+        "x": 270,
+        "y": 269
+      },
+      {
+        "x": 130,
+        "y": 270
+      }
+    ],
+    "line": {
+      "kind": "straight-shortest",
+      "x1": 270,
+      "y1": 269,
+      "x2": 130,
+      "y2": 270,
+      "distance": 140.0
+    }
+  },
+  "solver": {
+    "name": "solve_line v2",
+    "recognition_distance": 0,
+    "all_dots": [
+      {
+        "x": 409.7,
+        "y": 129.5,
+        "bgr": [
+          28,
+          110,
+          255
+        ],
+        "name": "橘"
+      },
+      {
+        "x": 269.5,
+        "y": 269.4,
+        "bgr": [
+          112,
+          67,
+          255
+        ],
+        "name": "红"
+      },
+      {
+        "x": 129.6,
+        "y": 269.5,
+        "bgr": [
+          112,
+          67,
+          255
+        ],
+        "name": "红"
+      },
+      {
+        "x": 409.3,
+        "y": 409.5,
+        "bgr": [
+          28,
+          110,
+          255
+        ],
+        "name": "橘"
+      }
+    ]
+  }
+}

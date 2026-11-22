@@ -1,0 +1,184 @@
+{
+  "case_id": "yidun/word-order/006",
+  "kind": "points+order",
+  "status": "solved",
+  "evidence": "unverified",
+  "confidence": "high",
+  "method": "DET+OCR+CV",
+  "method_detail": "YOLO(best_v3) locate + color-contour CV + RapidOCR multi-angle + idiom fuzzy match",
+  "idiom": "立国安邦",
+  "score": 4.742,
+  "margin": 0.817,
+  "cover": 4,
+  "top1_hits": 4,
+  "order": [
+    {
+      "step": 1,
+      "char": "立",
+      "glyph_index": 2,
+      "box": [
+        167,
+        48,
+        201,
+        81
+      ],
+      "center": [
+        183,
+        66
+      ],
+      "ocr_votes": 11
+    },
+    {
+      "step": 2,
+      "char": "国",
+      "glyph_index": 1,
+      "box": [
+        71,
+        18,
+        111,
+        55
+      ],
+      "center": [
+        91,
+        38
+      ],
+      "ocr_votes": 20
+    },
+    {
+      "step": 3,
+      "char": "安",
+      "glyph_index": 4,
+      "box": [
+        237,
+        98,
+        276,
+        136
+      ],
+      "center": [
+        259,
+        119
+      ],
+      "ocr_votes": 13
+    },
+    {
+      "step": 4,
+      "char": "邦",
+      "glyph_index": 3,
+      "box": [
+        62,
+        103,
+        98,
+        136
+      ],
+      "center": [
+        82,
+        121
+      ],
+      "ocr_votes": 23
+    }
+  ],
+  "ocr_reads": [
+    [
+      [
+        "国",
+        20
+      ],
+      [
+        "生",
+        2
+      ],
+      [
+        "田",
+        2
+      ],
+      [
+        "气",
+        1
+      ],
+      [
+        "日",
+        1
+      ]
+    ],
+    [
+      [
+        "立",
+        11
+      ],
+      [
+        "女",
+        2
+      ],
+      [
+        "一",
+        1
+      ]
+    ],
+    [
+      [
+        "邦",
+        23
+      ],
+      [
+        "解",
+        2
+      ]
+    ],
+    [
+      [
+        "安",
+        13
+      ],
+      [
+        "中",
+        1
+      ],
+      [
+        "好",
+        1
+      ]
+    ]
+  ],
+  "candidates": [
+    {
+      "idiom": "立国安邦",
+      "score": 4.742,
+      "total": 4.742,
+      "prior": 0.0,
+      "cover": 4,
+      "top1": 4
+    },
+    {
+      "idiom": "治国安邦",
+      "score": 3.606,
+      "total": 3.924,
+      "prior": 0.637,
+      "cover": 3,
+      "top1": 3
+    },
+    {
+      "idiom": "定国安邦",
+      "score": 3.606,
+      "total": 3.847,
+      "prior": 0.483,
+      "cover": 3,
+      "top1": 3
+    },
+    {
+      "idiom": "安邦定国",
+      "score": 3.606,
+      "total": 3.814,
+      "prior": 0.417,
+      "cover": 3,
+      "top1": 3
+    },
+    {
+      "idiom": "安邦治国",
+      "score": 3.606,
+      "total": 3.77,
+      "prior": 0.329,
+      "cover": 3,
+      "top1": 3
+    }
+  ]
+}

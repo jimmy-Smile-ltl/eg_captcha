@@ -1,0 +1,10 @@
+answer: offset-x
+coordinate_space: display 300x180 (moveX)
+image_fit_moveX: 138.0
+formula_midpoint_moveX: 149.5
+delta_display: 11.5
+tolerance: +-6 display px (0.02 * 300)
+image_fit_cx_600: 276.0
+ridge_score: 62.2
+ridge_coverage: 1.00
+note: 目标控制点 x 不在 p 里；以上为背景可见曲线的图像拟合，服务端 randomX 待在线复核

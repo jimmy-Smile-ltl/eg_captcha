@@ -1,0 +1,5 @@
+answer: 立国安邦
+order: 立(183,66) -> 国(91,38) -> 安(259,119) -> 邦(82,121)
+unit: px
+source: offline-solver (unverified)
+note: 按成语语序点击 4 字；坐标为字形颜色轮廓中心；图中编号见 annotated.png；未实机验证

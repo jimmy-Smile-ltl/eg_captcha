@@ -1,0 +1,46 @@
+{
+  "case_id": "shumei/icon-click/013",
+  "vendor": "shumei",
+  "vendor_name": "数美",
+  "type": "icon-click",
+  "type_name": "图标点选",
+  "variant": "classic",
+  "media": [
+    "image"
+  ],
+  "source_url": "https://www.ishumei.com/new/product/tw/code",
+  "source_path": "shumei/icon-click/sets/13",
+  "collected_at": "2026-11-18",
+  "prompt": "按顺序点击图中图标",
+  "roles": {
+    "bg": "bg.jpg",
+    "aux": "aux-01.png",
+    "annotated": "annotated.png"
+  },
+  "answer_format": "points",
+  "status": "result-pending-review",
+  "evidence": "offline-verified",
+  "confidence": "high",
+  "solver": {
+    "status": "exists",
+    "accuracy": "high",
+    "notes": "红色掩膜 + 旋转/缩放二值 IoU + 图标聚类 + 匈牙利；无 LLM；14/14 离线核对（≤7px）；结果待人工审查"
+  },
+  "review": {
+    "state": "pass",
+    "result": "correct",
+    "reviewed_at": "2026-11-18",
+    "notes": ""
+  },
+  "notes": "覆盖批次：样本中立收录；已补充求解结果（14/14 离线核对，≤7px）；待人工审查",
+  "method": "CV",
+  "method_note": "红色掩膜 + 多角度/多尺度二值 IoU + 图标聚类 + 匈牙利；无 LLM",
+  "pass_criteria": "按图中图标顺序依次点击；顺序错误不通过。",
+  "process": [
+    {
+      "file": "process-01-split.png",
+      "label": "图标拆分"
+    }
+  ],
+  "process_note": "源方案从提示条切出 4 个参考图标，再做旋转/缩放二值 IoU 匹配、图标聚类与 Hungarian 分配；最终结果见右侧。"
+}

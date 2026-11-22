@@ -1,0 +1,228 @@
+{
+  "case_id": "shumei/word-order/003",
+  "kind": "points+order",
+  "status": "solved",
+  "evidence": "unverified",
+  "confidence": "high",
+  "method": "DET+OCR+CV",
+  "method_detail": "YOLO(best_v3) locate + merged-box split + thin-bar detect + color-contour CV + RapidOCR/ddddocr multi-angle + idiom/phrase fuzzy match",
+  "idiom": "瞬息万变",
+  "score": 4.248,
+  "margin": 2.636,
+  "cover": 4,
+  "top1_hits": 4,
+  "order": [
+    {
+      "step": 1,
+      "char": "瞬",
+      "glyph_index": 2,
+      "box": [
+        329,
+        60,
+        394,
+        126
+      ],
+      "center": [
+        361,
+        93
+      ],
+      "ocr_votes": 13
+    },
+    {
+      "step": 2,
+      "char": "息",
+      "glyph_index": 4,
+      "box": [
+        82,
+        208,
+        147,
+        272
+      ],
+      "center": [
+        114,
+        240
+      ],
+      "ocr_votes": 27
+    },
+    {
+      "step": 3,
+      "char": "万",
+      "glyph_index": 1,
+      "box": [
+        58,
+        14,
+        144,
+        81
+      ],
+      "center": [
+        101,
+        47
+      ],
+      "ocr_votes": 11
+    },
+    {
+      "step": 4,
+      "char": "变",
+      "glyph_index": 3,
+      "box": [
+        516,
+        79,
+        585,
+        143
+      ],
+      "center": [
+        550,
+        111
+      ],
+      "ocr_votes": 24
+    }
+  ],
+  "ocr_reads": [
+    [
+      [
+        "万",
+        11
+      ],
+      [
+        "式",
+        1
+      ],
+      [
+        "方",
+        1
+      ]
+    ],
+    [
+      [
+        "瞬",
+        13
+      ],
+      [
+        "一",
+        6
+      ],
+      [
+        "鳄",
+        4
+      ],
+      [
+        "膨",
+        3
+      ],
+      [
+        "隅",
+        2
+      ],
+      [
+        "膘",
+        2
+      ],
+      [
+        "膜",
+        2
+      ],
+      [
+        "聘",
+        1
+      ],
+      [
+        "国",
+        1
+      ],
+      [
+        "香",
+        1
+      ],
+      [
+        "第",
+        1
+      ],
+      [
+        "鹰",
+        1
+      ]
+    ],
+    [
+      [
+        "变",
+        24
+      ],
+      [
+        "益",
+        2
+      ],
+      [
+        "仆",
+        2
+      ],
+      [
+        "侣",
+        2
+      ],
+      [
+        "企",
+        2
+      ],
+      [
+        "贮",
+        2
+      ],
+      [
+        "站",
+        1
+      ]
+    ],
+    [
+      [
+        "息",
+        27
+      ],
+      [
+        "意",
+        1
+      ]
+    ]
+  ],
+  "candidates": [
+    {
+      "idiom": "瞬息万变",
+      "score": 4.248,
+      "total": 5.813,
+      "prior": 0.73,
+      "cover": 4,
+      "top1": 4
+    },
+    {
+      "idiom": "千变万化",
+      "score": 2.232,
+      "total": 3.176,
+      "prior": 0.689,
+      "cover": 2,
+      "top1": 2
+    },
+    {
+      "idiom": "千变万状",
+      "score": 2.232,
+      "total": 2.832,
+      "prior": 0.0,
+      "cover": 2,
+      "top1": 2
+    },
+    {
+      "idiom": "千变万轸",
+      "score": 2.232,
+      "total": 2.832,
+      "prior": 0.0,
+      "cover": 2,
+      "top1": 2
+    },
+    {
+      "idiom": "瞬息之间",
+      "score": 2.016,
+      "total": 2.787,
+      "prior": 0.343,
+      "cover": 2,
+      "top1": 2
+    }
+  ]
+}

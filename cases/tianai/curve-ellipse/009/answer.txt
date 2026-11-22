@@ -1,0 +1,3 @@
+moveX=165
+s=0.5500
+percentage=0.5500

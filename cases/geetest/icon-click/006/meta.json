@@ -28,9 +28,9 @@
     "notes": "源方案 23/27≈85%；结果待人工审查"
   },
   "review": {
-    "state": "pending",
-    "result": "",
-    "reviewed_at": "",
+    "state": "fail",
+    "result": "incorrect",
+    "reviewed_at": "2026-11-15",
     "notes": ""
   },
   "method": "CV",

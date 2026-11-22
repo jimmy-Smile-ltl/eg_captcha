@@ -1,75 +1,53 @@
 {
-  "case_id": "amazon/audio/002",
-  "kind": "text",
-  "status": "result-pending-review",
-  "evidence": "unverified",
-  "confidence": "low",
-  "answer": {
-    "kind": "text",
-    "text": "faint"
+  "set": "02",
+  "audio_s": 9.98,
+  "female_src": 1,
+  "male_src": 0,
+  "f0_hz": {
+    "0": 106.7,
+    "1": 156.9
   },
-  "solution": {
-    "set": "02",
-    "problem_type": "noisyneighbour-en-us",
-    "audio_s": 9.98,
-    "sep_s": 10.96,
-    "chosen_src": 1,
-    "sources": [
-      {
-        "src": 0,
-        "text": "Naturally and necessarily hard to find, and long utility or inability contains the principles of the same quantity of matter, with this inertia, the equation of the same quantity of matter, the equation of the same quantity of matter, the equation of the same quantity of matter, the equation of the same quantity of matter, the equation of the same quantity of matter, the equation of the same quantity of matter,",
-        "score": 2
+  "female_is_chosen": true,
+  "speakers": [
+    {
+      "gender": "female",
+      "role": "questioner",
+      "role_note": "出题人；她念的两个词是正确答案",
+      "src": 1,
+      "f0_hz": 156.9,
+      "transcript": "Type one of the two following words spoken by me. Proceed. Lifetime.",
+      "transcript_note": "按已知指令句 + 多模型定稿的两个词重建",
+      "transcript_asr": {
+        "small.en · 女声轨": "Type one of the two following words spoken by me. Proceed. Lifetime.",
+        "large-v3-turbo · 女声轨": "type one of the two following words spoken by me proceed lifetime",
+        "large-v3-turbo · 混音": "Type one of the two following words spoken by me. Proceed. Lifetime."
       },
-      {
-        "src": 1,
-        "text": "Type one of the two following words spoken by me. Proceed. Lifetime.",
-        "score": 12
-      }
-    ],
-    "decodings": [
-      "Type one of the two following words spoken by me. Proceed. Lifetime.",
-      "Type one of the two following words spoken by me. Be faint."
-    ],
-    "candidates": [
-      "proceed",
-      "faint",
-      "lifetime"
-    ],
-    "candidate_probs": [
-      {
-        "word": "faint",
-        "pos_from_instruction": 0,
-        "votes": 1,
-        "mean_prob": 0.7625
-      },
-      {
-        "word": "proceed",
-        "pos_from_instruction": 0,
-        "votes": 1,
-        "mean_prob": 0.2303
-      },
-      {
-        "word": "lifetime",
-        "pos_from_instruction": 1,
-        "votes": 1,
-        "mean_prob": 0.7804
-      }
-    ],
-    "counts": {
-      "faint": 1,
-      "proceed": 1,
-      "lifetime": 1
-    },
-    "answer": "faint",
-    "asr_s": 23.59,
-    "review": {
-      "model": "large-v3-turbo",
-      "text": "type one of the two following words spoken by me proceed lifetime",
-      "tail": [
+      "words": [
         "proceed",
         "lifetime"
       ]
+    },
+    {
+      "gender": "male",
+      "role": "narrator",
+      "role_note": "背景旁白（noisy neighbour）；不是答案",
+      "src": 0,
+      "f0_hz": 106.7,
+      "transcript": "naturally and necessarily to science and on the ability or inability contains the principles of the same quantity of matter the this inertia the",
+      "transcript_note": "旁白是干扰；显示 small.en / large-v3-turbo 中质量较高的一版，原始两版见各模型转写",
+      "transcript_asr": {
+        "small.en · 旁白轨": "Naturally and necessarily hard to find, and long utility or inability contains the principles of the same quantity of matter, with this inertia, the equation of the same quantity of matter, the equation of the same quantity of matter, the equation of the same quantity of matter, the equation of the same quantity of matter, the equation of the same quantity of matter, the equation of the same quantity of matter,",
+        "large-v3-turbo · 旁白轨": "naturally and necessarily to science and on the ability or inability contains the principles of the same quantity of matter the this inertia the"
+      },
+      "words": []
     }
-  },
-  "notes": "两套 ASR 不一致，需人工听音频"
+  ],
+  "words": [
+    "proceed",
+    "lifetime"
+  ],
+  "words_alt": [],
+  "answer": "proceed",
+  "agreement": "high",
+  "note": "女声轨 small.en 与 large-v3-turbo 都给出 proceed/lifetime；混音复核见 transcript_asr。"
 }

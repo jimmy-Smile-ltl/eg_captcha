@@ -23,18 +23,18 @@
   "sample_state": "neutral",
   "solver": {
     "status": "exists",
-    "accuracy": "medium",
-    "notes": "源报告部分通过（8/50）；结果已纳入，待人工审核"
+    "accuracy": "high",
+    "notes": "直立场景库 SIFT/ORB 匹配，精确到 0.2°以内；待审"
   },
   "review": {
-    "state": "pending",
-    "result": "",
-    "reviewed_at": "",
+    "state": "pass",
+    "result": "correct",
+    "reviewed_at": "2026-11-18",
     "notes": ""
   },
-  "notes": "覆盖批次：样本中立收录；已补充源求解器最终结果 complete.jpg、角度与 result.json；vision_consensus；待人工审核",
+  "notes": "覆盖批次：结果已纳入，待人工审核；角度由直立场景库匹配（同一素材的 bg_restored 直立参考）",
   "method": "CV+VLM",
-  "method_note": "SIFT/ORB + 视觉模型兜底",
+  "method_note": "SIFT/ORB 直立场景库匹配",
   "evidence": "unverified",
-  "confidence": "medium"
+  "confidence": "high"
 }

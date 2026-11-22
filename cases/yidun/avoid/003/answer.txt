@@ -1,0 +1,6 @@
+answer: start=(20,140) target=(221,63) path_points=22
+target: 风（气流）图标
+target_bbox: (208,54,29,20)
+unit: px (320x160)
+source: unverified
+note: 纯 CV 求解：场景库差分 + 条带字形旋转匹配 + A* 避障；无 LLM

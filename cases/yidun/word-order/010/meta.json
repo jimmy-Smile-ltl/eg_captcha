@@ -11,26 +11,40 @@
   "source_url": "https://dun.163.com/trial",
   "source_path": "yidun/word-order/sets/10",
   "collected_at": "unknown",
-  "prompt": "按正确语序点击文字",
+  "prompt": "按正确语序点击图中 4 个汉字（组成四字成语）",
   "roles": {
     "bg": "bg.jpg",
     "annotated": "annotated.png"
   },
   "answer_format": "points+order",
-  "status": "sample-only",
+  "status": "result-pending-review",
   "sample_state": "neutral",
   "solver": {
     "status": "exists",
-    "accuracy": "unknown",
-    "notes": "源目录有 click 求解器；准确率未统一验证；待审"
+    "accuracy": "high",
+    "notes": "定位 12/12 组 4/4 框；OCR+成语库 12/12 匹配到成语（四平八稳/稳如泰山/固若金汤/立国安邦），全部 high；单票字有 Siamese 字形抽检佐证；未实机验证；待人工审查"
   },
   "review": {
-    "state": "pending",
-    "result": "",
-    "reviewed_at": "",
-    "notes": ""
+    "state": "pass",
+    "result": "correct",
+    "notes": "",
+    "reviewed_at": "2026-11-21T04:49:37.531Z"
   },
-  "notes": "覆盖批次：样本中立收录；结果未纳入。未撰写求解器（仅采集）",
-  "method": "OCR+VLM",
-  "method_note": "点击求解器已覆盖；建议 OCR + VLM 语序"
+  "notes": "覆盖批次：样本中立收录；零 LLM 求解器已跑通 12/12；LLM 时代的部分成语判定（古今多少/太平盛世/春风入画/安邦定国）已由逐字 OCR+成语约束纠正；结果待审",
+  "method": "DET+OCR+CV",
+  "method_note": "零 LLM 两步求解：YOLO(best_v3) 定位 4 个散落文字 + 传统 CV 按颜色提轮廓；RapidOCR 多角度读字 + 29,502 条成语库模糊匹配定语序。仅 CPU，无 API 成本；12/12 离线匹配，待实机验证",
+  "process": [
+    {
+      "file": "cv_glyphs.png",
+      "label": "颜色轮廓",
+      "hint": "4 个字按颜色提取的轮廓：原始裁片 / 覆盖 / 二值"
+    },
+    {
+      "file": "cv_annotated.png",
+      "label": "定位标注",
+      "hint": "YOLO 定位的 4 个字框与颜色轮廓（编号为空间顺序）"
+    }
+  ],
+  "pass_criteria": "按四字成语语序依次点击 4 个散落汉字，由服务端判定顺序。",
+  "evidence": "unverified"
 }

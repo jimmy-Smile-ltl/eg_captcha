@@ -25,10 +25,12 @@
 
 | 厂商 | 入口 | 说明 |
 |---|---|---|
+| 百度 Baidu | <https://aiqicha.baidu.com/> | 爱企查等百度系页面的 wappass spin 旋转验证码，触发式；无公开 demo |
 | Amazon AWS WAF | AWS WAF 文档：<https://docs.aws.amazon.com/waf/latest/developerguide/waf-js-captcha-api-render.html> | 无公开官方 demo；第三方 cap.guru 提供 AWS WAF 体验页。同一 widget 可用耳机图标在视觉九宫格与音频题之间切换 |
 | DataDome | <https://datadome.co/products/captcha-alternative/> | 官方产品页，无公开 demo；本库有滑块/音频样本 |
 | HUMAN Security | <https://www.humansecurity.com/platform/features/human-challenge/> | 官方产品页，无公开 demo；本库有按压/无感截图 |
 | 美团 Yoda | <https://verify.meituan.com/v2> | 真实业务挑战页，不是 demo；请勿做未授权测试 |
+| 哔哩哔哩 B站 | <https://passport.bilibili.com/login> | 极验 v3 word（历史，已不再下发）/ v4 icon-pixel（现行）；真实登录页，请勿做未授权测试 |
 
 ## 第三方验证码解决商 demo
 

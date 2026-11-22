@@ -1,0 +1,5 @@
+answer: target contour area=5260px, bbox=(15,26,82,82)
+scratch: min_bits=51/450 cells (11.3%); brush_bits=81/450 (18%)
+unit: 330x165 canvas, 11px cell, 23px brush
+source: offline-verified
+note: 按完整轮廓刮擦，轮廓外不刮；离线 12/12 完整覆盖，未实机提交

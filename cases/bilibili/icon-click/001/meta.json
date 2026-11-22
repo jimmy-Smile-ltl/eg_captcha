@@ -1,0 +1,66 @@
+{
+  "case_id": "bilibili/icon-click/001",
+  "vendor": "bilibili",
+  "vendor_name": "哔哩哔哩 B站",
+  "type": "icon-click",
+  "type_name": "图标点选",
+  "variant": "geetest-v4/icon-pixel",
+  "media": [
+    "image"
+  ],
+  "source_url": "https://passport.bilibili.com/login",
+  "source_path": "other/bilibili/icon-click/sets/01",
+  "collected_at": "2026-11-21",
+  "prompt": "按图标顺序，依次点击背景图中的 3 个对应图标",
+  "pass_criteria": "按 icon0→icon1→icon2 顺序点击 3 个图标；顺序错误不通过。",
+  "roles": {
+    "bg": "bg.jpg",
+    "aux": "aux-01.png",
+    "solved": "solve.png"
+  },
+  "answer_format": "points",
+  "status": "result-pending-review",
+  "evidence": "offline",
+  "confidence": "medium",
+  "notes": "GeeTest v4 adaptive icon-pixel；solve.png 为启发式求解器输出，2026-11-21 人工复核：顺序与坐标正确。",
+  "solver": {
+    "status": "exists",
+    "accuracy": "medium",
+    "notes": "背景 2×2 网点还原 + Lab k-means 单色描边候选 + 模板描边带旋转 IoU + 三模板指派；启发式，形状相近/近色时可能顺序错"
+  },
+  "review": {
+    "state": "pass",
+    "result": "correct",
+    "notes": "2026-11-21 人工复核：顺序与坐标正确。",
+    "reviewed_at": "2026-11-21T04:50:18.233Z"
+  },
+  "method": "CV",
+  "method_note": "颜色分离 + 形状匹配；无 LLM",
+  "process": [
+    {
+      "file": "process-01-restore.png",
+      "label": "01 背景去网点（原图 vs clean）"
+    },
+    {
+      "file": "process-02-candidates.png",
+      "label": "02 颜色分离候选（Lab k-means）"
+    },
+    {
+      "file": "process-03-match-icon0.png",
+      "label": "03 形状匹配 icon0（绿=候选，红=模板描边）"
+    },
+    {
+      "file": "process-04-match-icon1.png",
+      "label": "04 形状匹配 icon1"
+    },
+    {
+      "file": "process-05-match-icon2.png",
+      "label": "05 形状匹配 icon2"
+    },
+    {
+      "file": "process-06-final.png",
+      "label": "06 最终点击"
+    }
+  ],
+  "process_note": "1) 2×2 半调取亮格还原；2) Lab k-means 色簇 + 连通域候选；3–5) 逐模板旋转描边带匹配（绿色候选框、红色模板描边）；6) 最终点击。人工复核样本无自动匹配过程。"
+}

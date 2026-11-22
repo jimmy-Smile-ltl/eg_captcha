@@ -1,0 +1,18 @@
+answer: offset-x
+coordinate_space: display 300x180 (moveX)
+moveX: 215.2
+moveX_image: 430.5
+formula: moveX = ctrlX_image * 300 / 600；B(t) 两个控制点重合于 (ctrlX, ctrlY)
+method: p 精确端点 + 线响应集成扫描
+stroke_model: chromatic（彩色=Lab 色度模型；灰白=灰晕/白芯 + 线响应）
+stroke_coverage: 0.96
+P0: (135.0, 48.0)
+P3: (492.0, 34.0)
+ctrlY: 197.0
+fit_error_px: 2.65
+fit_p95_px: 5.55
+band_coverage: 0.99
+on_stroke: 0.90
+fit_quality: 55.8
+tolerance: +-15 display px（5% × 300；同平台实测 ±30 图像 px 通过、+35 拒绝）
+source: 统一集 shipinren 纯 HTTP（check code=200）

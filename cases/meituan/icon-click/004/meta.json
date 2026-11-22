@@ -19,7 +19,7 @@
     "restored": "restored.png"
   },
   "answer_format": "points",
-  "status": "sample-only",
+  "status": "solved",
   "sample_state": "neutral",
   "solver": {
     "status": "partial",
@@ -27,12 +27,12 @@
     "notes": "图像 83/83；提交闭环未打通"
   },
   "review": {
-    "state": "pending",
-    "result": "",
-    "reviewed_at": "",
-    "notes": ""
+    "state": "pass",
+    "result": "correct",
+    "reviewed_at": "2026-11-17",
+    "notes": "人工复核：结果满意（12/12）"
   },
-  "notes": "覆盖批次：样本中立收录；结果未纳入。图像 83/83；提交闭环未打通",
+  "notes": "覆盖批次：结果已纳入；背景切点检测还原 + 提示条拆分 + 模板匹配；人工复核结果满意；提交闭环未打通",
   "method": "CV",
   "method_note": "模板/滑窗匹配；无 LLM",
   "pass_criteria": "按图中图标的顺序依次点击；顺序错误不通过。",
@@ -42,5 +42,7 @@
       "label": "提示条拆分"
     }
   ],
-  "process_note": "源方案先还原打乱背景，再把提示条拆成 4 个图标，在还原图上做多尺度/旋转模板匹配；最终结果见右侧。"
+  "process_note": "源方案先还原打乱背景，再把提示条拆成 4 个图标，在还原图上做多尺度/旋转模板匹配；最终结果见右侧。",
+  "evidence": "manual",
+  "confidence": "high"
 }

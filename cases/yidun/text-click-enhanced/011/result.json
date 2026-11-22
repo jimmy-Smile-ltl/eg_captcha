@@ -1,0 +1,75 @@
+{
+  "case_id": "yidun/text-click-enhanced/011",
+  "kind": "points",
+  "status": "result-pending-review",
+  "evidence": "manual",
+  "confidence": "medium",
+  "instruction": "搬 → 第 → 雪",
+  "answer": {
+    "kind": "points",
+    "points": [
+      [
+        216,
+        122
+      ],
+      [
+        102,
+        104
+      ],
+      [
+        41,
+        119
+      ]
+    ],
+    "chars": [
+      "搬",
+      "第",
+      "雪"
+    ]
+  },
+  "solution": {
+    "method": "standalone-ocr + color-layer-split + fragment-ratio + font-chamfer",
+    "note": "独立框走 YOLO + 多角度 RapidOCR 定 1 个字；两组重叠对按墨色分层，按连通域碎片度判上下层，摆正后字体 chamfer 定字，锚点取目标自身露出笔画的最厚处。",
+    "partial": false,
+    "solved": 3,
+    "total": 3,
+    "clicks": [
+      {
+        "order": 1,
+        "char": "搬",
+        "x": 216,
+        "y": 122,
+        "role": "pair",
+        "confidence": "medium",
+        "pair": 6,
+        "member": "lower",
+        "color": "白",
+        "anchor_mode": "exposed",
+        "reason": "P6 (203,103)-(242,141) 39×38 才是这组字的框——旧 P3 (205,67)-(293,160) 是 88×93 的过并框，把整头小牛框了进来（= 全图字径 42px 的 2.2 倍，字不可能这么大，已弃用）。框内白层 466px 连成 1 块（32×34）= 搬 的字身，深绿层 193px（3 块）压在它右上。锚点 (216,122) 取白层距离变换峰（厚 3.2px），回验原图 RGB(234,236,225) 为纯白笔画"
+      },
+      {
+        "order": 2,
+        "char": "第",
+        "x": 102,
+        "y": 104,
+        "role": "pair",
+        "confidence": "medium",
+        "pair": 4,
+        "member": "upper",
+        "color": "白",
+        "anchor_mode": "exposed",
+        "reason": "P4 白层摆正可见 ⺮（顶部两小笔）+ 弟（弓的三道横 + 下垂的丨丿）= 第；蓝色层是 戈 形薄笔干扰。锚点取白笔纯白内核 (102,104) S8 V255"
+      },
+      {
+        "order": 3,
+        "char": "雪",
+        "x": 41,
+        "y": 119,
+        "role": "standalone",
+        "confidence": "high",
+        "anchor_mode": "exposed",
+        "reason": "阶段一独立框判定（锁定不改）：框 [21,100,61,138] 内 雨+彐 = 雪，红字完整单块"
+      }
+    ]
+  }
+}

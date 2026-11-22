@@ -1,75 +1,59 @@
 {
-  "case_id": "amazon/audio/008",
-  "kind": "text",
-  "status": "result-pending-review",
-  "evidence": "unverified",
-  "confidence": "medium",
-  "answer": {
-    "kind": "text",
-    "text": "existing"
+  "set": "08",
+  "audio_s": 9.98,
+  "female_src": 0,
+  "male_src": 1,
+  "f0_hz": {
+    "0": 205.1,
+    "1": 105.3
   },
-  "solution": {
-    "set": "08",
-    "problem_type": "noisyneighbour-en-us",
-    "audio_s": 9.98,
-    "sep_s": 12.09,
-    "chosen_src": 0,
-    "sources": [
-      {
-        "src": 0,
-        "text": "Type one of the two following words spoken by me. Existing. Connect.",
-        "score": 12
+  "female_is_chosen": true,
+  "speakers": [
+    {
+      "gender": "female",
+      "role": "questioner",
+      "role_note": "出题人；她念的两个词是正确答案",
+      "src": 0,
+      "f0_hz": 205.1,
+      "transcript": "Type one of the two following words spoken by me. Existing. Threat.",
+      "transcript_note": "按已知指令句 + 多模型定稿的两个词重建",
+      "transcript_asr": {
+        "small.en · 女声轨": "Type one of the two following words spoken by me. Existing. Connect.",
+        "large-v3-turbo · 女声轨": "Type one of the two following words spoken by me. Existing. Smart.",
+        "distil-large-v3 · 女声轨": "Type one of the two following words spoken by me. Existing. Right.",
+        "large-v3-turbo · 混音": "Type one of the two following words spoken by me. Existing. Threat.",
+        "distil-large-v3 · 混音": "For this purpose. Type one of the two following words spoken by me. Because it would the variety of which metaphysics treats. And the object of our synthetic a lot."
       },
-      {
-        "src": 1,
-        "text": "For this purpose, near analysis is of course useless, because it will be the variety of which metaphysics treats, and the object of our synthetical op-",
-        "score": 2
-      }
-    ],
-    "decodings": [
-      "Type one of the two following words spoken by me. Existing. Connect.",
-      "Type one of the two following words spoken by me. Distinct."
-    ],
-    "candidates": [
-      "existing",
-      "distinct",
-      "connect"
-    ],
-    "candidate_probs": [
-      {
-        "word": "existing",
-        "pos_from_instruction": 0,
-        "votes": 1,
-        "mean_prob": 0.8265
-      },
-      {
-        "word": "distinct",
-        "pos_from_instruction": 0,
-        "votes": 1,
-        "mean_prob": 0.1188
-      },
-      {
-        "word": "connect",
-        "pos_from_instruction": 1,
-        "votes": 1,
-        "mean_prob": 0.0874
-      }
-    ],
-    "counts": {
-      "existing": 1,
-      "distinct": 1,
-      "connect": 1
-    },
-    "answer": "existing",
-    "asr_s": 24.16,
-    "review": {
-      "model": "large-v3-turbo",
-      "text": "Type one of the two following words spoken by me. Existing. Smart.",
-      "tail": [
+      "words": [
         "existing",
-        "smart"
+        "threat"
       ]
+    },
+    {
+      "gender": "male",
+      "role": "narrator",
+      "role_note": "背景旁白（noisy neighbour）；不是答案",
+      "src": 1,
+      "f0_hz": 105.3,
+      "transcript": "For this purpose, near analysis is of course useless, because it will be the variety of which metaphysics treats, and the object of our synthetical op-",
+      "transcript_note": "旁白是干扰；显示 small.en / large-v3-turbo 中质量较高的一版，原始两版见各模型转写",
+      "transcript_asr": {
+        "small.en · 旁白轨": "For this purpose, near analysis is of course useless, because it will be the variety of which metaphysics treats, and the object of our synthetical op-",
+        "large-v3-turbo · 旁白轨": "For this purpose, mere analysis is of course useless, because it is the variety of which metaphysics treats, and the object of our synthetical options."
+      },
+      "words": []
     }
-  },
-  "notes": "两套 ASR 一致，仍待人工审查"
+  ],
+  "words": [
+    "existing",
+    "threat"
+  ],
+  "words_alt": [
+    "connect",
+    "smart",
+    "right"
+  ],
+  "answer": "existing",
+  "agreement": "medium",
+  "note": "第一词 existing 各模型一致；第二词只有原混音 large 稳定听成 threat（高通 150/180 Hz、减旁白变体也一致）；分离轨分别听成 connect/smart/right。旁白 treats 在 6.92-7.36s，女声第二词在 8.75-9.15s，排除旁白泄漏。"
 }

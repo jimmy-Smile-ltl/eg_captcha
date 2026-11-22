@@ -1,0 +1,74 @@
+{
+  "case_id": "yidun/text-click-enhanced/005",
+  "kind": "points",
+  "status": "result-pending-review",
+  "evidence": "manual",
+  "confidence": "medium",
+  "instruction": "趣 → 舌 → 帐",
+  "answer": {
+    "kind": "points",
+    "points": [
+      [
+        116,
+        71
+      ],
+      [
+        256,
+        132
+      ],
+      [
+        192,
+        78
+      ]
+    ],
+    "chars": [
+      "趣",
+      "舌",
+      "帐"
+    ]
+  },
+  "solution": {
+    "method": "standalone-ocr + color-layer-split + fragment-ratio + font-chamfer",
+    "note": "独立框走 YOLO + 多角度 RapidOCR 定 1 个字；两组重叠对按墨色分层，按连通域碎片度判上下层，摆正后字体 chamfer 定字，锚点取目标自身露出笔画的最厚处。",
+    "partial": false,
+    "solved": 3,
+    "total": 3,
+    "clicks": [
+      {
+        "order": 1,
+        "char": "趣",
+        "x": 116,
+        "y": 71,
+        "role": "pair",
+        "confidence": "medium",
+        "pair": 1,
+        "member": "lower",
+        "color": "深蓝",
+        "anchor_mode": "exposed",
+        "reason": "P1 深蓝层可见「耳(带内横的方框)+又」的右半=取，左侧只剩走字探出的碎点；上层白字为方框叠字，chamfer 最 3.19 / 富族 7.8 均优于 趣 3.83，判非趣；深蓝层按最小面积过滤后 chamfer 耳 5.50 独占第一、趣/取 并列第二"
+      },
+      {
+        "order": 2,
+        "char": "舌",
+        "x": 256,
+        "y": 132,
+        "role": "pair",
+        "confidence": "high",
+        "pair": 4,
+        "member": "upper",
+        "color": "白",
+        "anchor_mode": "exposed",
+        "reason": "P4 白字 chamfer 前五全是舌族（舍 2.47 / 舌 2.67 / 吞 2.72 / 告 2.88 / 古 3.01）；白字两块连通域 146+53px 完整在上，深蓝为 7 段斜虚线状干扰；锚点取下方口底横，离蓝 5.0px"
+      },
+      {
+        "order": 3,
+        "char": "帐",
+        "x": 192,
+        "y": 78,
+        "role": "standalone",
+        "confidence": "high",
+        "reason": ""
+      }
+    ]
+  }
+}
