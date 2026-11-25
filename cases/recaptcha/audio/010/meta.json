@@ -17,14 +17,14 @@
   },
   "answer_format": "text",
   "method": "ASR",
-  "method_note": "faster-whisper small.en；待人工听音频",
-  "status": "result-pending-review",
+  "method_note": "faster-whisper small.en",
+  "status": "solved",
   "evidence": "unverified",
   "confidence": "medium",
   "solver": {
     "status": "exists",
     "accuracy": "high",
-    "notes": "源记录 20/20 离线、15/15 线上；待审"
+    "notes": "源记录 20/20 离线、15/15 线上"
   },
   "review": {
     "state": "pass",
@@ -32,5 +32,5 @@
     "notes": "",
     "reviewed_at": "2026-11-20T21:17:04.670Z"
   },
-  "notes": "音频题；Whisper 转写，待人工听音频核对"
+  "notes": "音频题；Whisper 转写，已人工听音核对"
 }

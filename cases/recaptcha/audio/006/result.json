@@ -1,7 +1,7 @@
 {
   "case_id": "recaptcha/audio/006",
   "kind": "text",
-  "status": "result-pending-review",
+  "status": "solved",
   "evidence": "unverified",
   "confidence": "medium",
   "answer": {
@@ -15,7 +15,7 @@
     "words": [
       [
         "A",
-        0.0,
+        0,
         1.56
       ],
       [
@@ -35,12 +35,12 @@
       ]
     ],
     "duration": 4.3,
-    "language_probability": 1.0,
+    "language_probability": 1,
     "prompt": "Press PLAY to listen / Enter what you hear",
     "model": "small.en",
     "elapsed_s": 3.6,
     "solved_at": "2026-11-07 21:55:06",
     "note": "音频题：Whisper 转写结果，可直接作为 #audio-response 提交"
   },
-  "notes": "Whisper 转写，待人工听音频核对"
+  "notes": "Whisper 转写，已人工听音核对"
 }

@@ -26,10 +26,10 @@
     "notes": "旧批次 33/33 离线、7/7 线上；新批次待补跑"
   },
   "review": {
-    "state": "pending",
+    "state": "not-applicable",
     "result": "",
     "reviewed_at": "",
-    "notes": ""
+    "notes": "无 solved.png，无可对照源标注，审查不适用"
   },
   "notes": "覆盖批次：新图片题样本；结果未纳入"
 }

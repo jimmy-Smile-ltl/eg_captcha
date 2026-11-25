@@ -25,12 +25,12 @@
     "notes": "旧批次 33/33 离线、7/7 线上；新批次待补跑"
   },
   "review": {
-    "state": "pending",
-    "result": "",
-    "reviewed_at": "",
-    "notes": ""
+    "state": "partial",
+    "result": "partial",
+    "notes": "",
+    "reviewed_at": "2026-11-22T15:29:32.899Z"
   },
-  "notes": "覆盖批次：样本中立收录；结果未纳入。源记录 33/33 离线、7/7 线上；待审",
+  "notes": "覆盖批次：样本中立收录；结果未纳入。源记录 33/33 离线、7/7 线上；已审（源标注）",
   "method": "VLM",
   "method_note": "视觉 LLM 直接读格；无需训练"
 }
