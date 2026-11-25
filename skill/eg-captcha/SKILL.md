@@ -95,6 +95,6 @@ description: 查询与使用 eg_captcha 验证码知识库：按厂商/类型给
 
 ## 参考文件
 
-- `references/repo-map.md` — 18 家厂商 → 厂商索引/类型页/样本/方法的索引。
+- `references/repo-map.md` — 18 家厂商的索引：厂商文档、类型数、样本数、方法重点、documented-only 与快照统计（类型页正文仍从 `docs/types.md` 进入）。
 - `references/method-cost.md` — 方法标签、选型规则、成本模型。
 - `references/review-workflow.md` — `meta.json` 字段、审查状态机、校验清单。

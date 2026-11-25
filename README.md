@@ -46,7 +46,7 @@
 | 厂商索引 | 18 篇（+ 类型清单、方法论、体验入口共 21 篇 docs） |
 | 类型级求解器 | 有 55 / 混合 2 / 无 22（含 7 个仅文档类型）/ 效果差 6 / 部分进展 6 / 需浏览器 2 |
 | 可执行代码 | 0（无 py/js/html/sh；类型页可含 `text` 伪代码） |
-| 体积 | 约 436 MB（以图片、音频与过程图为主） |
+| 体积 | 约 433 MB（以图片、音频与过程图为主） |
 
 > 这些数字不是 KPI：`sample-only` 只代表有样本，`result-pending-review` 也不代表已通过。准确率来自源记录；人工审核结论单独记录在每个案例的 `review` 字段，未审案例为 `pending` / `not-applicable`。
 
@@ -143,7 +143,7 @@
 
 | 文件 | 作用 |
 |---|---|
-| `README.md`（类型目录） | 类型页：题面、样本图库、思路/伪代码、结果与审查、失败边界；同目录所有案例的入口 |
+| `README.md`（类型目录） | 类型页：题面、代表样本图库、思路/伪代码、结果与审查、失败边界；代表案例的入口，全部案例在在线浏览器按类型浏览 |
 | `meta.json` | 来源、类型、变体、媒体、`method`、`solver`、`review` |
 | `bg.*` / `aux-01.*` / `audio.*` | 原始主图、辅助图、音频 |
 | `restored.*` / `solved.*` | 背景还原图、最终结果 / 拼合效果图（源目录可视化，未复核） |
@@ -192,6 +192,9 @@
 - **2026-11-21**：**文档分层重构**：新增 86 篇类型页 `cases/<vendor>/<type>/README.md`（题面 / 样本图库 / 形态与难点 / 求解思路与 `text` 伪代码 / 结果与审查 / 失败与边界），18 篇 `docs/<vendor>.md` 瘦身为厂商索引；[docs/types.md](docs/types.md) 的厂商名直达类型页；CONTRIBUTING 与 skill 同步「厂商索引 → 类型页 → meta.json」的路由；口径从「零代码」调整为「无可执行代码（类型页可含伪代码/公式）」。B站补齐到厂商表与类型清单。
 - **2026-11-21**：网易易盾语序点选 `yidun/word-order` 改为**零 LLM 两步求解**：① YOLO(best_v3) 定位 4 个散落文字（12/12 组 4/4 框），传统 CV 按颜色聚类提轮廓；② RapidOCR 多角度读字（原图 ±25° + 颜色轮廓 ±40°，双路线票数合并）+ **29,502 条四字成语库**模糊匹配（4! 分配 + THUOCL 词频先验）定语序；12/12 匹配成功（四平八稳/稳如泰山/固若金汤/立国安邦，全部 high），纠正 LLM 时代的 5 组误判（05 安邦定国→立国安邦、08 古今多少→固若金汤、09 太平盛世→四平八稳、10 春风入画→四平八稳、12 安邦定国→立国安邦）。12 组案例改为 `result-pending-review`：`annotated.png`（按语序标注、绿色答案）、`answer.txt`（成语+有序坐标）、`result.json`（成语/top-10 候选/4 步点击/每字 OCR 票），`process` 含 `cv_glyphs.png`（颜色轮廓）与 `cv_annotated.png`（定位标注）；方法标签改为 `DET+OCR+CV`，`solver.accuracy=high`。`docs/yidun.md` 新增「word-order 求解过程拆解」附录（定位/颜色轮廓/OCR/成语匹配/失败记录），viewer 已重建并核对案例 001。
 - **2026-11-21**：新增百度旋转验证码 `baidu/rotate`：12 组从 200 张人工标注真机图选取（角度 60°~301°），ConvNeXt Tiny `conv_0203_ft_0205_pl_0206` 预测回正，200 张离线 **MAE 10.50°、acc@10° 81.0%**；案例含 `bg.png` / `solved.png` / `answer.txt` / `result.json`，`solver.status: exists`、accuracy 高，审查 pending；`docs/baidu.md`、`docs/types.md`、`docs/demos.md` 已同步。
+- **2026-11-21**：易盾增强文字点选 12 组结果图 / 过程图换统一版式（数据与点击坐标未变）。结果图 `annotated.png` 头部加 ①②③ 目标状态槽位（已解绿 / 未解灰），图内绿框 + `③ 字 · 已解` 标出解出的目标、红点为坐标，灰虚线框示意未解的重叠对（003 与已解框重叠的误判框不画）；过程图 `process-01-standalone.png` 改为四格：检测框 → 颜色簇掩码 → 按 OCR 最佳角度旋转 → 点击锚点。`meta.json` 只更新 `process` / `process_note` / `notes`，`review` 未动；viewer 已重建。
+- **2026-11-21**：网易易盾增强文字点选 `yidun/text-click-enhanced` 换思路，只解**非重叠字**。12/12 组核对发现：**题面第 3 个目标单独放置**；按每组约 2 个独立字推断，前 2 个目标在两组重叠对中。新流程：YOLO 所有框（不排除被误判为对的框）→ Lab 颜色簇掩码 → −75°…+75° 多角度 RapidOCR + padding 补扫（10/12/14/16）→ 开放词表若稳定读成别的字就拒绝 EasyOCR 限定候选 → 只保留与第 3 字完全一致的命中 → 点击单字框中心。12/12 组定位并识别第 3 目标（10 组 high；005 0.91、011 0.84 为 medium）。011 纠错：白色干扰字「羞」曾被限定候选强行读成「雪」，现已拒绝（羞 0.99），改定位左下蓝字「雪」（pad=12，0.84）。案例改为 **partial 1/3**：`annotated.png` 只标 1 点，`answer.txt` / `result.json` 明示前两字未解，新增 `process-01-standalone.png`，撤下旧 3 点错误结果与重对过程图；`solver.status=partial`，类型页、`docs/yidun.md`、`docs/types.md`、根统计与 skill 已同步，viewer 已重建。
+- **2026-11-21**：Amazon 音频题 `amazon/audio` 12 组完成双人分离复核：F0 判定女声=出题人（正确）、男声=旁白（干扰）；三模型 + 原混音融合定稿两个目标词，并补双方完整转录（`result.json` 的 `speakers`）。修正 01 `double/stroke`、03 `island/awareness`、08 `threat`、11 `freeze`；答案仍待人工听音审查。
 - **2026-11-20**：企讯通角度验证 `qingtongbu/angle` 从「效果差」升级：按实测改用 **ResNet50 360 类分类**（`aqc_spin_v2`）作主方法，保留 ConvNeXt-T 回归作对照。12 组逐组三联对比（原图 / ResNet50 / ConvNeXt）目检：ResNet50 **12/12** 回正方向正确或持平，ConvNeXt **11/12** 明显偏差（01/07/11 超 100°）。12 组案例补 `solved.png`（ResNet50 回正）、`answer.txt`（角度）、`result.json`（双方法角度与置信度）、`process-01-compare-methods.jpg`；`solver.status: weak→exists`、`method: CV`、`evidence: manual`，审查待回填；`docs/qingtongbu.md` 同步，viewer 已重建。
 - **2026-11-20**：企讯通曲线 `qingtongbu/curve` 扩到 **24 组**并升级为双色模型可解：`QCaptcha.js` 反混淆确认参考/预览同为三次贝塞尔、两个控制点重合且 x=滑块位移，`p` 只含 P0/P3/ctrlY，答案=参考描边控制点 x（`moveX=c/2`）。新增**纯 HTTP** gen + 自编码轨迹 check 链路（无需浏览器/WASM）：新采 12 组全部在线 `code=200`，累计 0 偏移 **36/36 通过**；实测容差 **5%**（展示 ±15px；±30 图像 px 通过、+35 拒绝）。描边按用户指出的两型**分别建模**：彩色（Lab 色度）与灰白（灰晕/白芯 + 线响应），并用颜色骨架 + 端点吸附解决起终点被星形/鹅卵石/云朵干扰的问题；旧 12 组用吸附后的骨架路径重拟合（GT 残差 0.85–4.4px，端点修正 10/12）。24 组案例补 `answer.txt` / `result.json` / `solved.png` / 4 张过程图，`evidence` 分别为 offline-verified / live-pass；`docs/qingtongbu.md` 同步，viewer 已重建。
 - **2026-11-20**：天爱滑动曲线 `tianai/curve` 机制**纠正**：`p` 只含两端点 + `ctrlY`，目标控制点 x（服务端 `randomX`）不在包里；旧版把 randomX 当作端点中点，只在 randomX 靠近中点时成立（与源求解器 ~10% 单次通过率吻合）。背景可能有两条共享端点的曲线（参考 + 干扰）；新方案用白度 top-hat 细亮脊 + 法线对称脊对 + 预览族内一维扫描恢复可见参考，另一条曲线按干扰排除；贴合度改为“滑块与图像拟合参考的偏差”。12 组图像拟合 moveX 已写入案例（`answer.txt`/`result.json`/过程图），旧公式中点保留作对照；`method`=CV+ACT、`answer_format`=offset-x，页面主图改用 `restored.jpg`（修复左右一乱一正）。图像拟合仍是视觉估计，在线提交待复核；`docs/tianai.md`、viewer 已同步。
@@ -219,9 +222,6 @@
 - **2026-11-18**：修正天爱旋转验证 3 组 Vision 误判（sets 04/05/06）：候选合成图按人物正立与线条连续性复核，角度当时改为 150.0° / 326.2° / 348.8°（06 已再由色带直线法修正为 248.0°）；新增 `angle_overrides.json`，求解器优先使用已核验角度。
 - **2026-11-18**：修正顶象图标点选 012：LLM `whole`（1x）把奖杯判到右侧空白处，改用 CV 白色图标模板匹配（IoU 0.94~0.97）；12 组统一使用 CV `solved.png` 作为最终结果，结构对齐。
 - **2026-11-18**：美团最短线连点 `meituan/line-connect` 12 组补齐展示链路：0.png + 1.png 原始题面、背景还原、1.png 颜色文字提取、同色两点定位、最短直线连接；修复 set 19 颜色文字标注（橘）；50/50 离线生成结果，12 组结果纳入待审。
-- **2026-11-21**：易盾增强文字点选 12 组结果图 / 过程图换统一版式（数据与点击坐标未变）。结果图 `annotated.png` 头部加 ①②③ 目标状态槽位（已解绿 / 未解灰），图内绿框 + `③ 字 · 已解` 标出解出的目标、红点为坐标，灰虚线框示意未解的重叠对（003 与已解框重叠的误判框不画）；过程图 `process-01-standalone.png` 改为四格：检测框 → 颜色簇掩码 → 按 OCR 最佳角度旋转 → 点击锚点。`meta.json` 只更新 `process` / `process_note` / `notes`，`review` 未动；viewer 已重建。
-- **2026-11-21**：网易易盾增强文字点选 `yidun/text-click-enhanced` 换思路，只解**非重叠字**。12/12 组核对发现：**题面第 3 个目标单独放置**；按每组约 2 个独立字推断，前 2 个目标在两组重叠对中。新流程：YOLO 所有框（不排除被误判为对的框）→ Lab 颜色簇掩码 → −75°…+75° 多角度 RapidOCR + padding 补扫（10/12/14/16）→ 开放词表若稳定读成别的字就拒绝 EasyOCR 限定候选 → 只保留与第 3 字完全一致的命中 → 点击单字框中心。12/12 组定位并识别第 3 目标（10 组 high；005 0.91、011 0.84 为 medium）。011 纠错：白色干扰字「羞」曾被限定候选强行读成「雪」，现已拒绝（羞 0.99），改定位左下蓝字「雪」（pad=12，0.84）。案例改为 **partial 1/3**：`annotated.png` 只标 1 点，`answer.txt` / `result.json` 明示前两字未解，新增 `process-01-standalone.png`，撤下旧 3 点错误结果与重对过程图；`solver.status=partial`，类型页、`docs/yidun.md`、`docs/types.md`、根统计与 skill 已同步，viewer 已重建。
-- **2026-11-21**：Amazon 音频题 `amazon/audio` 12 组完成双人分离复核：F0 判定女声=出题人（正确）、男声=旁白（干扰）；三模型 + 原混音融合定稿两个目标词，并补双方完整转录（`result.json` 的 `speakers`）。修正 01 `double/stroke`、03 `island/awareness`、08 `threat`、11 `freeze`；答案仍待人工听音审查。
 - **2026-11-18**：数美图标点选 `shumei/icon-click` 从 10 组扩到 14 组（新增 4 组真实样本 011–014）；求解器升级为红色掩膜 + 旋转/缩放二值 IoU + 图标聚类 + 匈牙利，14/14 离线核对（≤7px，最大 6.2px），结果与标注图纳入待审。
 - **2026-11-18**：美团图标点选 `meituan/icon-click` 12 组人工复核结果满意：状态更新为已解，`review` 回填 `pass/correct`；补入点击坐标答案与 `result.json`，viewer 求解器效果标为“几乎完美”。
 - **2026-11-18**：美团图标点选 `meituan/icon-click` 背景还原改为从乱序图检测真实块切点（不再固定等分），修复 003/009/010 的横/竖细缝；011/012 改用可求解的源集合并补上结果图；12 组还原图、求解标注与过程图同步。

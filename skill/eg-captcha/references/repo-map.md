@@ -1,4 +1,4 @@
-# 仓库索引（快照 2026-11-22）
+# 仓库索引（快照 2026-11-25）
 
 > 以下路径均相对仓库根目录 `EG_CAPTCHA_ROOT`。
 > 数字与状态以仓库 `README.md` 和各案例 `meta.json` 为准；这里只做路由，不复制正文。
@@ -40,7 +40,7 @@
 | `baidu` | 百度 | `docs/baidu.md` | 1 | 12 | CV+PROTO（旋转） |
 | `bilibili` | 哔哩哔哩 B站 | `docs/bilibili.md` | 2 | 18 | CV（极验 v3 word / v4 icon-pixel） |
 
-> “类型数”含 documented-only 类型；有案例的类型目录见第三节快照（86 个）。
+> “类型数”含 documented-only 类型；有案例的 86 个类型页见 `docs/types.md`，案例总数见文末快照。
 
 ## 无题面媒体 / documented-only
 
