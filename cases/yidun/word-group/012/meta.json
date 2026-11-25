@@ -11,25 +11,40 @@
   "source_url": "https://dun.163.com/trial",
   "source_path": "yidun/word-group/sets/24",
   "collected_at": "unknown",
-  "prompt": "选出并排列正确词语",
+  "prompt": "请点击两下“叠加的文字”，组成成语",
   "roles": {
-    "bg": "bg.jpg"
+    "bg": "bg.jpg",
+    "annotated": "annotated.png"
   },
   "answer_format": "points+order",
-  "status": "sample-only",
+  "status": "result-pending-review",
   "sample_state": "neutral",
+  "evidence": "unverified",
+  "confidence": "medium",
   "solver": {
     "status": "exists",
-    "accuracy": "high",
-    "notes": "源 llm_solver 12/12；待审"
+    "accuracy": "low",
+    "notes": "纯 CV（无 VLM/LLM）：离线 24/24 出解；线上通过的 14 轮原图回放判对 6 轮；线上 27.5% 属 11-22 前构建，不属当前构建；结果待人工审查"
   },
   "review": {
-    "state": "pending",
-    "result": "",
-    "reviewed_at": "",
-    "notes": ""
+    "state": "fail",
+    "result": "incorrect",
+    "notes": "",
+    "reviewed_at": "2026-11-22T10:52:34.571Z"
   },
-  "notes": "覆盖批次：样本中立收录；结果未纳入。未撰写求解器（仅采集）",
-  "method": "VLM",
-  "method_note": "llm_solver 选词/排序；无需训练"
+  "notes": "覆盖批次：样本中立收录；2026-11-22 结果换成纯 CV 求解（成语 + 两次点击），原 llm_solver 结果不再作为本案例答案",
+  "method": "CV",
+  "method_note": "每框精确色聚类分层（色格枚举 / 覆盖度分带 / 同色射线生长 / Lab 空间 k-means 10 色团） + HOG（10x10 格 x 8 方向 + 每格密度，900 维）字形代价 + 八层联合指派（4 组 x 2 层全由同一成语四字解释，12 个有序组对 x 8500 条成语）",
+  "process": [
+    {
+      "file": "process-01-groups.png",
+      "label": "轮廓描边（每层真实像素，按识别角度转正）"
+    },
+    {
+      "file": "process-02-chars.png",
+      "label": "字形检索与名次"
+    }
+  ],
+  "process_note": "过程①：上排是原框里两层轮廓（绿=L1、橙=L2）描在照片上；下排是每层自己的真实像素，掩膜外压暗、并按识别出的角度转正——上层字转正后通常能直接读出，下层常只剩一两根笔画。过程②：每层转正后的轮廓缩略图 + HOG 检索前 5、cost 与角度，右侧为最终被指派给该层的字及其名次。识别只到「前 30 名」级别，解题靠 8 层联合指派与成语约束投票，不靠单字 top-1。",
+  "pass_criteria": "点击两下叠加文字组，两组的四个字要组成成语；两次点击的先后顺序必须与成语顺序一致，点错组或顺序错都不通过。"
 }
